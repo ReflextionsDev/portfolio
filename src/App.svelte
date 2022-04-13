@@ -32,8 +32,8 @@
 		</p>
 	</div>
 
-
-	<!-- <div class="games">
+<!-- 
+	<div class="games">
 			{#each games as game}
 			<Card 
 				title={game.title}
@@ -41,9 +41,6 @@
 			/>
 		{/each}
 	</div> -->
-
-
-	<!-- Better to pass in the object? -->
 
 		<Showcase
 		{...games[1]}
