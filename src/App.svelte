@@ -46,14 +46,22 @@
 	<!-- Better to pass in the object? -->
 
 		<Showcase
-		title={games[1].title}
-		desc={games[1].desc}
-		obj={games[1]}
+		{...games[1]}
 		/>
 
 </main>
 
 <style>
+
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
 
 	main {
 		text-align: center;
@@ -70,6 +78,7 @@
 
 	.navbar {
 	background-color: aqua;
+	height: 10%;
 	}
 
 </style>
