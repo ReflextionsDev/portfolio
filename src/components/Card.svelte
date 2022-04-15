@@ -2,9 +2,9 @@
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
 
-    // let gif = "/assets/games/cards/testgif.gif";
+    let gif = "/assets/games/cards/testgif.gif";
     
-    let gif = "/assets/games/cards/cardGIF_RR2.gif";
+    // let gif = "/assets/games/cards/cardGIF_RR2.gif";
 
 </script>
 
