@@ -11,9 +11,9 @@
                 <div class="phone__speaker"></div>
             </div>
             <div class="phone__mid">
-    <!-- <div class="game">
+            <div class="game">
                 <iframe src="https://taupe-dolphin-87a2aa.netlify.app/" title="description"></iframe>
-            </div> -->
+            </div>
             </div>
             <div class="phone__bot">
                 <div class="phone__home"></div>
@@ -56,13 +56,14 @@
     .phone {
         height: 960px;
         max-height: 75%;
-        aspect-ratio: 2/3;
+        aspect-ratio: 9/16;
         background-color: rgb(1, 16, 11);
         border-radius: 50px;
         display: flex;
         flex-direction: column;
         /* align-items: center; */
         /* justify-content: center; */
+         box-shadow: 3px 5px 12px rgb(82, 82, 82);
     }
 
     .phone__top {
@@ -104,11 +105,13 @@
 
     .game {
         /* width: 640px; */
-        height: 960px;
+        /* height: 960px;
         max-height: 75%;
         aspect-ratio: 2/3;
-        background-color: aquamarine;
+        background-color: aquamarine; */
         /* border: 1px rgb(65, 135, 155) solid; */
+        width: 100%;
+        height: 100%;
     }
 
     .game iframe {
