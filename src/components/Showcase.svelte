@@ -36,7 +36,7 @@
     /* Spotlight */
     .spotlight {
         flex: 1;
-        background-color: grey;
+        background-color: rgb(220, 220, 220);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -48,13 +48,15 @@
         max-height: 75%;
         aspect-ratio: 2/3;
         background-color: aquamarine;
-        border: 1px rgb(65, 135, 155) solid;
+        /* border: 1px rgb(65, 135, 155) solid; */
     }
 
     .game iframe {
         border: none;
         width: 100%;
         height: 100%;
+        /* border-bottom: 1px black solid; */
+        box-shadow: 3px 5px 12px rgb(0, 0, 0);
     }
 
     /* Details */
