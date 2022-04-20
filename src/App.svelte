@@ -26,9 +26,12 @@
 
 	<!-- Componentize -->
 
-	<Games games={games} />
+	<!-- <Games games={games} /> -->
 
-	<Showcase {...games[1]} />
+	<Showcase {...games[1]} games={games} />
+	
+
+	<Showcase {...games[2]} games={games} />
 </main>
 
 <style>

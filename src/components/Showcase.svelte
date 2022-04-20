@@ -1,10 +1,13 @@
 <script>
+import Games from "./Games.svelte";
+
 import Laptop from "./Laptop.svelte";
 
     import Phone from "./Phone.svelte";
     
     export let title;
     export let desc;
+    export let games;
 </script>
 
 <!-- src="https://fascinating-kitsune-33d92d.netlify.app/" -->
@@ -14,9 +17,9 @@ import Laptop from "./Laptop.svelte";
 <div class="page">
     <div class="showcase">
         <div class="spotlight">
-            <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" />
+            <!-- <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" /> -->
             
-            <!-- <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" /> -->
+            <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" />
         </div>
         <div class="flexCenter">
             <div class="details">
@@ -42,6 +45,7 @@ import Laptop from "./Laptop.svelte";
                             class="src"
                         />
                         <br />
+                        <!-- <Games games={games}/> -->
                     </div>
                 </div>
             </div>

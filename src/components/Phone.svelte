@@ -1,5 +1,5 @@
 <script>
-    export let src
+    export let src;
 </script>
 
 <div class="phone">
@@ -8,10 +8,7 @@
     </div>
     <div class="phone__mid">
         <div class="game">
-            <iframe
-                {src}
-                title="Game Preview (Phone)"
-            />
+            <iframe {src} title="Game Preview (Phone)" />
         </div>
     </div>
     <div class="phone__bot">
@@ -120,5 +117,4 @@
         height: 100%;
         border-radius: 15px;
     }
-    
 </style>

@@ -4,7 +4,7 @@
 
 <div class="laptop">
     <div class="laptop__top">
-        <div class="laptop__speaker" />
+        <div class="laptop__camera" />
     </div>
     <div class="laptop__mid">
         <div class="game">
@@ -12,21 +12,14 @@
         </div>
     </div>
     <div class="laptop__bot">
-        <div class="laptop__home" />
+        <div class="laptop__divot" />
     </div>
 </div>
 
 <style>
     .laptop {
- 
-        /* height: 480px; */
-        /* width: 640px; */
-        width: 87%;
-        /* max-height: 10%; */
-        /* max-width: 100%; */
-        aspect-ratio: 3/2 ;
-        /* width: 100%; */
-
+        width: 85%;
+        aspect-ratio: 3/2;
         background-color: rgb(1, 16, 11);
         border-radius: 15px;
         display: flex;
@@ -42,15 +35,10 @@
         justify-content: center;
     }
 
-    .laptop__speaker {
-        /* background-color: rgb(41, 41, 41);
-        width: 50%;
-        height: 10%;
-        border-radius: 5px; */
-        height: 20%;
+    .laptop__camera {
+        height: 40%;
         aspect-ratio: 1/1;
-        border: rgb(77, 77, 77) 3px solid;
-        background-color: rgb(214, 11, 11) 3px solid;
+        border: rgb(130, 130, 130) 2px solid;
         border-radius: 50px;
     }
 
@@ -64,19 +52,18 @@
     .laptop__bot {
         flex: 1.5;
         display: flex;
-        align-items: center;
         justify-content: center;
-        width: 110%;
+        width: 105%;
         background-color: black;
-        border-radius: 0px 0px 100px 100px;
+        border-radius: 15px 15px 100px 100px;
         box-shadow: 3px 5px 12px rgb(82, 82, 82);
     }
 
-    .laptop__home {
-        /* height: 55%;
-        aspect-ratio: 1/1;
-        border: rgb(41, 41, 41) 3px solid;
-        border-radius: 50px; */
+    .laptop__divot {
+        background-color: rgb(40, 39, 39);
+        width: 40%;
+        height: 30%;
+        border-radius: 0px 0px 30px 30px;
     }
 
     .game {
@@ -88,6 +75,6 @@
         border: none;
         width: 100%;
         height: 100%;
-        /* border-radius: 15px; */
+        border-radius: 5px;
     }
 </style>
