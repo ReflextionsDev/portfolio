@@ -38,7 +38,7 @@
     .laptop__camera {
         height: 40%;
         aspect-ratio: 1/1;
-        border: rgb(130, 130, 130) 2px solid;
+        border: rgb(40, 39, 39) 2px solid;
         border-radius: 50px;
     }
 

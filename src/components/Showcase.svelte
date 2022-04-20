@@ -1,13 +1,13 @@
 <script>
-import Games from "./Games.svelte";
+    import Games from "./Games.svelte";
 
-import Laptop from "./Laptop.svelte";
+    import Laptop from "./Laptop.svelte";
 
     import Phone from "./Phone.svelte";
-    
+
     export let title;
     export let desc;
-    export let games;
+    export let platform;
 </script>
 
 <!-- src="https://fascinating-kitsune-33d92d.netlify.app/" -->
@@ -17,11 +17,15 @@ import Laptop from "./Laptop.svelte";
 <div class="page">
     <div class="showcase">
         <div class="spotlight">
-            <!-- <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" /> -->
-            
-            <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" />
+
+
+            {#if platform === "phone"}
+                <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" />
+            {:else if platform === "laptop"}
+                <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" />
+            {/if}
         </div>
-        <div class="flexCenter">
+        <div class="info">
             <div class="details">
                 <div class="content">
                     <h1>{title}</h1>
@@ -63,6 +67,7 @@ import Laptop from "./Laptop.svelte";
         align-items: center;
     }
 
+
     /* [Showcase] */
     .showcase {
         /* border: red 1px solid; */
@@ -74,6 +79,7 @@ import Laptop from "./Laptop.svelte";
         display: flex;
         width: 90%;
         height: 85%;
+        max-width: 1920px;
         box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
     }
 
@@ -90,7 +96,11 @@ import Laptop from "./Laptop.svelte";
 
     /* [Details] */
 
-    .flexCenter {
+    .laptop {
+        background-color: wheat;
+    }
+
+    .info {
         flex: 1;
         display: flex;
         justify-content: center;

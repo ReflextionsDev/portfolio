@@ -8,15 +8,20 @@
 		{
 			title: "Roadway Repair",
 			card_img: "/assets/games/cards/rrmenu.png",
+			desc: "lorem ipsum",
+			platform: "phone"
 		},
 		{
 			title: "Bouncy Balloons",
 			card_img: "/assets/games/cards/voter1.png",
 			desc: "Bouncy Balloons is part of a mobile web game suite I did in 2016. It features 30 levels with increasing mechanics and physics challenges.",
+			platform: "phone"
 		},
 		{
 			title: "Game 3",
 			card_img: "/assets/games/cards/musklander1.png",
+			desc: "loren ipsum laptop",
+			platform: "laptop"
 		},
 	];
 </script>
