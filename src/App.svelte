@@ -1,6 +1,6 @@
 <script>
-	export let name;
 	import Card from "./components/Card.svelte";
+	import Games from "./components/Games.svelte";
 	import Navbar from "./components/Navbar.svelte";
 	import Showcase from "./components/Showcase.svelte";
 
@@ -22,26 +22,11 @@
 </script>
 
 <main>
-	<!-- <div class="navbar">
-		<h1>Hello {name}!</h1>
-		<p>
-			Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to
-			learn how to build Svelte apps.
-		</p>
-	</div> -->
-
-	<Navbar/>
+	<Navbar />
 
 	<!-- Componentize -->
-	<!-- 
-	<div class="games">
-			{#each games as game}
-			<Card 
-				title={game.title}
-				src = {game.card_img}
-			/>
-		{/each}
-	</div> -->
+
+	<Games games={games} />
 
 	<Showcase {...games[1]} />
 </main>
@@ -64,11 +49,7 @@
 		flex-direction: column;
 	}
 
-	.games {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+
 
 	.navbar {
 		background-color: aqua;

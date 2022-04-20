@@ -1,5 +1,8 @@
 <script>
+import Laptop from "./Laptop.svelte";
+
     import Phone from "./Phone.svelte";
+    
     export let title;
     export let desc;
 </script>
@@ -12,6 +15,8 @@
     <div class="showcase">
         <div class="spotlight">
             <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" />
+            
+            <!-- <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" /> -->
         </div>
         <div class="flexCenter">
             <div class="details">
@@ -58,7 +63,8 @@
     .showcase {
         /* border: red 1px solid; */
         /* max-width: 1140px; */
-        max-width: 137vh;
+        /* max-width: 137vh; */
+        /* max-width: 167vh; */
         border-radius: 10px;
         background-color: white;
         display: flex;
@@ -69,21 +75,25 @@
 
     /* [Spotlight] */
     .spotlight {
+        /* flex: 1; */
         flex: 1;
         /* background-color: rgb(245, 245, 245); */
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 50%;
     }
 
     /* [Details] */
 
     .flexCenter {
-        flex: 1.5;
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 100%;
+        /* max-width: 100%; */
+        min-width: 620px;
+        /* max-width: 50%; */
     }
 
     .details {
