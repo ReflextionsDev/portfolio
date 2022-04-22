@@ -31,12 +31,12 @@
 
 	<!-- Componentize -->
 
-	<!-- <Games games={games} /> -->
+	<Games games={games} />
 
-	<Showcase {...games[1]} games={games} />
+	<!-- <Showcase {...games[1]} games={games} /> -->
 	
 
-	<Showcase {...games[2]} games={games} />
+	<!-- <Showcase {...games[2]} games={games} /> -->
 </main>
 
 <style>
@@ -46,7 +46,7 @@
 	}
 
 	p {
-		margin: 0;
+		maFrgin: 0;
 		padding: 0;
 	}
 
@@ -62,5 +62,6 @@
 	.navbar {
 		background-color: aqua;
 		height: 10%;
+		min-height: 10%;
 	}
 </style>
