@@ -3,9 +3,8 @@
     export let src = "/assets/games/cards/rrmenu.png";
 
     let gif = "/assets/games/cards/testgif.gif";
-    
-    // let gif = "/assets/games/cards/cardGIF_RR2.gif";
 
+    // let gif = "/assets/games/cards/cardGIF_RR2.gif";
 </script>
 
 <div class="game">
@@ -52,7 +51,7 @@ horizontal shutter in
         /* background-size: cover; */
         height: 253px;
         width: auto;
-        position: absolute; 
+        position: absolute;
         opacity: 0;
         /* left: 0; */
     }

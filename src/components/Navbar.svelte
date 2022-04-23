@@ -11,7 +11,6 @@
 </div>
 
 <style>
-
     .navbar {
         background-color: aqua;
         height: 10%;

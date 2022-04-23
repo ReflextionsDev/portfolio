@@ -1,13 +1,13 @@
 <script>
-    import Games from "./Games.svelte";
 
-    import Laptop from "./Laptop.svelte";
+// should take in a (game) variable and load from that, if cannot load, it should redirect to games dir
 
-    import Phone from "./Phone.svelte";
+    import Laptop from "../components/Laptop.svelte";
+    import Phone from "../components/Phone.svelte";
 
     export let title;
     export let desc;
-    export let platform;
+    export let platform
 </script>
 
 <!-- src="https://fascinating-kitsune-33d92d.netlify.app/" -->
