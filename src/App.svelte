@@ -11,6 +11,7 @@
 	let page = "";
 	let game = {};
 	let gameProps = null;
+	// URLS are temporary, need to update with sitelock versions after domain registered
 	const games = [
 		{
 			title: "Roadway Repair",

@@ -23,8 +23,8 @@
 
     <a href={`/games/${title.split(" ").join("").toLowerCase()}`}><img on:click={test} class="cover" {src} /></a>
 
-    <button on:click="{test}">
-    CLICK ME</button>
+    <!-- <button on:click="{test}">
+    CLICK ME</button> -->
     <!-- <img class="gif" alt="placeholder" src={gif} /> -->
 </div>
 
