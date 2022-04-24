@@ -8,6 +8,7 @@
     export let title;
     export let desc;
     export let platform
+    export let card_img
 </script>
 
 <!-- src="https://fascinating-kitsune-33d92d.netlify.app/" -->
@@ -32,7 +33,7 @@
                     <p style="font-size:1.5em; text-align:justify">{desc}</p>
                     <div class="details__images">
                         <img
-                            src="/assets/games/cards/musklander1.png"
+                            src= {card_img}
                             alt=""
                             class="src"
                         />

@@ -2,18 +2,30 @@
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
 
+	import router from "page";
+
     let gif = "/assets/games/cards/testgif.gif";
 
     // let gif = "/assets/games/cards/cardGIF_RR2.gif";
+
+    function test(){
+        router('/games/roadwayrepair');
+        console.log("yo")
+    }
+    
 </script>
+
 
 <div class="game">
     <!-- <h1>{title}</h1> -->
 
     <!-- <img {src} alt="" class="card" /> -->
 
-    <img class="cover" {src} />
-    <img class="gif" alt="placeholder" src={gif} />
+    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}><img on:click={test} class="cover" {src} /></a>
+
+    <button on:click="{test}">
+    CLICK ME</button>
+    <!-- <img class="gif" alt="placeholder" src={gif} /> -->
 </div>
 
 <!-- On enter, change src... -->
@@ -31,7 +43,7 @@ horizontal shutter in
         display: flex;
     }
 
-    .game > img {
+    .game img {
         width: 450px;
         border-radius: 10px;
         margin: 10px;
