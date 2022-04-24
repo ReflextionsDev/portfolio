@@ -4,9 +4,15 @@
     <div class="spacer" />
 
     <div class="links">
-        <div class="link">Home</div>
-        <div class="link">Web</div>
-        <div class="link">Games</div>
+        <a href="/">
+            <div class="link">Home</div>
+        </a>
+        <a href="/web">
+            <div class="link">Web</div>
+        </a>
+        <a href="/games">
+            <div class="link">Games</div>
+        </a>
     </div>
 </div>
 
