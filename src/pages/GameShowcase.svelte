@@ -107,7 +107,7 @@
         justify-content: center;
         align-items: center;
         /* max-width: 100%; */
-        min-width: 620px;
+        /* min-width: 620px; */
         /* max-width: 50%; */
     }
 

@@ -1,5 +1,43 @@
 <script>
     export let src;
+
+    let fullscreenPreview = false;
+
+    // may need to check game is loaded before allowing fullscreen...
+
+    function requestFullScreen(element) {
+
+        var requestMethod =
+            element.requestFullScreen ||
+            element.webkitRequestFullScreen ||
+            element.mozRequestFullScreen ||
+            element.msRequestFullscreen;
+
+        if (requestMethod) {
+            // Native full screen.
+            requestMethod.call(element);
+        } else if (typeof window.ActiveXObject !== "undefined") {
+            // IE Backup
+            var wscript = new ActiveXObject("WScript.Shell");
+            if (wscript !== null) {
+                wscript.SendKeys("{F11}");
+            }
+        }
+    }
+
+    function toggleFullScreen() {
+        // document.getElementsByTagName("iframe")[0].className = "fullScreen";
+        // document.getElementsByClassName("game")[0].className = "fullScreen";
+
+        if (fullscreenPreview) {
+            fullscreenPreview = true;
+        } else {
+            // var elem = document.body;
+            var elem = document.getElementsByClassName("game")[0]
+            requestFullScreen(elem);
+            // fullscreenPreview = true;
+        }
+    }
 </script>
 
 <div class="phone">
@@ -7,8 +45,15 @@
         <div class="phone__speaker" />
     </div>
     <div class="phone__mid">
-        <div class="game">
+        <div class="game" class:fullscreen={fullscreenPreview === true}>
             <iframe {src} title="Game Preview (Phone)" />
+
+            <img
+                src="/assets/icons/fullscreen2.png"
+                class="fullscreenToggle"
+                alt="toggle fullscreen button"
+                on:click={toggleFullScreen}
+            />
         </div>
     </div>
     <div class="phone__bot">
@@ -109,6 +154,7 @@
     .game {
         width: 100%;
         height: 100%;
+        position: relative;
     }
 
     .game iframe {
@@ -116,5 +162,38 @@
         width: 100%;
         height: 100%;
         border-radius: 15px;
+    }
+
+    .fullscreen {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .fullscreen iframe {
+        border-radius: 0px;
+    }
+
+    .fullscreenToggle {
+        border-radius: 5px 0px 15px 0px;
+        background-color: rgba(255, 255, 255, 0);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 10%;
+        padding: 3px;
+        -webkit-transition: background-color 250ms linear;
+        -ms-transition: background-color 250ms linear;
+        transition: background-color 250ms linear;
+    }
+
+    .fullscreenToggle:hover {
+        background-color: rgba(255, 255, 255, 0.304);
+        cursor: pointer;
+        -webkit-transition: background-color 250ms linear;
+        -ms-transition: background-color 250ms linear;
+        transition: background-color 250ms linear;
     }
 </style>
