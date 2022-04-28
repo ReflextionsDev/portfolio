@@ -16,7 +16,7 @@
 		{
 			title: "Roadway Repair",
 			card_img: "/assets/games/cards/rrmenu.png",
-			desc: "Roadway Repair is a pipes-stlye puzzle game themed around, well roads. It is part of a mobile web game suite I did in 2016.",
+			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016.",
 			platform: "phone",
 		},
 		{

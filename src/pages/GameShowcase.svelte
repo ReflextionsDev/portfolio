@@ -22,6 +22,7 @@
 
             {#if platform === "phone"}
                 <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" />
+                <!-- <Phone src="https://fr.wikipedia.org/wiki/Main_Page" /> -->
             {:else if platform === "laptop"}
                 <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" />
             {/if}

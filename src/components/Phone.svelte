@@ -3,11 +3,33 @@
 
     let fullscreenPreview = false;
 
-    // may need to check game is loaded before allowing fullscreen...
+    document.addEventListener("fullscreenchange", () => {
+        console.log("fullscreenchange");
+        fullscreenPreview = !fullscreenPreview;
+    });
+
+    if (document.addEventListener) {
+        document.addEventListener("webkitfullscreenchange", exitHandler, false);
+        document.addEventListener("mozfullscreenchange", exitHandler, false);
+        document.addEventListener("fullscreenchange", exitHandler, false);
+        document.addEventListener("MSFullscreenChange", exitHandler, false);
+    }
+
+    function exitHandler() {
+        fullscreenPreview = !fullscreenPreview;
+    }
+
+    function toggleFullScreen() {
+        var game = document.getElementsByClassName("game")[0];
+        if (fullscreenPreview) {
+            closeFullscreen();
+        } else {
+            requestFullScreen(game);
+        }
+    }
 
     function requestFullScreen(element) {
-
-        var requestMethod =
+        let requestMethod =
             element.requestFullScreen ||
             element.webkitRequestFullScreen ||
             element.mozRequestFullScreen ||
@@ -25,19 +47,19 @@
         }
     }
 
-    function toggleFullScreen() {
-        // document.getElementsByTagName("iframe")[0].className = "fullScreen";
-        // document.getElementsByClassName("game")[0].className = "fullScreen";
-
-        if (fullscreenPreview) {
-            fullscreenPreview = true;
-        } else {
-            // var elem = document.body;
-            var elem = document.getElementsByClassName("game")[0]
-            requestFullScreen(elem);
-            // fullscreenPreview = true;
+    function closeFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            /* IE11 */
+            document.msExitFullscreen();
         }
     }
+
+
 </script>
 
 <div class="phone">
@@ -174,6 +196,10 @@
 
     .fullscreen iframe {
         border-radius: 0px;
+    }
+
+    .fullscreen .fullscreenToggle {
+        width: 3%;
     }
 
     .fullscreenToggle {
