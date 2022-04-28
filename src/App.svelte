@@ -15,21 +15,48 @@
 	const games = [
 		{
 			title: "Roadway Repair",
-			card_img: "/assets/games/cards/rrmenu.png",
-			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016.",
+			cover: "/assets/games/roadwayrepair/rrmenu.png",
+			images: [
+				{
+					src: "/assets/games/roadwayrepair/rrmenu.png",
+					alt: "roadway repair menu screen",
+				},
+				{
+					src: "/assets/games/roadwayrepair/roadway1.png",
+					alt: "roadway repair menu, levels, and tutorial screen",
+				},
+				{
+					src: "/assets/games/roadwayrepair/roadway2.png",
+					alt: "roadway level screens",
+				},
+			],
+			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
 			platform: "phone",
+			src: "https://euphonious-dolphin-56fff0.netlify.app/",
 		},
 		{
 			title: "Bouncy Balloons",
-			card_img: "/assets/games/cards/voter1.png",
+			cover: "/assets/games/cards/voter1.png",
+			images: [],
 			desc: "Bouncy Balloons is part of a mobile web game suite I did in 2016. It features 30 levels with increasing mechanics and physics challenges.",
 			platform: "phone",
+			src: "https://euphonious-dolphin-56fff0.netlify.app/",
 		},
 		{
 			title: "Game3",
-			card_img: "/assets/games/cards/musklander1.png",
+			cover: "/assets/games/cards/musklander1.png",
+			images: [],
 			desc: "loren ipsum laptop",
 			platform: "laptop",
+			src: "https://fr.wikipedia.org/wiki/Main_Page",
+		},
+		{
+			title: "Game4",
+			cover: "/assets/games/cards/testgif.gif",
+			images: [],
+			desc: "loren ipsum laptop",
+			platform: "laptop",
+			src: "https://fr.wikipedia.org/wiki/Main_Page",
 		},
 	];
 

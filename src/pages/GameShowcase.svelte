@@ -1,57 +1,36 @@
 <script>
-
-// should take in a (game) variable and load from that, if cannot load, it should redirect to games dir
-
     import Laptop from "../components/Laptop.svelte";
     import Phone from "../components/Phone.svelte";
 
     export let title;
     export let desc;
-    export let platform
-    export let card_img
+    export let platform;
+    export let cover;
+    export let images;
+    export let src;
 </script>
-
-<!-- src="https://fascinating-kitsune-33d92d.netlify.app/" -->
 
 <!-- For landscape, adjust spotlight flex and make page bigger (vw height) -->
 
 <div class="page">
     <div class="showcase">
         <div class="spotlight">
-
-
             {#if platform === "phone"}
-                <Phone src="https://taupe-dolphin-87a2aa.netlify.app/" />
-                <!-- <Phone src="https://fr.wikipedia.org/wiki/Main_Page" /> -->
+                <Phone {src} />
             {:else if platform === "laptop"}
-                <Laptop src="https://fascinating-kitsune-33d92d.netlify.app/" />
+                <Laptop {src} />
             {/if}
         </div>
+        <!-- Should componetize -->
         <div class="info">
             <div class="details">
                 <div class="content">
                     <h1>{title}</h1>
                     <p style="font-size:1.5em; text-align:justify">{desc}</p>
                     <div class="details__images">
-                        <img
-                            src= {card_img}
-                            alt=""
-                            class="src"
-                        />
-                        <br />
-                        <img
-                            src="/assets/games/cards/musklander1.png"
-                            alt=""
-                            class="src"
-                        />
-                        <br />
-                        <img
-                            src="/assets/games/cards/musklander1.png"
-                            alt=""
-                            class="src"
-                        />
-                        <br />
-                        <!-- <Games games={games}/> -->
+                        {#each images as image}
+                            <img src={image.src} alt={image.alt} />
+                        {/each}
                     </div>
                 </div>
             </div>
@@ -68,7 +47,6 @@
         justify-content: center;
         align-items: center;
     }
-
 
     /* [Showcase] */
     .showcase {

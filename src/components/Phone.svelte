@@ -58,8 +58,6 @@
             document.msExitFullscreen();
         }
     }
-
-
 </script>
 
 <div class="phone">
