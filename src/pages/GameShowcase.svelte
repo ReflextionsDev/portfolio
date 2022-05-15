@@ -27,6 +27,7 @@
                 <div class="content">
                     <h1>{title}</h1>
                     <p style="font-size:1.5em; text-align:justify">{desc}</p>
+                    <!-- allow user to click images for full size module popup -->
                     <div class="details__images">
                         {#each images as image}
                             <img src={image.src} alt={image.alt} />
@@ -52,14 +53,14 @@
     .showcase {
         /* border: red 1px solid; */
         /* max-width: 1140px; */
-        /* max-width: 137vh; */
+        max-width: 137vh;
         /* max-width: 167vh; */
         border-radius: 10px;
         background-color: white;
         display: flex;
         width: 90%;
         height: 85%;
-        max-width: 1920px;
+        /* max-width: 1920px; */
         box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
     }
 
@@ -117,7 +118,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 45px;
         padding: 30px 0px;
     }
 

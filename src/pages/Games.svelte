@@ -14,5 +14,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		overflow-y: auto;
+		padding: 10px 0px;
 	}
+	
 </style>

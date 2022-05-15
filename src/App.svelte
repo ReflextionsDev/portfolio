@@ -32,15 +32,76 @@
 			],
 			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
 			platform: "phone",
-			src: "https://euphonious-dolphin-56fff0.netlify.app/",
+			src: "https://tangerine-duckanoo-61afbc.netlify.app/",
+			size: "tall"
 		},
 		{
 			title: "Bouncy Balloons",
-			cover: "/assets/games/cards/voter1.png",
-			images: [],
-			desc: "Bouncy Balloons is part of a mobile web game suite I did in 2016. It features 30 levels with increasing mechanics and physics challenges.",
+			cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
+			images: [
+				{
+					src: "/assets/games/bouncyballoons/bouncyballoons1.png",
+					alt: "bouncy balloons menu screen",
+				},
+				{
+					src: "/assets/games/bouncyballoons/bouncyballoons2.png",
+					alt: "bouncy ballons screenshot (1)",
+				},
+				{
+					src: "/assets/games/bouncyballoons/bouncyballoons3.png",
+					alt: "bouncy ballons screenshot (2)",
+				},
+			],
+			desc: "Bouncy Balloons is a physics based puzzle game. It is part of a mobile web game suite I did in 2016. It features 20 levels with increasing mechanics and difficulty.",
 			platform: "phone",
-			src: "https://euphonious-dolphin-56fff0.netlify.app/",
+			src: "https://stupendous-cobbler-26964c.netlify.app/",
+			size: "wide"
+		},
+		{
+			title: "Brix Builder",
+			cover: "/assets/games/brixbuilder/brixbuilder1.png",
+			images: [
+				{
+					src: "/assets/games/brixbuilder/brixbuilder1.png",
+					alt: "Brix Builder menu screen",
+				},
+				{
+					src: "/assets/games/brixbuilder/brixbuilder2.png",
+					alt: "Brix Builder screenshot (1)",
+				},
+				{
+					src: "/assets/games/brixbuilder/brixbuilder3.png",
+					alt: "Brix Builder screenshot (2)",
+				},
+			],
+			desc: "Brix Builder is an arcade inspired stacking game. It is part of a mobile web game suite I did in 2016. It features 3 difficulties with 7 levels each.",
+			platform: "phone",
+			src: "https://deluxe-haupia-237473.netlify.app/",
+			size: "big"
+		},
+		
+
+		{
+			title: "Rocket Runner",
+			cover: "/assets/games/rocketrunner/rocketrunner1.png",
+			images: [
+				{
+					src: "/assets/games/rocketrunner/rocketrunner1.png",
+					alt: "Rocket Runner menu screen",
+				},
+				{
+					src: "/assets/games/rocketrunner/rocketrunner2.png",
+					alt: "Rocket Runner screenshot (1)",
+				},
+				{
+					src: "/assets/games/rocketrunner/rocketrunner3.png",
+					alt: "Rocket Runner screenshot (2)",
+				},
+			],
+			desc: "Rocket Runner is an simple dodging game with unlockable skins and currency. It is part of a mobile web game suite I did in 2016.",
+			platform: "phone",
+			src: "https://deluxe-haupia-237473.netlify.app/",
+			size: "normal"
 		},
 		{
 			title: "Game3",
@@ -49,15 +110,16 @@
 			desc: "loren ipsum laptop",
 			platform: "laptop",
 			src: "https://fr.wikipedia.org/wiki/Main_Page",
+			size: "normal"
 		},
-		{
-			title: "Game4",
-			cover: "/assets/games/cards/testgif.gif",
-			images: [],
-			desc: "loren ipsum laptop",
-			platform: "laptop",
-			src: "https://fr.wikipedia.org/wiki/Main_Page",
-		},
+		// {
+		// 	title: "Game4",
+		// 	cover: "/assets/games/cards/testgif.gif",
+		// 	images: [],
+		// 	desc: "loren ipsum laptop",
+		// 	platform: "laptop",
+		// 	src: "https://fr.wikipedia.org/wiki/Main_Page",
+		// },
 	];
 
 	// Routing

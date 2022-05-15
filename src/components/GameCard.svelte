@@ -2,26 +2,26 @@
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
 
-	import router from "page";
+    import router from "page";
 
     let gif = "/assets/games/cards/testgif.gif";
 
     // let gif = "/assets/games/cards/cardGIF_RR2.gif";
 
-    function test(){
-        router('/games/roadwayrepair');
-        console.log("yo")
+    function test() {
+        router("/games/roadwayrepair");
+        console.log("yo");
     }
-    
 </script>
-
 
 <div class="game">
     <!-- <h1>{title}</h1> -->
 
     <!-- <img {src} alt="" class="card" /> -->
 
-    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}><img on:click={test} class="cover" {src} /></a>
+    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}
+        ><img on:click={test} class="cover" {src} /></a
+    >
 
     <!-- <button on:click="{test}">
     CLICK ME</button> -->
@@ -46,10 +46,17 @@ horizontal shutter in
     .game img {
         width: 450px;
         border-radius: 10px;
-        margin: 10px;
+        /* margin: 10px; */
 
         /* position: relative; */
     }
+    
+    /* .game img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        display: inline-block;
+    } */
 
     /* .game :hover {
         content: url("/assets/games/cards/testgif.gif");

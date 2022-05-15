@@ -211,13 +211,14 @@
         -webkit-transition: background-color 250ms linear;
         -ms-transition: background-color 250ms linear;
         transition: background-color 250ms linear;
+        cursor: pointer;
     }
 
     .fullscreenToggle:hover {
         background-color: rgba(255, 255, 255, 0.304);
-        cursor: pointer;
         -webkit-transition: background-color 250ms linear;
         -ms-transition: background-color 250ms linear;
         transition: background-color 250ms linear;
+
     }
 </style>

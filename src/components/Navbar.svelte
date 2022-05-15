@@ -22,8 +22,8 @@
         height: 10%;
         display: flex;
         align-items: center;
-        box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
-        margin: 0px 0px 10px 0px;
+        /* box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25); */
+        /* margin: 0px 0px 10px 0px; */
     }
 
     .title {

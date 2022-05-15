@@ -3,3 +3,7 @@
 - Pass height var to child
 - CSS tricks?
 - CSS superset
+
+# Phone
+- Only show fullscreen on hover
+- Click images to bring up full sized modal
