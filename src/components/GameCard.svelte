@@ -1,6 +1,7 @@
 <script>
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
+    export let size = "normal";
 
     import router from "page";
 
@@ -14,7 +15,7 @@
     }
 </script>
 
-<div class="game">
+<div class="game {size}">
     <!-- <h1>{title}</h1> -->
 
     <!-- <img {src} alt="" class="card" /> -->
@@ -40,23 +41,38 @@ horizontal shutter in
 <!-- /assets/games/cards/testgif.gif -->
 <style>
     .game {
-        display: flex;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
     }
 
     .game img {
-        width: 450px;
-        border-radius: 10px;
+        /* width: 450px;
+        border-radius: 10px; */
         /* margin: 10px; */
-
         /* position: relative; */
-    }
-    
-    /* .game img {
         max-width: 100%;
         height: auto;
         vertical-align: middle;
         display: inline-block;
-    } */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .tall {
+        grid-row: span 2;
+    }
+
+    .wide {
+        grid-column: span 2;
+    }
+
+    .big {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 
     /* .game :hover {
         content: url("/assets/games/cards/testgif.gif");
