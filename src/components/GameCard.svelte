@@ -1,44 +1,24 @@
-<script>
-    export let title;
-    export let src = "/assets/games/cards/rrmenu.png";
-    export let size = "normal";
-
-    import router from "page";
-
-    let gif = "/assets/games/cards/testgif.gif";
-
-    // let gif = "/assets/games/cards/cardGIF_RR2.gif";
-
-    function test() {
-        router("/games/roadwayrepair");
-        console.log("yo");
-    }
-</script>
-
-<div class="game {size}">
-    <!-- <h1>{title}</h1> -->
-
-    <!-- <img {src} alt="" class="card" /> -->
-
-    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}
-        ><img on:click={test} class="cover" {src} /></a
-    >
-
-    <!-- <button on:click="{test}">
-    CLICK ME</button> -->
-    <!-- <img class="gif" alt="placeholder" src={gif} /> -->
-</div>
-
-<!-- On enter, change src... -->
-
 <!-- On hover:
 show gif, show platform icons (freelance, web, mobile, stuff, game jam, #gamejam #freelance ?) engines?
 Title and opacity fades in, mouse changes, hover animation too
 Change text color on hover too
 horizontal shutter in
  -->
+ 
+<script>
+    export let title;
+    export let src = "/assets/games/cards/rrmenu.png";
+    export let size = "normal";
+    export let gif = "";
+</script>
 
-<!-- /assets/games/cards/testgif.gif -->
+<div class="game {size}">
+    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}>
+        <img class="cover" {src} />
+        <img class="gif" src={gif} />
+    </a>
+</div>
+
 <style>
     .game {
         /* display: flex; */
@@ -74,9 +54,18 @@ horizontal shutter in
         grid-row: span 2;
     }
 
-    /* .game :hover {
-        content: url("/assets/games/cards/testgif.gif");
-    } */
+    .game :hover {
+        content: url("/assets/previewgif.gif");
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        opacity: 10;
+    }
 
     .cover {
         /* opacity: 0; */

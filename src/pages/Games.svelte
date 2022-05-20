@@ -5,7 +5,7 @@
 
 <div class="games">
 	{#each games as game}
-		<GameCard title={game.title} src={game.cover} size={game.size} />
+		<GameCard title={game.title} src={game.cover} gif={game.gif} size={game.size} />
 	{/each}
 </div>
 

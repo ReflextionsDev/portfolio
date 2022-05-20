@@ -33,11 +33,14 @@
 			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
 			platform: "phone",
 			src: "https://tangerine-duckanoo-61afbc.netlify.app/",
-			size: "tall"
+			size: "big"
 		},
 		{
 			title: "Bouncy Balloons",
-			cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
+			// cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
+			// cover: "/assets/test.png",
+			cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
+			gif: "assets/previewgif.gif",
 			images: [
 				{
 					src: "/assets/games/bouncyballoons/bouncyballoons1.png",
@@ -55,7 +58,7 @@
 			desc: "Bouncy Balloons is a physics based puzzle game. It is part of a mobile web game suite I did in 2016. It features 20 levels with increasing mechanics and difficulty.",
 			platform: "phone",
 			src: "https://stupendous-cobbler-26964c.netlify.app/",
-			size: "wide"
+			size: "tall"
 		},
 		{
 			title: "Brix Builder",
