@@ -13,8 +13,9 @@ horizontal shutter in
 
 <div class="game {size}">
     <a href={`/games/${title.split(" ").join("").toLowerCase()}`}>
-        <img class="cover" {src} />
-        <img class="gif" src={gif} />
+        <img class="card" {src} alt={title} />
+        <img class="gif" src={gif} alt={title} />
+        <div class="cover"></div>
     </a>
 </div>
 
@@ -63,6 +64,22 @@ horizontal shutter in
 
     .game .gif:hover {
         opacity: 100;
-
     }
+
+    /* Current Blocking Gif */
+
+    .cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: black;
+        opacity: 0%;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    .cover:hover {
+        opacity: 30%;
+    }
+
 </style>
