@@ -4,7 +4,6 @@ Title and opacity fades in, mouse changes, hover animation too
 Change text color on hover too
 horizontal shutter in
  -->
- 
 <script>
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
@@ -21,24 +20,8 @@ horizontal shutter in
 
 <style>
     .game {
-        /* display: flex; */
         justify-content: center;
         align-items: center;
-    }
-
-    .game img {
-        /* width: 450px;
-        border-radius: 10px; */
-        /* margin: 10px; */
-        /* position: relative; */
-        max-width: 100%;
-        height: auto;
-        vertical-align: middle;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
     }
 
     .tall {
@@ -54,39 +37,32 @@ horizontal shutter in
         grid-row: span 2;
     }
 
-    .game :hover {
-        content: url("/assets/previewgif.gif");
-        max-width: 100%;
-        height: auto;
-        vertical-align: middle;
-        display: inline-block;
+    a {
+        position: relative;
+        display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-        opacity: 10;
     }
 
-    .cover {
-        /* opacity: 0; */
+    .game img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        display: inline-block;
+        object-fit: cover;
+        border-radius: 5px;
     }
 
     .game .gif {
-        /* background-size: cover; */
-        height: 253px;
-        width: auto;
         position: absolute;
+        left: 0;
         opacity: 0;
-        /* left: 0; */
+        transition: opacity 0.4s ease-in-out;
     }
 
     .game .gif:hover {
         opacity: 100;
-        /* position: absolute; */
-        /* left: 0; */
-        -webkit-transition: opacity 1s ease-in-out;
-        -moz-transition: opacity 0.3s ease-in-out;
-        -o-transition: opacity 0.3s ease-in-out;
-        transition: opacity 1s ease-in-out;
+
     }
 </style>
