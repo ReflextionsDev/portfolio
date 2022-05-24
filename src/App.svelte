@@ -16,7 +16,8 @@
 	const games = [
 		{
 			title: "Roadway Repair",
-			cover: "/assets/games/roadwayrepair/rrmenu.png",
+			cover: "/assets/games/roadwayrepair/roadwayCover.png",
+			gif: "/assets/games/roadwayrepair/roadway.gif",
 			images: [
 				{
 					src: "/assets/games/roadwayrepair/rrmenu.png",
@@ -41,7 +42,7 @@
 			// cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
 			// cover: "/assets/test.png",
 			cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
-			gif: "assets/games/bouncyballoons/bouncyballoons.gif",
+			gif: "assets/games/bouncyballoons/balloons.gif",
 			images: [
 				{
 					src: "/assets/games/bouncyballoons/bouncyballoons1.png",
@@ -63,7 +64,8 @@
 		},
 		{
 			title: "Brix Builder",
-			cover: "/assets/games/brixbuilder/brixbuilder1.png",
+			cover: "/assets/games/brixbuilder/brixCover.png",
+			gif: "/assets/games/brixbuilder/brix.gif",
 			images: [
 				{
 					src: "/assets/games/brixbuilder/brixbuilder1.png",
@@ -83,11 +85,10 @@
 			src: "https://deluxe-haupia-237473.netlify.app/",
 			size: "tall"
 		},
-		
-
 		{
 			title: "Rocket Runner",
-			cover: "/assets/games/rocketrunner/rocketrunner1.png",
+			cover: "/assets/games/rocketrunner/rocketCover.png",
+			gif: "/assets/games/rocketrunner/rocket.gif",
 			images: [
 				{
 					src: "/assets/games/rocketrunner/rocketrunner1.png",
