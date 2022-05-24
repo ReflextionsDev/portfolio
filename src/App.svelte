@@ -12,6 +12,7 @@
 	let game = {};
 	let gameProps = null;
 	// URLS are temporary, need to update with sitelock versions after domain registered
+	// Sizes are normal, tall, big, small, wide (unused)
 	const games = [
 		{
 			title: "Roadway Repair",
@@ -33,14 +34,14 @@
 			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
 			platform: "phone",
 			src: "https://tangerine-duckanoo-61afbc.netlify.app/",
-			size: "big"
+			size: "tall"
 		},
 		{
 			title: "Bouncy Balloons",
 			// cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
 			// cover: "/assets/test.png",
 			cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
-			gif: "assets/previewgif.gif",
+			gif: "assets/games/bouncyballoons/bouncyballoons.gif",
 			images: [
 				{
 					src: "/assets/games/bouncyballoons/bouncyballoons1.png",
@@ -80,7 +81,7 @@
 			desc: "Brix Builder is an arcade inspired stacking game. It is part of a mobile web game suite I did in 2016. It features 3 difficulties with 7 levels each.",
 			platform: "phone",
 			src: "https://deluxe-haupia-237473.netlify.app/",
-			size: "big"
+			size: "tall"
 		},
 		
 
@@ -104,17 +105,17 @@
 			desc: "Rocket Runner is an simple dodging game with unlockable skins and currency. It is part of a mobile web game suite I did in 2016.",
 			platform: "phone",
 			src: "https://deluxe-haupia-237473.netlify.app/",
-			size: "normal"
+			size: "tall"
 		},
-		{
-			title: "Game3",
-			cover: "/assets/games/cards/musklander1.png",
-			images: [],
-			desc: "loren ipsum laptop",
-			platform: "laptop",
-			src: "https://fr.wikipedia.org/wiki/Main_Page",
-			size: "normal"
-		},
+		// {
+		// 	title: "Game3",
+		// 	cover: "/assets/games/cards/musklander1.png",
+		// 	images: [],
+		// 	desc: "loren ipsum laptop",
+		// 	platform: "laptop",
+		// 	src: "https://fr.wikipedia.org/wiki/Main_Page",
+		// 	size: "normal"
+		// },
 		// {
 		// 	title: "Game4",
 		// 	cover: "/assets/games/cards/testgif.gif",

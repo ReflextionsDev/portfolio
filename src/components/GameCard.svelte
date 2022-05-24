@@ -1,9 +1,3 @@
-<!-- On hover:
-show gif, show platform icons (freelance, web, mobile, stuff, game jam, #gamejam #freelance ?) engines?
-Title and opacity fades in, mouse changes, hover animation too
-Change text color on hover too
-horizontal shutter in
- -->
 <script>
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
@@ -11,7 +5,7 @@ horizontal shutter in
     export let gif = "";
 </script>
 
-<div class="game {size}">
+<div class="game {size} hvr-pulse-grow">
     <a href={`/games/${title.split(" ").join("").toLowerCase()}`}>
         <img class="card  full" {src} alt={title} />
         <img class="gif full" src={gif} alt={title} />
@@ -21,7 +15,44 @@ horizontal shutter in
     </a>
 </div>
 
+<!-- Need cleanup -->
+<!-- Hover Effect by IanLunn, MIT License: https://github.com/IanLunn/Hover/blob/master/css/hover.css -->
 <style>
+    /* Pulse Grow */
+    @-webkit-keyframes hvr-pulse-grow {
+        to {
+            -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+        }
+    }
+    @keyframes hvr-pulse-grow {
+        to {
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+        }
+    }
+    .hvr-pulse-grow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+    .hvr-pulse-grow:hover,
+    .hvr-pulse-grow:focus,
+    .hvr-pulse-grow:active {
+        -webkit-animation-name: hvr-pulse-grow;
+        animation-name: hvr-pulse-grow;
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
     .game {
         justify-content: center;
         align-items: center;
@@ -75,6 +106,7 @@ horizontal shutter in
     .game:hover {
         box-shadow: 0px 0px 20px 1px black;
 
+        transition: all 0.3s ease-in-out;
     }
 
     .game .gif {
@@ -89,7 +121,7 @@ horizontal shutter in
     .cover {
         top: 0;
         background-color: black;
-        opacity: 0%; 
+        opacity: 0%;
     }
 
     .game:hover .cover {
