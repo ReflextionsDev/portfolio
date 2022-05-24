@@ -12,11 +12,12 @@ horizontal shutter in
 </script>
 
 <div class="game {size}">
-    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}>      
-        <img class="card" {src} alt={title} />
-        <img class="gif" src={gif} alt={title} />
-        <div class="cover"></div>
-        <div class="title">{title}</div>
+    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}>
+        <img class="card  full" {src} alt={title} />
+        <img class="gif full" src={gif} alt={title} />
+        <div class="cover full" />
+        <!-- <div class="title full">{title}</div> -->
+        <img class="icon" src="/assets/icons/fullscreen2.png" />
     </a>
 </div>
 
@@ -24,6 +25,8 @@ horizontal shutter in
     .game {
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        border-radius: 34px;
     }
 
     .tall {
@@ -39,28 +42,44 @@ horizontal shutter in
         grid-row: span 2;
     }
 
+    /* Relative used to allow links to be usable as absolute parent containers */
+
     a {
         position: relative;
-        display: block;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    a * {
+        transition: all 0.4s ease-in-out;
+    }
+
+    .full {
+        position: absolute;
+        max-width: 100%;
         width: 100%;
         height: 100%;
     }
 
     .game img {
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
         vertical-align: middle;
         display: inline-block;
         object-fit: cover;
-        border-radius: 5px;
+    }
+
+    .game {
+        transition: box-shadow 0.4s ease-in-out;
+    }
+
+    .game:hover {
+        box-shadow: 0px 0px 20px 1px black;
+
     }
 
     .game .gif {
-        position: absolute;
         left: 0;
         opacity: 0;
-        transition: opacity 0.4s ease-in-out;
     }
 
     .game:hover .gif {
@@ -68,17 +87,42 @@ horizontal shutter in
     }
 
     .cover {
-        width: 100%;
-        height: 100%;
-        position: absolute;
         top: 0;
         background-color: black;
-        opacity: 0%;
-        transition: opacity 0.4s ease-in-out;
+        opacity: 0%; 
     }
 
     .game:hover .cover {
-        opacity: 30%;
+        opacity: 20%;
+        /* vignette */
+        /* box-shadow: inset 0 0 20px black; */
     }
 
+    .title {
+        opacity: 0%;
+        color: white;
+        top: -150px;
+        text-shadow: 2px 2px #000000;
+        font-size: 3em;
+    }
+
+    .game:hover .title {
+        opacity: 70%;
+        top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon {
+        position: absolute;
+        bottom: -100px;
+        /* top: 0; */
+        /* opacity: 0; */
+    }
+
+    .game:hover .icon {
+        bottom: 2%;
+        opacity: 100%;
+        /* transition: all 0.2s ease-in-out; */
+    }
 </style>
