@@ -14,6 +14,7 @@
 	// URLS are temporary, need to update with sitelock versions after domain registered
 	// Sizes are normal, tall, big, small, wide (unused)
 	const games = [
+		// Roadway Repair
 		{
 			title: "Roadway Repair",
 			cover: "/assets/games/roadwayrepair/roadwayCover.png",
@@ -35,8 +36,9 @@
 			desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
 			platform: "phone",
 			src: "https://tangerine-duckanoo-61afbc.netlify.app/",
-			size: "tall"
+			size: "tall",
 		},
+		// Bouncy Balloons
 		{
 			title: "Bouncy Balloons",
 			// cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
@@ -60,8 +62,9 @@
 			desc: "Bouncy Balloons is a physics based puzzle game. It is part of a mobile web game suite I did in 2016. It features 20 levels with increasing mechanics and difficulty.",
 			platform: "phone",
 			src: "https://stupendous-cobbler-26964c.netlify.app/",
-			size: "tall"
+			size: "tall",
 		},
+		// Brix Builder
 		{
 			title: "Brix Builder",
 			cover: "/assets/games/brixbuilder/brixCover.png",
@@ -83,8 +86,9 @@
 			desc: "Brix Builder is an arcade inspired stacking game. It is part of a mobile web game suite I did in 2016. It features 3 difficulties with 7 levels each.",
 			platform: "phone",
 			src: "https://deluxe-haupia-237473.netlify.app/",
-			size: "tall"
+			size: "tall",
 		},
+		// Rocket Runner
 		{
 			title: "Rocket Runner",
 			cover: "/assets/games/rocketrunner/rocketCover.png",
@@ -106,25 +110,99 @@
 			desc: "Rocket Runner is an simple dodging game with unlockable skins and currency. It is part of a mobile web game suite I did in 2016.",
 			platform: "phone",
 			src: "https://deluxe-haupia-237473.netlify.app/",
-			size: "tall"
+			size: "tall",
 		},
-		// {
-		// 	title: "Game3",
-		// 	cover: "/assets/games/cards/musklander1.png",
-		// 	images: [],
-		// 	desc: "loren ipsum laptop",
-		// 	platform: "laptop",
-		// 	src: "https://fr.wikipedia.org/wiki/Main_Page",
-		// 	size: "normal"
-		// },
-		// {
-		// 	title: "Game4",
-		// 	cover: "/assets/games/cards/testgif.gif",
-		// 	images: [],
-		// 	desc: "loren ipsum laptop",
-		// 	platform: "laptop",
-		// 	src: "https://fr.wikipedia.org/wiki/Main_Page",
-		// },
+		// Voter Suppression
+		{
+			title: "The Voter Suppression Trail",
+			cover: "/assets/games/voter/voterCover.png",
+			gif: "/assets/games/voter/voter.gif",
+			images: [
+				{
+					src: "/assets/games/voter/voter1.png",
+					alt: "Voter Suppression Trail menu screen",
+				},
+				{
+					src: "/assets/games/voter/voter2.png",
+					alt: "Voter Suppression Trail screenshot (1)",
+				},
+				{
+					src: "/assets/games/voter/voter3.png",
+					alt: "Voter Suppression Trail screenshot (2)",
+				},
+				{
+					src: "/assets/games/voter/voter4.png",
+					alt: "Voter Suppression Trail screenshot (4)",
+				},
+				{
+					src: "/assets/games/voter/voter5.png",
+					alt: "Voter Suppression Trail screenshot (5)",
+				},
+			],
+			desc: "Voter Description",
+			platform: "laptop",
+			// Need to account for linked content
+			src: "https://deluxe-haupia-237473.netlify.app/",
+			size: "big",
+		},
+		// MTA Country
+		{
+			title: "MTA Country",
+			cover: "/assets/games/mta/mtaCover.png",
+			gif: "/assets/games/mta/mta.gif",
+			images: [
+				{
+					src: "/assets/games/mta/mta.png",
+					alt: "MTA Country menu screen",
+				},
+				{
+					src: "/assets/games/mta/mta2.png",
+					alt: "MTA Country screenshot (1)",
+				},
+				{
+					src: "/assets/games/mta/mta3.png",
+					alt: "MTA Country screenshot (2)",
+				},
+				{
+					src: "/assets/games/mta/mta4.png",
+					alt: "MTA Country screenshot (3)",
+				},
+			],
+			desc: "MTA description",
+			platform: "laptop",
+			// Need to account for linked content
+			src: "https://deluxe-haupia-237473.netlify.app/",
+			size: "small",
+		},
+		// Fantaknee Football
+		{
+			title: "Fantaknee Football",
+			cover: "/assets/games/fantaknee/fantakneeCover.png",
+			gif: "/assets/games/fantaknee/fantaknee.gif",
+			images: [
+				{
+					src: "/assets/games/fantaknee/fantaknee1.png",
+					alt: "Fantaknee Football menu screen",
+				},
+				{
+					src: "/assets/games/fantaknee/fantaknee2.png",
+					alt: "Fantaknee Football screenshot (1)",
+				},
+				{
+					src: "/assets/games/fantaknee/fantaknee3.png",
+					alt: "Fantaknee Football screenshot (2)",
+				},
+				{
+					src: "/assets/games/fantaknee/fantaknee4.png",
+					alt: "Fantaknee Football screenshot (3)",
+				},
+			],
+			desc: "fantaknee description",
+			platform: "laptop",
+			// Need to account for linked content
+			src: "https://deluxe-haupia-237473.netlify.app/",
+			size: "small",
+		},
 	];
 
 	// Routing

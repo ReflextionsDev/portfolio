@@ -13,3 +13,20 @@
 7. Make game grid masonry and add max-width
 8. Add hover gifs to game list
 9. Make games pop up as modules rather than new page
+
+# Mobile Games
+1. Bouncy Balloons
+2. Rocket Runner
+3. Roadway Repair
+4. Brix Builder
+
+# Freelance
+1. Voter
+2. MTA
+3. Fantaknee
+
+4. KCPS
+5. Tower Defense Project
+6. Chem Game?
+7. Nomzilla?
+8. Others
