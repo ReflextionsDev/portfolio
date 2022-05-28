@@ -13,6 +13,9 @@
 	let gameProps = null;
 	// URLS are temporary, need to update with sitelock versions after domain registered
 	// Sizes are normal, tall, big, small, wide (unused)
+	// Add freelance bool
+	// Add embedded bool (preview)
+	// Show year of production?
 	const games = [
 		// Roadway Repair
 		{
@@ -201,6 +204,68 @@
 			platform: "laptop",
 			// Need to account for linked content
 			src: "https://deluxe-haupia-237473.netlify.app/",
+			size: "small",
+		},
+		// KCPS
+		{
+			title: "Kitty Cat Poker Slots",
+			cover: "/assets/games/kcps/kcpsCover.png",
+			gif: "/assets/games/kcps/kcps.gif",
+			images: [
+				{
+					src: "/assets/games/kcps/kcps1.png",
+					alt: "Kitty Cat Poker Slots menu screen",
+				},
+				{
+					src: "/assets/games/kcps/kcps2.png",
+					alt: "Kitty Cat Poker Slots screenshot (1)",
+				},
+				{
+					src: "/assets/games/kcps/kcps3.png",
+					alt: "Kitty Cat Poker Slots screenshot (2)",
+				},
+				{
+					src: "/assets/games/kcps/kcps4.png",
+					alt: "Kitty Cat Poker Slots screenshot (3)",
+				},
+				{
+					src: "/assets/games/kcps/kcps5.png",
+					alt: "Kitty Cat Poker Slots screenshot (4)",
+				},
+				{
+					src: "/assets/games/kcps/kcps6.png",
+					alt: "Kitty Cat Poker Slots screenshot (5)",
+				},
+			],
+			desc: "kcps description, discus google play work and stuff, firebase accounts, etc",
+			platform: "phone",
+			// Need to account for linked content
+			src: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat",
+			size: "big",
+		},
+		// Tower Defense
+		{
+			title: "Tower Defense Prototype",
+			cover: "/assets/games/tower/towerCover.png",
+			gif: "/assets/games/tower/tower.gif",
+			images: [
+				{
+					src: "/assets/games/tower/tower1.png",
+					alt: "Tower Defense prototype menu screen",
+				},
+				{
+					src: "/assets/games/tower/tower2.png",
+					alt: "Tower Defense prototype screenshot (1)",
+				},
+				{
+					src: "/assets/games/tower/tower3.png",
+					alt: "Tower Defense prototype screenshot (2)",
+				},
+			],
+			desc: "tower description, discuss prototyping, client didn't go forward or something",
+			platform: "phone",
+			// Need to account for linked content
+			src: "",
 			size: "small",
 		},
 	];
