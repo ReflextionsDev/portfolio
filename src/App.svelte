@@ -329,6 +329,109 @@
 			src: "",
 			size: "small",
 		},
+		// RTR
+		{
+			date: "2013",
+			title: "Red Tie Runner",
+			cover: "/assets/games/rtr/rtrCover.png",
+			gif: "/assets/games/rtr/rtr.gif",
+			images: [
+				{
+					src: "/assets/games/rtr/ss1.png",
+					alt: "Red Tie Runner menu screen",
+				},
+				{
+					src: "/assets/games/rtr/ss2.png",
+					alt: "Red Tie Runner screenshot (1)",
+				},
+				{
+					src: "/assets/games/rtr/ss3.png",
+					alt: "Red Tie Runner screenshot (2)",
+				},
+				{
+					src: "/assets/games/rtr/ss4.png",
+					alt: "Red Tie Runner screenshot (4)",
+				},
+				{
+					src: "/assets/games/rtr/ss5.png",
+					alt: "Red Tie Runner screenshot (5)",
+				},
+				{
+					src: "/assets/games/rtr/ss6.png",
+					alt: "Red Tie Runner screenshot (6)",
+				},
+				{
+					src: "/assets/games/rtr/ss7.png",
+					alt: "Red Tie Runner screenshot (7)",
+				},
+			],
+			desc: "rtr description",
+			// Need to account for linked content
+			platform: "laptop",
+			src: "",
+			size: "big",
+		},
+		// Don't Fall
+		{
+			date: "2013",
+			title: "Don't Fall!",
+			cover: "/assets/games/dontfall/dfCover.png",
+			gif: "/assets/games/dontfall/df.gif",
+			images: [
+				{
+					src: "/assets/games/dontfall/df1.png",
+					alt: "Don't Fall! screenshot",
+				},
+				{
+					src: "/assets/games/dontfall/df2.png",
+					alt: "Don't Fall! screenshot",
+				},
+				{
+					src: "/assets/games/dontfall/df3.png",
+					alt: "Don't Fall! screenshot",
+				},
+			],
+			desc: "dontfall description",
+			// Need to account for linked content
+			platform: "laptop",
+			src: "",
+			size: "small",
+		},
+		//  Jet Attack
+		{
+			date: "2013",
+			title: "Jet Attack!",
+			desc: "jetattack description",
+			platform: "laptop",
+			src: "",
+			size: "small",
+			cover: "/assets/games/jetattack/jaCover3.png",
+			gif: "/assets/games/jetattack/ja.gif",
+			images: [
+				{
+					src: "/assets/games/jetattack/ss1.png",
+					alt: "Jet Attack! screenshot",
+				},
+				{
+					src: "/assets/games/jetattack/ss2.png",
+					alt: "Jet Attack! screenshot",
+				},
+				{
+					src: "/assets/games/jetattack/ss3.png",
+					alt: "Jet Attack! screenshot",
+				},
+				{
+					src: "/assets/games/jetattack/ss4.png",
+					alt: "Jet Attack! screenshot",
+				},
+			],
+		},
+		// Rocket Strike
+		// Sam
+		// Minos' Pond
+		// Gridlock Dash
+		// Protoshift
+		// Soul Grinder
 	];
 
 	// Routing
