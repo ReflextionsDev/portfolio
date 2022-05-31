@@ -245,6 +245,7 @@
 		},
 		// Tower Defense
 		{
+			date: "Aug 2019",
 			title: "Tower Defense Prototype",
 			cover: "/assets/games/tower/towerCover.png",
 			gif: "/assets/games/tower/tower.gif",
@@ -263,6 +264,66 @@
 				},
 			],
 			desc: "tower description, discuss prototyping, client didn't go forward or something",
+			platform: "phone",
+			// Need to account for linked content
+			src: "",
+			size: "small",
+		},
+		// Chem Game
+		{
+			date: "June 2017",
+			title: "Chemistry Hotspot Quiz",
+			cover: "/assets/games/chem/chemCover.png",
+			gif: "/assets/games/chem/chem.gif",
+			images: [
+				{
+					src: "/assets/games/chem/chem1.png",
+					alt: "Chemistry Hotspot Quiz menu screen",
+				},
+				{
+					src: "/assets/games/chem/chem2.png",
+					alt: "Chemistry Hotspot Quiz screenshot (1)",
+				},
+				{
+					src: "/assets/games/chem/chem3.png",
+					alt: "Chemistry Hotspot Quiz screenshot (2)",
+				},
+				{
+					src: "/assets/games/chem/chem4.png",
+					alt: "Chemistry Hotspot Quiz screenshot (3)",
+				},
+			],
+			desc: "chem description, discuss prototyping, client didn't go forward or something",
+			platform: "phone",
+			// Need to account for linked content
+			src: "",
+			size: "small",
+		},
+		// Nomzilla
+		{
+			date: "Dec 2016",
+			title: "Monster's Mayhem",
+			cover: "/assets/games/nom/nomCover.png",
+			gif: "/assets/games/nom/nom.gif",
+			images: [
+				{
+					src: "/assets/games/nom/nom1.png",
+					alt: "Monster's Mayhem menu screen",
+				},
+				{
+					src: "/assets/games/nom/nom2.png",
+					alt: "Monster's Mayhem screenshot (1)",
+				},
+				{
+					src: "/assets/games/nom/nom3.png",
+					alt: "Monster's Mayhem screenshot (2)",
+				},
+				{
+					src: "/assets/games/nom/nom4.png",
+					alt: "Monster's Mayhem screenshot (3)",
+				},
+			],
+			desc: "nom description, discuss prototyping, client didn't go forward or something",
 			platform: "phone",
 			// Need to account for linked content
 			src: "",
