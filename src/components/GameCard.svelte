@@ -73,6 +73,11 @@
         grid-row: span 2;
     }
 
+    .huge {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
     /* Relative used to allow links to be usable as absolute parent containers */
 
     a {
