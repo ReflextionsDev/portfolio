@@ -463,17 +463,21 @@
 			gif: "/assets/games/sam/sam.gif",
 			images: [
 				{
-					src: "/assets/games/sam/ss1.png",
+					src: "/assets/games/sam/1.png",
 					alt: "Sam screenshot",
 				},
 				{
-					src: "/assets/games/sam/ss2.png",
+					src: "/assets/games/sam/2.png",
 					alt: "Sam screenshot",
 				},
 				{
-					src: "/assets/games/sam/ss3.png",
+					src: "/assets/games/sam/3.png",
 					alt: "Sam screenshot",
 				},
+				{
+					src: "/assets/games/sam/4.png",
+					alt: "Sam screenshot",
+				}
 			],
 			desc: "sam description",
 			platform: "laptop",
