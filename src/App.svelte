@@ -518,8 +518,41 @@
 			size: "small",
 		},
 		// Gridlock Dash
+		{
+			date: "",
+			title: "Gridlock Dash",
+			cover: "/assets/games/gridlock/gdCover.png",
+			gif: "/assets/games/gridlock/gridlock.gif",
+			images: [
+				{
+					src: "/assets/games/gridlock/ss5.png",
+					alt: "gridlock screenshot",
+				},
+				{
+					src: "/assets/games/gridlock/ss1.png",
+					alt: "gridlock screenshot",
+				},
+				{
+					src: "/assets/games/gridlock/ss2.png",
+					alt: "gridlock screenshot",
+				},
+				{
+					src: "/assets/games/gridlock/ss4.png",
+					alt: "gridlock screenshot",
+				},
+				{
+					src: "/assets/games/gridlock/ss3.png",
+					alt: "gridlock screenshot",
+				},	
+			],
+			desc: "gridlock description",
+			platform: "laptop",
+			src: "",
+			size: "small",
+		},
 		// Protoshift
 		// Soul Grinder
+		// Adder
 	];
 
 	// Routing
