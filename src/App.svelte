@@ -17,6 +17,39 @@
 	// Add embedded bool (preview)
 	// Show year of production?
 	const games = [
+		// Protoshift
+		// Include Video
+		// https://steamdb.info/app/398070/
+		{
+			date: "Jan 2017",
+			title: "Protoshift",
+			cover: "/assets/games/protoshift/protoshiftcover.png",
+			gif: "/assets/games/protoshift/protoshift.gif",
+			images: [
+				{
+					src: "/assets/games/protoshift/1.png",
+					alt: "protoshift screenshot",
+				},
+				{
+					src: "/assets/games/protoshift/2.png",
+					alt: "protoshift screenshot",
+				},
+				{
+					src: "/assets/games/protoshift/3.png",
+					alt: "protoshift screenshot",
+				},
+				{
+					src: "/assets/games/protoshift/4.png",
+					alt: "protoshift screenshot",
+				}
+			],
+			desc: "protoshift description, mention steam, etc",
+			platform: "laptop",
+			src: "",
+			size: "big",
+		},
+		// Soul Grinder
+		// Adder
 		// Roadway Repair
 		{
 			title: "Roadway Repair",
@@ -550,9 +583,6 @@
 			src: "",
 			size: "small",
 		},
-		// Protoshift
-		// Soul Grinder
-		// Adder
 	];
 
 	// Routing
