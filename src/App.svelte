@@ -427,8 +427,59 @@
 			],
 		},
 		// Rocket Strike
-		
+		{
+			date: "",
+			title: "Rocket Strike!",
+			cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
+			gif: "/assets/games/rocketstrike/rocketstrike.gif",
+			images: [
+				{
+					src: "/assets/games/rocketstrike/ss1.png",
+					alt: "Rocket Strike! screenshot",
+				},
+				{
+					src: "/assets/games/rocketstrike/ss3.png",
+					alt: "Rocket Strike! screenshot",
+				},
+				{
+					src: "/assets/games/rocketstrike/ss4.png",
+					alt: "Rocket Strike! screenshot",
+				},
+				{
+					src: "/assets/games/rocketstrike/ss5.png",
+					alt: "Rocket Strike! screenshot",
+				},
+			],
+			desc: "rocketstrike description, released seperately as web with local multiplayer 1-4 and mobile",
+			platform: "laptop",
+			src: "",
+			size: "small",
+		},
 		// Sam
+		{
+			date: "",
+			title: "Sam",
+			cover: "/assets/games/sam/samCover.png",
+			gif: "/assets/games/sam/sam.gif",
+			images: [
+				{
+					src: "/assets/games/sam/ss1.png",
+					alt: "Sam screenshot",
+				},
+				{
+					src: "/assets/games/sam/ss2.png",
+					alt: "Sam screenshot",
+				},
+				{
+					src: "/assets/games/sam/ss3.png",
+					alt: "Sam screenshot",
+				},
+			],
+			desc: "sam description",
+			platform: "laptop",
+			src: "",
+			size: "small",
+		},
 		// Minos' Pond
 		// Gridlock Dash
 		// Protoshift
