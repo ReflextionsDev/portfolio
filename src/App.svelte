@@ -485,6 +485,38 @@
 			size: "small",
 		},
 		// Minos' Pond
+		{
+			date: "",
+			title: "Mino's Pond",
+			cover: "/assets/games/minos/minosCover.png",
+			gif: "/assets/games/minos/minos.gif",
+			images: [
+				{
+					src: "/assets/games/minos/ss1.png",
+					alt: "minos screenshot",
+				},
+				{
+					src: "/assets/games/minos/ss3.png",
+					alt: "minos screenshot",
+				},
+				{
+					src: "/assets/games/minos/ss4.png",
+					alt: "minos screenshot",
+				},
+				{
+					src: "/assets/games/minos/ss2.png",
+					alt: "minos screenshot",
+				},
+				{
+					src: "/assets/games/minos/ss5.gif",
+					alt: "minos screenshot",
+				}
+			],
+			desc: "minos description",
+			platform: "laptop",
+			src: "",
+			size: "small",
+		},
 		// Gridlock Dash
 		// Protoshift
 		// Soul Grinder
