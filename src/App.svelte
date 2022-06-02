@@ -20,6 +20,8 @@
 		// Protoshift
 		// Include Video
 		// https://steamdb.info/app/398070/
+		// https://web.archive.org/web/*/https://store.steampowered.com/app/398070
+		// https://steamcommunity.com/groups/Protoshift
 		{
 			date: "Jan 2017",
 			title: "Protoshift",
@@ -27,21 +29,26 @@
 			gif: "/assets/games/protoshift/protoshift.gif",
 			images: [
 				{
-					src: "/assets/games/protoshift/1.png",
+					src: "/assets/games/protoshift/card1BG.png",
 					alt: "protoshift screenshot",
 				},
 				{
-					src: "/assets/games/protoshift/2.png",
+					src: "/assets/games/protoshift/card2BG.png",
 					alt: "protoshift screenshot",
 				},
 				{
-					src: "/assets/games/protoshift/3.png",
+					src: "/assets/games/protoshift/card3BG.jpg",
 					alt: "protoshift screenshot",
 				},
 				{
-					src: "/assets/games/protoshift/4.png",
+					src: "/assets/games/protoshift/card4BG.jpg",
+					alt: "protoshift screenshot",
+				},
+				{
+					src: "/assets/games/protoshift/card6BG.jpg",
 					alt: "protoshift screenshot",
 				}
+				
 			],
 			desc: "protoshift description, mention steam, etc",
 			platform: "laptop",
@@ -49,6 +56,34 @@
 			size: "big",
 		},
 		// Soul Grinder
+		{
+			date: "",
+			title: "Soul Grinder",
+			cover: "/assets/games/soulgrinder/soulgrinderCover.png",
+			gif: "/assets/games/soulgrinder/soulgrinder.gif",
+			images: [
+				{
+					src: "/assets/games/soulgrinder/1.png",
+					alt: "soulgrinder screenshot",
+				},
+				{
+					src: "/assets/games/soulgrinder/2.png",
+					alt: "soulgrinder screenshot",
+				},
+				{
+					src: "/assets/games/soulgrinder/3.png",
+					alt: "soulgrinder screenshot",
+				},
+				{
+					src: "/assets/games/soulgrinder/4.png",
+					alt: "soulgrinder screenshot",
+				}
+			],
+			desc: "soulgrinder description",
+			platform: "laptop",
+			src: "",
+			size: "big",
+		},
 		// Adder
 		// Roadway Repair
 		{
