@@ -59,7 +59,7 @@
 		{
 			date: "",
 			title: "Soul Grinder",
-			cover: "/assets/games/soulgrinder/soulgrinderCover.png",
+			cover: "/assets/games/soulgrinder/cover.png",
 			gif: "/assets/games/soulgrinder/soulgrinder.gif",
 			images: [
 				{
@@ -79,7 +79,7 @@
 					alt: "soulgrinder screenshot",
 				}
 			],
-			desc: "soulgrinder description",
+			desc: "soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
 			platform: "laptop",
 			src: "",
 			size: "big",
