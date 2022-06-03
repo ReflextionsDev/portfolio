@@ -85,6 +85,34 @@
 			size: "big",
 		},
 		// Adder
+		{
+			date: "",
+			title: "Adder",
+			cover: "/assets/games/adder/cover.png",
+			gif: "/assets/games/adder/adder.gif",
+			images: [
+				{
+					src: "/assets/games/adder/1.png",
+					alt: "adder screenshot",
+				},
+				{
+					src: "/assets/games/adder/2.png",
+					alt: "adder screenshot",
+				},
+				{
+					src: "/assets/games/adder/3.png",
+					alt: "adder screenshot",
+				},
+				{
+					src: "/assets/games/adder/4.png",
+					alt: "adder screenshot",
+				}
+			],
+			desc: "adder description",
+			platform: "laptop",
+			src: "",
+			size: "big",
+		},
 		// Roadway Repair
 		{
 			title: "Roadway Repair",
