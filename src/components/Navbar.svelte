@@ -1,8 +1,9 @@
-<div class="navbar">
+<div class="navbar content">
     <div class="title"><h1>Nathan Bennett</h1></div>
 
     <div class="spacer" />
-
+    
+    <!-- why sub div links? -->
     <div class="links">
         <a href="/">
             <div class="link">Home</div>
@@ -18,12 +19,10 @@
 
 <style>
     .navbar {
-        background-color: rgb(255, 255, 255);
-        height: 10%;
+        height: 100%;
         display: flex;
         align-items: center;
-        box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
-        margin: 0px 0px 10px 0px;
+        position: sticky;
     }
 
     .title {
@@ -49,5 +48,5 @@
         text-decoration: none;
     }
 
- 
+
 </style>

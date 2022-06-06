@@ -47,8 +47,7 @@
 				{
 					src: "/assets/games/protoshift/card6BG.jpg",
 					alt: "protoshift screenshot",
-				}
-				
+				},
 			],
 			desc: "protoshift description, mention steam, etc",
 			platform: "laptop",
@@ -77,7 +76,7 @@
 				{
 					src: "/assets/games/soulgrinder/4.png",
 					alt: "soulgrinder screenshot",
-				}
+				},
 			],
 			desc: "soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
 			platform: "laptop",
@@ -91,22 +90,22 @@
 			cover: "/assets/games/adder/cover.png",
 			gif: "/assets/games/adder/adder.gif",
 			images: [
-				{
-					src: "/assets/games/adder/1.png",
-					alt: "adder screenshot",
-				},
-				{
-					src: "/assets/games/adder/2.png",
-					alt: "adder screenshot",
-				},
-				{
-					src: "/assets/games/adder/3.png",
-					alt: "adder screenshot",
-				},
-				{
-					src: "/assets/games/adder/4.png",
-					alt: "adder screenshot",
-				}
+				// {
+				// 	src: "/assets/games/adder/1.png",
+				// 	alt: "adder screenshot",
+				// },
+				// {
+				// 	src: "/assets/games/adder/2.png",
+				// 	alt: "adder screenshot",
+				// },
+				// {
+				// 	src: "/assets/games/adder/3.png",
+				// 	alt: "adder screenshot",
+				// },
+				// {
+				// 	src: "/assets/games/adder/4.png",
+				// 	alt: "adder screenshot",
+				// }
 			],
 			desc: "adder description",
 			platform: "laptop",
@@ -573,7 +572,7 @@
 				{
 					src: "/assets/games/sam/4.png",
 					alt: "Sam screenshot",
-				}
+				},
 			],
 			desc: "sam description",
 			platform: "laptop",
@@ -606,7 +605,7 @@
 				{
 					src: "/assets/games/minos/ss5.gif",
 					alt: "minos screenshot",
-				}
+				},
 			],
 			desc: "minos description",
 			platform: "laptop",
@@ -639,7 +638,7 @@
 				{
 					src: "/assets/games/gridlock/ss3.png",
 					alt: "gridlock screenshot",
-				},	
+				},
 			],
 			desc: "gridlock description",
 			platform: "laptop",
@@ -668,9 +667,9 @@
 	router.start();
 </script>
 
-<main>
-	<Navbar />
+<header><Navbar class="content" /></header>
 
+<main class="content">
 	{#if page === "home"}
 		<Home />
 	{:else if page === "games"}
@@ -685,10 +684,55 @@
 </main>
 
 <style>
+
+	header {
+		/* position: absolute; */
+		height: 6%;
+		position: sticky;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+
+		background-color: rgb(24 225 234 / 62%);
+        box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25)
+	}
+
+	header::before {
+		
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%); */
+        filter: blur(10px);
+        backdrop-filter: blur(8px);
+        /* margin: -20px; */
+    
+	}
+
+	
+
 	main {
 		text-align: center;
-		height: 100%;
+		/* height: auto; */
 		display: flex;
 		flex-direction: column;
+
+		margin: auto;
+		/* make a body prop */
+		/* min-width: 320px;
+		
+		width: max(60vw, 1200px); */
+
+		background-color: white;
+		
 	}
+
+
 </style>
