@@ -669,7 +669,7 @@
 
 <header><Navbar class="content" /></header>
 
-<main class="content">
+<main>
 	{#if page === "home"}
 		<Home />
 	{:else if page === "games"}
@@ -684,7 +684,6 @@
 </main>
 
 <style>
-
 	header {
 		/* position: absolute; */
 		height: 6%;
@@ -696,27 +695,23 @@
 		z-index: 1;
 
 		background-color: rgb(24 225 234 / 62%);
-        box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25)
+		box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
 	}
 
 	header::before {
-		
-        content: "";
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        /* box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%); */
-        filter: blur(10px);
-        backdrop-filter: blur(8px);
-        /* margin: -20px; */
-    
+		content: "";
+		position: absolute;
+		background: inherit;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		/* box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%); */
+		filter: blur(10px);
+		backdrop-filter: blur(8px);
+		/* margin: -20px; */
 	}
-
-	
 
 	main {
 		text-align: center;
@@ -731,8 +726,5 @@
 		width: max(60vw, 1200px); */
 
 		background-color: white;
-		
 	}
-
-
 </style>
