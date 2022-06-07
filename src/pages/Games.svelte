@@ -3,6 +3,8 @@
 	export let games;
 </script>
 
+<h1>HELLO THERE</h1>
+
 <div class="games">
 	{#each games as game}
 		<GameCard title={game.title} src={game.cover} gif={game.gif} size={game.size} />
