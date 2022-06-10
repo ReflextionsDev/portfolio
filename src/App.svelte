@@ -669,7 +669,7 @@
 
 <header><Navbar class="content" /></header>
 
-<main>
+<main class="content">
 	{#if page === "home"}
 		<Home />
 	{:else if page === "games"}
