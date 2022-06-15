@@ -86,12 +86,14 @@
     /* --- SKILLS --- */
 
     .skills {
+        /* margin-top: 100px; */
         /* padding: 50px 50px 200px 50px; */
-        background-color: #94e0e0;
+        background-color: #1a1a1a;
         position: relative;
         z-index: 1;
     }
 
+    /*  */
     .skills::before {
         content: "";
         width: 100%;

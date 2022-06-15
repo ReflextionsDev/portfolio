@@ -1,10 +1,12 @@
 <script>
+	import Info from './components/Info.svelte';
 	// Imports
 	import router from "page";
 	import Navbar from "./components/Navbar.svelte";
 	import Home from "./pages/Home.svelte";
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./pages/GameShowcase.svelte";
+	Info
 
 	// Variables
 	let url = "http://localhost:8080";
@@ -673,6 +675,7 @@
 	{#if page === "home"}
 		<Home />
 	{:else if page === "games"}
+	<Info />
 		<Games {games} />
 	{:else if page === "gameShowcase"}
 		{#if gameProps == null}
