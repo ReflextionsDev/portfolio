@@ -94,7 +94,7 @@
     }
 
     /*  */
-    .skills::before {
+    /* .skills::before {
         content: "";
         width: 100%;
         height: 14%;
@@ -106,7 +106,7 @@
         transform-origin: bottom left;
         transform: skewY(-3deg);
         -webkit-backface-visibility: hidden;
-    }
+    } */
 
     div img {
         width: 70%;

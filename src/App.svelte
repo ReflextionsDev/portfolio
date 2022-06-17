@@ -669,9 +669,9 @@
 	router.start();
 </script>
 
-<header><Navbar class="content" /></header>
+<!-- <header><Navbar class="content" /></header> -->
 
-<main class="content">
+<main>
 	{#if page === "home"}
 		<Home />
 	{:else if page === "games"}
