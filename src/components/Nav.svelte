@@ -11,6 +11,8 @@
     <div class="tabs__fill"></div>
 </div>
 
+<!-- Side shadows on hover, current tab could be higher too -->
+
 <style>
     .tabs__fill {
         content: "";
