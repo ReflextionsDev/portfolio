@@ -45,7 +45,9 @@
 <style>
     /* --- INFO --- */
 
-
+    .info--hidden {
+        
+    }
 
     .info__title {
         font-size: larger;

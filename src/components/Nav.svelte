@@ -1,3 +1,5 @@
+<!-- would like to rename things to nav -->
+
 <div class="tabs">
     <div class="tabs__bar">
         <div class="tab tab__web">
