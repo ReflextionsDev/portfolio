@@ -1,7 +1,10 @@
 <!-- would like to rename things to nav -->
+<script>
+    export let header = false;
+</script>
 
-<div class="tabs">
-    <div class="tabs__bar">
+<div class="tabs" class:header>
+    <div class="tabs__bar" class:header>
         <div class="tab tab__web">
             <div>WEB</div>
         </div>
@@ -10,16 +13,15 @@
             <div>GAMES</div>
         </div>
     </div>
-    <div class="tabs__fill"></div>
+    <div class="tabs__fill" class:header />
 </div>
 
 <!-- Side shadows on hover, current tab could be higher too -->
-
 <style>
     .tabs__fill {
         content: "";
         width: 100%;
-        height: 300%;
+        height: 600%;
         position: absolute;
         background-color: rgb(26 26 26);
         /* z-index: 1; */
@@ -27,8 +29,14 @@
         left: 0;
         transform-origin: bottom left;
         transform: skewY(-3deg);
+        /* Smooths angled edges */
+        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         overflow: hidden;
+    }
+
+    .tabs__fill.header {
+        display: none;
     }
 
     .tabs {
@@ -37,7 +45,10 @@
         height: 48px;
         margin-top: 6vw;
         position: relative;
-        transition: all 0.4s ease-in-out;
+    }
+
+    .tabs.header {
+        margin-top: 0;
     }
 
     .tabs__bar {
@@ -53,6 +64,12 @@
         transform: skewY(-3deg);
         -webkit-backface-visibility: hidden;
         /* overflow: hidden; */
+        
+        transition: all 0.4s ease-in-out;
+    }
+
+    .tabs__bar.header {
+        transform: none;
     }
 
     .tab {

@@ -1,90 +1,86 @@
+<!-- Scroll fix:
+    Content is hidden before scroll completes, so it jumps, needs to scroll then apply header stuff
+
+-->
 <script>
     import Info from "./../components/Info.svelte";
     import Nav from "./../components/Nav.svelte";
 
-    let headerMode = false;
-
-    function yeet() {
-        console.log("yo");
-    }
-
-    // Maybe this should be in splash component instead
+    let header = false;
 
     let scroll_PastSplash = false;
 
     let scroll_ThresholdElement = null;
     let scroll_ToElem = null;
-
     let elem_Splash = null;
 
-    // convert to svelte on: ?
-
-    // better way to do this?
+    // better way to do this? check svelte docs
     document.addEventListener("DOMContentLoaded", function () {
-        scroll_ThresholdElement = document.querySelector(".info__links");
+        // scroll_ThresholdElement = document.querySelector(".info__links");
+
+        scroll_ThresholdElement = document.querySelector(".info__title");
+
         scroll_ToElem = document.querySelector(".tabs");
         elem_Splash = document.querySelector(".splash");
+
+        // !!!! Will rename soon !!!!
+        // elem_nav = document.querySelector(".tabs")
     });
 
-    // needs to work to prevent firing a billion times
-
+    // start header mode
     function beforeSplash() {
         scroll_PastSplash = true;
         console.log("Trigger Header Mode");
+        console.log("YOU SCROLLED DOWN")
 
         scroll_ToElem.scrollIntoView({ behavior: "smooth" });
-        elem_Splash.classList.add("splash--header");
-        headerMode = !headerMode;
+        // elem_Splash.classList.add("splash--header");
+        // header = !header;
     }
 
+    // end header mode
     // this won't work when fixed
     function pastSplash() {
         scroll_PastSplash = false;
         console.log("Cancel Header Mode");
     }
 
-    window.onscroll = function () {
-        if (scroll_ThresholdElement.getBoundingClientRect().bottom <= 0) {
-            if (!scroll_PastSplash) {
-                beforeSplash();
-            }
-        } else {
-            if (scroll_PastSplash) {
-                pastSplash();
-            }
-        }
-    };
+    // can use svelte on:scroll
+    // window.onscroll = function () {
+    //     if (scroll_ThresholdElement.getBoundingClientRect().bottom <= 0) {
+    //         if (!scroll_PastSplash) {
+    //             beforeSplash();
+    //         }
+    //     } else {
+    //         if (scroll_PastSplash) {
+    //             pastSplash();
+    //         }
+    //     }
+    // };
+
+    function test(e) {
+        e.deltaY > 0
+            ?  beforeSplash()
+            
+            : console.log("YOU SCROLLED UP");
+    }
 </script>
 
-<!-- redesign:
-don't componetize tabs / navbar, make part of splash
-Wrap splash stuff in a content element or section that is handled, if scroll past content div then transform header -->
-
-<!-- do events based on content wrapper -->
-
-<!-- <div class="splash" class:splash--header={false}> -->
-<div class="splash">
+<!-- HTML -->
+<div class="splash" class:header on:wheel|preventDefault={(e) => test(e)}>
     <div class="splash__blur">
-        <!-- use js to display info -->
+        <!-- Wrapper for hiding splash content in header mode -->
+        <div class="splash__content" class:header>
+            <Info />
+        </div>
 
-        <Info />
-
-        <Nav />
+        <div class="splash__nav">
+            <Nav {header} />
+        </div>
     </div>
 </div>
 
 <style>
-    .splash--header {
-        position: fixed;
-        width: 100%;
-        z-index: 10;
-        color: rebeccapurple;
-    }
-
-    .splash__content {
-        display: none;
-    }
-
     .splash {
         background-image: url("/assets/backgrounds/purplebg.jpg");
         background-size: cover;
@@ -93,11 +89,11 @@ Wrap splash stuff in a content element or section that is handled, if scroll pas
         background-repeat: no-repeat;
     }
 
-    .splash--header {
+    .splash.header {
+        background-image: none;
         position: fixed;
         width: 100%;
         z-index: 10;
-        color: rebeccapurple;
     }
 
     .splash__blur {
@@ -105,5 +101,9 @@ Wrap splash stuff in a content element or section that is handled, if scroll pas
         height: inherit;
         backdrop-filter: blur(5px);
         background-color: rgb(27 46 132 / 54%);
+    }
+
+    .splash__content.header {
+        /* display: none; */
     }
 </style>
