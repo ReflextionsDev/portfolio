@@ -12,10 +12,14 @@
 
 <div>
     <Splash />
-    <Skills />
-    <Skills />
-    <Skills />
-    <Skills />
+
+    <div class="page">
+        <Skills />
+        <Skills />
+        <Skills />
+        <Skills />
+    </div>
+
 </div>
 
 <style>
