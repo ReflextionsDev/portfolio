@@ -4,6 +4,8 @@
     remove skew as soon as scroll applied
 -->
 <script>
+import { prevent_default } from "svelte/internal";
+
     import Info from "./../components/Info.svelte";
     import Nav from "./../components/Nav.svelte";
 
@@ -14,6 +16,18 @@
     let scroll_ThresholdElement = null;
     let scroll_ToElem = null;
     let elem_Splash = null;
+
+
+    // const elem = document.querySelector(".tabs__bar");
+
+    // const value1 = 0
+
+    // document.addEventListener('scroll', function(){
+    //     value1= -3 + window.scrollY/45
+    //     // elem.style.transform = "skewY(" + value1 + "deg)"
+    // }) 
+
+    // console.log('value1', value1)
 
     // better way to do this? check svelte docs
     document.addEventListener("DOMContentLoaded", function () {
@@ -64,21 +78,29 @@
         // console.log('bottom', Math.round(elem.getBoundingClientRect().bottom))
         // console.log('height', Math.round(elem.offsetHeight))
 
-        if (!header) {
-            if (
-                Math.round(elem.getBoundingClientRect().bottom - 2) <=
-                elem.offsetHeight
-            ) {
-                // functionalize me
-                console.log("YEET");
-                header = !header;
+        // if not in header mode
 
-                const page = document.querySelector('.page')
-                console.log(page)
-                page.scrollIntoView
-                window.scrollTo(0,0); 
-            }
-        }
+        // if (!header) {
+        //     if (
+        //         // Math.round(elem.getBoundingClientRect().bottom - 2) <=
+        //         // elem.offsetHeight
+
+
+        //         Math.round(elem.getBoundingClientRect().top) <= 0
+
+
+        //     ) {
+
+        //         // functionalize me
+        //         console.log("YEET");
+        //         header = !header;
+
+        //         const page = document.querySelector('.page')
+        //         console.log(page)
+        //         page.scrollIntoView
+        //         window.scrollTo(0,0); 
+        //     }
+        // }
     };
 
     // should prevent duplicate events too
@@ -89,10 +111,10 @@
 
 <!-- HTML -->
 <!-- Probably better to convert on:wheel to window events so I can prevent scrolling all across page -->
+<!-- on:wheel|preventDefault={(e) => handleScroll(e)} -->
 <div
     class="splash"
     class:header
-    on:wheel|preventDefault={(e) => handleScroll(e)}
 >
     <div class="splash__blur">
         <!-- Wrapper for hiding splash content in header mode -->
@@ -107,6 +129,11 @@
 </div>
 
 <style>
+
+    .page {
+        padding-top: 500px;
+    }
+
     .splash {
         background-image: url("/assets/backgrounds/purplebg.jpg");
         background-size: cover;
@@ -131,5 +158,9 @@
 
     .splash__content.header {
         display: none;
+    }
+
+    .splash__content { 
+                      padding-bottom: 6vw;
     }
 </style>
