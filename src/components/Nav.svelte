@@ -7,8 +7,8 @@
 
     // Recalculate skew angle on scroll
     function NavScroll() {
-        
-        // Scroll angle is determined by scroll progress of splash content 
+
+        // Scroll angle is determined by scroll progress of splash content
         const elem = document.querySelector(".splash__content");
         let distScrolled = Math.abs(elem.getBoundingClientRect().top);
         let elemHeight = elem.offsetHeight;
@@ -34,18 +34,33 @@
             <div>GAMES</div>
         </div>
     </div>
-    <div class="tabs__fill" class:header style="--skewAngle: {skewAngle};" />
+    <div class="tabs__fill-clip">
+        <div
+            class="tabs__fill"
+            class:header
+            style="--skewAngle: {skewAngle};"
+        />
+    </div>
 </div>
 
 <!-- Side shadows on hover, current tab could be higher too -->
 <style>
+    .tabs__fill-clip {
+        width: 100%;
+        height: 600%;
+        overflow: hidden;
+        position: relative;
+        bottom: 500%;
+    }
+
     .tabs__fill {
         content: "";
         width: 100%;
         height: 600%;
         position: absolute;
         background-color: rgb(26 26 26);
-        top: 48px;
+        /* top: 48px; */
+        top: 100%;
         left: 0;
         transform-origin: bottom left;
         transform: skewY(var(--skewAngle));

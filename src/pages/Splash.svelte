@@ -19,12 +19,8 @@
 </div>
 
 <style>
-    .page {
-        padding-top: 500px;
-    }
 
     .splash {
-        position: relative;
         background-image: url("/assets/backgrounds/purplebg.jpg");
         background-size: cover;
         background-attachment: fixed;
