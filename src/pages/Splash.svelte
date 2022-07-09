@@ -3,8 +3,14 @@
     Content jump is fixed, but need to add margin to page now...
     remove skew as soon as scroll applied
 -->
+
+<!-- on:wheel|preventDefault={(e) => handleScroll(e)} -->
+
+<svelte:window on:scroll={e => 
+console.log("yoee")}/>
+
 <script>
-import { prevent_default } from "svelte/internal";
+    import { prevent_default } from "svelte/internal";
 
     import Info from "./../components/Info.svelte";
     import Nav from "./../components/Nav.svelte";
@@ -17,6 +23,8 @@ import { prevent_default } from "svelte/internal";
     let scroll_ToElem = null;
     let elem_Splash = null;
 
+    
+
 
     // const elem = document.querySelector(".tabs__bar");
 
@@ -25,7 +33,7 @@ import { prevent_default } from "svelte/internal";
     // document.addEventListener('scroll', function(){
     //     value1= -3 + window.scrollY/45
     //     // elem.style.transform = "skewY(" + value1 + "deg)"
-    // }) 
+    // })
 
     // console.log('value1', value1)
 
@@ -33,7 +41,7 @@ import { prevent_default } from "svelte/internal";
     document.addEventListener("DOMContentLoaded", function () {
         // scroll_ThresholdElement = document.querySelector(".info__links");
 
-        scroll_ThresholdElement = document.querySelector(".info__title");
+        scroll_ThresholdElement = document.querySelector(".splash__content");
 
         scroll_ToElem = document.querySelector(".tabs");
         elem_Splash = document.querySelector(".splash");
@@ -48,9 +56,9 @@ import { prevent_default } from "svelte/internal";
         console.log("Trigger Header Mode");
         console.log("YOU SCROLLED DOWN");
 
-        scroll_ToElem.scrollIntoView({ behavior: "smooth" });
+        // scroll_ToElem.scrollIntoView({ behavior: "smooth" });
         // elem_Splash.classList.add("splash--header");
-        // header = !header;
+        header = !header;
     }
 
     // end header mode
@@ -62,6 +70,9 @@ import { prevent_default } from "svelte/internal";
 
     // can use svelte on:scroll
     window.onscroll = function () {
+
+        console.log('hi')
+
         // if (scroll_ThresholdElement.getBoundingClientRect().bottom <= 0) {
         //     if (!scroll_PastSplash) {
         //         beforeSplash();
@@ -71,6 +82,8 @@ import { prevent_default } from "svelte/internal";
         //         pastSplash();
         //     }
         // }
+
+        console.log(scroll_ThresholdElement.getBoundingClientRect().bottom);
 
         // will also rename
         const elem = document.querySelector(".tabs__bar");
@@ -85,9 +98,7 @@ import { prevent_default } from "svelte/internal";
         //         // Math.round(elem.getBoundingClientRect().bottom - 2) <=
         //         // elem.offsetHeight
 
-
         //         Math.round(elem.getBoundingClientRect().top) <= 0
-
 
         //     ) {
 
@@ -98,7 +109,7 @@ import { prevent_default } from "svelte/internal";
         //         const page = document.querySelector('.page')
         //         console.log(page)
         //         page.scrollIntoView
-        //         window.scrollTo(0,0); 
+        //         window.scrollTo(0,0);
         //     }
         // }
     };
@@ -112,10 +123,11 @@ import { prevent_default } from "svelte/internal";
 <!-- HTML -->
 <!-- Probably better to convert on:wheel to window events so I can prevent scrolling all across page -->
 <!-- on:wheel|preventDefault={(e) => handleScroll(e)} -->
-<div
-    class="splash"
-    class:header
->
+
+
+
+
+<div class="splash" class:header>
     <div class="splash__blur">
         <!-- Wrapper for hiding splash content in header mode -->
         <div class="splash__content" class:header>
@@ -129,12 +141,12 @@ import { prevent_default } from "svelte/internal";
 </div>
 
 <style>
-
     .page {
         padding-top: 500px;
     }
 
     .splash {
+        position: relative;
         background-image: url("/assets/backgrounds/purplebg.jpg");
         background-size: cover;
         background-attachment: fixed;
@@ -143,7 +155,8 @@ import { prevent_default } from "svelte/internal";
     }
 
     .splash.header {
-        background-image: none;
+        /* background-image: none; */
+        opacity: 50%;
         position: fixed;
         width: 100%;
         z-index: 10;
@@ -160,7 +173,7 @@ import { prevent_default } from "svelte/internal";
         display: none;
     }
 
-    .splash__content { 
-                      padding-bottom: 6vw;
+    .splash__content {
+        padding-bottom: 6vw;
     }
 </style>

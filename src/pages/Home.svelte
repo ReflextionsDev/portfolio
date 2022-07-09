@@ -4,6 +4,8 @@
     import Info from "./../components/Info.svelte";
     import Nav from "../components/Nav.svelte";
     import Games from "./Games.svelte";
+
+    
 </script>
 
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
@@ -12,6 +14,8 @@
 
 <div>
     <Splash />
+
+ 
 
     <div class="page">
         <Skills />
