@@ -86,7 +86,7 @@
     /* --- SKILLS --- */
 
     .skills {
-        /* margin-top: 100px; */
+        padding-top: 50px;
         /* padding: 50px 50px 200px 50px; */
         background-color: #1a1a1a;
         position: relative;

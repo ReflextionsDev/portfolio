@@ -3,12 +3,24 @@
     import Nav from "./../components/Nav.svelte";
 
     let header = false;
+    let contentHeight;
+
+
+
+    console.log(contentHeight)
+    let splashTop = ''
+
+
+    $: splashTop =  -contentHeight + 'px'
+
 </script>
 
-<div class="splash" class:header>
+
+
+<div class="splash" class:header style="--splashTop: {splashTop};">
     <div class="splash__blur">
         <!-- Wrapper for hiding splash content in header mode -->
-        <div class="splash__content" class:header>
+        <div class="splash__content" class:header bind:offsetHeight={contentHeight}>
             <Info />
         </div>
 
@@ -19,8 +31,11 @@
 </div>
 
 <style>
-
     .splash {
+        position: sticky;
+        top: var(--splashTop);
+        z-index: 100;
+
         background-image: url("/assets/backgrounds/purplebg.jpg");
         background-size: cover;
         background-attachment: fixed;
