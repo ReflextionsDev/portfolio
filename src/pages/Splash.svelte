@@ -3,24 +3,21 @@
     import Nav from "./../components/Nav.svelte";
 
     let header = false;
+
+    // Responsive variables to set splash top to the bottom of content: so sticky position can be used
     let contentHeight;
-
-
-
-    console.log(contentHeight)
-    let splashTop = ''
-
-
-    $: splashTop =  -contentHeight + 'px'
-
+    let splashTop = "";
+    $: splashTop = -contentHeight + "px";
 </script>
-
-
 
 <div class="splash" class:header style="--splashTop: {splashTop};">
     <div class="splash__blur">
         <!-- Wrapper for hiding splash content in header mode -->
-        <div class="splash__content" class:header bind:offsetHeight={contentHeight}>
+        <div
+            class="splash__content"
+            class:header
+            bind:offsetHeight={contentHeight}
+        >
             <Info />
         </div>
 
@@ -35,7 +32,17 @@
         position: sticky;
         top: var(--splashTop);
         z-index: 100;
+    }
 
+    .splash::before {
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        content: "";
+        position: absolute;
+        width: auto;
+        height: inherit;
         background-image: url("/assets/backgrounds/purplebg.jpg");
         background-size: cover;
         background-attachment: fixed;
