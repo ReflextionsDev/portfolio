@@ -34,6 +34,10 @@
 </script>
 
 <div class="skills">
+
+    <br/>
+    <br/>
+    <br/>
     <h1>Skills</h1>
 
     <h2>Front-End</h2>

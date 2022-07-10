@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
     import Info from "./../components/Info.svelte";
     import Nav from "./../components/Nav.svelte";
 
@@ -8,21 +10,60 @@
     let contentHeight;
     let splashTop = "";
     $: splashTop = -contentHeight + "px";
+
+    let elem;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        elem = document.querySelector(".splash__nav");
+        console.log(elem);
+    });
+
+    function updateNav() {
+        console.log("test", Math.floor(elem.getBoundingClientRect().top));
+
+        const navTop = Math.floor(elem.getBoundingClientRect().top);
+
+        navTop <= 0 ? (header = true) : (header = false);
+
+        console.log("header", header);
+    }
 </script>
+
+<svelte:window
+    on:scroll={(e) => {
+        updateNav();
+    }}
+/>
 
 <div class="splash" class:header style="--splashTop: {splashTop};">
     <div class="splash__blur">
+
+
+      
+        
+
         <!-- Wrapper for hiding splash content in header mode -->
-        <div
-            class="splash__content"
-            class:header
-            bind:offsetHeight={contentHeight}
-        >
+        <div class="splash__content" bind:offsetHeight={contentHeight}>
+            <br/>
+            <br/>
+            <br/>
+        
+
+            
             <Info />
+
+            <br/>
+            <br/>
+            <br/>
+        
+        
         </div>
 
+     
+
+
         <div class="splash__nav">
-            <Nav {header} />
+            <Nav />
         </div>
     </div>
 </div>
@@ -50,12 +91,8 @@
         background-repeat: no-repeat;
     }
 
-    .splash.header {
-        /* background-image: none; */
+    .splash.header::before {
         opacity: 50%;
-        position: fixed;
-        width: 100%;
-        z-index: 10;
     }
 
     .splash__blur {
@@ -63,10 +100,6 @@
         height: inherit;
         backdrop-filter: blur(5px);
         background-color: rgb(27 46 132 / 54%);
-    }
-
-    .splash__content.header {
-        display: none;
     }
 
     .splash__content {

@@ -1,5 +1,5 @@
 <script>
-    export let header = false;
+  
 
     // Dynamic variable used to change navbar skew as the user scrolls down
     const skewBase = -5;
@@ -24,8 +24,8 @@
 
 <svelte:window on:scroll={() => NavScroll()} />
 
-<div class="tabs" class:header>
-    <div class="tabs__bar" class:header style="--skewAngle: {skewAngle};">
+<div class="tabs">
+    <div class="tabs__bar" style="--skewAngle: {skewAngle};">
         <div class="tab tab__web">
             <div>WEB</div>
         </div>
@@ -35,11 +35,7 @@
         </div>
     </div>
     <div class="tabs__fill-clip">
-        <div
-            class="tabs__fill"
-            class:header
-            style="--skewAngle: {skewAngle};"
-        />
+        <div class="tabs__fill" style="--skewAngle: {skewAngle};" />
     </div>
 </div>
 
@@ -71,17 +67,9 @@
         overflow: hidden;
     }
 
-    .tabs__fill.header {
-        display: none;
-    }
-
     .tabs {
         height: 48px;
         position: relative;
-    }
-
-    .tabs.header {
-        margin-top: 0;
     }
 
     .tabs__bar {
@@ -97,10 +85,6 @@
         /* Smooths angled edges */
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-    }
-
-    .tabs__bar.header {
-        transform: none;
     }
 
     .tab {
