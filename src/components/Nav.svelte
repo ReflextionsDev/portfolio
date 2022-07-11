@@ -47,7 +47,7 @@
         overflow: hidden;
         position: relative;
         bottom: 500%;
-        z-index: -1;
+        /* z-index: -1; */
     }
 
     .tabs__fill {

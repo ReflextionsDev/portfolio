@@ -1,31 +1,48 @@
 <script>
+	import Projects from './Projects.svelte';
     import Splash from "./Splash.svelte";
-    import Skills from "./../components/Skills.svelte";
+    import Skills from "./Skills.svelte";
     import Info from "./../components/Info.svelte";
     import Nav from "../components/Nav.svelte";
     import Games from "./Games.svelte";
 
-    
 </script>
 
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
 <!-- Could move about section to below projects w/ resume -->
-<!-- Pass in background color as var -->
+<!-- Pass in background color as var, and skew, make theme object -->
+<!-- Nav bar should scroll to top of page -->
 
-<div>
+<!-- Make component w/ angled top, and one without, or make it a boolean of a section component -->
+
+<div class="wrapper">
     <Splash />
     
 
- 
+
+    <!-- Will do routing here -->
 
     <div class="page">
         <Skills />
+        <Projects />
+        
         <Skills />
-        <Skills />
+              
         <Skills />
     </div>
 
 </div>
 
 <style>
+    /* Duplicate bg so when splash goes into header, user doesn't see page background */
+    .wrapper {
+        width: auto;
+        height: inherit;
+        background-image: url("/assets/backgrounds/purplebg.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
 </style>

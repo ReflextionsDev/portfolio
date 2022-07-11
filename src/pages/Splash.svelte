@@ -13,6 +13,8 @@
 
     let elem;
 
+    // Convert to svelte... onMount and stuff
+
     document.addEventListener("DOMContentLoaded", function () {
         elem = document.querySelector(".splash__nav");
         console.log(elem);
@@ -36,9 +38,9 @@
 />
 
 <div class="splash" class:header style="--splashTop: {splashTop};">
-    <div class="splash__blur">
+    <div class="splash__blur" class:header>
 
-
+  
       
         
 
@@ -73,9 +75,15 @@
         position: sticky;
         top: var(--splashTop);
         z-index: 100;
+        
+    }
+
+    .splash::after {
+        background-color: rgb(27 46 132 / 54%);
     }
 
     .splash::before {
+        z-index: -2;
         top: 0px;
         right: 0px;
         bottom: 0px;
@@ -84,7 +92,7 @@
         position: absolute;
         width: auto;
         height: inherit;
-        background-image: url("/assets/backgrounds/purplebg.jpg");
+        background-image: url("/assets/backgrounds/purplebgblur.jpg");
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
@@ -95,11 +103,17 @@
         opacity: 50%;
     }
 
+
+
     .splash__blur {
         width: auto;
         height: inherit;
-        backdrop-filter: blur(5px);
+        /* backdrop-filter: blur(3px); */
         background-color: rgb(27 46 132 / 54%);
+    }
+
+    .splash__blur.header {
+         backdrop-filter: blur(3px);
     }
 
     .splash__content {
