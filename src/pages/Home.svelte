@@ -28,6 +28,7 @@
         
         <Skills />
               
+        <Projects />
         <Skills />
     </div>
 

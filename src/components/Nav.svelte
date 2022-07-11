@@ -73,6 +73,7 @@
     }
 
     .tabs__bar {
+        z-index: 1;
         content: "";
         width: 100%;
         height: 100%;
@@ -114,7 +115,7 @@
     }
 
     .tab__games {
-        z-index: 1;
+        /* z-index: 1; */
         background-color: rgb(53, 129, 186);
         position: absolute;
         width: 10%;

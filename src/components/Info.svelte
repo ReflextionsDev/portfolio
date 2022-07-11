@@ -64,9 +64,11 @@
         align-items: center;
         justify-content: center;
         gap: 10%;
+     
     }
 
     .info__link {
+        z-index: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -74,7 +76,7 @@
         font-size: larger;
         border-radius: 8px;
         padding: 0px 15px;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.1s ease-out;
     }
 
     .info__link:hover {
