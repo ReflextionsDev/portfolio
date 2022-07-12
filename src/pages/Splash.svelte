@@ -7,6 +7,7 @@
 
     import { theme } from '../stores.js'
  
+    let maskColor = theme.bgMasks.blue
 
     // Responsive variables to set splash top to the bottom of content: so sticky position can be used
     let contentHeight;
@@ -35,7 +36,7 @@
 />
 
 <div class="splash" class:header style="--splashTop: {splashTop};">
-    <div class="splash__blur" class:header>
+    <div class="splash__blur" class:header style="--maskColor: {maskColor};">
         <!-- Wrapper for hiding splash content in header mode -->
         <div class="splash__content" bind:offsetHeight={contentHeight} >
             <br />
@@ -89,7 +90,8 @@
     .splash__blur {
         width: auto;
         height: inherit;
-        background-color: rgb(27 46 132 / 54%);
+        /* background-color: rgb(27 46 132 / 54%); */
+        background-color: var(--maskColor);
     }
 
     .splash__blur.header {
