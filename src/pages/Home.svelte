@@ -1,10 +1,21 @@
 <script>
-	import Projects from './Projects.svelte';
+    import Section from "./../components/Section.svelte";
+    import Projects from "./Projects.svelte";
     import Splash from "./Splash.svelte";
     import Skills from "./Skills.svelte";
     import Info from "./../components/Info.svelte";
     import Nav from "../components/Nav.svelte";
     import Games from "./Games.svelte";
+
+    let theme = {
+        bgColors: {
+            primary: "#4b2284",
+        },
+    };
+
+
+    const skewAngle = -5;
+
 
 </script>
 
@@ -17,21 +28,37 @@
 
 <div class="wrapper">
     <Splash />
+
+    <Section top={true} bottom={false} bg="{theme.bgColors.primary}" >
+
+        <Info/>
+
+    </Section>
+
+    <Projects />
+
+   
+    <Section top={true} bottom={true} bg="{theme.bgColors.primary}" >
+
+        <Info/>
+
+    </Section>
+
     
 
+    <Projects />
 
     <!-- Will do routing here -->
 
     <div class="page">
         <Skills />
         <Projects />
-        
+
         <Skills />
-              
+
         <Projects />
         <Skills />
     </div>
-
 </div>
 
 <style>
@@ -45,5 +72,4 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-
 </style>

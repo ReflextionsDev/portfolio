@@ -21,13 +21,13 @@
     });
 
     function updateNav() {
-        console.log("test", Math.floor(elem.getBoundingClientRect().top));
+        // console.log("test", Math.floor(elem.getBoundingClientRect().top));
 
         const navTop = Math.floor(elem.getBoundingClientRect().top);
 
         navTop <= 0 ? (header = true) : (header = false);
 
-        console.log("header", header);
+        // console.log("header", header);
     }
 </script>
 

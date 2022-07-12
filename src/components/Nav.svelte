@@ -2,7 +2,7 @@
   
 
     // Dynamic variable used to change navbar skew as the user scrolls down
-    const skewBase = -5;
+    export let skewBase = -5
     let skewAngle = skewBase + "deg";
 
     // Recalculate skew angle on scroll

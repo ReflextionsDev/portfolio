@@ -13,3 +13,5 @@
   - Fill not displaying
   - Background blue mask not showing
 - Pre-blur background instead
+
+Wayback links to old sites
