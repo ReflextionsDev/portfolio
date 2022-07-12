@@ -6,6 +6,9 @@
     let skewBase = theme.skewAngle
     let skewAngle = skewBase + "deg";
 
+    let fillColor = theme.bgColors.primary
+
+
     // Recalculate skew angle on scroll
     function NavScroll() {
 
@@ -36,7 +39,7 @@
         </div>
     </div>
     <div class="tabs__fill-clip">
-        <div class="tabs__fill" style="--skewAngle: {skewAngle};" />
+        <div class="tabs__fill" style="--skewAngle: {skewAngle}; --fillColor: {fillColor}" />
     </div>
 </div>
 
@@ -56,7 +59,8 @@
         width: 100%;
         height: 600%;
         position: absolute;
-        background-color: rgb(26 26 26);
+        /* background-color: rgb(26 26 26); */
+        background-color: var(--fillColor);
         /* top: 48px; */
         top: 100%;
         left: 0;

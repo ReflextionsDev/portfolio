@@ -1,10 +1,12 @@
+<!-- COMMENT ME -->
 <script>
-    import { onMount } from "svelte";
-
     import Info from "./../components/Info.svelte";
     import Nav from "./../components/Nav.svelte";
 
     let header = false;
+
+    import { theme } from '../stores.js'
+ 
 
     // Responsive variables to set splash top to the bottom of content: so sticky position can be used
     let contentHeight;
@@ -21,13 +23,8 @@
     });
 
     function updateNav() {
-        // console.log("test", Math.floor(elem.getBoundingClientRect().top));
-
         const navTop = Math.floor(elem.getBoundingClientRect().top);
-
         navTop <= 0 ? (header = true) : (header = false);
-
-        // console.log("header", header);
     }
 </script>
 
@@ -39,30 +36,16 @@
 
 <div class="splash" class:header style="--splashTop: {splashTop};">
     <div class="splash__blur" class:header>
-
-  
-      
-        
-
         <!-- Wrapper for hiding splash content in header mode -->
-        <div class="splash__content" bind:offsetHeight={contentHeight}>
-            <br/>
-            <br/>
-            <br/>
-        
-
-            
+        <div class="splash__content" bind:offsetHeight={contentHeight} >
+            <br />
+            <br />
+            <br />
             <Info />
-
-            <br/>
-            <br/>
-            <br/>
-        
-        
+            <br />
+            <br />
+            <br />
         </div>
-
-     
-
 
         <div class="splash__nav">
             <Nav />
@@ -71,15 +54,11 @@
 </div>
 
 <style>
+    /*  */
     .splash {
         position: sticky;
         top: var(--splashTop);
         z-index: 100;
-        
-    }
-
-    .splash::after {
-        background-color: rgb(27 46 132 / 54%);
     }
 
     .splash::before {
@@ -99,21 +78,22 @@
         background-repeat: no-repeat;
     }
 
+    /* .splash::after {
+        background-color: rgb(27 46 132 / 54%);
+    } */
+
     .splash.header::before {
         opacity: 50%;
     }
 
-
-
     .splash__blur {
         width: auto;
         height: inherit;
-        /* backdrop-filter: blur(3px); */
         background-color: rgb(27 46 132 / 54%);
     }
 
     .splash__blur.header {
-         backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
     }
 
     .splash__content {

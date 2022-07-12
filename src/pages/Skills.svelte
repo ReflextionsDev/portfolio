@@ -90,11 +90,11 @@
     /* --- SKILLS --- */
 
     .skills {
-        padding-top: 50px;
+        /* padding-top: 50px; */
         /* padding: 50px 50px 200px 50px; */
-        background-color: #1a1a1a;
-        position: relative;
-        z-index: 1;
+        /* background-color: #1a1a1a; */
+        /* position: relative; */
+        /* z-index: 1; */
     }
 
     /*  */

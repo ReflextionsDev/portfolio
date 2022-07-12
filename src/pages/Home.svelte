@@ -25,7 +25,7 @@
 <div class="wrapper">
     <Splash />
 
-    <Section top={true} bottom={false} bg="{theme.bgColors.primary}" >
+    <Section top={true} bottom={true} bg="{theme.bgColors.primary}" >
 
         <Info/>
 
@@ -62,7 +62,7 @@
     .wrapper {
         width: auto;
         height: inherit;
-        background-image: url("/assets/backgrounds/purplebg.jpg");
+        background-image: url("/assets/backgrounds/purplebgblur.jpg");
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
