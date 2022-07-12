@@ -1,8 +1,9 @@
 <script>
   
+    import { theme } from '../stores.js'
 
     // Dynamic variable used to change navbar skew as the user scrolls down
-    export let skewBase = -5
+    let skewBase = theme.skewAngle
     let skewAngle = skewBase + "deg";
 
     // Recalculate skew angle on scroll

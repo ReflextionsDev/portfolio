@@ -7,12 +7,8 @@
     import Nav from "../components/Nav.svelte";
     import Games from "./Games.svelte";
 
-    let theme = {
-        bgColors: {
-            primary: "#4b2284",
-        },
-    };
 
+    import { theme } from '../stores.js'
 
     const skewAngle = -5;
 

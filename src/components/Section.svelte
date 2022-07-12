@@ -5,13 +5,20 @@
     - SkewAngle
  -->
 <script>
-    export let top = false,
-        bottom,
-        bg;
-    console.log("top", top);
+    import { theme } from "../stores.js";
+    export let top, bottom, bg;
+
+    let { skewAngle } = theme;
 </script>
 
-<div class="section" class:top class:bottom style="--backgroundColor: {bg}">
+<div
+    class="section"
+    class:top
+    class:bottom
+    style="
+        --backgroundColor: {bg};
+        --skewAngle: {skewAngle + 'deg'};"
+>
     <div class="slot">
         <slot />
     </div>
@@ -39,15 +46,14 @@
         left: 0;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        transform: skewY(var(--skewAngle));
     }
 
     .top::before {
         transform-origin: bottom left;
-        transform: skewY(-3deg);
     }
 
     .bottom::after {
         transform-origin: bottom right;
-        transform: skewY(-3deg);
     }
 </style>
