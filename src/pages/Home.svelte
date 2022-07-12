@@ -1,18 +1,12 @@
 <script>
+    import SectionBreak from "./../components/SectionBreak.svelte";
+    // Pages
     import Section from "./../components/Section.svelte";
     import Projects from "./Projects.svelte";
     import Splash from "./Splash.svelte";
     import Skills from "./Skills.svelte";
     import Info from "./../components/Info.svelte";
-    import Nav from "../components/Nav.svelte";
-    import Games from "./Games.svelte";
-
-
-    import { theme } from '../stores.js'
-
-    const skewAngle = -5;
-
-
+    import { theme } from "../stores.js";
 </script>
 
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
@@ -25,29 +19,25 @@
 <div class="wrapper">
     <Splash />
 
-    <Section top={true} bottom={true} bg="{theme.bgColors.primary}" >
-
-        <Info/>
-
+    <Section top={false} bottom={true} bg={theme.bgColors.primary}>
+        <Skills />
     </Section>
 
-    <Projects />
+    <!-- Add theme mask to splash page! -->
 
-   
-    <Section top={true} bottom={true} bg="{theme.bgColors.primary}" >
+    <SectionBreak title="THIS IS MY TITLE" bgURL={theme.bgImages.space} maskColor={theme.bgMasks.green}>
+        <h1>SLOTTED CONTENT</h1></SectionBreak
+    >
 
-        <Info/>
-
+    <Section top={true} bottom={true} bg={theme.bgColors.primary}>
+        <Info />
     </Section>
-
-    
 
     <Projects />
 
     <!-- Will do routing here -->
 
     <div class="page">
-        <Skills />
         <Projects />
 
         <Skills />
