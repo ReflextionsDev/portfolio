@@ -1,11 +1,19 @@
+<!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
+<!-- Could move about section to below projects w/ resume -->
+<!-- Pass in background color as var, and skew, make theme object -->
+<!-- Nav bar should scroll to top of page -->
+
+<!-- Make component w/ angled top, and one without, or make it a boolean of a section component -->
+
 <script>
-	import Info from "./components/Info.svelte";
 	// Imports
 	import router from "page";
-	import Navbar from "./components/Navbar.svelte";
+
 	import Home from "./pages/Home.svelte";
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./pages/GameShowcase.svelte";
+	import Splash from "./pages/Splash.svelte";
+	
 	import { games } from "./stores";
 
 	// Variables
@@ -39,33 +47,39 @@
 	router.start();
 </script>
 
-<header>
+<div class="wrapper">
+	<!-- Header -->
+	<Splash />
 
-
-
-</header>
-
-<main>
-	{#if page === "home"}
-		<Home />
-	{:else if page === "games"}
-		<Info />
-		<Games {games} />
-	{:else if page === "gameShowcase"}
-		{#if gameProps == null}
-			{window.location.replace(`${url}/games`)}
-		{:else}
-			<GameShowcase {...gameProps} />
+	<!-- Routed body -->
+	<main>
+		{#if page === "home"}
+			<Home />
+		{:else if page === "games"}
+			<Games {games} />
+		{:else if page === "gameShowcase"}
+			{#if gameProps == null}
+				{window.location.replace(`${url}/games`)}
+			{:else}
+				<GameShowcase {...gameProps} />
+			{/if}
 		{/if}
-	{/if}
-</main>
+	</main>
+</div>
 
 <style>
-	main {
+	.wrapper {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		background-color: white;
+		width: auto;
+		height: inherit;
+		/* Duplicate splash bg as page background */
+		background-image: url("/assets/backgrounds/purplebgblur.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 </style>

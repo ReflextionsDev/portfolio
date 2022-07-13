@@ -1,3 +1,4 @@
+<!-- Show web title and icon when in header mode -->
 <script>
     // Theme
     import { theme } from "../stores.js";

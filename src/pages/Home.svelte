@@ -1,61 +1,35 @@
 <script>
-    import Section from "./../components/Section.svelte";
-    import Project from "./Project.svelte";
-    import Splash from "./Splash.svelte";
+	import SectionBreak from './../components/SectionBreak.svelte';
+	import Section from "./../components/Section.svelte";
     import Skills from "./Skills.svelte";
-    import Info from "./../components/Info.svelte";
-    import SectionBreak from "./../components/SectionBreak.svelte";
-    import { theme } from "../stores.js";
-    import { games } from "../stores.js";
-    import Games from "./Games.svelte";
+    import Project from "./Project.svelte";
+import { theme } from "../stores";
+
+SectionBreak
+
 </script>
 
-<!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
-<!-- Could move about section to below projects w/ resume -->
-<!-- Pass in background color as var, and skew, make theme object -->
-<!-- Nav bar should scroll to top of page -->
+<div class="page">
+    <Section top={false} bottom={true} bg={theme.bgColors.primary}>
+        <Skills />
+    </Section>
 
-<!-- Make component w/ angled top, and one without, or make it a boolean of a section component -->
+    <SectionBreak
+        title="Projects"
+        bgURL={theme.bgImages.space}
+        maskColor={theme.bgMasks.green}
+    />
 
-<div class="wrapper">
-    <Splash />
+    <Section top={true} bottom={true} bg={"grey"}>
+        <Project />
+    </Section>
 
-    <!-- Will do routing here -->
+    <Section top={true} bottom={true} bg={"lightblue"}>
+        <Project />
+    </Section>
 
-    <div class="page">
-        <Section top={false} bottom={true} bg={theme.bgColors.primary}>
-            <Skills />
-        </Section>
 
-        <!-- <SectionBreak
-            title="React Ticket"
-            bgURL={theme.bgImages.space}
-            maskColor={theme.bgMasks.green}
-        /> -->
+    <SectionBreak/>
 
-        <Section top={true} bottom={true} bg={"grey"}>
-            <Project />
-        </Section>
 
-        <Section top={true} bottom={true} bg={"lightblue"}>
-            <Project />
-        </Section>
-
-        <!-- <Section top={true} bottom={true} bg={"purple"}>
-            <Games {games} />
-        </Section> -->
-    </div>
 </div>
-
-<style>
-    /* Duplicate bg so when splash goes into header, user doesn't see page background */
-    .wrapper {
-        width: auto;
-        height: inherit;
-        background-image: url("/assets/backgrounds/purplebgblur.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-</style>

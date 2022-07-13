@@ -3,9 +3,10 @@
 	export let games;
 </script>
 
-<h1>HELLO THERE</h1>
 
+<h1>GAMES</h1>
 <div class="games">
+
 	{#each games as game}
 		<GameCard title={game.title} src={game.cover} gif={game.gif} size={game.size} />
 	{/each}
@@ -37,7 +38,7 @@
     }
 
     /*  */
-    .games::before {
+    /* .games::before {
         content: "";
         width: 100%;
         height: 14%;
@@ -50,5 +51,5 @@
         transform: skewY(-3deg);
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-    }
+    } */
 </style>
