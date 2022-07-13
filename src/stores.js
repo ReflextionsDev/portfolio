@@ -1,5 +1,7 @@
 import { writable } from "svelte/store";
 
+export const url = "http://localhost:8080";
+
 export const theme = {
     bgColors: {
         primary: "#1a1a1a",

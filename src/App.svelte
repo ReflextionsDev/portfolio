@@ -1,23 +1,21 @@
-<!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
-<!-- Could move about section to below projects w/ resume -->
-<!-- Pass in background color as var, and skew, make theme object -->
-<!-- Nav bar should scroll to top of page -->
-
 <!-- Make component w/ angled top, and one without, or make it a boolean of a section component -->
-
 <script>
 	// Imports
 	import router from "page";
 
-	import Home from "./pages/Home.svelte";
+	// Pages
+	import Splash from "./header/Splash.svelte";
+	import Web from "./pages/Web.svelte";
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./pages/GameShowcase.svelte";
-	import Splash from "./pages/Splash.svelte";
+
+	// 
 	
-	import { games } from "./stores";
 
 	// Variables
-	let url = "http://localhost:8080";
+	import { games, url } from "./stores";
+
+
 	let page = "";
 	let game = {};
 	let gameProps = null;
@@ -47,6 +45,11 @@
 	router.start();
 </script>
 
+<!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
+<!-- Could move about section to below projects w/ resume -->
+<!-- Pass in background color as var, and skew, make theme object -->
+<!-- Nav bar should scroll to top of page -->
+
 <div class="wrapper">
 	<!-- Header -->
 	<Splash />
@@ -54,7 +57,7 @@
 	<!-- Routed body -->
 	<main>
 		{#if page === "home"}
-			<Home />
+			<Web />
 		{:else if page === "games"}
 			<Games {games} />
 		{:else if page === "gameShowcase"}

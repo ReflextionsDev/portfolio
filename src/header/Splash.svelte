@@ -3,8 +3,8 @@
     Header is a togglable class to adjust the component when in header mode -->
 <script>
     // Components
-    import Info from "./../components/Info.svelte";
-    import Nav from "./../components/Nav.svelte";
+    import Info from "./Info.svelte";
+    import Nav from "./Nav.svelte";
 
     // Theme
     import { theme } from "../stores.js";

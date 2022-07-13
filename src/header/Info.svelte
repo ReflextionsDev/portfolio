@@ -1,5 +1,5 @@
 <script>
-    import { Email, Github, Linkedin } from "./../components/icons/icons.js";
+    import { Email, Github, Linkedin } from "../components/icons/icons.js";
     const iconSize = 64;
 </script>
 
