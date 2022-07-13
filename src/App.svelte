@@ -39,7 +39,7 @@
 	router.start();
 </script>
 
-<!-- <header><Navbar class="content" /></header> -->
+<header><Navbar class="content" /></header>
 
 <main>
 	{#if page === "home"}
@@ -88,16 +88,9 @@
 
 	main {
 		text-align: center;
-		/* height: auto; */
 		display: flex;
 		flex-direction: column;
-
 		margin: auto;
-		/* make a body prop */
-		/* min-width: 320px;
-		
-		width: max(60vw, 1200px); */
-
 		background-color: white;
 	}
 </style>

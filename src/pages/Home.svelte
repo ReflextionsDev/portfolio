@@ -6,6 +6,8 @@
     import Info from "./../components/Info.svelte";
     import SectionBreak from "./../components/SectionBreak.svelte";
     import { theme } from "../stores.js";
+    import { games } from "../stores.js";
+    import Games from "./Games.svelte";
 </script>
 
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
@@ -31,13 +33,17 @@
             maskColor={theme.bgMasks.green}
         /> -->
 
-        <Section top={true} bottom={true} bg={'grey'}>
+        <Section top={true} bottom={true} bg={"grey"}>
             <Project />
         </Section>
 
-        <Section top={true} bottom={true} bg={'lightblue'}>
+        <Section top={true} bottom={true} bg={"lightblue"}>
             <Project />
         </Section>
+
+        <!-- <Section top={true} bottom={true} bg={"purple"}>
+            <Games {games} />
+        </Section> -->
     </div>
 </div>
 

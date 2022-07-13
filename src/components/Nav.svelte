@@ -39,13 +39,17 @@
 
 <div class="tabs">
     <div class="tabs__bar" style="--skewAngle: {skewAngle};">
-        <div class="tab tab__web">
-            <div>WEB</div>
-        </div>
+        <a href="/web">
+            <div class="tab tab__web">
+                <div>WEB</div>
+            </div>
+        </a>
 
-        <div class="tab tab__games">
-            <div>GAMES</div>
-        </div>
+        <a href="/games">
+            <div class="tab tab__games">
+                <div>GAMES</div>
+            </div>
+        </a>
     </div>
     <div class="tabs__fill-clip">
         <div
@@ -116,6 +120,7 @@
         bottom: 0;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        transition: all 0.1s ease-out;
     }
 
     .tab:hover {
