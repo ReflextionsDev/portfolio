@@ -84,6 +84,12 @@
     <Figma color={"#F24E1E"} size={iconSize} />
     <Notion color={"#000000"} size={iconSize} />
     <ConstructThree color={"#96aab9"} size={iconSize} />
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+ 
 </div>
 
 <style>

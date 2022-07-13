@@ -42,6 +42,9 @@
     </div>
 </div>
 
+
+<!-- Currently doing manual padding, should use theme stuff -->
+
 <style>
     /* --- INFO --- */
 

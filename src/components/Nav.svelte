@@ -1,27 +1,38 @@
 <script>
-  
-    import { theme } from '../stores.js'
+    // Theme
+    import { theme } from "../stores.js";
+    let fillColor = theme.bgColors.primary;
 
     // Dynamic variable used to change navbar skew as the user scrolls down
-    let skewBase = theme.skewAngle
+    let skewBase = theme.skewAngle;
     let skewAngle = skewBase + "deg";
 
-    let fillColor = theme.bgColors.primary
-
+    // Easing
+    function easeInQuart(x) {
+        return x * x * x * x;
+    }
 
     // Recalculate skew angle on scroll
     function NavScroll() {
-
-        // Scroll angle is determined by scroll progress of splash content
+        // Scroll angle is determined by scroll progress of the splash content
         const elem = document.querySelector(".splash__content");
+
         let distScrolled = Math.abs(elem.getBoundingClientRect().top);
         let elemHeight = elem.offsetHeight;
 
         // Percentage of the element that has been scrolled, capped at 100
-        let progress = Math.min(Math.round((distScrolled / elemHeight) * 100), 100);
+        let progress = Math.min(
+            Math.round((distScrolled / elemHeight) * 100),
+            100
+        );
+
+        // Easing function
+        progress = easeInQuart(progress / 100);
+
+        console.log(progress);
 
         // Invert top distance,
-        let skewMultiplier = (100 - progress) / 100;
+        let skewMultiplier = 1 - progress;
         skewAngle = skewBase * skewMultiplier + "deg";
     }
 </script>
@@ -39,7 +50,10 @@
         </div>
     </div>
     <div class="tabs__fill-clip">
-        <div class="tabs__fill" style="--skewAngle: {skewAngle}; --fillColor: {fillColor}" />
+        <div
+            class="tabs__fill"
+            style="--skewAngle: {skewAngle}; --fillColor: {fillColor}"
+        />
     </div>
 </div>
 
@@ -102,7 +116,8 @@
         font-size: larger;
         font-weight: bold;
         bottom: 0;
-        transition: all 0.1s ease-out;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
     }
 
     .tab:hover {

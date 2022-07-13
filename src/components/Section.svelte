@@ -22,7 +22,9 @@
         --skewAngle: {skewAngle + 'deg'};"
 >
     <div class="slot">
-        <slot />
+        <div class="content">
+            <slot />
+        </div>
     </div>
 </div>
 

@@ -2,12 +2,14 @@
     import SectionBreak from "./../components/SectionBreak.svelte";
     // Pages
     import Section from "./../components/Section.svelte";
-    import Projects from "./Projects.svelte";
+    import Project from "./Project.svelte";
     import Splash from "./Splash.svelte";
     import Skills from "./Skills.svelte";
     import Info from "./../components/Info.svelte";
     import { theme } from "../stores.js";
 </script>
+
+<!-- .content class is globally used to cap max width -->
 
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
 <!-- Could move about section to below projects w/ resume -->
@@ -19,31 +21,26 @@
 <div class="wrapper">
     <Splash />
 
-    <Section top={false} bottom={true} bg={theme.bgColors.primary}>
-        <Skills />
-    </Section>
-
-    <!-- Add theme mask to splash page! -->
-
-    <SectionBreak title="THIS IS MY TITLE" bgURL={theme.bgImages.space} maskColor={theme.bgMasks.green}>
-        <h1>SLOTTED CONTENT</h1></SectionBreak
-    >
-
-    <Section top={true} bottom={true} bg={theme.bgColors.primary}>
-        <Info />
-    </Section>
-
-    <Projects />
-
     <!-- Will do routing here -->
 
     <div class="page">
-        <Projects />
+        <Section top={false} bottom={true} bg={theme.bgColors.primary}>
+            <Skills />
+        </Section>
 
-        <Skills />
+        <!-- <SectionBreak
+            title="React Ticket"
+            bgURL={theme.bgImages.space}
+            maskColor={theme.bgMasks.green}
+        /> -->
 
-        <Projects />
-        <Skills />
+        <Section top={true} bottom={true} bg={'grey'}>
+            <Project />
+        </Section>
+
+        <Section top={true} bottom={true} bg={'lightblue'}>
+            <Project />
+        </Section>
     </div>
 </div>
 

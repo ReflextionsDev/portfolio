@@ -3,6 +3,7 @@ import { writable } from "svelte/store";
 export const theme =  {
     bgColors: {
         primary: "#1a1a1a",
+        secondary: "#361f83"
     },
     skewAngle: -3,
     bgImages: {
