@@ -1,15 +1,12 @@
 <script>
-    import SectionBreak from "./../components/SectionBreak.svelte";
-    // Pages
     import Section from "./../components/Section.svelte";
     import Project from "./Project.svelte";
     import Splash from "./Splash.svelte";
     import Skills from "./Skills.svelte";
     import Info from "./../components/Info.svelte";
+    import SectionBreak from "./../components/SectionBreak.svelte";
     import { theme } from "../stores.js";
 </script>
-
-<!-- .content class is globally used to cap max width -->
 
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
 <!-- Could move about section to below projects w/ resume -->

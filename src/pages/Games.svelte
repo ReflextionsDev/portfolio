@@ -48,6 +48,7 @@
         left: 0;
         transform-origin: bottom left;
         transform: skewY(-3deg);
+        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
     }
 </style>

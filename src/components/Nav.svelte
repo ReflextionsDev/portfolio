@@ -29,8 +29,6 @@
         // Easing function
         progress = easeInQuart(progress / 100);
 
-        console.log(progress);
-
         // Invert top distance,
         let skewMultiplier = 1 - progress;
         skewAngle = skewBase * skewMultiplier + "deg";
