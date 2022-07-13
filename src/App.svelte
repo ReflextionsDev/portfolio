@@ -39,7 +39,11 @@
 	router.start();
 </script>
 
-<header><Navbar class="content" /></header>
+<header>
+
+
+
+</header>
 
 <main>
 	{#if page === "home"}
@@ -57,35 +61,6 @@
 </main>
 
 <style>
-	header {
-		/* position: absolute; */
-		height: 6%;
-		position: sticky;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		z-index: 1;
-
-		background-color: rgb(24 225 234 / 62%);
-		box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
-	}
-
-	header::before {
-		content: "";
-		position: absolute;
-		background: inherit;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		/* box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%); */
-		filter: blur(10px);
-		backdrop-filter: blur(8px);
-		/* margin: -20px; */
-	}
-
 	main {
 		text-align: center;
 		display: flex;
