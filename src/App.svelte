@@ -1,4 +1,4 @@
-<!-- Make component w/ angled top, and one without, or make it a boolean of a section component -->
+<!-- The base app page. Loads splash page then uses routing in conjuction with navbar to display content.  -->
 <script>
 	// Imports
 	import router from "page";
@@ -9,34 +9,31 @@
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./pages/GameShowcase.svelte";
 
-	// 
-	
-
 	// Variables
 	import { games, url } from "./stores";
 
-
-	let page = "";
-	let game = {};
+	// Used to load game showcases, will probably need to be update when converted to modal
+	let gameTitle = {};
 	let gameProps = null;
-	// URLS are temporary, need to update with sitelock versions after domain registered
-	// Sizes are normal, tall, big, small, wide (unused)
-	// Add freelance bool
-	// Add embedded bool (preview)
-	// Show year of production?
 
 	// Routing
+	let page = "";
 	router("/", () => (page = "home"));
 	router("/games", () => (page = "games"));
+	// Game showcase
 	router(
 		"/games/:game",
 		(ctx, next) => {
-			game = ctx.params.game;
-			// Load props for defined game
-			gameProps = games.filter((gameObj) => {
-				return gameObj.title.split(" ").join("").toLowerCase() === game;
+			// If game parameter matches object in store list, load props
+			gameTitle = ctx.params.game;
+			gameProps = games.find((gameObj) => {
+				let cleanTitle = gameObj.title
+					.split(" ")
+					.join("")
+					.toLowerCase();
+				return cleanTitle === gameTitle;
 			});
-			gameProps = gameProps[0];
+			console.log("props", gameProps);
 			next();
 		},
 		() => (page = "gameShowcase")
@@ -44,11 +41,6 @@
 	router("/*", () => (page = "home"));
 	router.start();
 </script>
-
-<!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page -->
-<!-- Could move about section to below projects w/ resume -->
-<!-- Pass in background color as var, and skew, make theme object -->
-<!-- Nav bar should scroll to top of page -->
 
 <div class="wrapper">
 	<!-- Header -->
@@ -61,6 +53,7 @@
 		{:else if page === "games"}
 			<Games {games} />
 		{:else if page === "gameShowcase"}
+			<!-- Redirect to game page is props are missing -->
 			{#if gameProps == null}
 				{window.location.replace(`${url}/games`)}
 			{:else}

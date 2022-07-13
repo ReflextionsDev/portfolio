@@ -17,6 +17,10 @@ export const theme = {
     }
 }
 
+// Sizes are normal, tall, big, small, wide (unused)
+// Add freelance bool
+// Add embedded bool (preview)
+// Show year of production?
 export const games = [
     // Protoshift
     // Include Video
