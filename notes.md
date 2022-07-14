@@ -15,3 +15,5 @@
 - Pre-blur background instead
 
 Wayback links to old sites
+
+Consider change background image on page change (web vs games)

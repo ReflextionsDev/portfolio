@@ -13,11 +13,9 @@
     <br />
     <div class="info__body">
         <h3>
-            <!-- hover note on problems (original, right?) -->
             I'm a developer interested in building things and solving problems. I
             like satisfying data pipelines, automating boring tasks, and creating
-            better user experiences, sometimes driven by spite. Also creativity.
-            Creativity is good.
+            better user experiences with creativity.
             <br />
             <br />
             <!-- hover note about 2013 and setting up a business as a kid -->
@@ -59,7 +57,7 @@
     .info__body {
         text-align: justify;
         text-align: left;
-        padding: 0px 150px;
+        /* padding: 0px 150px; */
     }
 
     .info__links {
