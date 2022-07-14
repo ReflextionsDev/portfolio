@@ -4,7 +4,9 @@ html, body {
 	min-height: 100%;
 	margin: 0;
 	padding: 0px;
+	font-size: 20px;
 }
+
 
 body {
 	box-sizing: border-box;

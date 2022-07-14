@@ -4,7 +4,7 @@
 <script>
     // Components
     import Info from "./Info.svelte";
-    import Nav from "./Nav.svelte";
+    import Nav from "./NavBar.svelte";
 
     // Theme
     import { theme } from "../stores.js";
@@ -40,7 +40,7 @@
         </div>
 
         <div class="splash__nav" bind:this={elemNav}>
-            <Nav />
+            <Nav {header} />
         </div>
     </div>
 </div>
