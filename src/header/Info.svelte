@@ -10,22 +10,21 @@
         <h1>Nathan Bennett</h1>
         <h2>Web & Game Development</h2>
     </div>
-    <br />
-    <div class="info__body">
-        <h3>
-            I'm a developer interested in building things and solving problems. I
-            like satisfying data pipelines, automating boring tasks, and creating
-            better user experiences with creativity.
-            <br />
-            <br />
+
+    <div class="info__body content__text">
+        <p>
+            I'm a developer interested in building things and solving problems.
+            I like satisfying data pipelines, automating boring tasks, and
+            creating better user experiences with creativity.
+        </p>
+        <p>
             <!-- hover note about 2013 and setting up a business as a kid -->
             I have a background in creating and selling web games since 2013 and
             I've worked as a professional QA Tester. I'm primarily trained in MERN
             but am adaptable and excited to work in collaborative environments.
-        </h3>
+        </p>
     </div>
-    <br />
-    <br />
+
     <div class="info__links">
         <div class="info__link">
             <!-- <Github size={iconSize} color={"#181717"} /> Github -->
@@ -40,24 +39,22 @@
     </div>
 </div>
 
-
 <!-- Currently doing manual padding, should use theme stuff -->
-
 <style>
     /* --- INFO --- */
 
     .info--hidden {
-        
     }
 
     .info__title {
-        font-size: larger;
+        /* font-size: larger; */
     }
 
     .info__body {
-        text-align: justify;
-        text-align: left;
+        /* text-align: justify; */
+        /* text-align: left; */
         /* padding: 0px 150px; */
+        /* font-weight: bold; */
     }
 
     .info__links {
@@ -65,7 +62,7 @@
         align-items: center;
         justify-content: center;
         gap: 10%;
-     
+        flex-wrap: wrap;
     }
 
     .info__link {
@@ -74,7 +71,7 @@
         align-items: center;
         justify-content: center;
         gap: 10%;
-        font-size: larger;
+        /* font-size: larger; */
         border-radius: 8px;
         padding: 0px 15px;
         transition: all 0.1s ease-out;
