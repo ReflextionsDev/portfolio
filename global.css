@@ -17,12 +17,19 @@ body {
 
 
 /* ELEMENTS */
+h1, h2, h3 {
+	max-width: 90%;
+	/* margin: 0 auto; */
+}
+
 h1 {
 	font-size: 3rem;
+	margin: 1rem auto;
 }
 
 h2 {
 	font-size: 2rem;
+	margin: 0.5rem auto;
 }
 
 p {
@@ -39,10 +46,14 @@ p {
 	padding: 25px 0px;
 }
 
+.content__section {
+	padding: 1vw 0;
+}
+
 .content__text {
 	text-align: justify;
-	max-width: 90%;
 	margin: auto;
+	max-width: 75%;
 }
 
 /* BREAKPOINTS */
@@ -58,9 +69,7 @@ p {
 		color: blue;
 	}
 
-	.content__text {
-		max-width: 75%;
-	}
+
 
 }
 
@@ -75,6 +84,8 @@ p {
 		color: rgb(255, 230, 0);
 	}
 
+
+
 }
 
 
@@ -88,6 +99,14 @@ p {
 	h1 {
 		color: rgb(255, 0, 0);
 	}
+
+	.content {
+		padding: 15px 0px;
+	}
+
+	.content__text {
+		max-width: 85%;
+	}
 }
 
 /* Phones */
@@ -98,10 +117,20 @@ p {
 	}
 
 	h1 {
+		font-size: 2.5rem;
 		color: rgb(225, 0, 255);
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	.content {
+		padding: 10px 0px;
 	}
 
 	.content__text {
 		text-align: left;
+		max-width: 90%;
 	}
 }
