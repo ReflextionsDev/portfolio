@@ -6,12 +6,12 @@
 <!-- linkedin, git, email, resume (prob at bottom? cause it will be different for games vs web) -->
 
 <div class="info content">
-    <div class="info__title">
+    <div class="info__title content__section">
         <h1>Nathan Bennett</h1>
         <h2>Web & Game Development</h2>
     </div>
 
-    <div class="info__body content__text">
+    <div class="info__body content__text content__section">
         <p>
             I'm a developer interested in building things and solving problems.
             I like satisfying data pipelines, automating boring tasks, and
@@ -25,7 +25,7 @@
         </p>
     </div>
 
-    <div class="info__links">
+    <div class="info__links content__section">
         <div class="info__link">
             <!-- <Github size={iconSize} color={"#181717"} /> Github -->
             <Github size={iconSize} color={"#FFFFFF"} /> Github

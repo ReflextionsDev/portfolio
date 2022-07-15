@@ -90,7 +90,7 @@
 
     /* Adjust padding for vw, extra bottom padding for navbar */
     .splash__content {
-        padding-top: 4vw;
+        /* padding-top: 4vw; */
         padding-bottom: 8vw;
     }
 </style>
