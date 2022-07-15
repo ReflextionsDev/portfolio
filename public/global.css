@@ -134,3 +134,10 @@ p {
 		max-width: 90%;
 	}
 }
+
+/* Fallback fixed attachment to scroll because it is not supported on iOS mobile */
+@media only screen and (hover: none) and (pointer: coarse){
+	.background {
+		background-attachment: scroll !important;
+	}
+}

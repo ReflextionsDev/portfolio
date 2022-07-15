@@ -5,7 +5,7 @@ Accepts and optional title component, or slotted content -->
     export let title = "";
 </script>
 
-<div class="sectionBreak" style="--bgURL: {bgURL}">
+<div class="sectionBreak background" style="--bgURL: {bgURL}">
     <div class="mask" style="--maskColor: {maskColor}">
         <h1>{title}</h1>
         <slot />
