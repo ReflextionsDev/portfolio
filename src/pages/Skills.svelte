@@ -35,12 +35,10 @@
 
 <div class="skills">
 
-    <br/>
-    <br/>
-    <br/>
-    <h1>Skills</h1>
 
-    <h2>Front-End</h2>
+   <h2>Skills</h2>
+
+    <h3>Front-End</h3>
 
     <!-- componetize mouseover events? / hover icon component -->
     <!-- <div
@@ -64,7 +62,7 @@
     <br />
     <br />
 
-    <h2>Back-End</h2>
+    <h3>Back-End</h3>
 
     <NodeDotJs color={"#339933"} size={iconSize} />
     <Express color={"#000000"} size={iconSize} />
@@ -76,7 +74,7 @@
 
     <br />
 
-    <h2>Other</h2>
+    <h3>Other</h3>
     <Git color={"#F05032"} size={iconSize} />
 
     <Jquery color={"#0769AD"} size={iconSize} />
