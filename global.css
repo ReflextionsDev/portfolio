@@ -17,25 +17,28 @@ body {
 
 
 /* ELEMENTS */
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	max-width: 90%;
-	/* margin: 0 auto; */
 	text-align: center;
+	margin: 1rem auto;
 }
 
 h1 {
 	font-size: 3rem;
-	margin: 1rem auto;
 }
 
 h2 {
 	font-size: 2rem;
-	margin: 1rem auto;
 }
 
 h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
 	font-size: 1.15rem;
-	margin: 1rem auto;
+	margin: 1rem 0;
+
 }
 
 p {
@@ -43,7 +46,6 @@ p {
 }
 
 /* HEADING DASH */
-
 .dash {
 	display: table;
 	white-space: nowrap;
@@ -66,9 +68,7 @@ p {
 
 .dash::after {
 	left: 15%;
-
 }
-
 
 /* SPACING */
 .content {
@@ -97,11 +97,6 @@ p {
 	html {
 		font-size: 21px;
 	}
-
-	h1 {
-		color: blue;
-	}
-
 }
 
 /* Laptops */
@@ -110,13 +105,6 @@ p {
 	html {
 		font-size: 20px;
 	}
-
-	h1 {
-		color: rgb(255, 230, 0);
-	}
-
-
-
 }
 
 /* Tablets */
@@ -124,10 +112,6 @@ p {
 
 	html {
 		font-size: 19px;
-	}
-
-	h1 {
-		color: rgb(255, 0, 0);
 	}
 
 	.content {
@@ -148,16 +132,22 @@ p {
 
 	h1 {
 		font-size: 2.5rem;
-		color: rgb(225, 0, 255);
 	}
 
 	h2 {
 		font-size: 1.5rem;
 	}
 
+	h3 {
+		font-size: 1.15rem;
+	}
+	
+	h4 {
+		font-size: 1rem;
+	}
+
 	.content {
 		padding: 15px 0px;
-
 	}
 
 	.content__text {
@@ -166,7 +156,7 @@ p {
 	}
 }
 
-/* Fallback fixed attachment to scroll because it is not supported on iOS mobile */
+/* Fallback for background-attachment:fixed to scroll because it is not supported on iOS mobile */
 @media only screen and (hover: none) and (pointer: coarse) {
 	.background {
 		background-attachment: scroll !important;
