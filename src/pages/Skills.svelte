@@ -17,10 +17,24 @@
         Sqlite,
         Jquery,
     } from "./../components/icons/icons.js";
+    import Viewport from "svelte-viewport-info";
 
-    const iconSize = 64;
+    // Change iconSize on small screens
+    let iconSize = 64;
+    let iconGap = "1vw";
+    function updateIconSize() {
+        if (Viewport.Width < 576) {
+            iconSize = 48;
+            iconGap = "2vw";
+        } else {
+            iconSize = 64;
+            iconGap = "1vw";
+        }
+    }
+    updateIconSize();
+
+    // Define icons
     const colorHover = "#FFFFFF";
-
     let icons = [
         {
             label: "Javascript",
@@ -128,6 +142,7 @@
         icon.hoverColor = colorHover;
     });
 
+    // Icon recolor on hover
     function iconMouseOver(label) {
         let index = icons.findIndex((icon) => icon.label === label);
         icons[index].color = icons[index].hoverColor;
@@ -139,12 +154,15 @@
     }
 </script>
 
+<!-- Watch body for viewport changes -->
+<svelte:body on:viewportchanged={updateIconSize} />
+
 <div class="skills content">
     <h2 class="dash">Skills</h2>
 
     <div class="content__section">
         <h3>Front-End</h3>
-        <div>
+        <div class="icons">
             {#each icons as icon}
                 {#if icon.type === "frontend"}
                     <div
@@ -168,7 +186,7 @@
 
     <div class="content__section">
         <h3>Back-End</h3>
-        <div>
+        <div class="icons">
             {#each icons as icon}
                 {#if icon.type === "backend"}
                     <div
@@ -192,7 +210,7 @@
 
     <div class="content__section">
         <h3>Other</h3>
-        <div>
+        <div class="icons">
             {#each icons as icon}
                 {#if icon.type === "other"}
                     <div
@@ -216,6 +234,20 @@
 </div>
 
 <style>
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 576px) {
+        .icons {
+            gap: 2vw;
+        }
+    }
+
     .tooltip {
         position: relative;
         display: inline-block;
