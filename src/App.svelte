@@ -64,7 +64,7 @@
 	router.start();
 </script>
 
-<div class="wrapper">
+<div class="wrapper background">
 	<!-- Header -->
 	<Splash />
 
@@ -94,10 +94,10 @@
 		width: auto;
 		height: inherit;
 		/* Duplicate splash bg as page background */
-		/* background-image: url("/assets/backgrounds/purplebgblur.jpg");
+		background-image: url("/assets/backgrounds/purplebgblur.jpg");
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center;
-		background-repeat: no-repeat; */
+		background-repeat: no-repeat;
 	}
 </style>

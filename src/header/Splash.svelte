@@ -34,7 +34,7 @@
 />
 
 <div class="splash" class:header style="--splashTop: {splashTop};">
-    <div class="splash__bg background" />
+    <div class="splash__bg background" class:header />
     <div class="splash__blur" class:header style="--maskColor: {maskColor};">
         <div class="splash__content" bind:offsetHeight={contentHeight}>
             <Info />
@@ -55,22 +55,6 @@
     }
 
     /* Renders a background image below the whole component */
-    .splash::before {
-        /* z-index: -2;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        content: "";
-        position: absolute;
-        width: auto;
-        height: inherit;
-        background-image: url("/assets/backgrounds/purplebgblur.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat; */
-    }
 
     .splash__bg {
         z-index: -2;
@@ -90,7 +74,7 @@
     }
 
     /* Reduce bg image while in header mode */
-    .splash.header::before {
+    .splash__bg.header {
         opacity: 50%;
     }
 

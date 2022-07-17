@@ -108,7 +108,8 @@
         top: 0;
         left: 0;
         transform-origin: bottom left;
-        transform: skewY(var(--skewAngle)) translateZ(0);
+        transform: skewY(var(--skewAngle));
+        /* transform: skewY(var(--skewAngle)) translateZ(0); */
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
@@ -116,14 +117,11 @@
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.649); */
-
     }
 
     .tabs.header {
         align-items: flex-start;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.649);
-
-
     }
 
     .tab {
