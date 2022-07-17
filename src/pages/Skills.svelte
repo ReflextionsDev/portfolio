@@ -43,29 +43,14 @@
         let index = icons.findIndex((icon) => icon.label === label);
         icons[index].color = icons[index].colorDefault;
     }
+
+
+
 </script>
 
 <!-- !Add title prop to section padding! -->
 
 <div class="skills content">
-    <!-- {#each icons as icon}
-        {#if icon.type === "frontend"}
-            <div
-                on:mouseover={(e) => iconMouseOver(icon.label)}
-                on:focus={(e) => iconMouseOver(icon.label)}
-                on:mouseout={(e) => iconMouseOut(icon.label)}
-                on:blur={(e) => iconMouseOut(icon.label)}
-                class="hvr-grow"
-            >
-                <svelte:component
-                    this={icon.component}
-                    color={icon.color}
-                    size={iconSize}
-                />
-            </div>
-        {/if}
-    {/each} -->
-
     {#each icons as icon}
         {#if icon.type === "frontend"}
             <div
