@@ -17,23 +17,9 @@
         Sqlite,
         Jquery,
     } from "./../components/icons/icons.js";
-    import Viewport from "svelte-viewport-info";
-
-    // Change iconSize on small screens
-    let iconSize = 64;
-    let iconGap = "1vw";
-    function updateIconSize() {
-        if (Viewport.Width < 576) {
-            iconSize = 48;
-            iconGap = "2vw";
-        } else {
-            iconSize = 64;
-            iconGap = "1vw";
-        }
-    }
-    updateIconSize();
 
     // Define icons
+    import { iconSize } from "../stores.js";
     const colorHover = "#FFFFFF";
     let icons = [
         {
@@ -154,9 +140,6 @@
     }
 </script>
 
-<!-- Watch body for viewport changes -->
-<svelte:body on:viewportchanged={updateIconSize} />
-
 <div class="skills content">
     <h2 class="dash">Skills</h2>
 
@@ -176,7 +159,7 @@
                         <svelte:component
                             this={icon.component}
                             color={icon.color}
-                            size={iconSize}
+                            size={$iconSize}
                         />
                     </div>
                 {/if}
@@ -200,7 +183,7 @@
                         <svelte:component
                             this={icon.component}
                             color={icon.color}
-                            size={iconSize}
+                            size={$iconSize}
                         />
                     </div>
                 {/if}
@@ -224,7 +207,7 @@
                         <svelte:component
                             this={icon.component}
                             color={icon.color}
-                            size={iconSize}
+                            size={$iconSize}
                         />
                     </div>
                 {/if}

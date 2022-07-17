@@ -1,8 +1,5 @@
 <!-- The base app page. Loads splash page then uses routing in conjuction with navbar to display content.  -->
 <script>
-	// Imports
-	import router from "page";
-
 	// Pages
 	import Splash from "./header/Splash.svelte";
 	import Web from "./pages/Web.svelte";
@@ -16,20 +13,35 @@
 	let gameTitle = {};
 	let gameProps = null;
 
-	// Reset content
+	// Adjust iconSize on small screens
+	import Viewport from "svelte-viewport-info";
+	import { iconSize } from "./stores.js";
+
+	function updateIconSize() {
+		if (Viewport.Width < 576) {
+			iconSize.update(() => 48);
+		} else {
+			iconSize.update(() => 64);
+		}
+	}
+	updateIconSize();
+
+	// Reset content on new page
 	let firstLoad = true;
 	function scrollToMain() {
 		let main = document.querySelector("main");
-
 		if (main && !firstLoad) {
 			main.scrollIntoView({ behavior: "smooth" });
-		} else { 
+		} else {
 			firstLoad = false;
 		}
 	}
 
 	// Routing
+	import router from "page";
 	let page = "";
+
+	// Routes
 	router("/", () => {
 		page = "home";
 		setTimeout(scrollToMain, 10);
@@ -37,7 +49,6 @@
 	router("/games", () => {
 		page = "games";
 		setTimeout(scrollToMain, 10);
-
 	});
 	// Game showcase
 	router(
@@ -57,12 +68,17 @@
 		},
 		() => (page = "gameShowcase")
 	);
+	// 404 redirect
 	router("/*", () => {
 		page = "home";
 		scrollToMain();
 	});
+
 	router.start();
 </script>
+
+<!-- Watch body for viewport changes -->
+<svelte:body on:viewportchanged={updateIconSize} />
 
 <div class="wrapper background">
 	<!-- Header -->

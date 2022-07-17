@@ -1,6 +1,7 @@
 <script>
     import { Email, Github, Linkedin } from "../components/icons/icons.js";
-    const iconSize = 64;
+
+    import { iconSize } from "../stores.js";
 </script>
 
 <div class="info content">
@@ -26,15 +27,15 @@
     <div class="info__links content__section">
         <div class="info__link">
             <!-- <Github size={iconSize} color={"#181717"} /> Github -->
-            <Github size={iconSize} color={"#FFFFFF"} />
+            <Github size={$iconSize} color={"#FFFFFF"} />
             <h3>Github</h3>
         </div>
         <div class="info__link">
-            <Email size={iconSize} color={"#EA4335"} />
+            <Email size={$iconSize} color={"#EA4335"} />
             <h3>Email</h3>
         </div>
         <div class="info__link">
-            <Linkedin size={iconSize} color={"#0A66C2"} />
+            <Linkedin size={$iconSize} color={"#0A66C2"} />
             <h3>Linkedin</h3>
         </div>
     </div>
