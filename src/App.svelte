@@ -28,10 +28,15 @@
 
 	// Reset content on new page
 	let firstLoad = true;
-	function scrollToMain() {
-		let main = document.querySelector("main");
+	function scrollToTop() {
+		const main = document.querySelector("main");
+		const navbar = document.querySelector(".navbar");
+		const yOffset = -navbar.offsetHeight;
+		const y = main.getBoundingClientRect().top + window.pageYOffset + yOffset;
+		
 		if (main && !firstLoad) {
-			main.scrollIntoView({ behavior: "smooth" });
+			// elem.scrollIntoView({ behavior: "smooth" });
+			window.scrollTo({ top: y, behavior: "smooth" });
 		} else {
 			firstLoad = false;
 		}
@@ -44,11 +49,11 @@
 	// Routes
 	router("/", () => {
 		page = "home";
-		setTimeout(scrollToMain, 10);
+		setTimeout(scrollToTop, 10);
 	});
 	router("/games", () => {
 		page = "games";
-		setTimeout(scrollToMain, 10);
+		setTimeout(scrollToTop, 10);
 	});
 	// Game showcase
 	router(
@@ -71,7 +76,7 @@
 	// 404 redirect
 	router("/*", () => {
 		page = "home";
-		scrollToMain();
+		scrollToTop();
 	});
 
 	router.start();

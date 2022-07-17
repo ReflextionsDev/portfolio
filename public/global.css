@@ -56,7 +56,8 @@ p {
 	position: relative;
 	top: 0.75em;
 	/* width: 30%; */
-	width: 200px;
+	/* width: 200px; */
+	width: 20vw;
 }
 
 .dash::before {
@@ -101,12 +102,10 @@ p {
 		color: blue;
 	}
 
-
-
 }
 
 /* Laptops */
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-width: 768px) {
 
 	html {
 		font-size: 20px;
@@ -121,7 +120,7 @@ p {
 }
 
 /* Tablets */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 576px) {
 
 	html {
 		font-size: 19px;
@@ -157,7 +156,8 @@ p {
 	}
 
 	.content {
-		padding: 10px 0px;
+		padding: 15px 0px;
+
 	}
 
 	.content__text {
