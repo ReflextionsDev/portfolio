@@ -5,6 +5,8 @@
 </script>
 
 <div class="project content">
+    <h3 class="project__title">React Ticket Tracker</h3>
+
     <div class="spotlight content__info">
         <div style="display: flex; justify-content: center">
             <Laptop />
@@ -17,9 +19,11 @@
             <h4>Express</h4>
         </div>
     </div>
+
     <div class="info content__info">
-        <h3>React Ticket Tracker</h3>
-        <p content__text>
+        <h3 class="info__title">React Ticket Tracker</h3>
+
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -34,9 +38,8 @@
 </div>
 
 <style>
-    .project,
-    .info {
-        min-width: 280px;
+    .project__title {
+        width: 100%;
     }
 
     .project {
@@ -47,11 +50,39 @@
         flex-wrap: wrap;
     }
 
+    @media (min-width: 1200px) {
+        .project__title {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .info__title {
+            display: none;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .project {
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project {
+            flex-direction: column;
+        }
+    }
+
     .spotlight {
         flex: 1;
     }
 
     .info {
         flex: 1;
+    }
+
+    p {
+        text-align: left;
     }
 </style>
