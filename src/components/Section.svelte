@@ -4,8 +4,6 @@
     - BG: background color to be displayed   
     - SkewAngle
  -->
-
- <!-- Add support for background image and color mask on top -->
 <script>
     import { theme } from "../stores.js";
     export let top, bottom, bg;

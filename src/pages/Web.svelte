@@ -6,6 +6,8 @@
     import Skills from "./Skills.svelte";
     import Project from "./Project.svelte";
     import { theme } from "../stores";
+
+    let stack = ["React", "Redux", "Node", "Express"];
 </script>
 
 <div class="page">
@@ -27,19 +29,31 @@
     background: linear-gradient(162deg, rgba(97,189,226,1) 0%, rgba(130,48,176,1) 100%); -->
     <!-- #71787d -->
 
-
-
     <!-- background: linear-gradient(180deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%); -->
 
-    
-
-    <Section top={true} bottom={true} bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}>
+    <Section
+        top={true}
+        bottom={true}
+        bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}
+    >
         <h2 class="dash">Projects</h2>
-        <Project />
-        <Project />
-        <Project />
+        <Project
+            title="React Ticket Tracker"
+            desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
+            {stack}
+        />
+        <Project
+            title="Normandy"
+            desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
+            {stack}
+            reverse={true}
+        />
+        <Project
+        title="New Project"
+        desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
+        {stack}
+    />
     </Section>
-
 
     <!-- <SectionBreak bgURL={theme.bgImages.space} maskColor={'rgb(11 16 56 / 57%)'}>
         <h2 class="dash">Projects</h2>
@@ -49,5 +63,4 @@
     </SectionBreak> -->
 
     <!-- <SectionBreak /> -->
-
 </div>

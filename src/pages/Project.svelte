@@ -1,35 +1,35 @@
-<!-- Should be modular, accept images, title text, tech stack, order, etc -->
+<!-- Should be modular, accept images, title text, tech stack, order, links, etc -->
 <script>
     import Laptop from "./../components/Laptop.svelte";
+
+    export let title, desc;
+    export let stack = [];
+    export let reverse = false;
+
+    if (reverse) {
+    }
 </script>
 
 <div class="project content">
-    <h3 class="project__title">React Ticket Tracker</h3>
+    <h3 class="project__title">{title}</h3>
 
-    <div class="spotlight content__section">
+    <div class="spotlight content__section" class:reverse>
         <div style="display: flex; justify-content: center">
             <Laptop />
         </div>
 
         <div style="display: flex; justify-content: center; gap: 5% ">
-            <h4>React</h4>
-            <h4>Redux</h4>
-            <h4>Node</h4>
-            <h4>Express</h4>
+            {#each stack as item}
+                <h4>{item}</h4>
+            {/each}
         </div>
     </div>
 
-    <div class="info content__section">
-        <h3 class="info__title">React Ticket Tracker</h3>
+    <div class="info content__section" class:reverse>
+        <h3 class="info__title">{title}</h3>
 
         <p class="info__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            {desc}
         </p>
         <button>Live Demo</button>
         <button>More Info & Source</button>
@@ -47,6 +47,25 @@
 
     .project__title {
         width: 100%;
+        order: 1;
+    }
+
+    .spotlight {
+        order: 2;
+    }
+
+    .info {
+        order: 3;
+    }
+
+    /* Reverse class allows swapping of spotlight and info */
+    @media (min-width: 768px) {
+        .spotlight.reverse {
+            order: 3;
+        }
+        .info.reverse {
+            order: 2;
+        }
     }
 
     .spotlight,
