@@ -3,8 +3,6 @@
     const iconSize = 64;
 </script>
 
-<!-- linkedin, git, email, resume (prob at bottom? cause it will be different for games vs web) -->
-
 <div class="info content">
     <div class="info__title content__section">
         <h1>Nathan Bennett</h1>
@@ -42,24 +40,7 @@
     </div>
 </div>
 
-<!-- Currently doing manual padding, should use theme stuff -->
 <style>
-    /* --- INFO --- */
-
-    .info--hidden {
-    }
-
-    .info__title {
-        /* font-size: larger; */
-    }
-
-    .info__body {
-        /* text-align: justify; */
-        /* text-align: left; */
-        /* padding: 0px 150px; */
-        /* font-weight: bold; */
-    }
-
     .info__links {
         display: flex;
         align-items: center;
@@ -76,7 +57,6 @@
         align-items: center;
         justify-content: center;
         gap: 10%;
-        /* font-size: larger; */
         border-radius: 8px;
         padding: 0px 15px;
         transition: all 0.1s ease-out;
