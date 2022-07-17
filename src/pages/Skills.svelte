@@ -18,40 +18,63 @@
         Jquery,
     } from "./../components/icons/icons.js";
 
+    let icons = [
+        {
+            label: "javascript",
+            type: "frontend",
+            component: Javascript,
+            colorDefault: "#F7DF1E",
+        },
+    ];
+
+    icons.forEach((icon) => {
+        icon.color = icon.colorDefault;
+    });
+
     const iconSize = 64;
+    const colorHover = "#FFFFFF";
 
-    let colour = "#000000";
-
-    function handleMouseOver(e) {
-        colour = "#F7DF1E";
-        console.log(colour);
+    function iconMouseOver(label) {
+        let index = icons.findIndex((icon) => icon.label === label);
+        icons[index].color = colorHover;
     }
-    function handleMouseOut(e) {
-        colour = "#FFFFFF";
 
-        console.log(colour);
+    function iconMouseOut(label) {
+        let index = icons.findIndex((icon) => icon.label === label);
+        icons[index].color = icons[index].colorDefault;
     }
+
+
+
 </script>
 
 <!-- !Add title prop to section padding! -->
 
-<div class="skills">
-    <!-- componetize mouseover events? / hover icon component -->
-    <!-- <div
-        on:mouseover={handleMouseOver}
-        on:mouseout={handleMouseOut}
-        class="hvr-grow"
-    >
-        <Javascript color={colour} size={iconSize} />
-    </div> -->
+<div class="skills content">
+    {#each icons as icon}
+        {#if icon.type === "frontend"}
+            <div
+                on:mouseover={(e) => iconMouseOver(icon.label)}
+                on:focus={(e) => iconMouseOver(icon.label)}
+                on:mouseout={(e) => iconMouseOut(icon.label)}
+                on:blur={(e) => iconMouseOut(icon.label)}
+                class="hvr-grow"
+            >
+                <svelte:component
+                    this={icon.component}
+                    color={icon.color}
+                    size={iconSize}
+                />
+            </div>
+        {/if}
+    {/each}
 
-    <!-- <h2 class="dash">Skills</h2> -->
-
+    <h2 class="dash">Skills</h2>
 
     <div class="content__section">
         <h3>Front-End</h3>
         <div>
-            <Javascript color={colour} size={iconSize} />
+            <!-- <Javascript color={colour} size={iconSize} /> -->
             <Html5 color={"#E34F26"} size={iconSize} />
             <CssThree color={"#1572B6"} size={iconSize} />
             <React color={"#61DAFB"} size={iconSize} />
@@ -84,37 +107,23 @@
 </div>
 
 <style>
-    /* --- SKILLS --- */
-
-    .skills {
-        /* padding-top: 50px; */
-        /* padding: 50px 50px 200px 50px; */
-        /* background-color: #1a1a1a; */
-        /* position: relative; */
-        /* z-index: 1; */
+    .hvr-grow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform;
     }
 
-    /*  */
-    /* .skills::before {
-        content: "";
-        width: 100%;
-        height: 14%;
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        transform-origin: bottom left;
-        transform: skewY(-3deg);
-        -webkit-backface-visibility: hidden;
-    } */
-
-    div img {
-        width: 70%;
-        height: auto;
-    }
-
-    .y img {
-        margin-left: 250px;
+    .hvr-grow:hover,
+    .hvr-grow:focus,
+    .hvr-grow:active {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
     }
 </style>

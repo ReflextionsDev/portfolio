@@ -11,9 +11,9 @@
 <div class="page">
 
 
-    <Section top={false} bottom={true} bg={theme.bgColors.primary}>
+    <!-- <Section top={false} bottom={true} bg={theme.bgColors.primary}>
         <h2 class="dash">Skills</h2>
-    </Section>
+    </Section> -->
 
 
     <Section top={false} bottom={true} bg={theme.bgColors.primary}>
