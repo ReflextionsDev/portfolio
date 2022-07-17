@@ -1,18 +1,17 @@
 <!-- Should be modular, accept images, title text, tech stack, order, etc -->
 <script>
     import Laptop from "./../components/Laptop.svelte";
-    import Phone from "./../components/Phone.svelte";
 </script>
 
 <div class="project content">
     <h3 class="project__title">React Ticket Tracker</h3>
 
-    <div class="spotlight content__info">
+    <div class="spotlight content__section">
         <div style="display: flex; justify-content: center">
             <Laptop />
         </div>
 
-        <div style="display: flex; justify-content: center; gap: 20px ">
+        <div style="display: flex; justify-content: center; gap: 5% ">
             <h4>React</h4>
             <h4>Redux</h4>
             <h4>Node</h4>
@@ -20,10 +19,10 @@
         </div>
     </div>
 
-    <div class="info content__info">
+    <div class="info content__section">
         <h3 class="info__title">React Ticket Tracker</h3>
 
-        <p>
+        <p class="info__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -38,10 +37,6 @@
 </div>
 
 <style>
-    .project__title {
-        width: 100%;
-    }
-
     .project {
         display: flex;
         flex-direction: row;
@@ -50,39 +45,58 @@
         flex-wrap: wrap;
     }
 
-    @media (min-width: 1200px) {
-        .project__title {
-            display: none;
-        }
+    .project__title {
+        width: 100%;
     }
 
-    @media (max-width: 1200px) {
-        .info__title {
-            display: none;
-        }
-    }
-
-    @media (max-width: 992px) {
-        .project {
-            align-items: center;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .project {
-            flex-direction: column;
-        }
-    }
-
-    .spotlight {
-        flex: 1;
-    }
-
+    .spotlight,
     .info {
         flex: 1;
     }
 
     p {
         text-align: left;
+    }
+
+    /* Hide shared title on big display */
+    @media (min-width: 1200px) {
+        .project__title {
+            display: none;
+        }
+    }
+
+    /* Replace info title with shared title on smaller display */
+    @media (max-width: 1200px) {
+        .info__title {
+            display: none;
+        }
+
+        .info__text {
+            display: inline-block;
+            max-width: 90%;
+        }
+    }
+
+    /* Tablets */
+    @media (max-width: 992px) {
+        p {
+            margin: 0;
+        }
+
+        .spotlight {
+            width: 75%;
+        }
+    }
+
+    /* Phones */
+    @media (max-width: 768px) {
+        .project {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .spotlight {
+            width: 100%;
+        }
     }
 </style>

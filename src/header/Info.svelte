@@ -28,15 +28,15 @@
         <div class="info__link">
             <!-- <Github size={iconSize} color={"#181717"} /> Github -->
             <Github size={$iconSize} color={"#FFFFFF"} />
-            <h3>Github</h3>
+            <h4>Github</h4>
         </div>
         <div class="info__link">
             <Email size={$iconSize} color={"#EA4335"} />
-            <h3>Email</h3>
+            <h4>Email</h4>
         </div>
         <div class="info__link">
             <Linkedin size={$iconSize} color={"#0A66C2"} />
-            <h3>Linkedin</h3>
+            <h4>Linkedin</h4>
         </div>
     </div>
 </div>
