@@ -9,21 +9,30 @@
 </script>
 
 <div class="page">
+
+
+    <Section top={false} bottom={true} bg={theme.bgColors.primary}>
+        <h2 class="dash">Skills</h2>
+    </Section>
+
+
     <Section top={false} bottom={true} bg={theme.bgColors.primary}>
         <Skills />
     </Section>
 
-    <SectionBreak
+    <!-- <SectionBreak
         title="Projects"
         bgURL={theme.bgImages.space}
         maskColor={theme.bgMasks.green}
-    />
+    /> -->
+
+    <Section top={true} bottom={true} bg={"grey"}>
+        <h2 class="dash">Projects</h2>
+    </Section>
 
     <Section top={true} bottom={true} bg={"grey"}>
         <Project />
-    </Section>
-
-    <Section top={true} bottom={true} bg={"lightblue"}>
+        <Project />
         <Project />
     </Section>
 

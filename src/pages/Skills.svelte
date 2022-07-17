@@ -33,13 +33,9 @@
     }
 </script>
 
+<!-- !Add title prop to section padding! -->
+
 <div class="skills">
-
-
-   <h2>Skills</h2>
-
-    <h3>Front-End</h3>
-
     <!-- componetize mouseover events? / hover icon component -->
     <!-- <div
         on:mouseover={handleMouseOver}
@@ -49,45 +45,42 @@
         <Javascript color={colour} size={iconSize} />
     </div> -->
 
-    <Javascript color={colour} size={iconSize} />
+    <!-- <h2 class="dash">Skills</h2> -->
 
-    <Html5 color={"#E34F26"} size={iconSize} />
-    <CssThree color={"#1572B6"} size={iconSize} />
 
-    <React color={"#61DAFB"} size={iconSize} />
-    <Redux color={"#764ABC"} size={iconSize} />
+    <div class="content__section">
+        <h3>Front-End</h3>
+        <div>
+            <Javascript color={colour} size={iconSize} />
+            <Html5 color={"#E34F26"} size={iconSize} />
+            <CssThree color={"#1572B6"} size={iconSize} />
+            <React color={"#61DAFB"} size={iconSize} />
+            <Redux color={"#764ABC"} size={iconSize} />
+            <Svelte color={"#FF3E00"} size={iconSize} />
+        </div>
+    </div>
 
-    <Svelte color={"#FF3E00"} size={iconSize} />
+    <div class="content__section">
+        <h3>Back-End</h3>
+        <div>
+            <NodeDotJs color={"#339933"} size={iconSize} />
+            <Express color={"#000000"} size={iconSize} />
+            <Mongodb color={"#47A248"} size={iconSize} />
+            <Amazonaws color={"#232F3E"} size={iconSize} />
+            <Sqlite color={"#003B57"} size={iconSize} />
+        </div>
+    </div>
 
-    <br />
-    <br />
-
-    <h3>Back-End</h3>
-
-    <NodeDotJs color={"#339933"} size={iconSize} />
-    <Express color={"#000000"} size={iconSize} />
-    <Mongodb color={"#47A248"} size={iconSize} />
-
-    <Amazonaws color={"#232F3E"} size={iconSize} />
-
-    <Sqlite color={"#003B57"} size={iconSize} />
-
-    <br />
-
-    <h3>Other</h3>
-    <Git color={"#F05032"} size={iconSize} />
-
-    <Jquery color={"#0769AD"} size={iconSize} />
-
-    <Figma color={"#F24E1E"} size={iconSize} />
-    <Notion color={"#000000"} size={iconSize} />
-    <ConstructThree color={"#96aab9"} size={iconSize} />
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
- 
+    <div class="content__section">
+        <h3>Other</h3>
+        <div>
+            <Git color={"#F05032"} size={iconSize} />
+            <Jquery color={"#0769AD"} size={iconSize} />
+            <Figma color={"#F24E1E"} size={iconSize} />
+            <Notion color={"#000000"} size={iconSize} />
+            <ConstructThree color={"#96aab9"} size={iconSize} />
+        </div>
+    </div>
 </div>
 
 <style>

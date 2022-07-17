@@ -37,6 +37,7 @@
     .section {
         position: relative;
         background-color: var(--backgroundColor);
+        /* padding: 4vh 0 5vh; */
     }
 
     .top::before,
