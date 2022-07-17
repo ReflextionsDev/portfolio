@@ -9,12 +9,9 @@
 </script>
 
 <div class="page">
-
-
     <!-- <Section top={false} bottom={true} bg={theme.bgColors.primary}>
         <h2 class="dash">Skills</h2>
     </Section> -->
-
 
     <Section top={false} bottom={true} bg={theme.bgColors.primary}>
         <Skills />
@@ -26,15 +23,31 @@
         maskColor={theme.bgMasks.green}
     /> -->
 
-    <Section top={true} bottom={true} bg={"grey"}>
+    <!-- background: rgb(97,189,226);
+    background: linear-gradient(162deg, rgba(97,189,226,1) 0%, rgba(130,48,176,1) 100%); -->
+    <!-- #71787d -->
+
+
+
+    <!-- background: linear-gradient(180deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%); -->
+
+    
+
+    <Section top={true} bottom={true} bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}>
         <h2 class="dash">Projects</h2>
-    </Section>
-
-    <Section top={true} bottom={true} bg={"grey"}>
         <Project />
         <Project />
         <Project />
     </Section>
 
-    <SectionBreak />
+
+    <!-- <SectionBreak bgURL={theme.bgImages.space} maskColor={'rgb(11 16 56 / 57%)'}>
+        <h2 class="dash">Projects</h2>
+        <Project />
+        <Project />
+        <Project />
+    </SectionBreak> -->
+
+    <!-- <SectionBreak /> -->
+
 </div>

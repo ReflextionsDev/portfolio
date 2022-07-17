@@ -36,7 +36,8 @@
 
     .section {
         position: relative;
-        background-color: var(--backgroundColor);
+        /* background-color: var(--backgroundColor); */
+        background: var(--backgroundColor);
         padding: 1vh 0 8vh;
     }
 
