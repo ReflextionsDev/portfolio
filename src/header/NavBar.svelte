@@ -43,7 +43,7 @@
 
 <div class="navbar">
     <div class="tabs" class:header style="--skewAngle: {skewAngle};">
-        <a href="/web" class="tab tab__web">
+        <a href="/" class="tab tab__web">
             <div>WEB</div>
         </a>
 
@@ -66,6 +66,9 @@
         position: relative;
         display: flex;
         flex-direction: row;
+
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
     }
 
     .navbar__fill-clip {
@@ -121,29 +124,25 @@
 
     .tab {
         display: flex;
-        /* align-self: center; */
         justify-content: center;
         align-items: center;
-        /* align-self: center; */
         font-size: larger;
         font-weight: bold;
         bottom: 0;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
         transition: all 0.1s ease-out;
-
         color: white;
-
         height: 100%;
         width: 10%;
         min-width: 100px;
-
         text-decoration: none;
     }
 
     .tab:hover {
         background-color: rgb(178, 207, 230);
         height: 120%;
+        box-shadow: 0px 0px 10px rgb(0 0 0);
+        z-index: 1;
+        /* clip-path: inset(-15px -15px 0px -15px); */
     }
 
     .tab__web {

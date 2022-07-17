@@ -16,10 +16,25 @@
 	let gameTitle = {};
 	let gameProps = null;
 
+	// Reset content
+	function scrollToMain() {
+		let main = document.querySelector("main");
+
+		if (main) {
+			main.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+
 	// Routing
 	let page = "";
-	router("/", () => (page = "home"));
-	router("/games", () => (page = "games"));
+	router("/", () => {
+		page = "home";
+		scrollToMain();
+	});
+	router("/games", () => {
+		page = "games";
+		scrollToMain();
+	});
 	// Game showcase
 	router(
 		"/games/:game",
@@ -38,7 +53,10 @@
 		},
 		() => (page = "gameShowcase")
 	);
-	router("/*", () => (page = "home"));
+	router("/*", () => {
+		page = "home";
+		scrollToMain();
+	});
 	router.start();
 </script>
 
