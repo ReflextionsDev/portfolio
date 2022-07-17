@@ -17,11 +17,14 @@
 	let gameProps = null;
 
 	// Reset content
+	let firstLoad = true;
 	function scrollToMain() {
 		let main = document.querySelector("main");
 
-		if (main) {
+		if (main && !firstLoad) {
 			main.scrollIntoView({ behavior: "smooth" });
+		} else { 
+			firstLoad = false;
 		}
 	}
 
@@ -29,11 +32,12 @@
 	let page = "";
 	router("/", () => {
 		page = "home";
-		scrollToMain();
+		setTimeout(scrollToMain, 10);
 	});
 	router("/games", () => {
 		page = "games";
-		scrollToMain();
+		setTimeout(scrollToMain, 10);
+
 	});
 	// Game showcase
 	router(
