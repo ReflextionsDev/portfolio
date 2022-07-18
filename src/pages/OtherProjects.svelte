@@ -10,6 +10,8 @@
             <p>{project.desc}</p>
         </div>
     {/each}
+    <!-- Invisible flex item to prevent 3rd object from fitting row -->
+    <div class="project" />
 </div>
 
 <style>
@@ -18,19 +20,14 @@
         flex-wrap: wrap;
         max-width: 95%;
         gap: 3%;
-        /* justify-content: center; */
         justify-content: space-around;
     }
 
     .project {
-        /* flex: 0.5; */
-        width: 280px;
+        flex: 0.5;
         min-width: 270px;
-        max-width: 450px;
-        /* max-width: 50%; */
-        /* max-width: calc(50% - 3%); */
+        max-width: min(90%, 450px);
         flex-grow: 1;
-        /* padding: 10px; */
     }
 
     img {
@@ -39,24 +36,6 @@
     }
 
     p {
-        text-align: justify;
+        text-align: left;
     }
-
-    @media (min-width: 576px) {
-        .project {
-            /* max-width: calc(50% - 3%); */
-        }
-    }
-
-    @media (max-width: 576px) {
-        .projectGrid {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .project {
-            /* max-width: 85%; */
-        }
-    }
-
 </style>
