@@ -50,6 +50,14 @@
         <a href="/games" class="tab tab__games">
             <div>GAMES</div>
         </a>
+
+        <!-- <a href="/games" class="tab tab__design">
+            <div>DESIGN</div>
+        </a> -->
+
+        <!-- <a href="/games" class="tab tab__resume">
+            <div>RESUME</div>
+        </a> -->
     </div>
     <div class="navbar__fill-clip">
         <div
@@ -153,5 +161,9 @@
 
     .tab__games {
         background-color: rgb(53, 129, 186);
+    }
+
+    .tab__resume {
+        background-color: rgb(43, 192, 115);
     }
 </style>

@@ -35,7 +35,7 @@
         <h2 class="dash">Skills</h2>
     </Section> -->
 
-    <Section top={false} bottom={true} bg={theme.bgColors.primary}>
+    <Section top={false} bottom={false} bg={theme.bgColors.primary}>
         <Skills />
     </Section>
 
@@ -53,7 +53,7 @@
 
     <Section
         top={true}
-        bottom={true}
+        bottom={false}
         bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}
     >
         <h2 class="dash">Projects</h2>
