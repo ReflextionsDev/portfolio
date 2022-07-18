@@ -6,8 +6,6 @@
     export let stack = [];
     export let reverse = false;
 
-    if (reverse) {
-    }
 </script>
 
 <div class="project content">
@@ -48,6 +46,10 @@
     .project__title {
         width: 100%;
         order: 1;
+    }
+
+    .spotlight h4 {
+        margin: 1rem 0;
     }
 
     .spotlight {

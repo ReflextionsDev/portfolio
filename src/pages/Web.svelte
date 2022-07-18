@@ -1,6 +1,7 @@
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page 
         Could move about section to below projects w/ resume -->
 <script>
+    import OtherProjects from "./OtherProjects.svelte";
     import SectionBreak from "./../components/SectionBreak.svelte";
     import Section from "./../components/Section.svelte";
     import Skills from "./Skills.svelte";
@@ -8,6 +9,24 @@
     import { theme } from "../stores";
 
     let stack = ["React", "Redux", "Node", "Express"];
+
+    let projectsOther = [
+        {
+            title: "Map Builder",
+            desc: "Create a fantasy style map with jqeury drag and drop",
+            img: "/assets/games/protoshift/protoshiftcover.png",
+        },
+        {
+            title: "Map Builder",
+            desc: "Create a fantasy style map with jqeury drag and drop",
+            img: "/assets/games/protoshift/protoshiftcover.png",
+        },
+        {
+            title: "Map Builder",
+            desc: "Create a fantasy style map with jqeury drag and drop",
+            img: "/assets/games/protoshift/protoshiftcover.png",
+        },
+    ];
 </script>
 
 <div class="page">
@@ -43,16 +62,21 @@
             {stack}
         />
         <Project
-            title="Normandy"
+            title="Project 2"
             desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
             {stack}
             reverse={true}
         />
         <Project
-        title="New Project"
-        desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
-        {stack}
-    />
+            title="New Project"
+            desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
+            {stack}
+        />
+    </Section>
+
+    <Section top={true} bottom={true} bg={"darkblue"}>
+        <h2 class="dash">Other Projects</h2>
+        <OtherProjects projects={projectsOther} />
     </Section>
 
     <!-- <SectionBreak bgURL={theme.bgImages.space} maskColor={'rgb(11 16 56 / 57%)'}>
@@ -62,5 +86,8 @@
         <Project />
     </SectionBreak> -->
 
-    <!-- <SectionBreak /> -->
+    <SectionBreak />
+
+    <!-- Add contact form and resume link here -->
+    <!-- Or resume as new tab -->
 </div>
