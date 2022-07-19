@@ -42,22 +42,23 @@
 <svelte:window on:scroll={() => NavScroll()} />
 
 <div class="navbar">
-    <div class="tabs" class:header style="--skewAngle: {skewAngle};">
-        <a href="/" class="tab tab__web">
-            <div>WEB</div>
-        </a>
+    <div class="navitems" class:header style="--skewAngle: {skewAngle};">
+        <div class="info" class:header>
+            <!-- <img class="favicon" src="favicon.png" alt="favicon"/> -->
+            <div class="title"><h4>NLB.DEV</h4></div>
+        </div>
 
-        <a href="/games" class="tab tab__games">
-            <div>GAMES</div>
-        </a>
-
-        <!-- <a href="/games" class="tab tab__design">
-            <div>DESIGN</div>
-        </a> -->
-
-        <!-- <a href="/games" class="tab tab__resume">
-            <div>RESUME</div>
-        </a> -->
+        <div class="tabs" class:header>
+            <a href="/" class="tab tab__web">
+                <h4>WEB</h4>
+            </a>
+            <a href="/games" class="tab tab__games">
+                <h4>GAMES</h4>
+            </a>
+            <a href="/" class="tab tab__resume">
+                <h4>RESUME</h4>
+            </a>
+        </div>
     </div>
     <div class="navbar__fill-clip">
         <div
@@ -69,6 +70,7 @@
 
 <!-- Side shadows on hover, current tab could be higher too -->
 <style>
+    /* NAVBAR */
     .navbar {
         height: 48px;
         position: relative;
@@ -106,17 +108,47 @@
         overflow: hidden;
     }
 
-    .tabs {
+    /* NAVITEMS */
+
+    .navitems {
         z-index: 1;
         content: "";
+        position: absolute;
         width: 100%;
         height: 100%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 41%);
         top: 0;
         left: 0;
         transform-origin: bottom left;
         transform: skewY(var(--skewAngle));
+        background-color: rgba(0, 0, 0, 41%);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        gap: 10px;
+        opacity: 0%;
+        transition: opacity 1000ms ease;
+    }
+
+    .info.header {
+        opacity: 70%;
+    }
+
+    .favicon {
+        max-height: 70%;
+        width: auto;
+    }
+    .title {
+        /* padding: 0 10px; */
+    }
+
+    /* TABS */
+
+    .tabs {
         /* transform: skewY(var(--skewAngle)) translateZ(0); */
         display: flex;
         justify-content: flex-end;
@@ -136,15 +168,36 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: larger;
-        font-weight: bold;
+        /* font-size: larger; */
+        /* font-weight: bold; */
         bottom: 0;
         transition: all 0.1s ease-out;
         color: white;
         height: 100%;
         width: 10%;
-        min-width: 100px;
+        min-width: 120px;
         text-decoration: none;
+    }
+
+    @media (max-width: 576px) {
+        .navitems.header {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .tabs {
+            width: 100%;
+        }
+        .info {
+            display: none;
+            /* flex: 3; */
+        }
+
+        
+        .tab {
+            min-width: 0px;
+            flex: 1;
+        }
     }
 
     .tab:hover {
