@@ -5,7 +5,6 @@
     export let title, desc;
     export let stack = [];
     export let reverse = false;
-
 </script>
 
 <div class="project content">
@@ -29,8 +28,10 @@
         <p class="info__text">
             {desc}
         </p>
-        <button>Live Demo</button>
-        <button>More Info & Source</button>
+        <div class="buttons">
+            <button>Live Demo</button>
+            <button>More Info & Source</button>
+        </div>
     </div>
 </div>
 
@@ -58,6 +59,14 @@
 
     .info {
         order: 3;
+    }
+
+    .buttons {
+        margin: 25px;
+        display: flex;
+        justify-content: center;
+        gap: max(10%, 15px);
+        flex-wrap: wrap;
     }
 
     /* Reverse class allows swapping of spotlight and info */

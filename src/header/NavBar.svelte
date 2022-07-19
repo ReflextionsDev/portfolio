@@ -193,7 +193,6 @@
             /* flex: 3; */
         }
 
-        
         .tab {
             min-width: 0px;
             flex: 1;
