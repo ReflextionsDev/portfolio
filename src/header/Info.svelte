@@ -25,19 +25,31 @@
     </div>
 
     <div class="info__links content__section">
-        <div class="info__link">
-            <!-- <Github size={iconSize} color={"#181717"} /> Github -->
+        <a
+            href="https://github.com/ReflextionsDev"
+            target="new"
+            class="info__link hvr-grow"
+        >
             <Github size={$iconSize} color={"#FFFFFF"} />
             <h4>Github</h4>
-        </div>
-        <div class="info__link">
+        </a>
+
+        <a
+            href="mailto:nlb.nathan@gmail.com"
+            target="new"
+            class="info__link hvr-grow"
+        >
             <Email size={$iconSize} color={"#EA4335"} />
             <h4>Email</h4>
-        </div>
-        <div class="info__link">
+        </a>
+        <a
+            href="https://www.linkedin.com/in/nathanlbennett/"
+            target="new"
+            class="info__link hvr-grow"
+        >
             <Linkedin size={$iconSize} color={"#0A66C2"} />
             <h4>Linkedin</h4>
-        </div>
+        </a>
     </div>
 </div>
 
@@ -61,9 +73,31 @@
         border-radius: 8px;
         padding: 0px 15px;
         transition: all 0.1s ease-out;
+        text-decoration: none;
+        color: whitesmoke;
     }
 
     .info__link:hover {
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.355);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        text-decoration: underline;
+    }
+
+    /* Hover CSS by @IanLunn https://github.com/IanLunn/Hover */
+    .hvr-grow {
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform;
+    }
+
+    .hvr-grow:hover,
+    .hvr-grow:focus,
+    .hvr-grow:active {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
     }
 </style>

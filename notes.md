@@ -8,12 +8,15 @@
 - Only show fullscreen on hover
 - Click images to bring up full sized modal
 
-# Background
-- Blur not supported on FF, preview page without blur effects, fix issues:
-  - Fill not displaying
-  - Background blue mask not showing
-- Pre-blur background instead
+# Todo
+- Splash links and better hover
+- Project links
+- Other project links
+- Games
+- Modal popups
+- Project mobile overlay on laptop
+- Project images
 
+# Other
 Wayback links to old sites
-
 Consider change background image on page change (web vs games)
