@@ -1,6 +1,7 @@
 <!-- Intro, Skills, Projects, Contact and Resume PDF at bottom of page 
         Could move about section to below projects w/ resume -->
 <script>
+    import ContactForm from "./ContactForm.svelte";
     import OtherProjects from "./OtherProjects.svelte";
     import SectionBreak from "./../components/SectionBreak.svelte";
     import Section from "./../components/Section.svelte";
@@ -26,7 +27,6 @@
             desc: "Create a fantasy style map with jqeury drag and drop",
             img: "/assets/games/protoshift/protoshiftcover.png",
         },
-        
     ];
 </script>
 
@@ -73,10 +73,9 @@
             desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
             {stack}
         />
-        
     </Section>
 
-    <Section top={true} bottom={true} bg={"darkblue"}>
+    <Section top={true} bottom={true} bg={theme.bgColors.primary}>
         <h2 class="dash">Other Projects</h2>
         <OtherProjects projects={projectsOther} />
     </Section>
@@ -88,7 +87,10 @@
         <Project />
     </SectionBreak> -->
 
-    <SectionBreak />
+    <!-- <SectionBreak maskColor={'#0000008f'}> -->
+    <SectionBreak>
+        <ContactForm />
+    </SectionBreak>
 
     <!-- Add contact form and resume link here -->
     <!-- Or resume as new tab -->
