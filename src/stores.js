@@ -34,6 +34,7 @@ export const games = [
         title: "Protoshift",
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
+        tags: ["featured", "mobile", "web", "freelance", "jam", "sale"],
         images: [
             {
                 src: "/assets/games/protoshift/card1BG.png",
@@ -65,6 +66,7 @@ export const games = [
     {
         date: "",
         title: "Soul Grinder",
+        tags: ["featured", "mobile", "web", "jam", "sale"],
         cover: "/assets/games/soulgrinder/cover.png",
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
         images: [
@@ -94,6 +96,7 @@ export const games = [
     {
         date: "",
         title: "Adder",
+        tags: ["featured"],
         cover: "/assets/games/adder/cover.png",
         gif: "/assets/games/adder/adder.gif",
         images: [
@@ -122,8 +125,10 @@ export const games = [
     // Roadway Repair
     {
         title: "Roadway Repair",
+        tags: ["featured", "mobile", "web", "sale"],
         cover: "/assets/games/roadwayrepair/roadwayCover.png",
         gif: "/assets/games/roadwayrepair/roadway.gif",
+        tags: ["featured", "mobile", "web", "sale"],
         images: [
             {
                 src: "/assets/games/roadwayrepair/rrmenu.png",
@@ -148,6 +153,7 @@ export const games = [
         title: "Bouncy Balloons",
         // cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
         // cover: "/assets/test.png",
+        tags: ["featured", "mobile", "web", "sale"],
         cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
         gif: "assets/games/bouncyballoons/balloons.gif",
         images: [
@@ -172,6 +178,7 @@ export const games = [
     // Brix Builder
     {
         title: "Brix Builder",
+        tags: ["featured", "mobile", "web", "sale"],
         cover: "/assets/games/brixbuilder/brixCover.png",
         gif: "/assets/games/brixbuilder/brix.gif",
         images: [
@@ -196,6 +203,7 @@ export const games = [
     // Rocket Runner
     {
         title: "Rocket Runner",
+        tags: ["featured", "mobile", "web", "sale"],
         cover: "/assets/games/rocketrunner/rocketCover.png",
         gif: "/assets/games/rocketrunner/rocket.gif",
         images: [
@@ -220,6 +228,7 @@ export const games = [
     // Voter Suppression
     {
         title: "The Voter Suppression Trail",
+        tags: ["featured", "mobile", "web", "freelance"],
         cover: "/assets/games/voter/voterCover.png",
         gif: "/assets/games/voter/voter.gif",
         images: [
@@ -253,6 +262,7 @@ export const games = [
     // MTA Country
     {
         title: "MTA Country",
+        tags: ["featured", "mobile", "web", "freelance"],
         cover: "/assets/games/mta/mtaCover.png",
         gif: "/assets/games/mta/mta.gif",
         images: [
@@ -282,6 +292,7 @@ export const games = [
     // Fantaknee Football
     {
         title: "Fantaknee Football",
+        tags: ["featured", "mobile", "web", "freelance"],
         cover: "/assets/games/fantaknee/fantakneeCover.png",
         gif: "/assets/games/fantaknee/fantaknee.gif",
         images: [
@@ -311,6 +322,7 @@ export const games = [
     // KCPS
     {
         title: "Kitty Cat Poker Slots",
+        tags: ["featured", "mobile", "freelance"],
         cover: "/assets/games/kcps/kcpsCover.png",
         gif: "/assets/games/kcps/kcps.gif",
         images: [
@@ -349,6 +361,7 @@ export const games = [
     {
         date: "Aug 2019",
         title: "Tower Defense Prototype",
+        tags: ["freelance"],
         cover: "/assets/games/tower/towerCover.png",
         gif: "/assets/games/tower/tower.gif",
         images: [
@@ -375,6 +388,7 @@ export const games = [
     {
         date: "June 2017",
         title: "Chemistry Hotspot Quiz",
+        tags: ["freelance"],
         cover: "/assets/games/chem/chemCover.png",
         gif: "/assets/games/chem/chem.gif",
         images: [
@@ -405,6 +419,7 @@ export const games = [
     {
         date: "Dec 2016",
         title: "Monster's Mayhem",
+        tags: ["freelance"],
         cover: "/assets/games/nom/nomCover.png",
         gif: "/assets/games/nom/nom.gif",
         images: [
@@ -435,6 +450,7 @@ export const games = [
     {
         date: "2013",
         title: "Red Tie Runner",
+        tags: ["featured", "mobile", "web", "sale"],
         cover: "/assets/games/rtr/rtrCover.png",
         gif: "/assets/games/rtr/rtr.gif",
         images: [
@@ -477,6 +493,7 @@ export const games = [
     {
         date: "2013",
         title: "Don't Fall!",
+        tags: ["featured", "web", "sale"],
         cover: "/assets/games/dontfall/dfCover.png",
         gif: "/assets/games/dontfall/df.gif",
         images: [
@@ -503,6 +520,7 @@ export const games = [
     {
         date: "2013",
         title: "Jet Attack!",
+        tags: ["featured", "web", "sale"],
         desc: "jetattack description",
         platform: "laptop",
         src: "",
@@ -532,6 +550,7 @@ export const games = [
     {
         date: "",
         title: "Rocket Strike!",
+        tags: ["featured", "web", "sale"],
         cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
         gif: "/assets/games/rocketstrike/rocketstrike.gif",
         images: [
@@ -561,6 +580,7 @@ export const games = [
     {
         date: "",
         title: "Sam",
+        tags: ["featured", "web", "jam"],
         cover: "/assets/games/sam/samCover.png",
         gif: "/assets/games/sam/sam.gif",
         images: [
@@ -590,6 +610,7 @@ export const games = [
     {
         date: "",
         title: "Mino's Pond",
+        tags: ["web", "jam"],
         cover: "/assets/games/minos/minosCover.png",
         gif: "/assets/games/minos/minos.gif",
         images: [
@@ -623,6 +644,7 @@ export const games = [
     {
         date: "",
         title: "Gridlock Dash",
+        tags: ["featured", "web", "jam", "sale"],
         cover: "/assets/games/gridlock/gdCover.png",
         gif: "/assets/games/gridlock/gridlock.gif",
         images: [

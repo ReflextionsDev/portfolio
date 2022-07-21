@@ -1,11 +1,9 @@
 <script>
     import GameIntro from "./GameIntro.svelte";
-    import GameCard from "./../components/GameCard.svelte";
     import SectionBreak from "./../components/SectionBreak.svelte";
     import Section from "./../components/Section.svelte";
     import { theme } from "../stores";
-    // export let games;
-    import { games } from "../stores";
+    import GameGrid from "../components/GameGrid.svelte";
 </script>
 
 <div class="page">
@@ -18,58 +16,13 @@
         bottom={true}
         bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}
     >
-        <h2 class="dash">Games</h2>
+        <h2 class="dash">Game Archive</h2>
 
-        <h3>Featured</h3>
-        <div class="games content">
-            {#each games as game}
-                <GameCard
-                    title={game.title}
-                    src={game.cover}
-                    gif={game.gif}
-                    size={game.size}
-                />
-            {/each}
-        </div>
+        <h3>Featured, All, Web, Mobile, Freelance, Game Jam, For Sale</h3>
 
-        <h3>Featured</h3>
-        <div class="games content">
-            {#each games as game}
-                <GameCard
-                    title={game.title}
-                    src={game.cover}
-                    gif={game.gif}
-                    size={game.size}
-                />
-            {/each}
-        </div>
+        <GameGrid/>
     </Section>
 
     <SectionBreak />
 </div>
 
-<style>
-    .games {
-        /* display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		overflow-y: auto;
-		padding: 10px 0px; */
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-auto-rows: 200px;
-        grid-auto-flow: dense;
-        padding: 5% 5%;
-
-        /* background-color: rgb(237, 237, 237); */
-    }
-
-    .games {
-        /* margin-top: 100px; */
-        /* padding: 50px 50px 200px 50px; */
-        /* background-color: #94e0e0; */
-        /* position: relative; */
-        /* z-index: 1; */
-    }
-</style>
