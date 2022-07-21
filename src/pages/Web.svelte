@@ -36,6 +36,7 @@
     </Section> -->
 
     <Section top={false} bottom={false} bg={theme.bgColors.primary}>
+        <h2 class="dash">Skills</h2>
         <Skills />
     </Section>
 

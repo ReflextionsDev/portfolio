@@ -141,8 +141,6 @@
 </script>
 
 <div class="skills content">
-    <h2 class="dash">Skills</h2>
-
     <div class="content__section">
         <h3>Front-End</h3>
         <div class="icons">
@@ -214,8 +212,7 @@
             {/each}
         </div>
     </div>
-    <br/>
-
+    <br />
 </div>
 
 <style>

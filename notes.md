@@ -16,7 +16,10 @@
 - Modal popups
 - Project mobile overlay on laptop
 - Project images
+- Add support to disable splash or convert to header only, for standalone pages
+
 
 # Other
 Wayback links to old sites
 Consider change background image on page change (web vs games)
+

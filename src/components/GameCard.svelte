@@ -16,6 +16,7 @@
 </div>
 
 <!-- Need cleanup -->
+
 <!-- Hover Effect by IanLunn, MIT License: https://github.com/IanLunn/Hover/blob/master/css/hover.css -->
 <style>
     /* Pulse Grow */
@@ -57,7 +58,8 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        border-radius: 34px;
+        /* border-radius: 34px; */
+        border-radius: 4px;
     }
 
     .tall {
