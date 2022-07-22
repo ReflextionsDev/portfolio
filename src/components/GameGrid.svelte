@@ -1,3 +1,5 @@
+<!-- Needs to not load gifs on mobile -->
+
 <script>
     import GameCard from "./../components/GameCard.svelte";
     import { games, gameTags, iconSize } from "../stores";
@@ -6,7 +8,7 @@
     let tag = "featured";
 
     function updateTag(filter) {
-        tag = filter
+        tag = filter;
     }
 
     function getTagCount(tag) {
@@ -49,7 +51,7 @@
         </div>
     </div>
 
-    <div class="games">
+    <div class="games content__padding">
         {#each games as game}
             {#if game.tags.includes(tag)}
                 <GameCard
@@ -77,6 +79,16 @@
         justify-content: flex-end;
     }
 
+    @media (max-width: 576px) {
+        .filter {
+            /* justify-content: center; */
+        }
+
+        .filter__content {
+            /* min-width: 75% !important; */
+        }
+    }
+
     .filter h3 {
         margin: 0;
         padding: 0.25rem 0;
@@ -88,7 +100,6 @@
         position: relative;
         margin: 15px;
         min-width: 200px;
-
     }
 
     .filter__dropdown {
@@ -120,7 +131,6 @@
         display: flex;
         gap: 4%;
         align-items: center;
-
     }
 
     .filter__item {
@@ -145,5 +155,34 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-auto-rows: 200px;
         grid-auto-flow: dense;
+    }
+
+    /* Grid breakpoints */
+    @media (max-width: 870px) {
+        .games {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-auto-rows: 150px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .games {
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-auto-rows: 140px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .games {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-auto-rows: 120px;
+        }
+    }
+
+    @media (max-width: 330px) {
+        .games {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-auto-rows: 80px;
+        }
     }
 </style>

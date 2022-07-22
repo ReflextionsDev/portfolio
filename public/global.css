@@ -106,7 +106,21 @@ button:hover {
 	max-width: 75%;
 }
 
+.content__padding {
+	max-width: 100%;
+	margin: auto;
+}
+
 /* BREAKPOINTS */
+
+/* Content */
+@media (max-width: 1200px) {
+	.content__padding {
+		max-width: 90%;
+		margin: auto;
+	}
+}
+
 
 /* Large Screens */
 @media (min-width: 992px) {
@@ -114,6 +128,8 @@ button:hover {
 	html {
 		font-size: 21px;
 	}
+
+
 }
 
 /* Laptops */
@@ -122,6 +138,8 @@ button:hover {
 	html {
 		font-size: 20px;
 	}
+
+
 }
 
 /* Tablets */
