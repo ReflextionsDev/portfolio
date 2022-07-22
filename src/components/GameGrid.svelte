@@ -1,7 +1,13 @@
 <script>
     import GameCard from "./../components/GameCard.svelte";
-    import { games, gameTags } from "../stores";
-    let tag = "mobile";
+    import { games, gameTags, iconSize } from "../stores";
+    import MenuIcon from "./icons/MenuIcon.svelte";
+
+    let tag = "featured";
+
+    function updateTag(filter) {
+        tag = filter
+    }
 
     function getTagCount(tag) {
         let sum = games.reduce((count, game) => {
@@ -21,13 +27,14 @@
         <div class="filter__content">
             <h3 class="filter__header">
                 {tag[0].toUpperCase() + tag.substring(1)}
+                <MenuIcon size={36} />
             </h3>
             <div class="filter__dropdown">
                 {#each gameTags as filter}
                     {#if filter !== tag}
                         <div
                             class="filter__item"
-                            on:click={(e) => (tag = filter)}
+                            on:click={(e) => updateTag(filter)}
                         >
                             <h3>
                                 {filter[0].toUpperCase() + filter.substring(1)}
@@ -80,11 +87,8 @@
         flex: 0.2;
         position: relative;
         margin: 15px;
-    }
+        min-width: 200px;
 
-    .filter__header {
-        background: #000000d5;
-        margin: 10px;
     }
 
     .filter__dropdown {
@@ -114,10 +118,21 @@
         transition: background-color 50ms;
         border-bottom: #55535e 2px solid;
         display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 4%;
+        align-items: center;
+
+    }
+
+    .filter__item {
+        justify-content: center;
         padding: 5px 0;
+    }
+
+    .filter__header {
+        background: #000000d5;
+        margin: 10px;
+        justify-content: space-between;
+        padding-inline: 10px !important;
     }
 
     .filter__item p {
