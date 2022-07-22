@@ -19,6 +19,8 @@ export const theme = {
     }
 }
 
+export const gameTags = ["all","featured","freelance","web","mobile","jam","sale"]
+
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
 // Add embedded bool (preview)
@@ -34,7 +36,7 @@ export const games = [
         title: "Protoshift",
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
-        tags: ["featured", "mobile", "web", "freelance", "jam", "sale"],
+        tags: ["featured", "web"],
         images: [
             {
                 src: "/assets/games/protoshift/card1BG.png",

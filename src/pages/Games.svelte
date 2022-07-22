@@ -18,11 +18,14 @@
     >
         <h2 class="dash">Game Archive</h2>
 
-        <h3>Featured, All, Web, Mobile, Freelance, Game Jam, For Sale</h3>
+        <!-- <h3>Featured, All, Web, Mobile, Freelance, Game Jam, For Sale</h3> -->
 
-        <GameGrid/>
+        <GameGrid />
     </Section>
 
     <SectionBreak />
 </div>
 
+<style>
+
+</style>

@@ -1,44 +1,134 @@
 <script>
     import GameCard from "./../components/GameCard.svelte";
-    import { games } from "../stores";
-    export let tag = "all";
+    import { games, gameTags } from "../stores";
+    let tag = "mobile";
+
+    function getTagCount(tag) {
+        let sum = games.reduce((count, game) => {
+            if (game.tags.includes(tag) || tag === "all") {
+                return count + 1;
+            } else {
+                return count;
+            }
+        }, 0);
+
+        return sum;
+    }
 </script>
 
-<div class="games content">
-    {#each games as game}
-        <GameCard
-            title={game.title}
-            src={game.cover}
-            gif={game.gif}
-            size={game.size}
-        />
-    {/each}
+<div class="content">
+    <div class="filter">
+        <div class="filter__content">
+            <h3 class="filter__header">
+                {tag[0].toUpperCase() + tag.substring(1)}
+            </h3>
+            <div class="filter__dropdown">
+                {#each gameTags as filter}
+                    {#if filter !== tag}
+                        <div
+                            class="filter__item"
+                            on:click={(e) => (tag = filter)}
+                        >
+                            <h3>
+                                {filter[0].toUpperCase() + filter.substring(1)}
+                            </h3>
+                            <p>
+                                ({getTagCount(filter)})
+                            </p>
+                        </div>
+                    {/if}
+                {/each}
+            </div>
+        </div>
+    </div>
+
+    <div class="games">
+        {#each games as game}
+            {#if game.tags.includes(tag)}
+                <GameCard
+                    title={game.title}
+                    src={game.cover}
+                    gif={game.gif}
+                    size={game.size}
+                />
+            {:else if tag === "all"}
+                <GameCard
+                    title={game.title}
+                    src={game.cover}
+                    gif={game.gif}
+                    size={game.size}
+                />
+            {/if}
+        {/each}
+    </div>
 </div>
 
-
-
 <style>
+    .filter {
+        color: whitesmoke;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .filter h3 {
+        margin: 0;
+        padding: 0.25rem 0;
+        max-width: 100%;
+    }
+
+    .filter__content {
+        flex: 0.2;
+        position: relative;
+        margin: 15px;
+    }
+
+    .filter__header {
+        background: #000000d5;
+        margin: 10px;
+    }
+
+    .filter__dropdown {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        background: #000000b5;
+        display: none;
+    }
+
+    .filter__content:hover .filter__dropdown {
+        display: block;
+    }
+
+    .filter__item:hover {
+        background: #ffffff8f;
+        cursor: pointer;
+    }
+
+    .filter__header:hover {
+        background: #5e5e5e8f;
+        cursor: pointer;
+    }
+
+    .filter__item,
+    .filter__header {
+        transition: background-color 50ms;
+        border-bottom: #55535e 2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4%;
+        padding: 5px 0;
+    }
+
+    .filter__item p {
+        margin: 0;
+    }
+
     .games {
-        /* display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		overflow-y: auto;
-		padding: 10px 0px; */
         display: grid;
         grid-gap: 15px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-auto-rows: 200px;
         grid-auto-flow: dense;
-        padding: 5% 5%;
-
-        /* background-color: rgb(237, 237, 237); */
-    }
-
-    .games {
-        /* margin-top: 100px; */
-        /* padding: 50px 50px 200px 50px; */
-        /* background-color: #94e0e0; */
-        /* position: relative; */
-        /* z-index: 1; */
     }
 </style>
