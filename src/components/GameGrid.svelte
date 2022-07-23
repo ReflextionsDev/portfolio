@@ -1,4 +1,5 @@
 <!-- Needs to not load gifs on mobile -->
+<!-- Need to optimize gifs... maybe use videos, or cut them even shorter, downscale -->
 
 <script>
     import GameCard from "./../components/GameCard.svelte";
