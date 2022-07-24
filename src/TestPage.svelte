@@ -3,5 +3,5 @@
     import Phone from "./components/Phone.svelte";
 </script>
 
-<!-- <Phone /> -->
-<Laptop />
+<Phone />
+<!-- <Laptop /> -->
