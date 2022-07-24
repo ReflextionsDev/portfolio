@@ -1,3 +1,5 @@
+<!-- Support image instead of source
+Add fullscreen button, which is togglable -->
 <script>
     export let src;
 </script>
@@ -18,7 +20,7 @@
 
 <style>
     .laptop {
-        width: 85%;
+        width: 95%;
         aspect-ratio: 3/2;
         background-color: rgb(1, 16, 11);
         border-radius: 15px;
@@ -26,6 +28,7 @@
         flex-direction: column;
         box-shadow: 3px 0px 12px rgb(82, 82, 82);
         align-items: center;
+        margin: auto;
     }
 
     .laptop__top {

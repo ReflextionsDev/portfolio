@@ -15,6 +15,9 @@
     
 </script>
 
+<!-- Later add: open as page -->
+<!-- On mobile, hide preview object, only show links (play in browser) for mobile, for desktop games, show gif in laptop -->
+
 <!-- For landscape, adjust spotlight flex and make page bigger (vw height) -->
 
 <div>

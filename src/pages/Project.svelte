@@ -11,7 +11,7 @@
     <h3 class="project__title">{title}</h3>
 
     <div class="spotlight content__section" class:reverse>
-        <div style="display: flex; justify-content: center">
+        <div style="padding-inline: 30px">
             <Laptop />
         </div>
 
