@@ -7,7 +7,8 @@ export const iconSize = writable(64)
 export const theme = {
     bgColors: {
         primary: "#1a1a1a",
-        secondary: "#361f83"
+        secondary: "#361f83",
+        gradientSilver: "linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)",
     },
     skewAngle: -3,
     bgImages: {
@@ -89,9 +90,9 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
         ],
-        desc: "soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
+        desc: "Sould Grinder is blah blah lorem lorem blah ipsum and stuff. soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
         platform: "laptop",
-        src: "",
+        src: "https://games.crazygames.com/en_US/soul-grinder/index.html",
         size: "big",
     },
     // Adder

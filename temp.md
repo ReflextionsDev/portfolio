@@ -85,3 +85,24 @@ Manual scroll to
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 } */
+
+
+    /* custom scrollbar */
+    /* ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: hsl(196, 15%, 86%);
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #a8bbbf;
+    } */

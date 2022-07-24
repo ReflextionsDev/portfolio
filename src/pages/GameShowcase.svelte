@@ -10,32 +10,33 @@
     export let cover;
     export let images;
     export let src;
-
-
-    
 </script>
 
 <!-- Later add: open as page -->
 <!-- On mobile, hide preview object, only show links (play in browser) for mobile, for desktop games, show gif in laptop -->
-
 <!-- For landscape, adjust spotlight flex and make page bigger (vw height) -->
+<!-- Should componetize -->
+<!-- allow user to click images for full size module popup -->
 
-<div>
+<!-- <div>
     <div class="showcase">
         <div class="preview">
             {#if platform === "phone"}
                 <Phone {src} />
             {:else if platform === "laptop"}
-                <Laptop {src} />
+                <div class="laptop__wrapper">
+                    <Laptop {src} />
+                </div>
             {/if}
         </div>
-        <!-- Should componetize -->
-        <!-- allow user to click images for full size module popup -->
+
         <div class="info">
             <div class="details">
                 <div class="content">
                     <h1>{title}</h1>
-                    <p style="font-size:1.5em; text-align:justify">{desc}</p>
+                    <p style="font-size:1.5em; text-align:justify">
+                        {desc}
+                    </p>
 
                     <div class="details__images">
                         {#each images as image}
@@ -46,77 +47,78 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+{#if platform === "phone"}
+    <Phone {src} />
+{:else if platform === "laptop"}
+    <div class="showcase content" style="flex-direction: column;">
+        <h2 class="dash">{title}</h2>
+
+        <div class="preview" style="padding: 5% 15%">
+            <Laptop {src} />
+        </div>
+
+        <div class="info">
+            <p class="info__item info__desc content__text">
+                {desc}
+            </p>
+
+            {#each images as image}
+                <div class="info__item">
+                    <img src={image.src} alt={image.alt} />
+                </div>
+            {/each}
+        </div>
+    </div>
+{/if}
 
 <style>
-    /* [Page] */
-    .page {
-        height: 90%;
-        /* background-color: rgb(244, 244, 244); */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .info__item {
+        max-width: 50%;
+        gap: 45px;
+        
+    }
+    .laptop__wrapper {
     }
 
     /* [Showcase] */
     .showcase {
-        /* border: red 1px solid; */
-        /* max-width: 1140px; */
-        /* max-width: 137vh; */
-        /* max-width: 167vh; */
-        /* border-radius: 10px; */
-        /* background-color: white; */
         display: flex;
-        /* width: 90%; */
-        /* height: 85%; */
-        /* max-width: 1920px; */
-        /* box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25); */
     }
 
     /* [Spotlight] */
     .preview {
-        /* flex: 1; */
         flex: 1;
-        /* background-color: rgb(245, 245, 245); */
-        /* display: flex; */
-        /* align-items: center; */
-        /* justify-content: center; */
-        /* max-width: 50%; */
-        display: sticky;
-        top: 0;
-    }
-
-    /* [Details] */
-
-    .laptop {
-        background-color: wheat;
     }
 
     .info {
-        flex: 1;
+        /* flex: 1;
         display: flex;
         justify-content: center;
-        align-items: center;
-        /* max-width: 100%; */
-        /* min-width: 620px; */
-        /* max-width: 50%; */
+        align-items: center; */
+        /* max-height: 100%; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
     .details {
-        flex: 1;
+        /* flex: 1; */
         /* overflow-y: auto; */
         /* overflow-x: hidden; */
-        max-width: 100%;
-        max-height: 88%;
+        /* max-width: 100%; */
+        /* max-height: 88%; */
     }
 
-    /* max width div? */
+    .info__desc {
+        flex: 1;
+    }
 
-    .content {
-        /* max-width: 75%; */
-        /* max-height: 90%; */
-        /* align-self: center; */
-        /* margin: auto; */
+    .info__images {
+        /* max-height: 100%; */
+        flex: 1;
+        /* overflow: auto; */
     }
 
     img {
@@ -125,31 +127,11 @@
         border-radius: 4%;
     }
 
-    .details__images {
+    .info__images {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 45px;
         padding: 30px 0px;
     }
-
-    /* custom scrollbar */
-    /* ::-webkit-scrollbar {
-        width: 20px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: hsl(196, 15%, 86%);
-        border-radius: 20px;
-        border: 6px solid transparent;
-        background-clip: content-box;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: #a8bbbf;
-    } */
 </style>

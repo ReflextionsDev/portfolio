@@ -90,7 +90,7 @@
 
 <div class="wrapper background">
 	<Modal
-		styleWindow={{ boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.15)", width: "1200px" }}
+		styleWindow={{ boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.15)", width: "1200px", background: theme.bgColors.primary, color: "white"}}
 	>
 		<!-- Header -->
 		<Splash />
