@@ -92,7 +92,7 @@ button:hover {
 	min-width: 280px;
 	max-width: 1200px;
 	margin: auto;
-	overflow: hidden;
+	/* overflow: hidden; */
 	padding: 25px 0px;
 }
 
