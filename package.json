@@ -20,6 +20,7 @@
   "dependencies": {
     "page": "^1.11.6",
     "sirv-cli": "^2.0.0",
+    "svelte-simple-modal": "^1.4.1",
     "svelte-viewport-info": "^1.0.0"
   }
 }

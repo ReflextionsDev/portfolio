@@ -3,20 +3,29 @@
     export let src = "/assets/games/cards/rrmenu.png";
     export let size = "normal";
     export let gif = "";
+
+
+
+    // Modal
+    import { getContext } from "svelte";
+    import Popup from "./GamePopup.svelte";
+    
+
+    const { open } = getContext("simple-modal");
+    const openPopup = () => open(Popup, {title});
 </script>
 
-<div class="game {size} hvr-pulse-grow">
-    <a href={`/games/${title.split(" ").join("").toLowerCase()}`}>
+
+
+<div class="game {size} hvr-pulse-grow" on:click={openPopup}>
         <img class="card  full" {src} alt={title} />
         <img class="gif full" src={gif} alt={title} />
         <div class="cover full" />
         <!-- <div class="title full">{title}</div> -->
         <img class="icon" src="/assets/icons/fullscreen2.png" />
-    </a>
 </div>
 
 <!-- Need cleanup -->
-
 <!-- Hover Effect by IanLunn, MIT License: https://github.com/IanLunn/Hover/blob/master/css/hover.css -->
 <style>
     /* Pulse Grow */
@@ -60,6 +69,16 @@
         overflow: hidden;
         /* border-radius: 34px; */
         border-radius: 4px;
+
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .game * {
+        transition: all 0.4s ease-in-out;
+
     }
 
     .tall {
@@ -83,14 +102,10 @@
     /* Relative used to allow links to be usable as absolute parent containers */
 
     a {
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 100%;
+     
     }
 
     a * {
-        transition: all 0.4s ease-in-out;
     }
 
     .full {
@@ -114,6 +129,7 @@
         box-shadow: 0px 0px 20px 1px black;
 
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
     }
 
     .game .gif {

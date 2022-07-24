@@ -5,9 +5,11 @@
 	import Web from "./pages/Web.svelte";
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./pages/GameShowcase.svelte";
+	import Section from "./components/Section.svelte";
+	import Modal from "svelte-simple-modal";
 
 	// Variables
-	import { games, url } from "./stores";
+	import { games, url, theme } from "./stores";
 
 	// Used to load game showcases, will probably need to be update when converted to modal
 	let gameTitle = {};
@@ -32,8 +34,9 @@
 		const main = document.querySelector("main");
 		const navbar = document.querySelector(".navbar");
 		const yOffset = -navbar.offsetHeight;
-		const y = main.getBoundingClientRect().top + window.pageYOffset + yOffset;
-		
+		const y =
+			main.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
 		if (main && !firstLoad) {
 			// elem.scrollIntoView({ behavior: "smooth" });
 			window.scrollTo({ top: y, behavior: "smooth" });
@@ -86,24 +89,34 @@
 <svelte:body on:viewportchanged={updateIconSize} />
 
 <div class="wrapper background">
-	<!-- Header -->
-	<Splash />
+	<Modal
+		styleWindow={{ boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.15)", width: "1200px" }}
+	>
+		<!-- Header -->
+		<Splash />
 
-	<!-- Routed body -->
-	<main>
-		{#if page === "home"}
-			<Web />
-		{:else if page === "games"}
-			<Games {games} />
-		{:else if page === "gameShowcase"}
-			<!-- Redirect to game page is props are missing -->
-			{#if gameProps == null}
-				{window.location.replace(`${url}/games`)}
-			{:else}
-				<GameShowcase {...gameProps} />
+		<!-- Routed body -->
+		<main>
+			{#if page === "home"}
+				<Web />
+			{:else if page === "games"}
+				<Games {games} />
+			{:else if page === "gameShowcase"}
+				<!-- Redirect to game page is props are missing -->
+				{#if gameProps == null}
+					{window.location.replace(`${url}/games`)}
+				{:else}
+					<Section
+						top={false}
+						bottom={false}
+						bg={theme.bgColors.primary}
+					>
+						<GameShowcase {...gameProps} />
+					</Section>
+				{/if}
 			{/if}
-		{/if}
-	</main>
+		</main>
+	</Modal>
 </div>
 
 <style>

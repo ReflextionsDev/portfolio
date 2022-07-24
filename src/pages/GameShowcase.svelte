@@ -2,19 +2,24 @@
     import Laptop from "../components/Laptop.svelte";
     import Phone from "../components/Phone.svelte";
 
+    import { theme } from "../stores";
+
     export let title;
     export let desc;
     export let platform;
     export let cover;
     export let images;
     export let src;
+
+
+    
 </script>
 
 <!-- For landscape, adjust spotlight flex and make page bigger (vw height) -->
 
-<div class="page">
+<div>
     <div class="showcase">
-        <div class="spotlight">
+        <div class="preview">
             {#if platform === "phone"}
                 <Phone {src} />
             {:else if platform === "laptop"}
@@ -22,12 +27,13 @@
             {/if}
         </div>
         <!-- Should componetize -->
+        <!-- allow user to click images for full size module popup -->
         <div class="info">
             <div class="details">
                 <div class="content">
                     <h1>{title}</h1>
                     <p style="font-size:1.5em; text-align:justify">{desc}</p>
-                    <!-- allow user to click images for full size module popup -->
+
                     <div class="details__images">
                         {#each images as image}
                             <img src={image.src} alt={image.alt} />
@@ -43,7 +49,7 @@
     /* [Page] */
     .page {
         height: 90%;
-        background-color: rgb(244, 244, 244);
+        /* background-color: rgb(244, 244, 244); */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,26 +59,28 @@
     .showcase {
         /* border: red 1px solid; */
         /* max-width: 1140px; */
-        max-width: 137vh;
+        /* max-width: 137vh; */
         /* max-width: 167vh; */
-        border-radius: 10px;
-        background-color: white;
+        /* border-radius: 10px; */
+        /* background-color: white; */
         display: flex;
-        width: 90%;
-        height: 85%;
+        /* width: 90%; */
+        /* height: 85%; */
         /* max-width: 1920px; */
-        box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
+        /* box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25); */
     }
 
     /* [Spotlight] */
-    .spotlight {
+    .preview {
         /* flex: 1; */
         flex: 1;
         /* background-color: rgb(245, 245, 245); */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 50%;
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* max-width: 50%; */
+        display: sticky;
+        top: 0;
     }
 
     /* [Details] */
@@ -93,8 +101,8 @@
 
     .details {
         flex: 1;
-        overflow-y: auto;
-        overflow-x: hidden;
+        /* overflow-y: auto; */
+        /* overflow-x: hidden; */
         max-width: 100%;
         max-height: 88%;
     }
@@ -102,10 +110,10 @@
     /* max width div? */
 
     .content {
-        max-width: 75%;
-        max-height: 90%;
+        /* max-width: 75%; */
+        /* max-height: 90%; */
         /* align-self: center; */
-        margin: auto;
+        /* margin: auto; */
     }
 
     img {
@@ -123,7 +131,7 @@
     }
 
     /* custom scrollbar */
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
         width: 20px;
     }
 
@@ -140,5 +148,5 @@
 
     ::-webkit-scrollbar-thumb:hover {
         background-color: #a8bbbf;
-    }
+    } */
 </style>
