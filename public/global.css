@@ -44,6 +44,18 @@ p {
 	font-size: 1rem;
 }
 
+a {
+	color: royalblue;
+}
+
+a:hover {
+	color: whitesmoke;
+}
+
+a:active {
+	color: darkcyan;
+}
+
 button {
 	font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	min-width: 120px;

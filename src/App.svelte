@@ -7,6 +7,7 @@
 	import GameShowcase from "./pages/GameShowcase.svelte";
 	import Section from "./components/Section.svelte";
 	import Modal from "svelte-simple-modal";
+	import SectionBreak from "./components/SectionBreak.svelte";
 
 	// Variables
 	import { games, url, theme } from "./stores";
@@ -90,7 +91,12 @@
 
 <div class="wrapper background">
 	<Modal
-		styleWindow={{ boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.15)", width: "1200px", background: theme.bgColors.primary, color: "white"}}
+		styleWindow={{
+			boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.15)",
+			width: "1200px",
+			background: theme.bgColors.primary,
+			color: "white",
+		}}
 	>
 		<!-- Header -->
 		<Splash />
@@ -108,11 +114,12 @@
 				{:else}
 					<Section
 						top={false}
-						bottom={false}
+						bottom={true}
 						bg={theme.bgColors.primary}
 					>
 						<GameShowcase {...gameProps} />
 					</Section>
+					<SectionBreak />
 				{/if}
 			{/if}
 		</main>

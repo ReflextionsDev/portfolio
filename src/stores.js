@@ -72,6 +72,10 @@ export const games = [
         tags: ["featured", "mobile", "web", "jam", "sale"],
         cover: "/assets/games/soulgrinder/cover.png",
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
+        desc: "Sould Grinder is blah blah lorem lorem blah ipsum and stuff. soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
+        platform: "laptop",
+        src: "https://games.crazygames.com/en_US/soul-grinder/index.html",
+        size: "big",
         images: [
             {
                 src: "/assets/games/soulgrinder/1.png",
@@ -90,10 +94,25 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
         ],
-        desc: "Sould Grinder is blah blah lorem lorem blah ipsum and stuff. soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
-        platform: "laptop",
-        src: "https://games.crazygames.com/en_US/soul-grinder/index.html",
-        size: "big",
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "",
+            },
+            {
+                label: "Another Link",
+                link: "",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/soul-grinder",
+            },
+            {
+                label: "Crazy Games",
+                link: "https://www.crazygames.com/game/soul-grinder",
+            }
+        ]
+  
     },
     // Adder
     {

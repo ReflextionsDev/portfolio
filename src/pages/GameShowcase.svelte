@@ -10,6 +10,9 @@
     export let cover;
     export let images;
     export let src;
+    export let links = [];
+
+    console.log("links", links);
 </script>
 
 <!-- Later add: open as page -->
@@ -49,16 +52,13 @@
     </div>
 </div> -->
 
-{#if platform === "phone"}
-    <Phone {src} />
-{:else if platform === "laptop"}
-    <div class="showcase content" style="flex-direction: column;">
-        <h2 class="dash">{title}</h2>
-
-        <div class="preview" style="padding: 5% 15%">
-            <Laptop {src} />
+<!-- {#if platform === "phone"}
+    <div class="showcase">
+        <div class="preview">
+            <Phone {src} />
         </div>
 
+        
         <div class="info">
             <p class="info__item info__desc content__text">
                 {desc}
@@ -71,67 +71,64 @@
             {/each}
         </div>
     </div>
-{/if}
+{:else if platform === "laptop"} -->
+<div class="content">
+    <h2 class="dash">{title}</h2>
+
+    {#if platform === "phone"}
+        <Phone {src} />
+    {:else if platform === "laptop"}
+        <div style="padding: 5% 15% 2%">
+            <Laptop {src} />
+        </div>
+    {/if}
+
+    <div class="links">
+        {#each links as link}
+            <a href={link.link} target="new">
+                <h4 style="max-width: 100%">{link.label}</h4>
+            </a>
+        {/each}
+    </div>
+
+    <div class="content__section">
+        <p class="content__text ">
+            {desc}
+        </p>
+    </div>
+
+    <div class="content__section content__padding images">
+        {#each images as image}
+            <div class="image">
+                <img src={image.src} alt={image.alt} />
+            </div>
+        {/each}
+    </div>
+</div>
 
 <style>
-    .info__item {
-        max-width: 50%;
-        gap: 45px;
-        
-    }
-    .laptop__wrapper {
-    }
-
-    /* [Showcase] */
-    .showcase {
-        display: flex;
-    }
-
-    /* [Spotlight] */
-    .preview {
-        flex: 1;
-    }
-
-    .info {
-        /* flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center; */
-        /* max-height: 100%; */
+    .links {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    .details {
-        /* flex: 1; */
-        /* overflow-y: auto; */
-        /* overflow-x: hidden; */
-        /* max-width: 100%; */
-        /* max-height: 88%; */
-    }
-
-    .info__desc {
-        flex: 1;
-    }
-
-    .info__images {
-        /* max-height: 100%; */
-        flex: 1;
-        /* overflow: auto; */
+        justify-content: center;
+        gap: 5%;
     }
 
     img {
-        /* padding: 20%; */
         max-width: 100%;
-        border-radius: 4%;
     }
 
-    .info__images {
+    .images {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+
         align-items: center;
-        gap: 45px;
-        padding: 30px 0px;
+        justify-content: center;
+    }
+
+    .image {
+        flex: 1;
+        min-width: max(270px, 40%);
+        margin: 10px;
     }
 </style>
