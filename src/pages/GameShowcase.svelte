@@ -1,9 +1,9 @@
 <script>
+    // Imports
     import Laptop from "../components/Laptop.svelte";
     import Phone from "../components/Phone.svelte";
 
-    import { theme } from "../stores";
-
+    // Vars
     export let title;
     export let desc;
     export let platform;
@@ -12,7 +12,7 @@
     export let src;
     export let links = [];
 
-    console.log("links", links);
+    import { Lightbox } from "svelte-lightbox";
 </script>
 
 <!-- Later add: open as page -->
@@ -100,7 +100,10 @@
     <div class="content__section content__padding images">
         {#each images as image}
             <div class="image">
-                <img src={image.src} alt={image.alt} />
+                <Lightbox transitionDuration=150>
+                    <img src={image.src} alt={image.alt} />
+
+                </Lightbox>
             </div>
         {/each}
     </div>
