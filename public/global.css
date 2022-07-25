@@ -56,7 +56,7 @@ a:active {
 	color: darkcyan;
 }
 
-button {
+.button {
 	font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	min-width: 120px;
 	min-height: 40px;
@@ -70,7 +70,7 @@ button {
 }
 
 button:hover {
-	background-color: rgb(64, 107, 186);
+	background-color: rgb(64, 107, 186) !important;
 	cursor: pointer;
 }
 

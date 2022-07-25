@@ -88,7 +88,7 @@
         <ShowcaseLaptop {src} {title} {links} {desc} />
     {/if}
 
-    <!-- Images -->
+    <!-- Media -->
     <div class="content__section content__padding images">
         {#each videos as video}
             <div class="image">
@@ -117,7 +117,7 @@
             href={`/games/${title.split(" ").join("").toLowerCase()}`}
             target="new"
         >
-            <button>Open as page</button>
+            <button class="button">Open as page</button>
         </a>
     {/if}
 </div>

@@ -97,6 +97,10 @@
 			background: theme.bgColors.primary,
 			color: "white",
 		}}
+		styleCloseButton={{
+			cursor: "pointer",
+			margin: "10px",
+		}}
 	>
 		<!-- Header -->
 		<Splash />

@@ -29,8 +29,8 @@
             {desc}
         </p>
         <div class="buttons">
-            <button>Live Demo</button>
-            <button>More Info & Source</button>
+            <button class="button">Live Demo</button>
+            <button class="button">More Info & Source</button>
         </div>
     </div>
 </div>

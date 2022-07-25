@@ -20,7 +20,7 @@
                 />
             </label>
             <!-- your other form fields go here -->
-            <button type="submit">Send</button>
+            <button class="button" type="submit">Send</button>
         </form>
     </div>
 </div>
