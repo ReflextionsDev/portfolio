@@ -117,7 +117,7 @@
 						bottom={true}
 						bg={theme.bgColors.primary}
 					>
-						<GameShowcase {...gameProps} />
+						<GameShowcase {...gameProps} fullPage={true} />
 					</Section>
 					<SectionBreak />
 				{/if}

@@ -1,5 +1,6 @@
 <script>
     // Imports
+    import { Lightbox } from "svelte-lightbox";
     import Laptop from "../components/Laptop.svelte";
     import Phone from "../components/Phone.svelte";
 
@@ -11,8 +12,9 @@
     export let images;
     export let src;
     export let links = [];
+    export let fullPage = false;
 
-    import { Lightbox } from "svelte-lightbox";
+    console.log("is fullpage", fullPage);
 </script>
 
 <!-- Later add: open as page -->
@@ -20,6 +22,8 @@
 <!-- For landscape, adjust spotlight flex and make page bigger (vw height) -->
 <!-- Should componetize -->
 <!-- allow user to click images for full size module popup -->
+<!-- Add gallery support -->
+<!-- Make open as page button scroll to top page -->
 
 <!-- <div>
     <div class="showcase">
@@ -100,13 +104,21 @@
     <div class="content__section content__padding images">
         {#each images as image}
             <div class="image">
-                <Lightbox transitionDuration=150>
+                <Lightbox transitionDuration="150">
                     <img src={image.src} alt={image.alt} />
-
                 </Lightbox>
             </div>
         {/each}
     </div>
+
+    {#if !fullPage}
+        <a
+            href={`/games/${title.split(" ").join("").toLowerCase()}`}
+            target="new"
+        >
+            <button>Open as page</button></a
+        >
+    {/if}
 </div>
 
 <style>
