@@ -20,7 +20,7 @@ export const theme = {
     }
 }
 
-export const gameTags = ["all","featured","freelance","web","mobile","jam","sale"]
+export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam", "sale"]
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -112,7 +112,7 @@ export const games = [
                 link: "https://www.crazygames.com/game/soul-grinder",
             }
         ]
-  
+
     },
     // Adder
     {
@@ -150,7 +150,10 @@ export const games = [
         tags: ["featured", "mobile", "web", "sale"],
         cover: "/assets/games/roadwayrepair/roadwayCover.png",
         gif: "/assets/games/roadwayrepair/roadway.gif",
-        tags: ["featured", "mobile", "web", "sale"],
+        desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
+        platform: "phone",
+        src: "https://tangerine-duckanoo-61afbc.netlify.app/",
+        size: "tall",
         images: [
             {
                 src: "/assets/games/roadwayrepair/rrmenu.png",
@@ -165,10 +168,25 @@ export const games = [
                 alt: "roadway level screens",
             },
         ],
-        desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
-        platform: "phone",
-        src: "https://tangerine-duckanoo-61afbc.netlify.app/",
-        size: "tall",
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "",
+            },
+            {
+                label: "Another Link",
+                link: "",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/soul-grinder",
+            },
+            {
+                label: "Crazy Games",
+                link: "https://www.crazygames.com/game/soul-grinder",
+            }
+        ],
+
     },
     // Bouncy Balloons
     {

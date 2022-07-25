@@ -3,6 +3,8 @@
     import { Lightbox } from "svelte-lightbox";
     import Laptop from "../components/Laptop.svelte";
     import Phone from "../components/Phone.svelte";
+    import ShowcaseLaptop from "../components/ShowcaseLaptop.svelte";
+    import ShowcasePhone from "../components/ShowcasePhone.svelte";
 
     // Vars
     export let title;
@@ -13,8 +15,6 @@
     export let src;
     export let links = [];
     export let fullPage = false;
-
-    console.log("is fullpage", fullPage);
 </script>
 
 <!-- Later add: open as page -->
@@ -76,31 +76,16 @@
         </div>
     </div>
 {:else if platform === "laptop"} -->
-<div class="content">
-    <h2 class="dash">{title}</h2>
 
+<div class="content">
+    <!-- Showcase Type -->
     {#if platform === "phone"}
-        <Phone {src} />
+        <ShowcasePhone {src} {title} {links} {desc} />
     {:else if platform === "laptop"}
-        <div style="padding: 5% 15% 2%">
-            <Laptop {src} />
-        </div>
+        <ShowcaseLaptop {src} {title} {links} {desc} />
     {/if}
 
-    <div class="links">
-        {#each links as link}
-            <a href={link.link} target="new">
-                <h4 style="max-width: 100%">{link.label}</h4>
-            </a>
-        {/each}
-    </div>
-
-    <div class="content__section">
-        <p class="content__text ">
-            {desc}
-        </p>
-    </div>
-
+    <!-- Images -->
     <div class="content__section content__padding images">
         {#each images as image}
             <div class="image">
@@ -111,24 +96,18 @@
         {/each}
     </div>
 
+    <!-- Full Page Button -->
     {#if !fullPage}
         <a
             href={`/games/${title.split(" ").join("").toLowerCase()}`}
             target="new"
         >
-            <button>Open as page</button></a
-        >
+            <button>Open as page</button>
+        </a>
     {/if}
 </div>
 
 <style>
-    .links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5%;
-    }
-
     img {
         max-width: 100%;
     }
