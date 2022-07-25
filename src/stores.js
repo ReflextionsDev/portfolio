@@ -94,6 +94,17 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
         ],
+
+        videos: [
+            {
+                label: "Trailer 1",
+                src: "https://www.youtube.com/embed/m_qlgFQs7E4",
+            },
+            {
+                label: "Trailer 2",
+                src: "https://www.youtube.com/embed/USmpeevo_wg",
+            },
+        ],
         links: [
             {
                 label: "Scirra Arcade",

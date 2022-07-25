@@ -14,7 +14,10 @@
     export let images;
     export let src;
     export let links = [];
+    export let videos = [];
     export let fullPage = false;
+
+    console.log(videos);
 </script>
 
 <!-- Later add: open as page -->
@@ -87,6 +90,18 @@
 
     <!-- Images -->
     <div class="content__section content__padding images">
+        {#each videos as video}
+            <div class="image">
+                <iframe
+                    class="video"
+                    src={video.src}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media;picture-in-picture"
+                    allowfullscreen
+                />
+            </div>
+        {/each}
         {#each images as image}
             <div class="image">
                 <Lightbox transitionDuration="150">
@@ -124,5 +139,11 @@
         flex: 1;
         min-width: max(270px, 40%);
         margin: 10px;
+        display: flex;
+    }
+
+    .video {
+        width: 1193px;
+        aspect-ratio: 16/9;
     }
 </style>
