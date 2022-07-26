@@ -1,8 +1,8 @@
 <script>
     // Imports
     import { Lightbox } from "svelte-lightbox";
-    import ShowcaseLaptop from "../ShowcaseLaptop.svelte";
-    import ShowcasePhone from "../ShowcasePhone.svelte";
+    import ShowcaseLaptop from "./GameShowcaseLaptop.svelte";
+    import ShowcasePhone from "./GameShowcasePhone.svelte";
 
     // Vars
     export let title;
@@ -29,7 +29,7 @@
 <div class="content">
     <!-- Showcase Type -->
     {#if platform === "phone"}
-        <ShowcasePhone {src} {title} {links} {desc} {gif}/>
+        <ShowcasePhone {src} {title} {links} {desc} {gif} />
     {:else if platform === "laptop"}
         <ShowcaseLaptop {src} {title} {links} {desc} {gif} />
     {/if}
@@ -76,7 +76,6 @@
     .images {
         display: flex;
         flex-wrap: wrap;
-
         align-items: center;
         justify-content: center;
     }
@@ -86,6 +85,7 @@
         min-width: max(270px, 40%);
         margin: 10px;
         display: flex;
+        justify-content: center;
     }
 
     .video {

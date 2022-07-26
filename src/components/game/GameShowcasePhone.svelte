@@ -1,7 +1,7 @@
 <!-- On mobile, show phone with gif, with text on it that says play in browser (if possible) or button below -->
 
 <script>
-    import Phone from "./Phone.svelte";
+    import Phone from "../Phone.svelte";
     export let src = "";
     export let title, links, desc;
 </script>

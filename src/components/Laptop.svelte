@@ -50,9 +50,11 @@ Add fullscreen button, which is togglable -->
                         </div>
                     {/if}
                 {:else}
-                    <Lightbox transitionDuration="150">
-                        <img class="gif" src={img} alt="project preview" />
-                    </Lightbox>
+                    <div class="lightbox">
+                        <Lightbox transitionDuration="150">
+                            <img class="gif" src={img} alt="project preview" />
+                        </Lightbox>
+                    </div>
                 {/if}
             </MediaQuery>
         </div>

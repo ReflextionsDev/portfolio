@@ -1,6 +1,6 @@
 <!-- On mobile, show gif in desktop image -->
 <script>
-    import Laptop from "./Laptop.svelte";
+    import Laptop from "../Laptop.svelte";
     export let src = "";
     export let title, links, desc, gif;
 </script>
