@@ -1,13 +1,15 @@
-<!-- Componetize fullscreen button -->
 <script>
+    // Imports
     import DeviceContent from "./DeviceContent.svelte";
 
+    // Vars
     export let img = "";
     export let src = "";
     export let gif = "";
     export let hasDesktopPreview = true;
     export let hasMobilePreview = true;
 
+    // Fullscreen Button
     let fullscreenPreview = false;
 
     document.addEventListener("fullscreenchange", () => {
@@ -73,7 +75,6 @@
     </div>
     <div class="phone__mid">
         <div class="game" class:fullscreen={fullscreenPreview === true}>
-            <!-- <iframe {src} title="Game Preview (Phone)" /> -->
             <DeviceContent
                 {img}
                 {src}
@@ -82,12 +83,12 @@
                 {hasMobilePreview}
             />
 
-            <img
+            <!-- <img
                 src="/assets/icons/fullscreen2.png"
                 class="fullscreenToggle"
                 alt="toggle fullscreen button"
                 on:click={toggleFullScreen}
-            />
+            /> -->
         </div>
     </div>
     <div class="phone__bot">
@@ -123,6 +124,7 @@
 
     .phone__mid {
         width: 90%;
+        /* height: 90%; */
         flex: 9;
         margin: auto;
     }
@@ -145,13 +147,8 @@
         width: 100%;
         height: 100%;
         position: relative;
-    }
-
-    .game iframe {
-        border: none;
-        width: 100%;
-        height: 100%;
         border-radius: 15px;
+        overflow: hidden;
     }
 
     .fullscreen {

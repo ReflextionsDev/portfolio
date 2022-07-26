@@ -209,7 +209,9 @@ export const games = [
         // cover: "/assets/test.png",
         tags: ["featured", "mobile", "web", "sale"],
         cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
-        gif: "assets/games/bouncyballoons/balloons.gif",
+        // gif: "assets/games/bouncyballoons/balloons.gif",
+        gif: "/assets/games/adder/adder.gif",
+
         images: [
             {
                 src: "/assets/games/bouncyballoons/bouncyballoons1.png",

@@ -10,4 +10,12 @@
     });
 </script>
 
-<GameShowcase {...gameProps} />
+<div class="popup">
+    <GameShowcase {...gameProps} />
+</div>
+
+<style>
+    .popup {
+        margin-bottom: 100px;
+    }
+</style>

@@ -11,6 +11,9 @@
     if (img === "") {
         preview = true;
     }
+
+
+    console.log(hasMobilePreview)
 </script>
 
 <div class="screen">

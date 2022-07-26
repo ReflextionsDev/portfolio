@@ -61,6 +61,7 @@
         /* flex: 1; */
         height: 90%;
         margin: auto;
+        overflow: hidden;
     }
 
     .laptop__bot {
