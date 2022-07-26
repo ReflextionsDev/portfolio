@@ -1,10 +1,8 @@
-<!-- Needs to not load gifs on mobile -->
 <!-- Need to optimize gifs... maybe use videos, or cut them even shorter, downscale -->
-
 <script>
-    import GameCard from "./../components/GameCard.svelte";
-    import { games, gameTags, iconSize } from "../stores";
-    import MenuIcon from "./icons/MenuIcon.svelte";
+	import GameCard from './GameCard.svelte';
+    import { games, gameTags, iconSize } from "../../stores";
+    import MenuIcon from "../icons/MenuIcon.svelte";
 
     let tag = "featured";
 
@@ -24,6 +22,9 @@
         return sum;
     }
 </script>
+
+<!-- Needs to not load gifs on mobile -->
+
 
 <div class="content">
     <div class="filter">

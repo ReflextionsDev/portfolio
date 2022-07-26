@@ -1,8 +1,8 @@
 <script>
     // Imports
     import { Lightbox } from "svelte-lightbox";
-    import ShowcaseLaptop from "../components/ShowcaseLaptop.svelte";
-    import ShowcasePhone from "../components/ShowcasePhone.svelte";
+    import ShowcaseLaptop from "../ShowcaseLaptop.svelte";
+    import ShowcasePhone from "../ShowcasePhone.svelte";
 
     // Vars
     export let title;

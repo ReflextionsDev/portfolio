@@ -4,7 +4,7 @@
 	import Splash from "./components/header/Splash.svelte";
 	import Web from "./pages/Web.svelte";
 	import Games from "./pages/Games.svelte";
-	import GameShowcase from "./pages/GameShowcase.svelte";
+	import GameShowcase from "./components/game/GameShowcase.svelte";
 	import Section from "./components/Section.svelte";
 	import Modal from "svelte-simple-modal";
 	import SectionBreak from "./components/SectionBreak.svelte";

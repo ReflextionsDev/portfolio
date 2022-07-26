@@ -1,6 +1,6 @@
 <script>
-    import GameShowcase from "../pages/GameShowcase.svelte";
-    import { games } from "../stores";
+    import GameShowcase from "./GameShowcase.svelte";
+    import { games } from "../../stores";
 
     export let title;
 
