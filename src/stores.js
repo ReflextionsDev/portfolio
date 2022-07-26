@@ -74,7 +74,7 @@ export const games = [
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
         desc: "Sould Grinder is blah blah lorem lorem blah ipsum and stuff. soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
         platform: "laptop",
-        src: "https://games.crazygames.com/en_US/soul-grinder/index.html",
+        src: "https://itch.io/embed-upload/5436086?color=1C0C42",
         size: "big",
         images: [
             {

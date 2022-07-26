@@ -1,15 +1,14 @@
 <!-- On mobile, show gif in desktop image -->
-
 <script>
     import Laptop from "./Laptop.svelte";
     export let src = "";
-    export let title, links, desc;
+    export let title, links, desc, gif;
 </script>
 
 <h2 class="dash title">{title}</h2>
 
-<div style="padding: 5% 15% 2%">
-    <Laptop {src} />
+<div class="laptop-wrapper">
+    <Laptop {src} {gif} />
 </div>
 
 <div class="links">
@@ -27,10 +26,25 @@
 </div>
 
 <style>
+    .laptop-wrapper {
+        padding: 5% 15% 2%;
+    }
+
+    @media (max-width: 1200px) {
+        .laptop-wrapper {
+            padding: 5% 5% 2%;
+        }
+    }
+
     .links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 5%;
+    }
+
+    .demolink {
+        text-decoration: none;
+        width: 100%;
     }
 </style>

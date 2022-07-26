@@ -1,8 +1,15 @@
 <!-- Support image instead of source
 Add fullscreen button, which is togglable -->
 <script>
+    import { Lightbox } from "svelte-lightbox";
+    import MediaQuery from "svelte-media-query";
     export let src;
+    export let gif;
+    let hasDesktopPreview = true;
+    let hasMobilePreview = true;
 </script>
+
+<!-- Should prob componetize and slot laptop content -->
 
 <div class="laptop">
     <div class="laptop__top">
@@ -10,7 +17,30 @@ Add fullscreen button, which is togglable -->
     </div>
     <div class="laptop__mid">
         <div class="game">
-            <iframe {src} title="Game Preview (laptop)" />
+            <MediaQuery query="(min-width: 1200px)" let:matches>
+                {#if matches && hasDesktopPreview}
+                    <iframe {src} title="Game Preview" allowfullscreen={true} />
+                {:else if !matches && hasMobilePreview}
+                    <div class="demo">
+                        <img class="gif" src={gif} alt="gameplay gif" />
+                        <a href={src} target="game">
+                            <div class="cover">
+                                <img
+                                    class="playBtn"
+                                    src="/assets/icons/play.png"
+                                    alt="play button"
+                                />
+                            </div>
+                        </a>
+                    </div>
+                {:else}
+                    <div class="lightbox">
+                        <Lightbox transitionDuration="150">
+                            <img class="gif" src={gif} alt="gameplay gif" />
+                        </Lightbox>
+                    </div>
+                {/if}
+            </MediaQuery>
         </div>
     </div>
     <div class="laptop__bot">
@@ -19,6 +49,29 @@ Add fullscreen button, which is togglable -->
 </div>
 
 <style>
+    /* Demo */
+    .demo {
+        position: relative;
+    }
+
+    .cover {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.056);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .playBtn {
+        opacity: 80%;
+        width: 50px;
+        height: auto;
+    }
+
+    /* Laptop */
     .laptop {
         width: 95%;
         aspect-ratio: 3/2;
@@ -69,9 +122,13 @@ Add fullscreen button, which is togglable -->
         border-radius: 0px 0px 30px 30px;
     }
 
+    /* Preview */
     .game {
         width: 100%;
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .game iframe {
@@ -79,5 +136,19 @@ Add fullscreen button, which is togglable -->
         width: 100%;
         height: 100%;
         border-radius: 5px;
+    }
+
+    .gif {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .lightbox {
+        width: 100%;
+    }
+
+    /* Media Query */
+    @media (max-width: 1200px) {
     }
 </style>
