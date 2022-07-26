@@ -2,11 +2,11 @@
         Could move about section to below projects w/ resume -->
 <script>
     import ContactForm from "./ContactForm.svelte";
-    import OtherProjects from "./OtherProjects.svelte";
+    import OtherProjects from "./../components/web/OtherProjects.svelte";
     import SectionBreak from "./../components/SectionBreak.svelte";
     import Section from "./../components/Section.svelte";
-    import Skills from "./Skills.svelte";
-    import Project from "./Project.svelte";
+    import Skills from "./../components/web/Skills.svelte";
+    import Project from "./../components/web/Project.svelte";
     import { theme } from "../stores";
 
     let stack = ["React", "Redux", "Node", "Express"];

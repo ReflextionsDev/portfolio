@@ -16,10 +16,10 @@
         Figma,
         Sqlite,
         Jquery,
-    } from "./../components/icons/icons.js";
+    } from "../icons/icons.js";
 
     // Define icons
-    import { iconSize } from "../stores.js";
+    import { iconSize } from "./../../stores.js";
     const colorHover = "#FFFFFF";
     let icons = [
         {

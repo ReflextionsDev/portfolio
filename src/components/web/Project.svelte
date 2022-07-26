@@ -1,6 +1,6 @@
 <!-- Should be modular, accept images, title text, tech stack, order, links, etc -->
 <script>
-    import Laptop from "./../components/Laptop.svelte";
+    import Laptop from "../Laptop.svelte";
 
     export let title, desc;
     export let stack = [];
