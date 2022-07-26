@@ -4,28 +4,24 @@
     export let size = "normal";
     export let gif = "";
 
-
-
     // Modal
     import { getContext } from "svelte";
     import Popup from "./GamePopup.svelte";
-    
 
     const { open } = getContext("simple-modal");
-    const openPopup = () => open(Popup, {title});
+    const openPopup = () => open(Popup, { title });
 </script>
 
-
-
 <div class="game {size} hvr-pulse-grow" on:click={openPopup}>
-        <img class="card  full" {src} alt={title} />
-        <img class="gif full" src={gif} alt={title} />
-        <div class="cover full" />
-        <!-- <div class="title full">{title}</div> -->
-        <img class="icon" src="/assets/icons/fullscreen2.png" />
+    <img class="card  full" {src} alt={title} />
+    <img class="gif full" src={gif} alt={title} />
+    <div class="cover full" />
+    <!-- <div class="title full">{title}</div> -->
+    <img class="icon" src="/assets/icons/fullscreen2.png" alt="freelance icon"/>
 </div>
 
 <!-- Need cleanup -->
+
 <!-- Hover Effect by IanLunn, MIT License: https://github.com/IanLunn/Hover/blob/master/css/hover.css -->
 <style>
     /* Pulse Grow */
@@ -78,7 +74,6 @@
 
     .game * {
         transition: all 0.4s ease-in-out;
-
     }
 
     .tall {
@@ -100,13 +95,6 @@
     }
 
     /* Relative used to allow links to be usable as absolute parent containers */
-
-    a {
-     
-    }
-
-    a * {
-    }
 
     .full {
         position: absolute;
@@ -161,18 +149,18 @@
         font-size: 3em;
     }
 
-    .game:hover .title {
+    /* .game:hover .title {
         opacity: 70%;
         top: 10px;
         align-items: center;
         justify-content: center;
-    }
+    } */
 
     .icon {
         position: absolute;
         bottom: -100px;
+        left: 0;
         /* top: 0; */
-        /* opacity: 0; */
     }
 
     .game:hover .icon {

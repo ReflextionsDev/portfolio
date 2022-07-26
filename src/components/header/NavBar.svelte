@@ -138,13 +138,10 @@
         opacity: 70%;
     }
 
-    .favicon {
+    /* .favicon {
         max-height: 70%;
         width: auto;
-    }
-    .title {
-        /* padding: 0 10px; */
-    }
+    } */
 
     /* TABS */
 

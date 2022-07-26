@@ -81,16 +81,6 @@
         justify-content: flex-end;
     }
 
-    @media (max-width: 576px) {
-        .filter {
-            /* justify-content: center; */
-        }
-
-        .filter__content {
-            /* min-width: 75% !important; */
-        }
-    }
-
     .filter h3 {
         margin: 0;
         padding: 0.25rem 0;

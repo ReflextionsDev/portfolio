@@ -42,9 +42,4 @@
         justify-content: center;
         gap: 5%;
     }
-
-    .demolink {
-        text-decoration: none;
-        width: 100%;
-    }
 </style>
