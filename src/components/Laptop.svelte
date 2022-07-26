@@ -3,12 +3,16 @@ Add fullscreen button, which is togglable -->
 <script>
     import { Lightbox } from "svelte-lightbox";
     import MediaQuery from "svelte-media-query";
-    export let src;
-    export let gif;
+    export let src = "";
+    export let gif = "";
+    export let img = "";
+    export let preview = true;
     let hasDesktopPreview = true;
     let hasMobilePreview = true;
 </script>
 
+<!-- Also add preview bool, so it can be used for projects instead... and images... -->
+<!-- Embed type: src / gif / img -->
 <!-- Should prob componetize and slot laptop content -->
 
 <div class="laptop">
@@ -18,27 +22,37 @@ Add fullscreen button, which is togglable -->
     <div class="laptop__mid">
         <div class="game">
             <MediaQuery query="(min-width: 1200px)" let:matches>
-                {#if matches && hasDesktopPreview}
-                    <iframe {src} title="Game Preview" allowfullscreen={true} />
-                {:else if !matches && hasMobilePreview}
-                    <div class="demo">
-                        <img class="gif" src={gif} alt="gameplay gif" />
-                        <a href={src} target="game">
-                            <div class="cover">
-                                <img
-                                    class="playBtn"
-                                    src="/assets/icons/play.png"
-                                    alt="play button"
-                                />
-                            </div>
-                        </a>
-                    </div>
-                {:else}
-                    <div class="lightbox">
-                        <Lightbox transitionDuration="150">
+                {#if preview}
+                    {#if matches && hasDesktopPreview}
+                        <iframe
+                            {src}
+                            title="Game Preview"
+                            allowfullscreen={true}
+                        />
+                    {:else if !matches && hasMobilePreview}
+                        <div class="demo">
                             <img class="gif" src={gif} alt="gameplay gif" />
-                        </Lightbox>
-                    </div>
+                            <a href={src} target="game">
+                                <div class="cover">
+                                    <img
+                                        class="playBtn"
+                                        src="/assets/icons/play.png"
+                                        alt="play button"
+                                    />
+                                </div>
+                            </a>
+                        </div>
+                    {:else}
+                        <div class="lightbox">
+                            <Lightbox transitionDuration="150">
+                                <img class="gif" src={gif} alt="gameplay gif" />
+                            </Lightbox>
+                        </div>
+                    {/if}
+                {:else}
+                    <Lightbox transitionDuration="150">
+                        <img class="gif" src={img} alt="project preview" />
+                    </Lightbox>
                 {/if}
             </MediaQuery>
         </div>

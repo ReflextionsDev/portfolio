@@ -12,7 +12,7 @@
 
     <div class="spotlight content__section" class:reverse>
         <div style="padding-inline: 30px">
-            <Laptop />
+            <Laptop preview={false} img="/assets/games/protoshift/protoshiftcover.png"/>
         </div>
 
         <div style="display: flex; justify-content: center; gap: 5% ">
