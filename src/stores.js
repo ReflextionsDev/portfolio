@@ -37,6 +37,12 @@ export const games = [
         title: "Protoshift",
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
+        desc: "protoshift description, mention steam, etc",
+        platform: "laptop",
+        src: "",
+        size: "big",
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
         tags: ["featured", "web"],
         images: [
             {
@@ -60,10 +66,7 @@ export const games = [
                 alt: "protoshift screenshot",
             },
         ],
-        desc: "protoshift description, mention steam, etc",
-        platform: "laptop",
-        src: "",
-        size: "big",
+
     },
     // Soul Grinder
     {
