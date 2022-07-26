@@ -7,7 +7,7 @@
     import Nav from "./NavBar.svelte";
 
     // Theme
-    import { theme } from "../stores.js";
+    import { theme } from "../../stores.js";
     let maskColor = theme.bgMasks.blue;
 
     // Responsive variables to set splash top to the bottom of content: so sticky position can be used

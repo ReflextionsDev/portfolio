@@ -1,7 +1,7 @@
 <script>
-    import { Email, Github, Linkedin } from "../components/icons/icons.js";
+    import { Email, Github, Linkedin } from "../icons/icons.js";
 
-    import { iconSize } from "../stores.js";
+    import { iconSize } from "../../stores.js";
 </script>
 
 <div class="info content">

@@ -1,7 +1,7 @@
 <!-- The base app page. Loads splash page then uses routing in conjuction with navbar to display content.  -->
 <script>
 	// Pages
-	import Splash from "./header/Splash.svelte";
+	import Splash from "./components/header/Splash.svelte";
 	import Web from "./pages/Web.svelte";
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./pages/GameShowcase.svelte";

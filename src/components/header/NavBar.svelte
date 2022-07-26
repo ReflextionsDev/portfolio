@@ -1,7 +1,7 @@
 <!-- Show web title and icon when in header mode (NLB.DEV) -->
 <script>
     // Theme
-    import { theme } from "../stores.js";
+    import { theme } from "../../stores.js";
     let fillColor = theme.bgColors.primary;
 
     // Header mode
