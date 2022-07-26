@@ -1,9 +1,9 @@
 <script>
     import GameIntro from "../components/game/GameIntro.svelte";
-    import SectionBreak from "./../components/SectionBreak.svelte";
-    import Section from "./../components/Section.svelte";
-    import { theme } from "../stores";
     import GameGrid from "../components/game/GameGrid.svelte";
+    import Section from "./../components/Section.svelte";
+    import SectionBreak from "./../components/SectionBreak.svelte";
+    import { theme } from "../stores";
 </script>
 
 <div class="page">
@@ -25,7 +25,3 @@
 
     <SectionBreak />
 </div>
-
-<style>
-
-</style>

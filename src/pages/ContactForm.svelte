@@ -26,9 +26,9 @@
 </div>
 
 <style>
-    .cta {
-        /* text-decoration: underline; */
-    }
+    /* .cta {
+        text-decoration: underline;
+    } */
 
     h4 {
         text-align: left;
