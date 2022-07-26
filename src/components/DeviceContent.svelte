@@ -59,6 +59,7 @@
     .demo {
         position: relative;
         width: 100%;
+        height: 100%;
     }
 
     .cover {
@@ -87,6 +88,7 @@
 
     .gif {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 5px;
     }

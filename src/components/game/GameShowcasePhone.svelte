@@ -3,7 +3,7 @@
 <script>
     import Phone from "../Phone.svelte";
     export let src = "";
-    export let title, links, desc;
+    export let title, links, desc, gif;
 </script>
 
 <h2 class="dash title">{title}</h2>
@@ -11,7 +11,7 @@
 <div class="showcase content__section">
     <div class="preview">
         <div style="margin-inline: 15%">
-            <Phone {src} />
+            <Phone {src} {gif}/>
         </div>
     </div>
 

@@ -1,6 +1,12 @@
 <!-- Componetize fullscreen button -->
 <script>
-    export let src;
+    import DeviceContent from "./DeviceContent.svelte";
+
+    export let img = "";
+    export let src = "";
+    export let gif = "";
+    export let hasDesktopPreview = true;
+    export let hasMobilePreview = true;
 
     let fullscreenPreview = false;
 
@@ -67,7 +73,14 @@
     </div>
     <div class="phone__mid">
         <div class="game" class:fullscreen={fullscreenPreview === true}>
-            <iframe {src} title="Game Preview (Phone)" />
+            <!-- <iframe {src} title="Game Preview (Phone)" /> -->
+            <DeviceContent
+                {img}
+                {src}
+                {gif}
+                {hasDesktopPreview}
+                {hasMobilePreview}
+            />
 
             <img
                 src="/assets/icons/fullscreen2.png"
@@ -176,6 +189,5 @@
         -webkit-transition: background-color 250ms linear;
         -ms-transition: background-color 250ms linear;
         transition: background-color 250ms linear;
-
     }
 </style>
