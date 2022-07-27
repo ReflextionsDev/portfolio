@@ -4,6 +4,12 @@
     export let src = "/assets/games/cards/rrmenu.png";
     export let size = "normal";
     export let gif = "";
+    export let tags = []
+
+
+    let freelance = tags.includes("freelance");
+    let mobile = tags.includes("mobile");
+    let desktop = tags.includes("web");
 
     // Modal
     import { getContext } from "svelte";
@@ -17,11 +23,33 @@
     <img class="gif full" src={gif} alt={title} />
     <div class="cover full" />
     <!-- <div class="title full">{title}</div> -->
-    <img
-        class="icon"
-        src="/assets/icons/fullscreen2.png"
-        alt="freelance icon"
-    />
+    <div class="icons">
+        <div class="iconsLeft iconsGroup">
+            {#if freelance}
+                <img
+                    class="icon iconFreelance"
+                    src="/assets/icons/freelance.png"
+                    alt="freelance icon"
+                />
+            {/if}
+        </div>
+        <div class="iconsRight iconsGroup">
+            {#if mobile}
+                <img
+                    class="icon iconMobile"
+                    src="/assets/icons/phone.png"
+                    alt="mobile icon"
+                />
+            {/if}
+            {#if desktop}
+                <img
+                    class="icon iconDesktop"
+                    src="/assets/icons/desktop.png"
+                    alt="desktop icon"
+                />
+            {/if}
+        </div>
+    </div>
 </div>
 
 <!-- Need cleanup -->
@@ -130,17 +158,39 @@
         justify-content: center;
     } */
 
+    /* Card Icons */
+
     .icon {
-        position: absolute;
-        bottom: -100px;
-        left: 0;
-        /* top: 0; */
+        width: min(7vw, 64px);
+        height: min(7vw, 64px);
     }
 
-    .game:hover .icon {
-        bottom: 2%;
-        opacity: 100%;
-        /* transition: all 0.2s ease-in-out; */
+    .icons {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+    }
+
+    .iconsGroup {
+        position: absolute;
+        opacity: 85%;
+    }
+
+    .iconsRight {
+        right: 0;
+        bottom: -100%;
+    }
+
+    .iconsLeft {
+        left: 0;
+        bottom: -50%;
+    }
+
+    .game:hover .iconsGroup {
+        bottom: 1%;
     }
 
     /* Card Sizes */

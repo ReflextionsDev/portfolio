@@ -26,6 +26,7 @@
 <!-- Needs to not load gifs on mobile -->
 
 <div>
+    <!-- Filter -->
     <div class="filter">
         <div class="filter__content">
             <h3 class="filter__header">
@@ -52,6 +53,7 @@
         </div>
     </div>
 
+    <!-- Game Cards -->
     <div class="games content__padding">
         {#each games as game}
             {#if game.tags.includes(tag)}
@@ -60,6 +62,7 @@
                     src={game.cover}
                     gif={game.gif}
                     size={game.size}
+                    tags={game.tags}
                 />
             {:else if tag === "all"}
                 <GameCard
@@ -67,6 +70,7 @@
                     src={game.cover}
                     gif={game.gif}
                     size={game.size}
+                    tags={game.tags}
                 />
             {/if}
         {/each}
@@ -74,6 +78,7 @@
 </div>
 
 <style>
+    /* Filter */
     .filter {
         color: whitesmoke;
         display: flex;
@@ -140,6 +145,7 @@
         margin: 0;
     }
 
+    /* Games */
     .games {
         display: grid;
         grid-gap: 15px;
