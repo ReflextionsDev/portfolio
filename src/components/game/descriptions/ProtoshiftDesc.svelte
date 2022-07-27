@@ -15,15 +15,24 @@
 
 <ul>
     <li>
-        <a href="https://steamcommunity.com/groups/Protoshift"
-            >Steam Community</a
-        >
+        <a
+            target="details"
+            href="https://www.youtube.com/playlist?list=PLR_qFtySjuJVgakQnDBLytVb8XhpEprRY
+        ">Soundtrack</a>
+    </li>
+    <li>
+        <a target="details" href="https://steamcommunity.com/groups/Protoshift"
+            >Steam Community
+        </a>
     </li>
     <li>
         <a
+            target="details"
             href="https://web.archive.org/web/*/https://store.steampowered.com/app/398070"
-            >Steam Archive</a
-        >
+            >Steam Archive
+        </a>
     </li>
-    <li><a href="https://steamdb.info/app/398070/">Steamdb</a></li>
+    <li>
+        <a target="details" href="https://steamdb.info/app/398070/">Steamdb</a>
+    </li>
 </ul>

@@ -42,9 +42,9 @@ export const games = [
         hasMobilePreview: false,
         desc: ProtoshiftDesc,
         src: "https://itch.io/embed-upload/6238921?color=000000",
-        tags: ["featured", "web"],
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
+        tags: ["featured", "web", "sale"],
         links: [
             {
                 label: "Itch.io",
@@ -93,22 +93,18 @@ export const games = [
     {
         date: "Feb 23, 2022",
         title: "Soul Grinder",
-        tags: ["featured", "mobile", "web", "jam", "sale"],
-        cover: "/assets/games/soulgrinder/cover.png",
-        gif: "/assets/games/soulgrinder/soulgrinder.gif",
-        desc: SoulGrinderDesc,
         platform: "laptop",
-        src: "https://itch.io/embed-upload/5436086?color=1C0C42",
         size: "big",
         hasDesktopPreview: true,
         hasMobilePreview: false,
+        desc: SoulGrinderDesc,
+        src: "https://itch.io/embed-upload/6242510?color=1C0C42",
+        cover: "/assets/games/soulgrinder/cover.png",
+        gif: "/assets/games/soulgrinder/soulgrinder.gif",
+        tags: ["featured", "mobile", "web", "jam", "sale"],
         images: [
             {
                 src: "/assets/games/soulgrinder/1.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/2.png",
                 alt: "soulgrinder screenshot",
             },
             {
@@ -116,29 +112,23 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
             {
+                src: "/assets/games/soulgrinder/5.png",
+                alt: "soulgrinder screenshot",
+            },
+            {
                 src: "/assets/games/soulgrinder/4.png",
                 alt: "soulgrinder screenshot",
             },
-        ],
-        videos: [
             {
-                label: "Trailer 1",
-                src: "https://www.youtube.com/embed/m_qlgFQs7E4",
+                src: "/assets/games/soulgrinder/6.png",
+                alt: "soulgrinder screenshot",
             },
             {
-                label: "Trailer 2",
-                src: "https://www.youtube.com/embed/USmpeevo_wg",
+                src: "/assets/games/soulgrinder/7.png",
+                alt: "soulgrinder screenshot",
             },
         ],
         links: [
-            {
-                label: "Scirra Arcade",
-                link: "",
-            },
-            {
-                label: "Another Link",
-                link: "",
-            },
             {
                 label: "Itch.io",
                 link: "https://reflextions.itch.io/soul-grinder",
@@ -146,33 +136,38 @@ export const games = [
             {
                 label: "Crazy Games",
                 link: "https://www.crazygames.com/game/soul-grinder",
-            }
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/soul-grinder-36000/play",
+            },
         ]
     },
     // Adder
     {
-        date: "",
+        date: "TBD",
         title: "Adder",
-        tags: ["featured"],
         cover: "/assets/games/adder/cover.png",
         gif: "/assets/games/adder/adder.gif",
+        tags: ["featured"],
+
         images: [
-            // {
-            // 	src: "/assets/games/adder/1.png",
-            // 	alt: "adder screenshot",
-            // },
-            // {
-            // 	src: "/assets/games/adder/2.png",
-            // 	alt: "adder screenshot",
-            // },
-            // {
-            // 	src: "/assets/games/adder/3.png",
-            // 	alt: "adder screenshot",
-            // },
-            // {
-            // 	src: "/assets/games/adder/4.png",
-            // 	alt: "adder screenshot",
-            // }
+            {
+            	src: "/assets/games/adder/1.png",
+            	alt: "adder screenshot",
+            },
+            {
+            	src: "/assets/games/adder/2.png",
+            	alt: "adder screenshot",
+            },
+            {
+            	src: "/assets/games/adder/3.png",
+            	alt: "adder screenshot",
+            },
+            {
+            	src: "/assets/games/adder/4.png",
+            	alt: "adder screenshot",
+            }
         ],
         desc: "adder description",
         platform: "laptop",
