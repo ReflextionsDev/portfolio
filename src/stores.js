@@ -25,6 +25,7 @@ export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam",
 
 // Game Descriptions
 import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
+import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svelte'
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -36,14 +37,14 @@ export const games = [
         date: "Jan 15, 2016",
         title: "Protoshift",
         platform: "laptop",
-        src: "https://itch.io/embed-upload/6238921?color=000000",
         size: "big",
         hasDesktopPreview: true,
         hasMobilePreview: false,
+        desc: ProtoshiftDesc,
+        src: "https://itch.io/embed-upload/6238921?color=000000",
         tags: ["featured", "web"],
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
-        desc: ProtoshiftDesc,
         links: [
             {
                 label: "Itch.io",
@@ -87,19 +88,20 @@ export const games = [
                 src: "https://www.youtube.com/embed/sgIUKdjbfOs",
             },
         ],
-
     },
     // Soul Grinder
     {
-        date: "",
+        date: "Feb 23, 2022",
         title: "Soul Grinder",
         tags: ["featured", "mobile", "web", "jam", "sale"],
         cover: "/assets/games/soulgrinder/cover.png",
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
-        desc: "Sould Grinder is blah blah lorem lorem blah ipsum and stuff. soulgrinder description, talk about self imposed crunch, could include post-mortem, can talk about thrall features and stuff not added",
+        desc: SoulGrinderDesc,
         platform: "laptop",
         src: "https://itch.io/embed-upload/5436086?color=1C0C42",
         size: "big",
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
         images: [
             {
                 src: "/assets/games/soulgrinder/1.png",

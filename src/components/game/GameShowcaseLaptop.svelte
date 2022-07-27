@@ -2,6 +2,7 @@
 <script>
     import Laptop from "../Laptop.svelte";
     export let src = "";
+    export let date = "";
     export let title, links, desc, gif;
     export let hasDesktopPreview, hasMobilePreview;
 </script>
@@ -22,6 +23,9 @@
 
 <div class="content__section">
     <p class="content__text ">
+        {#if date}
+            <p><b>Release Date: </b> {date}</p>
+        {/if}
         <svelte:component this={desc} />
     </p>
 </div>

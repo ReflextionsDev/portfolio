@@ -5,7 +5,7 @@
     import ShowcasePhone from "./GameShowcasePhone.svelte";
 
     // Vars
-    export let title, desc, platform, images, src, gif;
+    export let title, desc, platform, images, src, gif, date;
     export let hasDesktopPreview, hasMobilePreview;
     export let links = [];
     export let videos = [];
@@ -27,6 +27,7 @@
             {title}
             {links}
             {desc}
+            {date}
             {gif}
             {hasDesktopPreview}
             {hasMobilePreview}
@@ -37,6 +38,7 @@
             {title}
             {links}
             {desc}
+            {date}
             {gif}
             {hasDesktopPreview}
             {hasMobilePreview}

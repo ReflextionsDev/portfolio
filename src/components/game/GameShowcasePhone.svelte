@@ -2,6 +2,7 @@
 <script>
     import Phone from "../Phone.svelte";
     export let src = "";
+    export let date = "";
     export let title, links, desc, gif;
     export let hasDesktopPreview, hasMobilePreview;
 </script>
