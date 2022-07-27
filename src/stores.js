@@ -33,17 +33,24 @@ export const games = [
     // https://web.archive.org/web/*/https://store.steampowered.com/app/398070
     // https://steamcommunity.com/groups/Protoshift
     {
-        date: "Jan 2017",
+        date: "Jan 15, 2016",
         title: "Protoshift",
-        cover: "/assets/games/protoshift/protoshiftcover.png",
-        gif: "/assets/games/protoshift/protoshift.gif",
-        desc: "protoshift description, mention steam, etc",
         platform: "laptop",
-        src: "",
+        src: "https://itch.io/embed-upload/6238921?color=000000",
         size: "big",
         hasDesktopPreview: true,
-        hasMobilePreview: true,
+        hasMobilePreview: false,
         tags: ["featured", "web"],
+        cover: "/assets/games/protoshift/protoshiftcover.png",
+        gif: "/assets/games/protoshift/protoshift.gif",
+        desc: `Protoshift is an addicting, fast paced, twitch based, arcade game filled with challenge, inspired by Super Hexagon. Put your mouse hand to the test while attempting to complete impossible levels and compete on global leader-boards. 
+        
+        Protoshift was originally released on Steam on Jan 15, 2016. A few years after release I sold the Steam version to a publisher, who's account was taken down some time later.
+
+        More info can be found at these links:
+        - https://steamcommunity.com/groups/Protoshift
+        - https://steamdb.info/app/398070/  
+        - https://web.archive.org/web/*/https://store.steampowered.com/app/398070 `,
         images: [
             {
                 src: "/assets/games/protoshift/card1BG.png",
@@ -66,7 +73,27 @@ export const games = [
                 alt: "protoshift screenshot",
             },
         ],
+        videos: [
+            {
+                label: "Trailer",
+                src: "https://www.youtube.com/embed/noXmLOkoHoo",
 
+            },
+            {
+                label: "Soundtrack",
+                src: "https://www.youtube.com/embed/sgIUKdjbfOs",
+            },
+        ],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/protoshift",
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/protoshift-41700/play",
+            },
+        ]
     },
     // Soul Grinder
     {
@@ -97,7 +124,6 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
         ],
-
         videos: [
             {
                 label: "Trailer 1",
@@ -126,7 +152,6 @@ export const games = [
                 link: "https://www.crazygames.com/game/soul-grinder",
             }
         ]
-
     },
     // Adder
     {
