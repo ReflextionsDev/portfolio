@@ -287,13 +287,25 @@ export const games = [
     {
         date: "2013",
         title: "Jet Attack!",
-        tags: ["featured", "web", "sale"],
-        desc: "jetattack description",
         platform: "laptop",
-        src: "",
         size: "small",
+        desc: JetAttackDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/6243474?color=333333",
         cover: "/assets/games/jetattack/jaCover3.png",
         gif: "/assets/games/jetattack/ja.gif",
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/jet-attack-1477/play",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/jet-attack",
+            },
+        ],
+        tags: ["featured", "web", "sale"],
         images: [
             {
                 src: "/assets/games/jetattack/ss1.png",
