@@ -22,12 +22,18 @@ export const theme = {
 
 export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam", "sale"]
 
-
 // Game Descriptions
 import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
 import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svelte'
 import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 import RTRDesc from './components/game/descriptions/RTRDesc.svelte'
+import DontFallDesc from './components/game/descriptions/DontFallDesc.svelte'
+import GridlockDashDesc  from './components/game/descriptions/GridlockDashDesc.svelte'
+import JetAttackDesc from './components/game/descriptions/JetAttackDesc.svelte'
+import MinosPondDesc from './components/game/descriptions/MinosPondDesc.svelte'
+import SamDesc  from './components/game/descriptions/SamDesc.svelte'
+// import  from './components/game/descriptions/Desc.svelte'
+
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -238,7 +244,202 @@ export const games = [
 
             },
         ],
-      
+    },
+     // Don't Fall
+     {
+        date: "2013",
+        title: "Don't Fall!",
+        platform: "laptop",
+        size: "small",
+        desc: DontFallDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/6243387?color=333333",
+        cover: "/assets/games/dontfall/dfCover.png",
+        gif: "/assets/games/dontfall/df.gif",
+        tags: ["featured", "web", "sale"],
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/dont-fall-94/play",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/dont-fall",
+            },
+        ],
+        images: [
+            {
+                src: "/assets/games/dontfall/df1.png",
+                alt: "Don't Fall! screenshot",
+            },
+            {
+                src: "/assets/games/dontfall/df2.png",
+                alt: "Don't Fall! screenshot",
+            },
+            {
+                src: "/assets/games/dontfall/df3.png",
+                alt: "Don't Fall! screenshot",
+            },
+        ],       
+    },
+    //  Jet Attack
+    {
+        date: "2013",
+        title: "Jet Attack!",
+        tags: ["featured", "web", "sale"],
+        desc: "jetattack description",
+        platform: "laptop",
+        src: "",
+        size: "small",
+        cover: "/assets/games/jetattack/jaCover3.png",
+        gif: "/assets/games/jetattack/ja.gif",
+        images: [
+            {
+                src: "/assets/games/jetattack/ss1.png",
+                alt: "Jet Attack! screenshot",
+            },
+            {
+                src: "/assets/games/jetattack/ss2.png",
+                alt: "Jet Attack! screenshot",
+            },
+            {
+                src: "/assets/games/jetattack/ss3.png",
+                alt: "Jet Attack! screenshot",
+            },
+            {
+                src: "/assets/games/jetattack/ss4.png",
+                alt: "Jet Attack! screenshot",
+            },
+        ],
+    },
+    // Rocket Strike
+    {
+        date: "",
+        title: "Rocket Strike!",
+        tags: ["featured", "web", "sale"],
+        cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
+        gif: "/assets/games/rocketstrike/rocketstrike.gif",
+        images: [
+            {
+                src: "/assets/games/rocketstrike/ss1.png",
+                alt: "Rocket Strike! screenshot",
+            },
+            {
+                src: "/assets/games/rocketstrike/ss3.png",
+                alt: "Rocket Strike! screenshot",
+            },
+            {
+                src: "/assets/games/rocketstrike/ss4.png",
+                alt: "Rocket Strike! screenshot",
+            },
+            {
+                src: "/assets/games/rocketstrike/ss5.png",
+                alt: "Rocket Strike! screenshot",
+            },
+        ],
+        desc: "rocketstrike description, released seperately as web with local multiplayer 1-4 and mobile",
+        platform: "laptop",
+        src: "",
+        size: "small",
+    },
+    // Sam
+    {
+        date: "",
+        title: "Sam",
+        tags: ["featured", "web", "jam"],
+        cover: "/assets/games/sam/samCover.png",
+        gif: "/assets/games/sam/sam.gif",
+        images: [
+            {
+                src: "/assets/games/sam/1.png",
+                alt: "Sam screenshot",
+            },
+            {
+                src: "/assets/games/sam/2.png",
+                alt: "Sam screenshot",
+            },
+            {
+                src: "/assets/games/sam/3.png",
+                alt: "Sam screenshot",
+            },
+            {
+                src: "/assets/games/sam/4.png",
+                alt: "Sam screenshot",
+            },
+        ],
+        desc: "sam description",
+        platform: "laptop",
+        src: "",
+        size: "small",
+    },
+    // Minos' Pond
+    {
+        date: "",
+        title: "Mino's Pond",
+        tags: ["web", "jam"],
+        cover: "/assets/games/minos/minosCover.png",
+        gif: "/assets/games/minos/minos.gif",
+        images: [
+            {
+                src: "/assets/games/minos/ss1.png",
+                alt: "minos screenshot",
+            },
+            {
+                src: "/assets/games/minos/ss3.png",
+                alt: "minos screenshot",
+            },
+            {
+                src: "/assets/games/minos/ss4.png",
+                alt: "minos screenshot",
+            },
+            {
+                src: "/assets/games/minos/ss2.png",
+                alt: "minos screenshot",
+            },
+            {
+                src: "/assets/games/minos/ss5.gif",
+                alt: "minos screenshot",
+            },
+        ],
+        desc: "minos description",
+        platform: "laptop",
+        src: "",
+        size: "small",
+    },
+    // Gridlock Dash
+    {
+        date: "",
+        title: "Gridlock Dash",
+        tags: ["featured", "web", "jam", "sale"],
+        cover: "/assets/games/gridlock/gdCover.png",
+        gif: "/assets/games/gridlock/gridlock.gif",
+        images: [
+            {
+                src: "/assets/games/gridlock/ss5.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss1.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss2.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss4.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss3.png",
+                alt: "gridlock screenshot",
+            },
+        ],
+        desc: "gridlock description",
+        platform: "laptop",
+        src: "",
+        size: "small",
     },
     // Roadway Repair
     {
@@ -585,189 +786,5 @@ export const games = [
         size: "small",
     },
 
-    // Don't Fall
-    {
-        date: "2013",
-        title: "Don't Fall!",
-        tags: ["featured", "web", "sale"],
-        cover: "/assets/games/dontfall/dfCover.png",
-        gif: "/assets/games/dontfall/df.gif",
-        images: [
-            {
-                src: "/assets/games/dontfall/df1.png",
-                alt: "Don't Fall! screenshot",
-            },
-            {
-                src: "/assets/games/dontfall/df2.png",
-                alt: "Don't Fall! screenshot",
-            },
-            {
-                src: "/assets/games/dontfall/df3.png",
-                alt: "Don't Fall! screenshot",
-            },
-        ],
-        desc: "dontfall description",
-        // Need to account for linked content
-        platform: "laptop",
-        src: "",
-        size: "small",
-    },
-    //  Jet Attack
-    {
-        date: "2013",
-        title: "Jet Attack!",
-        tags: ["featured", "web", "sale"],
-        desc: "jetattack description",
-        platform: "laptop",
-        src: "",
-        size: "small",
-        cover: "/assets/games/jetattack/jaCover3.png",
-        gif: "/assets/games/jetattack/ja.gif",
-        images: [
-            {
-                src: "/assets/games/jetattack/ss1.png",
-                alt: "Jet Attack! screenshot",
-            },
-            {
-                src: "/assets/games/jetattack/ss2.png",
-                alt: "Jet Attack! screenshot",
-            },
-            {
-                src: "/assets/games/jetattack/ss3.png",
-                alt: "Jet Attack! screenshot",
-            },
-            {
-                src: "/assets/games/jetattack/ss4.png",
-                alt: "Jet Attack! screenshot",
-            },
-        ],
-    },
-    // Rocket Strike
-    {
-        date: "",
-        title: "Rocket Strike!",
-        tags: ["featured", "web", "sale"],
-        cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
-        gif: "/assets/games/rocketstrike/rocketstrike.gif",
-        images: [
-            {
-                src: "/assets/games/rocketstrike/ss1.png",
-                alt: "Rocket Strike! screenshot",
-            },
-            {
-                src: "/assets/games/rocketstrike/ss3.png",
-                alt: "Rocket Strike! screenshot",
-            },
-            {
-                src: "/assets/games/rocketstrike/ss4.png",
-                alt: "Rocket Strike! screenshot",
-            },
-            {
-                src: "/assets/games/rocketstrike/ss5.png",
-                alt: "Rocket Strike! screenshot",
-            },
-        ],
-        desc: "rocketstrike description, released seperately as web with local multiplayer 1-4 and mobile",
-        platform: "laptop",
-        src: "",
-        size: "small",
-    },
-    // Sam
-    {
-        date: "",
-        title: "Sam",
-        tags: ["featured", "web", "jam"],
-        cover: "/assets/games/sam/samCover.png",
-        gif: "/assets/games/sam/sam.gif",
-        images: [
-            {
-                src: "/assets/games/sam/1.png",
-                alt: "Sam screenshot",
-            },
-            {
-                src: "/assets/games/sam/2.png",
-                alt: "Sam screenshot",
-            },
-            {
-                src: "/assets/games/sam/3.png",
-                alt: "Sam screenshot",
-            },
-            {
-                src: "/assets/games/sam/4.png",
-                alt: "Sam screenshot",
-            },
-        ],
-        desc: "sam description",
-        platform: "laptop",
-        src: "",
-        size: "small",
-    },
-    // Minos' Pond
-    {
-        date: "",
-        title: "Mino's Pond",
-        tags: ["web", "jam"],
-        cover: "/assets/games/minos/minosCover.png",
-        gif: "/assets/games/minos/minos.gif",
-        images: [
-            {
-                src: "/assets/games/minos/ss1.png",
-                alt: "minos screenshot",
-            },
-            {
-                src: "/assets/games/minos/ss3.png",
-                alt: "minos screenshot",
-            },
-            {
-                src: "/assets/games/minos/ss4.png",
-                alt: "minos screenshot",
-            },
-            {
-                src: "/assets/games/minos/ss2.png",
-                alt: "minos screenshot",
-            },
-            {
-                src: "/assets/games/minos/ss5.gif",
-                alt: "minos screenshot",
-            },
-        ],
-        desc: "minos description",
-        platform: "laptop",
-        src: "",
-        size: "small",
-    },
-    // Gridlock Dash
-    {
-        date: "",
-        title: "Gridlock Dash",
-        tags: ["featured", "web", "jam", "sale"],
-        cover: "/assets/games/gridlock/gdCover.png",
-        gif: "/assets/games/gridlock/gridlock.gif",
-        images: [
-            {
-                src: "/assets/games/gridlock/ss5.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss1.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss2.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss4.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss3.png",
-                alt: "gridlock screenshot",
-            },
-        ],
-        desc: "gridlock description",
-        platform: "laptop",
-        src: "",
-        size: "small",
-    },
+   
 ]
