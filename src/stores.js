@@ -27,6 +27,7 @@ export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam",
 import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
 import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svelte'
 import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
+import RTRDesc from './components/game/descriptions/RTRDesc.svelte'
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -103,6 +104,20 @@ export const games = [
         cover: "/assets/games/soulgrinder/cover.png",
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
         tags: ["featured", "mobile", "web", "jam", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/soul-grinder",
+            },
+            {
+                label: "Crazy Games",
+                link: "https://www.crazygames.com/game/soul-grinder",
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/soul-grinder-36000/play",
+            },
+        ],
         images: [
             {
                 src: "/assets/games/soulgrinder/1.png",
@@ -129,20 +144,7 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
         ],
-        links: [
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/soul-grinder",
-            },
-            {
-                label: "Crazy Games",
-                link: "https://www.crazygames.com/game/soul-grinder",
-            },
-            {
-                label: "Scirra Arcade",
-                link: "https://www.construct.net/en/free-online-games/soul-grinder-36000/play",
-            },
-        ]
+      
     },
     // Adder
     {
@@ -159,22 +161,84 @@ export const games = [
         tags: ["featured"],
         images: [
             {
-            	src: "/assets/games/adder/1.png",
-            	alt: "adder screenshot",
+                src: "/assets/games/adder/1.png",
+                alt: "adder screenshot",
             },
             {
-            	src: "/assets/games/adder/2.png",
-            	alt: "adder screenshot",
+                src: "/assets/games/adder/2.png",
+                alt: "adder screenshot",
             },
             {
-            	src: "/assets/games/adder/3.png",
-            	alt: "adder screenshot",
+                src: "/assets/games/adder/3.png",
+                alt: "adder screenshot",
             },
             {
-            	src: "/assets/games/adder/4.png",
-            	alt: "adder screenshot",
+                src: "/assets/games/adder/4.png",
+                alt: "adder screenshot",
             }
         ],
+    },
+    // RTR
+    {
+        date: "2013",
+        title: "Red Tie Runner",
+        platform: "laptop",
+        size: "big",
+        desc: RTRDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/6243042?color=5c7272",
+        cover: "/assets/games/rtr/rtrCover.png",
+        gif: "/assets/games/rtr/rtr.gif",
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/red-tie-runner-1463/play",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/red-tie-runner",
+            },
+        ],
+        images: [
+            {
+                src: "/assets/games/rtr/ss1.png",
+                alt: "Red Tie Runner menu screen",
+            },
+            {
+                src: "/assets/games/rtr/ss2.png",
+                alt: "Red Tie Runner screenshot (1)",
+            },
+            {
+                src: "/assets/games/rtr/ss3.png",
+                alt: "Red Tie Runner screenshot (2)",
+            },
+            {
+                src: "/assets/games/rtr/ss4.png",
+                alt: "Red Tie Runner screenshot (4)",
+            },
+            {
+                src: "/assets/games/rtr/ss5.png",
+                alt: "Red Tie Runner screenshot (5)",
+            },
+            {
+                src: "/assets/games/rtr/ss6.png",
+                alt: "Red Tie Runner screenshot (6)",
+            },
+            {
+                src: "/assets/games/rtr/ss7.png",
+                alt: "Red Tie Runner screenshot (7)",
+            },
+        ],
+        videos: [
+            {
+                label: "Trailer",
+                src: "https://www.youtube.com/embed/AlBAiyg96eY",
+
+            },
+        ],
+      
     },
     // Roadway Repair
     {
@@ -520,49 +584,7 @@ export const games = [
         src: "",
         size: "small",
     },
-    // RTR
-    {
-        date: "2013",
-        title: "Red Tie Runner",
-        tags: ["featured", "mobile", "web", "sale"],
-        cover: "/assets/games/rtr/rtrCover.png",
-        gif: "/assets/games/rtr/rtr.gif",
-        images: [
-            {
-                src: "/assets/games/rtr/ss1.png",
-                alt: "Red Tie Runner menu screen",
-            },
-            {
-                src: "/assets/games/rtr/ss2.png",
-                alt: "Red Tie Runner screenshot (1)",
-            },
-            {
-                src: "/assets/games/rtr/ss3.png",
-                alt: "Red Tie Runner screenshot (2)",
-            },
-            {
-                src: "/assets/games/rtr/ss4.png",
-                alt: "Red Tie Runner screenshot (4)",
-            },
-            {
-                src: "/assets/games/rtr/ss5.png",
-                alt: "Red Tie Runner screenshot (5)",
-            },
-            {
-                src: "/assets/games/rtr/ss6.png",
-                alt: "Red Tie Runner screenshot (6)",
-            },
-            {
-                src: "/assets/games/rtr/ss7.png",
-                alt: "Red Tie Runner screenshot (7)",
-            },
-        ],
-        desc: "rtr description",
-        // Need to account for linked content
-        platform: "laptop",
-        src: "",
-        size: "big",
-    },
+
     // Don't Fall
     {
         date: "2013",
