@@ -7,6 +7,7 @@
 <script>
     import { theme } from "../stores.js";
     export let top, bottom, bg;
+    export let contentNoClip = false;
 
     let { skewAngle } = theme;
 </script>
@@ -20,7 +21,7 @@
         --skewAngle: {skewAngle + 'deg'};"
 >
     <div class="slot">
-        <div class="content">
+        <div class="content" class:contentNoClip>
             <slot />
         </div>
     </div>

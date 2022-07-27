@@ -15,6 +15,7 @@
         top={true}
         bottom={true}
         bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}
+        contentNoClip={true}
     >
         <h2 class="dash">Game Archive</h2>
 

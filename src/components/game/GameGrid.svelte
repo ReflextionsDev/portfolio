@@ -1,6 +1,6 @@
 <!-- Need to optimize gifs... maybe use videos, or cut them even shorter, downscale -->
 <script>
-	import GameCard from './GameCard.svelte';
+    import GameCard from "./GameCard.svelte";
     import { games, gameTags, iconSize } from "../../stores";
     import MenuIcon from "../icons/MenuIcon.svelte";
 
@@ -25,8 +25,7 @@
 
 <!-- Needs to not load gifs on mobile -->
 
-
-<div class="content">
+<div>
     <div class="filter">
         <div class="filter__content">
             <h3 class="filter__header">

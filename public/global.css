@@ -108,6 +108,10 @@ button:hover {
 	padding: 25px 0px;
 }
 
+.contentNoClip {
+	overflow: visible;
+}
+
 .content__section {
 	padding: 1vw 0;
 }

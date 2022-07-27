@@ -1,4 +1,5 @@
 <script>
+    // Vars
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
     export let size = "normal";
@@ -7,7 +8,6 @@
     // Modal
     import { getContext } from "svelte";
     import Popup from "./GamePopup.svelte";
-
     const { open } = getContext("simple-modal");
     const openPopup = () => open(Popup, { title });
 </script>
@@ -17,14 +17,17 @@
     <img class="gif full" src={gif} alt={title} />
     <div class="cover full" />
     <!-- <div class="title full">{title}</div> -->
-    <img class="icon" src="/assets/icons/fullscreen2.png" alt="freelance icon"/>
+    <img
+        class="icon"
+        src="/assets/icons/fullscreen2.png"
+        alt="freelance icon"
+    />
 </div>
 
 <!-- Need cleanup -->
-
-<!-- Hover Effect by IanLunn, MIT License: https://github.com/IanLunn/Hover/blob/master/css/hover.css -->
 <style>
-    /* Pulse Grow */
+    /* Effects */
+    /* Hover Effects by IanLunn, MIT License: https://github.com/IanLunn/Hover/blob/master/css/hover.css */
     @-webkit-keyframes hvr-pulse-grow {
         to {
             -webkit-transform: scale(1.01);
@@ -59,13 +62,12 @@
         animation-direction: alternate;
     }
 
+    /* Game */
     .game {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        /* border-radius: 34px; */
         border-radius: 4px;
-
         position: relative;
         display: flex;
         width: 100%;
@@ -76,31 +78,8 @@
         transition: all 0.4s ease-in-out;
     }
 
-    .tall {
-        grid-row: span 2;
-    }
-
-    .wide {
-        grid-column: span 2;
-    }
-
-    .big {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .huge {
-        grid-column: span 3;
-        grid-row: span 2;
-    }
-
-    /* Relative used to allow links to be usable as absolute parent containers */
-
-    .full {
-        position: absolute;
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
+    .game {
+        transition: box-shadow 0.4s ease-in-out;
     }
 
     .game img {
@@ -109,13 +88,8 @@
         object-fit: cover;
     }
 
-    .game {
-        transition: box-shadow 0.4s ease-in-out;
-    }
-
     .game:hover {
         box-shadow: 0px 0px 20px 1px black;
-
         transition: all 0.3s ease-in-out;
         cursor: pointer;
     }
@@ -138,7 +112,7 @@
     .game:hover .cover {
         opacity: 20%;
         /* vignette */
-        /* box-shadow: inset 0 0 20px black; */
+        box-shadow: inset 0 0 20px black;
     }
 
     .title {
@@ -167,5 +141,31 @@
         bottom: 2%;
         opacity: 100%;
         /* transition: all 0.2s ease-in-out; */
+    }
+
+    /* Card Sizes */
+    .tall {
+        grid-row: span 2;
+    }
+
+    .wide {
+        grid-column: span 2;
+    }
+
+    .big {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .huge {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    .full {
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
     }
 </style>
