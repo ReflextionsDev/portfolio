@@ -22,7 +22,7 @@
 
 <div class="content__section">
     <p class="content__text ">
-        {desc}
+        <svelte:component this={desc} />
     </p>
 </div>
 

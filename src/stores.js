@@ -22,6 +22,10 @@ export const theme = {
 
 export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam", "sale"]
 
+
+// Game Descriptions
+import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
+
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
 // Add embedded bool (preview)
@@ -39,14 +43,7 @@ export const games = [
         tags: ["featured", "web"],
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
-        desc: `Protoshift is an addicting, fast paced, twitch based, arcade game filled with challenge, inspired by Super Hexagon. Put your mouse hand to the test while attempting to complete impossible levels and compete on global leader-boards. 
-        
-        Protoshift was originally released on Steam on Jan 15, 2016. A few years after release I sold the Steam version to a publisher, who's account was taken down some time later.
-
-        More info can be found at these links:
-        - https://steamcommunity.com/groups/Protoshift
-        - https://steamdb.info/app/398070/  
-        - https://web.archive.org/web/*/https://store.steampowered.com/app/398070 `,
+        desc: ProtoshiftDesc,
         links: [
             {
                 label: "Itch.io",
