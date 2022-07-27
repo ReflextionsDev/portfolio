@@ -147,37 +147,37 @@ export const games = [
       
     },
     // Adder
-    {
-        date: "TBD",
-        title: "Adder",
-        platform: "laptop",
-        size: "big",
-        desc: AdderDesc,
-        hasDesktopPreview: false,
-        hasMobilePreview: false,
-        src: "",
-        cover: "/assets/games/adder/cover.png",
-        gif: "/assets/games/adder/adder.gif",
-        tags: ["featured"],
-        images: [
-            {
-                src: "/assets/games/adder/1.png",
-                alt: "adder screenshot",
-            },
-            {
-                src: "/assets/games/adder/2.png",
-                alt: "adder screenshot",
-            },
-            {
-                src: "/assets/games/adder/3.png",
-                alt: "adder screenshot",
-            },
-            {
-                src: "/assets/games/adder/4.png",
-                alt: "adder screenshot",
-            }
-        ],
-    },
+    // {
+    //     date: "TBD",
+    //     title: "Adder",
+    //     platform: "laptop",
+    //     size: "big",
+    //     desc: AdderDesc,
+    //     hasDesktopPreview: false,
+    //     hasMobilePreview: false,
+    //     src: "",
+    //     cover: "/assets/games/adder/cover.png",
+    //     gif: "/assets/games/adder/adder.gif",
+    //     tags: ["featured"],
+    //     images: [
+    //         {
+    //             src: "/assets/games/adder/1.png",
+    //             alt: "adder screenshot",
+    //         },
+    //         {
+    //             src: "/assets/games/adder/2.png",
+    //             alt: "adder screenshot",
+    //         },
+    //         {
+    //             src: "/assets/games/adder/3.png",
+    //             alt: "adder screenshot",
+    //         },
+    //         {
+    //             src: "/assets/games/adder/4.png",
+    //             alt: "adder screenshot",
+    //         }
+    //     ],
+    // },
     // RTR
     {
         date: "2013",
