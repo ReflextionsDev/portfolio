@@ -5,6 +5,8 @@
     import MenuIcon from "../icons/MenuIcon.svelte";
 
     let tag = "featured";
+    // For testing
+    tag = "all"
 
     function updateTag(filter) {
         tag = filter;

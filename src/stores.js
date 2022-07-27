@@ -26,6 +26,7 @@ export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam",
 // Game Descriptions
 import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
 import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svelte'
+import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -38,9 +39,9 @@ export const games = [
         title: "Protoshift",
         platform: "laptop",
         size: "big",
+        desc: ProtoshiftDesc,
         hasDesktopPreview: true,
         hasMobilePreview: false,
-        desc: ProtoshiftDesc,
         src: "https://itch.io/embed-upload/6238921?color=000000",
         cover: "/assets/games/protoshift/protoshiftcover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
@@ -95,9 +96,9 @@ export const games = [
         title: "Soul Grinder",
         platform: "laptop",
         size: "big",
+        desc: SoulGrinderDesc,
         hasDesktopPreview: true,
         hasMobilePreview: false,
-        desc: SoulGrinderDesc,
         src: "https://itch.io/embed-upload/6242510?color=1C0C42",
         cover: "/assets/games/soulgrinder/cover.png",
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
@@ -147,10 +148,15 @@ export const games = [
     {
         date: "TBD",
         title: "Adder",
+        platform: "laptop",
+        size: "big",
+        desc: AdderDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
+        src: "",
         cover: "/assets/games/adder/cover.png",
         gif: "/assets/games/adder/adder.gif",
         tags: ["featured"],
-
         images: [
             {
             	src: "/assets/games/adder/1.png",
@@ -169,10 +175,6 @@ export const games = [
             	alt: "adder screenshot",
             }
         ],
-        desc: "adder description",
-        platform: "laptop",
-        src: "",
-        size: "big",
     },
     // Roadway Repair
     {
