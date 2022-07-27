@@ -28,10 +28,6 @@ export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam",
 // Show year of production?
 export const games = [
     // Protoshift
-    // Include Video
-    // https://steamdb.info/app/398070/
-    // https://web.archive.org/web/*/https://store.steampowered.com/app/398070
-    // https://steamcommunity.com/groups/Protoshift
     {
         date: "Jan 15, 2016",
         title: "Protoshift",
@@ -51,6 +47,16 @@ export const games = [
         - https://steamcommunity.com/groups/Protoshift
         - https://steamdb.info/app/398070/  
         - https://web.archive.org/web/*/https://store.steampowered.com/app/398070 `,
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/protoshift",
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/protoshift-41700/play",
+            },
+        ],
         images: [
             {
                 src: "/assets/games/protoshift/card1BG.png",
@@ -84,16 +90,7 @@ export const games = [
                 src: "https://www.youtube.com/embed/sgIUKdjbfOs",
             },
         ],
-        links: [
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/protoshift",
-            },
-            {
-                label: "Scirra Arcade",
-                link: "https://www.construct.net/en/free-online-games/protoshift-41700/play",
-            },
-        ]
+
     },
     // Soul Grinder
     {

@@ -5,18 +5,11 @@
     import ShowcasePhone from "./GameShowcasePhone.svelte";
 
     // Vars
-    export let title;
-    export let desc;
-    export let platform;
-    export let images;
-    export let src;
-    export let gif;
-
+    export let title, desc, platform, images, src, gif;
+    export let hasDesktopPreview, hasMobilePreview;
     export let links = [];
     export let videos = [];
     export let fullPage = false;
-
-    console.log(videos);
 </script>
 
 <!-- On mobile, hide preview object, only show links (play in browser) for mobile, for desktop games, show gif in laptop -->
@@ -29,9 +22,25 @@
 <div class="content">
     <!-- Showcase Type -->
     {#if platform === "phone"}
-        <ShowcasePhone {src} {title} {links} {desc} {gif} />
+        <ShowcasePhone
+            {src}
+            {title}
+            {links}
+            {desc}
+            {gif}
+            {hasDesktopPreview}
+            {hasMobilePreview}
+        />
     {:else if platform === "laptop"}
-        <ShowcaseLaptop {src} {title} {links} {desc} {gif} />
+        <ShowcaseLaptop
+            {src}
+            {title}
+            {links}
+            {desc}
+            {gif}
+            {hasDesktopPreview}
+            {hasMobilePreview}
+        />
     {/if}
 
     <!-- Media -->

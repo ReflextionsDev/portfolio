@@ -3,12 +3,13 @@
     import Laptop from "../Laptop.svelte";
     export let src = "";
     export let title, links, desc, gif;
+    export let hasDesktopPreview, hasMobilePreview;
 </script>
 
 <h2 class="dash title">{title}</h2>
 
 <div class="laptop-wrapper">
-    <Laptop {src} {gif} />
+    <Laptop {src} {gif} {hasDesktopPreview} {hasMobilePreview} />
 </div>
 
 <div class="links">
