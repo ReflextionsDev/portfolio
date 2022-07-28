@@ -1,6 +1,7 @@
 <!-- On mobile, show phone with gif, with text on it that says play in browser (if possible) or button below -->
 <script>
     import Phone from "../Phone.svelte";
+    import { Lightbox } from "svelte-lightbox";
     export let src = "";
     export let date = "";
     export let icon = "";
@@ -29,15 +30,22 @@
                     </a>
                 {/each}
             </div>
-           
+
             <div class="content__section">
                 <p class="content__text ">
+                    {#if date}
+                        <p><b>Release Date: </b> {date}</p>
+                    {/if}
                     <svelte:component this={desc} />
                 </p>
             </div>
-            <div class="icon">
-                <img src={icon} alt="Game Icon" />
-            </div>
+            {#if icon}
+                <div class="icon">
+                    <Lightbox>
+                        <img src={icon} alt="Game Icon" />
+                    </Lightbox>
+                </div>
+            {/if}
         </div>
     </div>
 </div>

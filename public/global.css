@@ -78,6 +78,7 @@ button:hover {
 .dash {
 	display: table;
 	white-space: nowrap;
+	overflow: hidden;
 }
 
 .dash::before, .dash::after {
@@ -89,7 +90,6 @@ button:hover {
 	/* width: 30%; */
 	/* width: 200px; */
 	width: 20vw;
-	overflow: hidden;
 }
 
 .dash::before {

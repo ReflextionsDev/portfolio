@@ -532,7 +532,7 @@ export const games = [
     },
     // Roadway Repair
     {
-        date: "",
+        date: "2016",
         title: "Roadway Repair",
         platform: "phone",
         size: "tall",
@@ -542,7 +542,7 @@ export const games = [
         src: "https://itch.io/embed-upload/6246806?color=333333",
         cover: "/assets/games/roadwayrepair/roadwayCover.png",
         gif: "/assets/games/roadwayrepair/roadway.gif",
-        icon: "/assets/games/roadwayrepair/RoadwayRepairIcon.png", 
+        icon: "/assets/games/roadwayrepair/RoadwayRepairIcon.png",
         tags: ["featured", "mobile", "web", "sale"],
         links: [
             {
@@ -567,14 +567,24 @@ export const games = [
     },
     // Bouncy Balloons
     {
+        date: "2016",
         title: "Bouncy Balloons",
-        // cover: "/assets/games/bouncyballoons/bouncyballoons1.png",
-        // cover: "/assets/test.png",
-        tags: ["featured", "mobile", "web", "sale"],
+        platform: "phone",
+        size: "tall",
+        desc: BalloonsDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6248445?color=333333",
         cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
-        // gif: "assets/games/bouncyballoons/balloons.gif",
-        gif: "/assets/games/adder/adder.gif",
-
+        gif: "assets/games/bouncyballoons/balloons.gif",
+        icon: "assets/games/bouncyballoons/BalloonIcon.png",
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/bouncy-balloons",
+            },
+        ],
         images: [
             {
                 src: "/assets/games/bouncyballoons/bouncyballoons1.png",
@@ -589,10 +599,6 @@ export const games = [
                 alt: "bouncy ballons screenshot (2)",
             },
         ],
-        desc: "Bouncy Balloons is a physics based puzzle game. It is part of a mobile web game suite I did in 2016. It features 20 levels with increasing mechanics and difficulty.",
-        platform: "phone",
-        src: "https://stupendous-cobbler-26964c.netlify.app/",
-        size: "tall",
     },
     // Brix Builder
     {
