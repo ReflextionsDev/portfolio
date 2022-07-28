@@ -446,6 +446,7 @@ export const games = [
         src: "https://itch.io/embed-upload/347253?color=000000",
         cover: "/assets/games/sam/samCover.png",
         gif: "/assets/games/sam/sam.gif",
+        tags: ["featured", "web", "jam"],
         links: [
             {
                 label: "Itch.io",
@@ -456,7 +457,6 @@ export const games = [
                 link: "https://www.construct.net/en/free-online-games/sam-1499/play"
             }
         ],
-        tags: ["featured", "web", "jam"],
         images: [
             {
                 src: "/assets/games/sam/1.png",
@@ -480,9 +480,29 @@ export const games = [
     {
         date: "",
         title: "Mino's Pond",
-        tags: ["web", "jam"],
+        platform: "laptop",
+        size: "small",
+        desc: MinosPondDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/464651?color=0f5c9a",
         cover: "/assets/games/minos/minosCover.png",
         gif: "/assets/games/minos/minos.gif",
+        tags: ["web", "jam"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/minospond",
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/minos-pond-1795/play?via=pp"
+            },
+            {
+                label: "Ludum Dare",
+                link: "https://ldjam.com/events/ludum-dare/38/minos-pond/"
+            }
+        ],
         images: [
             {
                 src: "/assets/games/minos/ss1.png",
@@ -505,10 +525,7 @@ export const games = [
                 alt: "minos screenshot",
             },
         ],
-        desc: "minos description",
-        platform: "laptop",
-        src: "",
-        size: "small",
+
     },
     // Roadway Repair
     {

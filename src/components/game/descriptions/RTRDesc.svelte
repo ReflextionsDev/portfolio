@@ -10,5 +10,5 @@
     This is the first game I ever finished; back in 2013. Originally it was
     released on the App Store, then passed Steam greenlight. I polished it a bit
     and released it for free. To date, it's received nearly 2 million plays on
-    the Scirra Arcade. I also built a version with integrated achievments and leaderboards for Y8.com.
+    the Scirra Arcade. I also built a version with integrated achievements and leaderboards for Y8.com.
 </p>
