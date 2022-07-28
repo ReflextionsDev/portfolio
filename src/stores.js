@@ -207,6 +207,10 @@ export const games = [
                 label: "Itch.io",
                 link: "https://reflextions.itch.io/red-tie-runner",
             },
+            {
+                label: "Y8",
+                link: "https://www.y8.com/games/red_tie_runner"
+            }
         ],
         images: [
             {
@@ -305,6 +309,10 @@ export const games = [
             {
                 label: "Itch.io",
                 link: "https://reflextions.itch.io/jet-attack",
+            },
+            {
+                label: "Y8",
+                link: "https://www.y8.com/games/jet_attack"
             },
             {
                 label: "Chrome Web Store",
@@ -445,6 +453,8 @@ export const games = [
         src: "",
         size: "small",
     },
+    // https://chrome.google.com/webstore/detail/gridlock-dash/npanhggcndhhgnpefpeiihmihnecijbd?
+
     // Gridlock Dash
     {
         date: "",
