@@ -25,7 +25,7 @@ export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam",
 // Game Descriptions
 import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
 import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svelte'
-import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
+// import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 import RTRDesc from './components/game/descriptions/RTRDesc.svelte'
 import DontFallDesc from './components/game/descriptions/DontFallDesc.svelte'
 import GridlockDashDesc from './components/game/descriptions/GridlockDashDesc.svelte'
@@ -34,7 +34,10 @@ import MinosPondDesc from './components/game/descriptions/MinosPondDesc.svelte'
 import SamDesc from './components/game/descriptions/SamDesc.svelte'
 import RocketStrikeDesc from './components/game/descriptions/RocketStrikeDesc.svelte'
 // import  from './components/game/descriptions/Desc.svelte'
-
+import RoadwayDesc from './components/game/descriptions/RoadwayDesc.svelte'
+import BalloonsDesc from './components/game/descriptions/BalloonsDesc.svelte'
+import BrixDesc from './components/game/descriptions/BrixDesc.svelte'
+import RocketRunnerDesc from './components/game/descriptions/RocketRunnerDesc.svelte'
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -106,7 +109,7 @@ export const games = [
         size: "big",
         desc: SoulGrinderDesc,
         hasDesktopPreview: true,
-        hasMobilePreview: false,
+        hasMobilePreview: true,
         src: "https://itch.io/embed-upload/6242510?color=1C0C42",
         cover: "/assets/games/soulgrinder/cover.png",
         gif: "/assets/games/soulgrinder/soulgrinder.gif",
@@ -478,7 +481,7 @@ export const games = [
     },
     // Minos' Pond
     {
-        date: "",
+        date: "April 24th, 2017",
         title: "Mino's Pond",
         platform: "laptop",
         size: "small",
@@ -529,14 +532,24 @@ export const games = [
     },
     // Roadway Repair
     {
+        date: "",
         title: "Roadway Repair",
-        tags: ["featured", "mobile", "web", "sale"],
+        platform: "phone",
+        size: "tall",
+        desc: RoadwayDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6246806?color=333333",
         cover: "/assets/games/roadwayrepair/roadwayCover.png",
         gif: "/assets/games/roadwayrepair/roadway.gif",
-        desc: "Roadway Repair is a pipes-stlye puzzle game themed around... well, roads. It is part of a mobile web game suite I did in 2016. I think was the first game I spent money outsourcing the art on.",
-        platform: "phone",
-        src: "https://tangerine-duckanoo-61afbc.netlify.app/",
-        size: "tall",
+        icon: "/assets/games/roadwayrepair/RoadwayRepairIcon.png", 
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/roadway-repair",
+            },
+        ],
         images: [
             {
                 src: "/assets/games/roadwayrepair/rrmenu.png",
@@ -551,25 +564,6 @@ export const games = [
                 alt: "roadway level screens",
             },
         ],
-        links: [
-            {
-                label: "Scirra Arcade",
-                link: "",
-            },
-            {
-                label: "Another Link",
-                link: "",
-            },
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/soul-grinder",
-            },
-            {
-                label: "Crazy Games",
-                link: "https://www.crazygames.com/game/soul-grinder",
-            }
-        ],
-
     },
     // Bouncy Balloons
     {
@@ -656,6 +650,8 @@ export const games = [
         tags: ["featured", "mobile", "web", "freelance"],
         cover: "/assets/games/voter/voterCover.png",
         gif: "/assets/games/voter/voter.gif",
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
         images: [
             {
                 src: "/assets/games/voter/voter1.png",

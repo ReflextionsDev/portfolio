@@ -3,6 +3,7 @@
     import Phone from "../Phone.svelte";
     export let src = "";
     export let date = "";
+    export let icon = "";
     export let title, links, desc, gif;
     export let hasDesktopPreview, hasMobilePreview;
 </script>
@@ -18,7 +19,9 @@
 
     <div class="details">
         <div style="margin-inline: 0%">
+            <div />
             <h2 class="titleAlt">{title}</h2>
+
             <div class="links content__text content__section">
                 {#each links as link}
                     <a href={link.link} target="new">
@@ -26,10 +29,14 @@
                     </a>
                 {/each}
             </div>
+           
             <div class="content__section">
                 <p class="content__text ">
                     <svelte:component this={desc} />
                 </p>
+            </div>
+            <div class="icon">
+                <img src={icon} alt="Game Icon" />
             </div>
         </div>
     </div>
@@ -58,6 +65,17 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 5%;
+    }
+
+    .icon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon img {
+        max-width: 30%;
     }
 
     @media (max-width: 768px) {

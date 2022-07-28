@@ -7,6 +7,7 @@
     // Vars
     export let title, desc, platform, images, src, gif, date;
     export let hasDesktopPreview, hasMobilePreview;
+    export let icon = '';
     export let links = [];
     export let videos = [];
     export let fullPage = false;
@@ -29,6 +30,7 @@
             {desc}
             {date}
             {gif}
+            {icon}
             {hasDesktopPreview}
             {hasMobilePreview}
         />

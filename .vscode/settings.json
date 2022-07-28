@@ -4,8 +4,7 @@
     ],
     "spellright.documentTypes": [
         "latex",
-        "plaintext",
-        "svelte"
+        "plaintext"
     ],
     "spellright.parserByClass": {
         "svelte": {
