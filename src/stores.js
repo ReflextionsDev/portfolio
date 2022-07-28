@@ -436,11 +436,27 @@ export const games = [
     },
     // Sam
     {
-        date: "",
+        date: "Dec 15, 2016",
         title: "Sam",
-        tags: ["featured", "web", "jam"],
+        platform: "laptop",
+        size: "small",
+        desc: SamDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/347253?color=000000",
         cover: "/assets/games/sam/samCover.png",
         gif: "/assets/games/sam/sam.gif",
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/sam",
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/sam-1499/play"
+            }
+        ],
+        tags: ["featured", "web", "jam"],
         images: [
             {
                 src: "/assets/games/sam/1.png",
@@ -459,10 +475,6 @@ export const games = [
                 alt: "Sam screenshot",
             },
         ],
-        desc: "sam description",
-        platform: "laptop",
-        src: "",
-        size: "small",
     },
     // Minos' Pond
     {
