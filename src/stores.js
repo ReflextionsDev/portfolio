@@ -347,9 +347,9 @@ export const games = [
         desc: RocketStrikeDesc,
         hasDesktopPreview: true,
         hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/1796897?color=333333",
         cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
         gif: "/assets/games/rocketstrike/rocketstrike.gif",
-        src: "https://itch.io/embed-upload/1796897?color=333333",
         tags: ["featured", "web", "mobile", "sale"],
         links: [
             {
@@ -387,7 +387,52 @@ export const games = [
                 alt: "Rocket Strike! screenshot",
             },
         ],
-
+    },
+    // Gridlock Dash
+    {
+        date: "2014",
+        title: "Gridlock Dash",
+        platform: "laptop",
+        size: "small",
+        desc: GridlockDashDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/1796902?color=333333",
+        cover: "/assets/games/gridlock/gdCover.png",
+        gif: "/assets/games/gridlock/gridlock.gif",
+        tags: ["featured", "web", "mobile", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/gridlock-dash",
+            },
+            {
+                label: "Chrome Web Store",
+                link: "https://chrome.google.com/webstore/detail/gridlock-dash/npanhggcndhhgnpefpeiihmihnecijbd?"
+            }
+        ],
+        images: [
+            {
+                src: "/assets/games/gridlock/ss5.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss1.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss2.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss4.png",
+                alt: "gridlock screenshot",
+            },
+            {
+                src: "/assets/games/gridlock/ss3.png",
+                alt: "gridlock screenshot",
+            },
+        ],
     },
     // Sam
     {
@@ -449,42 +494,6 @@ export const games = [
             },
         ],
         desc: "minos description",
-        platform: "laptop",
-        src: "",
-        size: "small",
-    },
-    // https://chrome.google.com/webstore/detail/gridlock-dash/npanhggcndhhgnpefpeiihmihnecijbd?
-
-    // Gridlock Dash
-    {
-        date: "",
-        title: "Gridlock Dash",
-        tags: ["featured", "web", "jam", "sale"],
-        cover: "/assets/games/gridlock/gdCover.png",
-        gif: "/assets/games/gridlock/gridlock.gif",
-        images: [
-            {
-                src: "/assets/games/gridlock/ss5.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss1.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss2.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss4.png",
-                alt: "gridlock screenshot",
-            },
-            {
-                src: "/assets/games/gridlock/ss3.png",
-                alt: "gridlock screenshot",
-            },
-        ],
-        desc: "gridlock description",
         platform: "laptop",
         src: "",
         size: "small",

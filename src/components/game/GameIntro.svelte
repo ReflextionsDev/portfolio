@@ -1,6 +1,9 @@
 <h2 class="dash">About</h2>
 
 <!-- Add link to itch, and scirra -->
+<!-- https://www.construct.net/en/free-online-games/profile/reflextions-28351 -->
+<!-- https://reflextions.itch.io/ -->
+<!-- https://www.indiedb.com/company/reflextions -->
 <div class="content">
     <div class="content__text">
         <p>
