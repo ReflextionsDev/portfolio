@@ -28,10 +28,11 @@ import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svel
 import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 import RTRDesc from './components/game/descriptions/RTRDesc.svelte'
 import DontFallDesc from './components/game/descriptions/DontFallDesc.svelte'
-import GridlockDashDesc  from './components/game/descriptions/GridlockDashDesc.svelte'
+import GridlockDashDesc from './components/game/descriptions/GridlockDashDesc.svelte'
 import JetAttackDesc from './components/game/descriptions/JetAttackDesc.svelte'
 import MinosPondDesc from './components/game/descriptions/MinosPondDesc.svelte'
-import SamDesc  from './components/game/descriptions/SamDesc.svelte'
+import SamDesc from './components/game/descriptions/SamDesc.svelte'
+import RocketStrikeDesc from './components/game/descriptions/RocketStrikeDesc.svelte'
 // import  from './components/game/descriptions/Desc.svelte'
 
 
@@ -150,7 +151,7 @@ export const games = [
                 alt: "soulgrinder screenshot",
             },
         ],
-      
+
     },
     // Adder
     // {
@@ -245,8 +246,8 @@ export const games = [
             },
         ],
     },
-     // Don't Fall
-     {
+    // Don't Fall
+    {
         date: "2013",
         title: "Don't Fall!",
         platform: "laptop",
@@ -281,7 +282,7 @@ export const games = [
                 src: "/assets/games/dontfall/df3.png",
                 alt: "Don't Fall! screenshot",
             },
-        ],       
+        ],
     },
     //  Jet Attack
     {
@@ -295,6 +296,7 @@ export const games = [
         src: "https://itch.io/embed-upload/6243474?color=333333",
         cover: "/assets/games/jetattack/jaCover3.png",
         gif: "/assets/games/jetattack/ja.gif",
+        tags: ["featured", "web", "sale"],
         links: [
             {
                 label: "Scirra Arcade",
@@ -304,8 +306,11 @@ export const games = [
                 label: "Itch.io",
                 link: "https://reflextions.itch.io/jet-attack",
             },
+            {
+                label: "Chrome Web Store",
+                link: "https://chrome.google.com/webstore/detail/jet-attack/ajkmfllnckceklaikmcmppnlhekmafob?",
+            },
         ],
-        tags: ["featured", "web", "sale"],
         images: [
             {
                 src: "/assets/games/jetattack/ss1.png",
@@ -327,11 +332,35 @@ export const games = [
     },
     // Rocket Strike
     {
-        date: "",
+        date: "2014",
         title: "Rocket Strike!",
-        tags: ["featured", "web", "sale"],
+        platform: "laptop",
+        size: "small",
+        desc: RocketStrikeDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
         cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
         gif: "/assets/games/rocketstrike/rocketstrike.gif",
+        src: "https://itch.io/embed-upload/1796897?color=333333",
+        tags: ["featured", "web", "mobile", "sale"],
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/rocket-strike-3791/play",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/rocketstrike",
+            },
+            {
+                label: "Y8",
+                link: "https://www.y8.com/games/rocket_strike",
+            },
+            {
+                label: "Chrome Web Store",
+                link: "https://chrome.google.com/webstore/detail/rocket-strike/ldfmjnlghddcjpboloecgkflfednighd?"
+            }
+        ],
         images: [
             {
                 src: "/assets/games/rocketstrike/ss1.png",
@@ -350,10 +379,7 @@ export const games = [
                 alt: "Rocket Strike! screenshot",
             },
         ],
-        desc: "rocketstrike description, released seperately as web with local multiplayer 1-4 and mobile",
-        platform: "laptop",
-        src: "",
-        size: "small",
+
     },
     // Sam
     {
@@ -798,5 +824,5 @@ export const games = [
         size: "small",
     },
 
-   
+
 ]

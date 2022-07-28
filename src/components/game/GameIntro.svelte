@@ -1,5 +1,6 @@
 <h2 class="dash">About</h2>
 
+<!-- Add link to itch, and scirra -->
 <div class="content">
     <div class="content__text">
         <p>
