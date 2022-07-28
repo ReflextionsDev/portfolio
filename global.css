@@ -89,6 +89,7 @@ button:hover {
 	/* width: 30%; */
 	/* width: 200px; */
 	width: 20vw;
+	overflow: hidden;
 }
 
 .dash::before {
@@ -109,6 +110,10 @@ button:hover {
 }
 
 .contentNoClip {
+	min-width: 280px;
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
 	overflow: visible;
 }
 
