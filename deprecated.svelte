@@ -1,17 +1,17 @@
-Manual scroll to
+<script>
+    // Manual Scroll To
+    function scrollIntoView({ target }) {
+        const el = document.querySelector(target.getAttribute("href"));
+        console.log(target);
+        console.log(el);
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: "smooth",
+        });
+    }
+</script>
 
-   // function scrollIntoView({ target }) {
-    //     const el = document.querySelector(target.getAttribute("href"));
-    //     console.log(target);
-    //     console.log(el);
-    //     if (!el) return;
-    //     el.scrollIntoView({
-    //         behavior: "smooth",
-    //     });
-    // }
-
-
-<!-- <nav>
+<nav>
     <a href=".tabs" on:click|preventDefault={scrollIntoView}>Section 1</a>
     <a href="#section-2" on:click|preventDefault={scrollIntoView}>Section 2</a>
     <a href="#section-3" on:click|preventDefault={scrollIntoView}>Section 3</a>
@@ -29,12 +29,10 @@ Manual scroll to
     <section id="section-3">
         <h2>Section 3</h2>
     </section>
-</main> -->
+</main>
 
-
-
-
-/* body::before {
+<style>
+    /* body::before {
 	background: linear-gradient(145deg, rgba(255, 255, 255, 1) 0%, rgba(29, 251, 255, 1) 53%, rgb(251, 255, 253) 100%);
 	content: "";
 	top: 0;
@@ -46,7 +44,7 @@ Manual scroll to
 
 } */
 
-/* ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
 	width: 20px;
 }
 
@@ -65,9 +63,9 @@ Manual scroll to
 	background-color: #a8bbbf;
 } */
 
-/* TEMP */
+    /* TEMP */
 
-/* .hvr-grow {
+    /* .hvr-grow {
 	display: inline-block;
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
@@ -85,7 +83,6 @@ Manual scroll to
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 } */
-
 
     /* custom scrollbar */
     /* ::-webkit-scrollbar {
@@ -106,3 +103,4 @@ Manual scroll to
     ::-webkit-scrollbar-thumb:hover {
         background-color: #a8bbbf;
     } */
+</style>

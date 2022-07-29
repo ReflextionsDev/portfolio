@@ -1,9 +1,8 @@
 import { writable } from "svelte/store";
 
+// Vars
 export const url = "http://localhost:8080";
-
 export const iconSize = writable(64)
-
 export const theme = {
     bgColors: {
         primary: "#1a1a1a",
@@ -20,6 +19,7 @@ export const theme = {
     }
 }
 
+// Games
 export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam", "sale"]
 
 // Game Descriptions
@@ -45,10 +45,7 @@ import TowerDefenseDesc from './components/game/descriptions/TowerDefenseDesc.sv
 import KcpsDesc from "./components/game/descriptions/kcpsDesc.svelte";
 import ChemDesc from "./components/game/descriptions/ChemDesc.svelte";
 
-// Sizes are normal, tall, big, small, wide (unused)
-// Add freelance bool
-// Add embedded bool (preview)
-// Show year of production?
+// Sizes - small, tall, big, huge (unused), wide (unused)
 export const games = [
     // Protoshift
     {
@@ -162,38 +159,7 @@ export const games = [
         ],
 
     },
-    // Adder
-    // {
-    //     date: "TBD",
-    //     title: "Adder",
-    //     platform: "laptop",
-    //     size: "big",
-    //     desc: AdderDesc,
-    //     hasDesktopPreview: false,
-    //     hasMobilePreview: false,
-    //     src: "",
-    //     cover: "/assets/games/adder/cover.png",
-    //     gif: "/assets/games/adder/adder.gif",
-    //     tags: ["featured"],
-    //     images: [
-    //         {
-    //             src: "/assets/games/adder/1.png",
-    //             alt: "adder screenshot",
-    //         },
-    //         {
-    //             src: "/assets/games/adder/2.png",
-    //             alt: "adder screenshot",
-    //         },
-    //         {
-    //             src: "/assets/games/adder/3.png",
-    //             alt: "adder screenshot",
-    //         },
-    //         {
-    //             src: "/assets/games/adder/4.png",
-    //             alt: "adder screenshot",
-    //         }
-    //     ],
-    // },
+
     // RTR
     {
         date: "2013",
@@ -941,3 +907,36 @@ export const games = [
         ],     
     },
 ]
+
+// Adder
+// {
+//     date: "TBD",
+//     title: "Adder",
+//     platform: "laptop",
+//     size: "big",
+//     desc: AdderDesc,
+//     hasDesktopPreview: false,
+//     hasMobilePreview: false,
+//     src: "",
+//     cover: "/assets/games/adder/cover.png",
+//     gif: "/assets/games/adder/adder.gif",
+//     tags: ["featured"],
+//     images: [
+//         {
+//             src: "/assets/games/adder/1.png",
+//             alt: "adder screenshot",
+//         },
+//         {
+//             src: "/assets/games/adder/2.png",
+//             alt: "adder screenshot",
+//         },
+//         {
+//             src: "/assets/games/adder/3.png",
+//             alt: "adder screenshot",
+//         },
+//         {
+//             src: "/assets/games/adder/4.png",
+//             alt: "adder screenshot",
+//         }
+//     ],
+// },

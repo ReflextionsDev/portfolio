@@ -3,13 +3,13 @@
         "en"
     ],
     "spellright.documentTypes": [
+        "markdown",
         "latex",
-        "plaintext",
-        "svelte"
+        "plaintext"
     ],
     "spellright.parserByClass": {
         "svelte": {
-            "parser": "markdown"
+            "parser": "plain"
         }
     }
 }
