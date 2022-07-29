@@ -23,9 +23,9 @@ export const theme = {
 export const gameTags = ["all", "featured", "freelance", "web", "mobile", "jam", "sale"]
 
 // Game Descriptions
+// import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 import ProtoshiftDesc from './components/game/descriptions/ProtoshiftDesc.svelte'
 import SoulGrinderDesc from './components/game/descriptions/SoulGrinderDesc.svelte'
-// import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 import RTRDesc from './components/game/descriptions/RTRDesc.svelte'
 import DontFallDesc from './components/game/descriptions/DontFallDesc.svelte'
 import GridlockDashDesc from './components/game/descriptions/GridlockDashDesc.svelte'
@@ -33,7 +33,6 @@ import JetAttackDesc from './components/game/descriptions/JetAttackDesc.svelte'
 import MinosPondDesc from './components/game/descriptions/MinosPondDesc.svelte'
 import SamDesc from './components/game/descriptions/SamDesc.svelte'
 import RocketStrikeDesc from './components/game/descriptions/RocketStrikeDesc.svelte'
-// import  from './components/game/descriptions/Desc.svelte'
 import RoadwayDesc from './components/game/descriptions/RoadwayDesc.svelte'
 import BalloonsDesc from './components/game/descriptions/BalloonsDesc.svelte'
 import BrixDesc from './components/game/descriptions/BrixDesc.svelte'
@@ -41,7 +40,10 @@ import RocketRunnerDesc from './components/game/descriptions/RocketRunnerDesc.sv
 import VoterDesc from './components/game/descriptions/VoterDesc.svelte'
 import MTACountryDesc from './components/game/descriptions/MTACountryDesc.svelte'
 import FantakneeDesc from './components/game/descriptions/FantakneeDesc.svelte'
-
+import KCPSDesc from './components/game/descriptions/kcpsDesc.svelte'
+import MayhemDesc from './components/game/descriptions/MayhemDesc.svelte'
+import TowerDefenseDesc from './components/game/descriptions/TowerDefenseDesc.svelte'
+import KcpsDesc from "./components/game/descriptions/kcpsDesc.svelte";
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -253,7 +255,6 @@ export const games = [
             {
                 label: "Trailer",
                 src: "https://www.youtube.com/embed/AlBAiyg96eY",
-
             },
         ],
     },
@@ -800,10 +801,29 @@ export const games = [
     },
     // KCPS
     {
+        date: "2019",
         title: "Kitty Cat Poker Slots",
-        tags: ["featured", "mobile", "freelance"],
+        size: "big",
+        platform: "laptop",
+        desc: KcpsDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
+        src: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat",
         cover: "/assets/games/kcps/kcpsCover.png",
         gif: "/assets/games/kcps/kcps.gif",
+        tags: ["featured", "mobile", "freelance"],
+        videos: [
+            {
+                label: "Trailer",
+                src: "https://www.youtube.com/embed/_na6hF010b0",
+            }
+        ],
+        links: [
+            {
+                label: "Google Play",
+                link: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat"
+            }
+        ],
         images: [
             {
                 src: "/assets/games/kcps/kcps1.png",
@@ -830,11 +850,6 @@ export const games = [
                 alt: "Kitty Cat Poker Slots screenshot (5)",
             },
         ],
-        desc: "kcps description, discus google play work and stuff, firebase accounts, etc",
-        platform: "phone",
-        // Need to account for linked content
-        src: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat",
-        size: "big",
     },
     // Tower Defense
     {
