@@ -638,10 +638,24 @@ export const games = [
     },
     // Rocket Runner
     {
+        date: "2016",
         title: "Rocket Runner",
-        tags: ["featured", "mobile", "web", "sale"],
+        platform: "phone",
+        size: "tall",
+        desc: RocketRunnerDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6248631?color=333333",
         cover: "/assets/games/rocketrunner/rocketCover.png",
         gif: "/assets/games/rocketrunner/rocket.gif",
+        icon: "/assets/games/rocketrunner/icon.png",
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/rocket-runner",
+            },
+        ],
         images: [
             {
                 src: "/assets/games/rocketrunner/rocketrunner1.png",
@@ -656,10 +670,7 @@ export const games = [
                 alt: "Rocket Runner screenshot (2)",
             },
         ],
-        desc: "Rocket Runner is an simple dodging game with unlockable skins and currency. It is part of a mobile web game suite I did in 2016.",
-        platform: "phone",
-        src: "https://deluxe-haupia-237473.netlify.app/",
-        size: "tall",
+
     },
     // Voter Suppression
     {
