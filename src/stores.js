@@ -40,10 +40,10 @@ import RocketRunnerDesc from './components/game/descriptions/RocketRunnerDesc.sv
 import VoterDesc from './components/game/descriptions/VoterDesc.svelte'
 import MTACountryDesc from './components/game/descriptions/MTACountryDesc.svelte'
 import FantakneeDesc from './components/game/descriptions/FantakneeDesc.svelte'
-import KCPSDesc from './components/game/descriptions/kcpsDesc.svelte'
 import MayhemDesc from './components/game/descriptions/MayhemDesc.svelte'
 import TowerDefenseDesc from './components/game/descriptions/TowerDefenseDesc.svelte'
 import KcpsDesc from "./components/game/descriptions/kcpsDesc.svelte";
+import ChemDesc from "./components/game/descriptions/ChemDesc.svelte";
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -877,15 +877,19 @@ export const games = [
                 alt: "Tower Defense prototype screenshot (2)",
             },
         ],
-      
     },
     // Chem Game
     {
         date: "June 2017",
         title: "Chemistry Hotspot Quiz",
-        tags: ["freelance"],
+        size: "small",
+        platform: "laptop",
+        desc: ChemDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
         cover: "/assets/games/chem/chemCover.png",
         gif: "/assets/games/chem/chem.gif",
+        tags: ["freelance"],
         images: [
             {
                 src: "/assets/games/chem/chem1.png",
@@ -904,19 +908,19 @@ export const games = [
                 alt: "Chemistry Hotspot Quiz screenshot (3)",
             },
         ],
-        desc: "chem description, discuss prototyping, client didn't go forward or something",
-        platform: "phone",
-        // Need to account for linked content
-        src: "",
-        size: "small",
     },
     // Nomzilla
     {
         date: "Dec 2016",
         title: "Monster's Mayhem",
-        tags: ["freelance"],
+        size: "small",
+        platform: "laptop",
+        desc: MayhemDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
         cover: "/assets/games/nom/nomCover.png",
         gif: "/assets/games/nom/nom.gif",
+        tags: ["freelance"],
         images: [
             {
                 src: "/assets/games/nom/nom1.png",
@@ -934,13 +938,6 @@ export const games = [
                 src: "/assets/games/nom/nom4.png",
                 alt: "Monster's Mayhem screenshot (3)",
             },
-        ],
-        desc: "nom description, discuss prototyping, client didn't go forward or something",
-        platform: "phone",
-        // Need to account for linked content
-        src: "",
-        size: "small",
+        ],     
     },
-
-
 ]

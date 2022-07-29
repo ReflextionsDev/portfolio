@@ -1,5 +1,5 @@
 <p>
-    Kitty Kat Poker Slots Casino is a full scale android app I was comissioned
+    Kitty Kat Poker Slots Casino is a full scale android app I was commissioned
     to develop. It's a slot machine game based on matching poker hands with a
     cute cat theme.
 </p>
@@ -11,7 +11,7 @@
 </p>
 <ul>
     <li>
-        An account stystem via Firebase, which supports Google Play, Facebook,
+        An account system via Firebase, which supports Google Play, Facebook,
         or email login.
     </li>
     <li>A daily login reward, also using the account system.</li>
