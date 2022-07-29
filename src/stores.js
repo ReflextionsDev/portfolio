@@ -855,9 +855,14 @@ export const games = [
     {
         date: "Aug 2019",
         title: "Tower Defense Prototype",
-        tags: ["freelance"],
+        size: "small",
+        platform: "laptop",
+        desc: TowerDefenseDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
         cover: "/assets/games/tower/towerCover.png",
         gif: "/assets/games/tower/tower.gif",
+        tags: ["freelance"],
         images: [
             {
                 src: "/assets/games/tower/tower1.png",
@@ -872,11 +877,7 @@ export const games = [
                 alt: "Tower Defense prototype screenshot (2)",
             },
         ],
-        desc: "tower description, discuss prototyping, client didn't go forward or something",
-        platform: "phone",
-        // Need to account for linked content
-        src: "",
-        size: "small",
+      
     },
     // Chem Game
     {
