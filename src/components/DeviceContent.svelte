@@ -21,7 +21,7 @@
         {#if preview}
             {#if matches && hasDesktopPreview}
                 <iframe {src} title="Game Preview" allowfullscreen={true} />
-            {:else if !matches && hasMobilePreview}
+            {:else if hasMobilePreview}
                 <div class="demo">
                     <img class="gif" src={gif} alt="gameplay gif" />
                     <a href={src} target="game">

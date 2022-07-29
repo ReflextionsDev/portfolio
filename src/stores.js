@@ -38,6 +38,10 @@ import RoadwayDesc from './components/game/descriptions/RoadwayDesc.svelte'
 import BalloonsDesc from './components/game/descriptions/BalloonsDesc.svelte'
 import BrixDesc from './components/game/descriptions/BrixDesc.svelte'
 import RocketRunnerDesc from './components/game/descriptions/RocketRunnerDesc.svelte'
+import VoterDesc from './components/game/descriptions/VoterDesc.svelte'
+import MTACountryDesc from './components/game/descriptions/MTACountryDesc.svelte'
+import FantakneeDesc from './components/game/descriptions/FantakneeDesc.svelte'
+
 
 // Sizes are normal, tall, big, small, wide (unused)
 // Add freelance bool
@@ -674,12 +678,27 @@ export const games = [
     },
     // Voter Suppression
     {
+        date: "Nov 3, 2016",
         title: "The Voter Suppression Trail",
-        tags: ["featured", "mobile", "web", "freelance"],
+        platform: "laptop",
+        size: "big",
+        desc: VoterDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: true,
+        src: "https://www.nytimes.com/interactive/2016/11/01/opinion/voting-suppression-videogame.html",
         cover: "/assets/games/voter/voterCover.png",
         gif: "/assets/games/voter/voter.gif",
-        hasDesktopPreview: false,
-        hasMobilePreview: false,
+        tags: ["featured", "mobile", "web", "freelance"],
+        links: [
+            {
+                label: "NY Times",
+                link: "https://www.nytimes.com/interactive/2016/11/01/opinion/voting-suppression-videogame.html",
+            },
+            {
+                label: "Everyday Arcade",
+                link: "https://everydayarcade.com/games/the-voter-suppression-trail"
+            }
+        ],
         images: [
             {
                 src: "/assets/games/voter/voter1.png",
@@ -702,11 +721,7 @@ export const games = [
                 alt: "Voter Suppression Trail screenshot (5)",
             },
         ],
-        desc: "Voter Description",
-        platform: "laptop",
-        // Need to account for linked content
-        src: "https://deluxe-haupia-237473.netlify.app/",
-        size: "big",
+       
     },
     // MTA Country
     {
