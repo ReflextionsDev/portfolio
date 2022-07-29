@@ -721,14 +721,27 @@ export const games = [
                 alt: "Voter Suppression Trail screenshot (5)",
             },
         ],
-       
+
     },
     // MTA Country
     {
+        date: "May 22, 2018",
         title: "MTA Country",
-        tags: ["featured", "mobile", "web", "freelance"],
+        platform: "laptop",
+        size: "small",
+        desc: MTACountryDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: true,
+        src: "https://everydayarcade.com/games/mta-country",
         cover: "/assets/games/mta/mtaCover.png",
         gif: "/assets/games/mta/mta.gif",
+        tags: ["featured", "mobile", "web", "freelance"],
+        links: [
+            {
+                label: "Everyday Arcade",
+                link: "https://everydayarcade.com/games/mta-country"
+            }
+        ],
         images: [
             {
                 src: "/assets/games/mta/mta.png",
@@ -747,11 +760,6 @@ export const games = [
                 alt: "MTA Country screenshot (3)",
             },
         ],
-        desc: "MTA description",
-        platform: "laptop",
-        // Need to account for linked content
-        src: "https://deluxe-haupia-237473.netlify.app/",
-        size: "small",
     },
     // Fantaknee Football
     {
