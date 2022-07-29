@@ -6,5 +6,5 @@
 
 <p>
     Don't Fall! was originally made over the course of a weekend. It reached
-    over a million plays on the Chrome Web Store and Scirra Arcade.
+    over a million plays on the Chrome Web Store, Scirra Arcade, and a defunct site called Clay.io.
 </p>

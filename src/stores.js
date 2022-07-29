@@ -47,6 +47,148 @@ import ChemDesc from "./components/game/descriptions/ChemDesc.svelte";
 
 // Sizes - small, tall, big, huge (unused), wide (unused)
 export const games = [
+    // Soul Grinder
+    {
+        date: "Feb 23, 2022",
+        title: "Soul Grinder",
+        platform: "laptop",
+        size: "big",
+        desc: SoulGrinderDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6242510?color=1C0C42",
+        cover: "/assets/games/soulgrinder/cover.png",
+        gif: "/assets/games/soulgrinder/soulgrinder.gif",
+        tags: ["featured", "mobile", "web", "jam", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/soul-grinder",
+            },
+            {
+                label: "Crazy Games",
+                link: "https://www.crazygames.com/game/soul-grinder",
+            },
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/soul-grinder-36000/play",
+            },
+        ],
+        images: [
+            {
+                src: "/assets/games/soulgrinder/1.png",
+                alt: "soulgrinder screenshot",
+            },
+            {
+                src: "/assets/games/soulgrinder/3.png",
+                alt: "soulgrinder screenshot",
+            },
+            {
+                src: "/assets/games/soulgrinder/5.png",
+                alt: "soulgrinder screenshot",
+            },
+            {
+                src: "/assets/games/soulgrinder/4.png",
+                alt: "soulgrinder screenshot",
+            },
+            {
+                src: "/assets/games/soulgrinder/6.png",
+                alt: "soulgrinder screenshot",
+            },
+            {
+                src: "/assets/games/soulgrinder/7.png",
+                alt: "soulgrinder screenshot",
+            },
+        ],
+
+    },
+    // KCPS
+    {
+        date: "2019",
+        title: "Kitty Cat Poker Slots",
+        size: "big",
+        platform: "laptop",
+        desc: KcpsDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: false,
+        src: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat",
+        cover: "/assets/games/kcps/kcpsCover.png",
+        gif: "/assets/games/kcps/kcps.gif",
+        tags: ["featured", "mobile", "freelance"],
+        videos: [
+            {
+                label: "Trailer",
+                src: "https://www.youtube.com/embed/_na6hF010b0",
+            }
+        ],
+        links: [
+            {
+                label: "Google Play",
+                link: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat"
+            }
+        ],
+        images: [
+            {
+                src: "/assets/games/kcps/kcps1.png",
+                alt: "Kitty Cat Poker Slots menu screen",
+            },
+            {
+                src: "/assets/games/kcps/kcps2.png",
+                alt: "Kitty Cat Poker Slots screenshot (1)",
+            },
+            {
+                src: "/assets/games/kcps/kcps3.png",
+                alt: "Kitty Cat Poker Slots screenshot (2)",
+            },
+            {
+                src: "/assets/games/kcps/kcps4.png",
+                alt: "Kitty Cat Poker Slots screenshot (3)",
+            },
+            {
+                src: "/assets/games/kcps/kcps5.png",
+                alt: "Kitty Cat Poker Slots screenshot (4)",
+            },
+            {
+                src: "/assets/games/kcps/kcps6.png",
+                alt: "Kitty Cat Poker Slots screenshot (5)",
+            },
+        ],
+    },
+    // Roadway Repair
+    {
+        date: "2016",
+        title: "Roadway Repair",
+        platform: "phone",
+        size: "tall",
+        desc: RoadwayDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6246806?color=333333",
+        cover: "/assets/games/roadwayrepair/roadwayCover.png",
+        gif: "/assets/games/roadwayrepair/roadway.gif",
+        icon: "/assets/games/roadwayrepair/RoadwayRepairIcon.png",
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/roadway-repair",
+            },
+        ],
+        images: [
+            {
+                src: "/assets/games/roadwayrepair/rrmenu.png",
+                alt: "roadway repair menu screen",
+            },
+            {
+                src: "/assets/games/roadwayrepair/roadway1.png",
+                alt: "roadway repair menu, levels, and tutorial screen",
+            },
+            {
+                src: "/assets/games/roadwayrepair/roadway2.png",
+                alt: "roadway level screens",
+            },
+        ],
+    },
     // Protoshift
     {
         date: "Jan 15, 2016",
@@ -104,62 +246,79 @@ export const games = [
             },
         ],
     },
-    // Soul Grinder
+    // Don't Fall
     {
-        date: "Feb 23, 2022",
-        title: "Soul Grinder",
+        date: "2013",
+        title: "Don't Fall!",
         platform: "laptop",
-        size: "big",
-        desc: SoulGrinderDesc,
+        size: "small",
+        desc: DontFallDesc,
         hasDesktopPreview: true,
-        hasMobilePreview: true,
-        src: "https://itch.io/embed-upload/6242510?color=1C0C42",
-        cover: "/assets/games/soulgrinder/cover.png",
-        gif: "/assets/games/soulgrinder/soulgrinder.gif",
-        tags: ["featured", "mobile", "web", "jam", "sale"],
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/6243387?color=333333",
+        cover: "/assets/games/dontfall/dfCover.png",
+        gif: "/assets/games/dontfall/df.gif",
+        tags: ["featured", "web", "sale"],
         links: [
             {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/soul-grinder",
-            },
-            {
-                label: "Crazy Games",
-                link: "https://www.crazygames.com/game/soul-grinder",
-            },
-            {
                 label: "Scirra Arcade",
-                link: "https://www.construct.net/en/free-online-games/soul-grinder-36000/play",
+                link: "https://www.construct.net/en/free-online-games/dont-fall-94/play",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/dont-fall",
             },
         ],
         images: [
             {
-                src: "/assets/games/soulgrinder/1.png",
-                alt: "soulgrinder screenshot",
+                src: "/assets/games/dontfall/df1.png",
+                alt: "Don't Fall! screenshot",
             },
             {
-                src: "/assets/games/soulgrinder/3.png",
-                alt: "soulgrinder screenshot",
+                src: "/assets/games/dontfall/df2.png",
+                alt: "Don't Fall! screenshot",
             },
             {
-                src: "/assets/games/soulgrinder/5.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/4.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/6.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/7.png",
-                alt: "soulgrinder screenshot",
+                src: "/assets/games/dontfall/df3.png",
+                alt: "Don't Fall! screenshot",
             },
         ],
-
     },
-
+    // Bouncy Balloons
+    {
+        date: "2016",
+        title: "Bouncy Balloons",
+        platform: "phone",
+        size: "tall",
+        desc: BalloonsDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6248445?color=333333",
+        cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
+        gif: "assets/games/bouncyballoons/balloons.gif",
+        icon: "assets/games/bouncyballoons/BalloonIcon.png",
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/bouncy-balloons",
+            },
+        ],
+        images: [
+            {
+                src: "/assets/games/bouncyballoons/bouncyballoons1.png",
+                alt: "bouncy balloons menu screen",
+            },
+            {
+                src: "/assets/games/bouncyballoons/bouncyballoons2.png",
+                alt: "bouncy ballons screenshot (1)",
+            },
+            {
+                src: "/assets/games/bouncyballoons/bouncyballoons3.png",
+                alt: "bouncy ballons screenshot (2)",
+            },
+        ],
+    },
     // RTR
     {
         date: "2013",
@@ -224,44 +383,6 @@ export const games = [
             },
         ],
     },
-    // Don't Fall
-    {
-        date: "2013",
-        title: "Don't Fall!",
-        platform: "laptop",
-        size: "small",
-        desc: DontFallDesc,
-        hasDesktopPreview: true,
-        hasMobilePreview: false,
-        src: "https://itch.io/embed-upload/6243387?color=333333",
-        cover: "/assets/games/dontfall/dfCover.png",
-        gif: "/assets/games/dontfall/df.gif",
-        tags: ["featured", "web", "sale"],
-        links: [
-            {
-                label: "Scirra Arcade",
-                link: "https://www.construct.net/en/free-online-games/dont-fall-94/play",
-            },
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/dont-fall",
-            },
-        ],
-        images: [
-            {
-                src: "/assets/games/dontfall/df1.png",
-                alt: "Don't Fall! screenshot",
-            },
-            {
-                src: "/assets/games/dontfall/df2.png",
-                alt: "Don't Fall! screenshot",
-            },
-            {
-                src: "/assets/games/dontfall/df3.png",
-                alt: "Don't Fall! screenshot",
-            },
-        ],
-    },
     //  Jet Attack
     {
         date: "2013",
@@ -274,7 +395,7 @@ export const games = [
         src: "https://itch.io/embed-upload/6243474?color=333333",
         cover: "/assets/games/jetattack/jaCover3.png",
         gif: "/assets/games/jetattack/ja.gif",
-        tags: ["featured", "web", "sale"],
+        tags: ["web", "sale"],
         links: [
             {
                 label: "Scirra Arcade",
@@ -312,56 +433,6 @@ export const games = [
             },
         ],
     },
-    // Rocket Strike
-    {
-        date: "2014",
-        title: "Rocket Strike!",
-        platform: "laptop",
-        size: "small",
-        desc: RocketStrikeDesc,
-        hasDesktopPreview: true,
-        hasMobilePreview: false,
-        src: "https://itch.io/embed-upload/1796897?color=333333",
-        cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
-        gif: "/assets/games/rocketstrike/rocketstrike.gif",
-        tags: ["featured", "web", "mobile", "sale"],
-        links: [
-            {
-                label: "Scirra Arcade",
-                link: "https://www.construct.net/en/free-online-games/rocket-strike-3791/play",
-            },
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/rocketstrike",
-            },
-            {
-                label: "Y8",
-                link: "https://www.y8.com/games/rocket_strike",
-            },
-            {
-                label: "Chrome Web Store",
-                link: "https://chrome.google.com/webstore/detail/rocket-strike/ldfmjnlghddcjpboloecgkflfednighd?"
-            }
-        ],
-        images: [
-            {
-                src: "/assets/games/rocketstrike/ss1.png",
-                alt: "Rocket Strike! screenshot",
-            },
-            {
-                src: "/assets/games/rocketstrike/ss3.png",
-                alt: "Rocket Strike! screenshot",
-            },
-            {
-                src: "/assets/games/rocketstrike/ss4.png",
-                alt: "Rocket Strike! screenshot",
-            },
-            {
-                src: "/assets/games/rocketstrike/ss5.png",
-                alt: "Rocket Strike! screenshot",
-            },
-        ],
-    },
     // Gridlock Dash
     {
         date: "2014",
@@ -374,7 +445,7 @@ export const games = [
         src: "https://itch.io/embed-upload/1796902?color=333333",
         cover: "/assets/games/gridlock/gdCover.png",
         gif: "/assets/games/gridlock/gridlock.gif",
-        tags: ["featured", "web", "mobile", "sale"],
+        tags: ["web", "mobile", "sale"],
         links: [
             {
                 label: "Itch.io",
@@ -501,76 +572,6 @@ export const games = [
         ],
 
     },
-    // Roadway Repair
-    {
-        date: "2016",
-        title: "Roadway Repair",
-        platform: "phone",
-        size: "tall",
-        desc: RoadwayDesc,
-        hasDesktopPreview: true,
-        hasMobilePreview: true,
-        src: "https://itch.io/embed-upload/6246806?color=333333",
-        cover: "/assets/games/roadwayrepair/roadwayCover.png",
-        gif: "/assets/games/roadwayrepair/roadway.gif",
-        icon: "/assets/games/roadwayrepair/RoadwayRepairIcon.png",
-        tags: ["featured", "mobile", "web", "sale"],
-        links: [
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/roadway-repair",
-            },
-        ],
-        images: [
-            {
-                src: "/assets/games/roadwayrepair/rrmenu.png",
-                alt: "roadway repair menu screen",
-            },
-            {
-                src: "/assets/games/roadwayrepair/roadway1.png",
-                alt: "roadway repair menu, levels, and tutorial screen",
-            },
-            {
-                src: "/assets/games/roadwayrepair/roadway2.png",
-                alt: "roadway level screens",
-            },
-        ],
-    },
-    // Bouncy Balloons
-    {
-        date: "2016",
-        title: "Bouncy Balloons",
-        platform: "phone",
-        size: "tall",
-        desc: BalloonsDesc,
-        hasDesktopPreview: true,
-        hasMobilePreview: true,
-        src: "https://itch.io/embed-upload/6248445?color=333333",
-        cover: "assets/games/bouncyballoons/bouncyballoonsportrait.png",
-        gif: "assets/games/bouncyballoons/balloons.gif",
-        icon: "assets/games/bouncyballoons/BalloonIcon.png",
-        tags: ["featured", "mobile", "web", "sale"],
-        links: [
-            {
-                label: "Itch.io",
-                link: "https://reflextions.itch.io/bouncy-balloons",
-            },
-        ],
-        images: [
-            {
-                src: "/assets/games/bouncyballoons/bouncyballoons1.png",
-                alt: "bouncy balloons menu screen",
-            },
-            {
-                src: "/assets/games/bouncyballoons/bouncyballoons2.png",
-                alt: "bouncy ballons screenshot (1)",
-            },
-            {
-                src: "/assets/games/bouncyballoons/bouncyballoons3.png",
-                alt: "bouncy ballons screenshot (2)",
-            },
-        ],
-    },
     // Brix Builder
     {
         date: "2016",
@@ -584,7 +585,7 @@ export const games = [
         cover: "/assets/games/brixbuilder/brixCover.png",
         gif: "/assets/games/brixbuilder/brix.gif",
         icon: "/assets/games/brixbuilder/icon.png",
-        tags: ["featured", "mobile", "web", "sale"],
+        tags: ["mobile", "web", "sale"],
         links: [
             {
                 label: "Itch.io",
@@ -620,7 +621,7 @@ export const games = [
         cover: "/assets/games/rocketrunner/rocketCover.png",
         gif: "/assets/games/rocketrunner/rocket.gif",
         icon: "/assets/games/rocketrunner/icon.png",
-        tags: ["featured", "mobile", "web", "sale"],
+        tags: ["mobile", "web", "sale"],
         links: [
             {
                 label: "Itch.io",
@@ -727,6 +728,56 @@ export const games = [
             },
         ],
     },
+    // Rocket Strike
+    {
+        date: "2014",
+        title: "Rocket Strike!",
+        platform: "laptop",
+        size: "small",
+        desc: RocketStrikeDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: false,
+        src: "https://itch.io/embed-upload/1796897?color=333333",
+        cover: "/assets/games/rocketstrike/rocketstrikeCover.png",
+        gif: "/assets/games/rocketstrike/rocketstrike.gif",
+        tags: ["web", "mobile", "featured", "sale"],
+        links: [
+            {
+                label: "Scirra Arcade",
+                link: "https://www.construct.net/en/free-online-games/rocket-strike-3791/play",
+            },
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/rocketstrike",
+            },
+            {
+                label: "Y8",
+                link: "https://www.y8.com/games/rocket_strike",
+            },
+            {
+                label: "Chrome Web Store",
+                link: "https://chrome.google.com/webstore/detail/rocket-strike/ldfmjnlghddcjpboloecgkflfednighd?"
+            }
+        ],
+        images: [
+            {
+                src: "/assets/games/rocketstrike/ss1.png",
+                alt: "Rocket Strike! screenshot",
+            },
+            {
+                src: "/assets/games/rocketstrike/ss3.png",
+                alt: "Rocket Strike! screenshot",
+            },
+            {
+                src: "/assets/games/rocketstrike/ss4.png",
+                alt: "Rocket Strike! screenshot",
+            },
+            {
+                src: "/assets/games/rocketstrike/ss5.png",
+                alt: "Rocket Strike! screenshot",
+            },
+        ],
+    },
     // Fantaknee Football
     {
         date: "2017",
@@ -739,7 +790,7 @@ export const games = [
         src: "https://ilovechrisbaker.com/stuff/Fantaknee-Football/index.html",
         cover: "/assets/games/fantaknee/fantakneeCover.png",
         gif: "/assets/games/fantaknee/fantaknee.gif",
-        tags: ["featured", "mobile", "web", "freelance"],
+        tags: ["mobile", "web", "freelance"],
         links: [
             {
                 label: "Game",
@@ -765,58 +816,7 @@ export const games = [
             },
         ],
     },
-    // KCPS
-    {
-        date: "2019",
-        title: "Kitty Cat Poker Slots",
-        size: "big",
-        platform: "laptop",
-        desc: KcpsDesc,
-        hasDesktopPreview: false,
-        hasMobilePreview: false,
-        src: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat",
-        cover: "/assets/games/kcps/kcpsCover.png",
-        gif: "/assets/games/kcps/kcps.gif",
-        tags: ["featured", "mobile", "freelance"],
-        videos: [
-            {
-                label: "Trailer",
-                src: "https://www.youtube.com/embed/_na6hF010b0",
-            }
-        ],
-        links: [
-            {
-                label: "Google Play",
-                link: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat"
-            }
-        ],
-        images: [
-            {
-                src: "/assets/games/kcps/kcps1.png",
-                alt: "Kitty Cat Poker Slots menu screen",
-            },
-            {
-                src: "/assets/games/kcps/kcps2.png",
-                alt: "Kitty Cat Poker Slots screenshot (1)",
-            },
-            {
-                src: "/assets/games/kcps/kcps3.png",
-                alt: "Kitty Cat Poker Slots screenshot (2)",
-            },
-            {
-                src: "/assets/games/kcps/kcps4.png",
-                alt: "Kitty Cat Poker Slots screenshot (3)",
-            },
-            {
-                src: "/assets/games/kcps/kcps5.png",
-                alt: "Kitty Cat Poker Slots screenshot (4)",
-            },
-            {
-                src: "/assets/games/kcps/kcps6.png",
-                alt: "Kitty Cat Poker Slots screenshot (5)",
-            },
-        ],
-    },
+
     // Tower Defense
     {
         date: "Aug 2019",
@@ -904,7 +904,7 @@ export const games = [
                 src: "/assets/games/nom/nom4.png",
                 alt: "Monster's Mayhem screenshot (3)",
             },
-        ],     
+        ],
     },
 ]
 

@@ -6,7 +6,7 @@
 
     let tag = "featured";
     // For testing
-    tag = "all"
+    // tag = "all"
 
     function updateTag(filter) {
         tag = filter;
