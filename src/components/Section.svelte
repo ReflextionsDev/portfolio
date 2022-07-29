@@ -62,6 +62,6 @@
     .bottom::after {
         transform-origin: bottom right;
         box-shadow: 0 0 40px #000000de;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
+        clip-path: polygon(0% 10%, 100% 10%, 100% 120%, 0% 120%)
     }
 </style>
