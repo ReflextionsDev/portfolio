@@ -602,10 +602,24 @@ export const games = [
     },
     // Brix Builder
     {
+        date: "2016",
         title: "Brix Builder",
-        tags: ["featured", "mobile", "web", "sale"],
+        platform: "phone",
+        size: "tall",
+        desc: BrixDesc,
+        hasDesktopPreview: true,
+        hasMobilePreview: true,
+        src: "https://itch.io/embed-upload/6248551?color=333333",
         cover: "/assets/games/brixbuilder/brixCover.png",
         gif: "/assets/games/brixbuilder/brix.gif",
+        icon: "/assets/games/brixbuilder/icon.png",
+        tags: ["featured", "mobile", "web", "sale"],
+        links: [
+            {
+                label: "Itch.io",
+                link: "https://reflextions.itch.io/brix-builder",
+            },
+        ],
         images: [
             {
                 src: "/assets/games/brixbuilder/brixbuilder1.png",
@@ -620,10 +634,7 @@ export const games = [
                 alt: "Brix Builder screenshot (2)",
             },
         ],
-        desc: "Brix Builder is an arcade inspired stacking game. It is part of a mobile web game suite I did in 2016. It features 3 difficulties with 7 levels each.",
-        platform: "phone",
-        src: "https://deluxe-haupia-237473.netlify.app/",
-        size: "tall",
+
     },
     // Rocket Runner
     {
