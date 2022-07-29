@@ -721,7 +721,6 @@ export const games = [
                 alt: "Voter Suppression Trail screenshot (5)",
             },
         ],
-
     },
     // MTA Country
     {
@@ -763,10 +762,23 @@ export const games = [
     },
     // Fantaknee Football
     {
+        date: "2017",
         title: "Fantaknee Football",
-        tags: ["featured", "mobile", "web", "freelance"],
+        size: "small",
+        platform: "laptop",
+        desc: FantakneeDesc,
+        hasDesktopPreview: false,
+        hasMobilePreview: true,
+        src: "https://ilovechrisbaker.com/stuff/Fantaknee-Football/index.html",
         cover: "/assets/games/fantaknee/fantakneeCover.png",
         gif: "/assets/games/fantaknee/fantaknee.gif",
+        tags: ["featured", "mobile", "web", "freelance"],
+        links: [
+            {
+                label: "Game",
+                link: "https://ilovechrisbaker.com/fantaknee-football-by-super-deluxe/"
+            }
+        ],
         images: [
             {
                 src: "/assets/games/fantaknee/fantaknee1.png",
@@ -785,11 +797,6 @@ export const games = [
                 alt: "Fantaknee Football screenshot (3)",
             },
         ],
-        desc: "fantaknee description",
-        platform: "laptop",
-        // Need to account for linked content
-        src: "https://deluxe-haupia-237473.netlify.app/",
-        size: "small",
     },
     // KCPS
     {
