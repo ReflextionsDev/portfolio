@@ -1,11 +1,13 @@
 <script>
+    // Imports
+    import MediaQuery from "svelte-media-query";
+
     // Vars
     export let title;
     export let src = "/assets/games/cards/rrmenu.png";
     export let size = "normal";
     export let gif = "";
-    export let tags = []
-
+    export let tags = [];
 
     let freelance = tags.includes("freelance");
     let mobile = tags.includes("mobile");
@@ -20,7 +22,12 @@
 
 <div class="game {size} hvr-pulse-grow" on:click={openPopup}>
     <img class="card  full" {src} alt={title} />
-    <img class="gif full" src={gif} alt={title} />
+    <!-- Quick and dirty fix for gif bandwidth hogging -->
+    <MediaQuery query="(min-width: 1200px)" let:matches>
+        {#if matches}
+            <img class="gif full" src={gif} alt={title} />
+        {/if}
+    </MediaQuery>
     <div class="cover full" />
     <!-- <div class="title full">{title}</div> -->
     <div class="icons">

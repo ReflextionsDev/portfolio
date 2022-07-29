@@ -17,8 +17,11 @@
             I've published projects on Steam, Google Play, and the App Store. My
             HTML5 games have have reached millions of players and I've participated in a few game jams. I've worked as a freelancer on many projects, including apps, educational games, and games published as op-eds.
         </p>
-        <p>
+        <!-- <p>
             Scroll down to see <a href="">what I'm working on</a> now and my <a href="">game archive</a>. Alternatively, check out my <a href="">design portfolio</a> or get more <a href="">info about hiring</a>. 
+        </p> -->
+        <p>
+            Scroll down to see my finished projects to date.
         </p>
     </div>
 </div>

@@ -13,14 +13,17 @@
     <div class="info__body content__text content__section">
         <p>
             I'm a developer interested in building things and solving problems.
-            I like satisfying data pipelines, automating boring tasks, and
-            creating better user experiences with creativity.
+            <!-- I like satisfying data pipelines, automating boring tasks, and
+            creating better user experiences with creativity. -->
+
+            I like working across teams of various disciplines and building
+            better user experiences with creativity.
         </p>
         <p>
             <!-- hover note about 2013 and setting up a business as a kid -->
-            I have a background in creating and selling web games since 2013 and
-            I've worked as a professional QA Tester. I'm primarily trained in MERN
-            but am adaptable and excited to work in collaborative environments.
+            I have a background in creating and selling web games since I was a teenager
+            and I've worked as a professional QA Tester. I'm primarily trained in
+            MERN stack but am adaptable and excited to work in collaborative environments.
         </p>
     </div>
 
