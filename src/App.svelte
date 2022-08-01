@@ -45,7 +45,6 @@
 			// elem.scrollIntoView({ behavior: "smooth" });
 			const yOffset = -navbar.offsetHeight;
 			const y =
-				main.getBoundingClientRect().top + window.pageYOffset + yOffset;
 			window.scrollTo({ top: y, behavior: "smooth" });
 		} else {
 			firstLoad = false;
