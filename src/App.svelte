@@ -30,16 +30,21 @@
 	updateIconSize();
 
 	// Reset content on new page
+	import { onMount } from "svelte";
+	onMount(() => {
+		documentLoaded = true;
+	});
 	let firstLoad = true;
+	let documentLoaded = false;
 	function scrollToTop() {
+
 		const main = document.querySelector("main");
 		const navbar = document.querySelector(".navbar");
-		const yOffset = -navbar.offsetHeight;
-		const y =
-			main.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-		if (main && !firstLoad) {
+		
+		if (documentLoaded && navbar && main && !firstLoad) {
 			// elem.scrollIntoView({ behavior: "smooth" });
+			const yOffset = -navbar.offsetHeight;
+			const y =
 			window.scrollTo({ top: y, behavior: "smooth" });
 		} else {
 			firstLoad = false;
