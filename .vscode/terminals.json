@@ -1,0 +1,18 @@
+{
+  "autorun": true,
+  "terminals": [
+    {
+      "name": "Client",
+      "focus": true,
+      "commands": [
+        "npm run dev"
+      ]
+    },
+    {
+      "name": "Git",
+      "commands": [
+        "git status"
+      ]
+    }
+  ]
+}
