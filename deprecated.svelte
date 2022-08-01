@@ -31,6 +31,14 @@
     </section>
 </main>
 
+<!-- <SectionBreak bgURL={theme.bgImages.space} maskColor={'rgb(11 16 56 / 57%)'}>
+        <h2 class="dash">Projects</h2>
+        <Project />
+        <Project />
+        <Project />
+    </SectionBreak> -->
+
+<!-- <SectionBreak maskColor={'#0000008f'}> -->
 <style>
     /* body::before {
 	background: linear-gradient(145deg, rgba(255, 255, 255, 1) 0%, rgba(29, 251, 255, 1) 53%, rgb(251, 255, 253) 100%);

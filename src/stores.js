@@ -940,3 +940,41 @@ export const games = [
 //         }
 //     ],
 // },
+
+// Web Projects
+export const projects = [
+    {
+        title: "Portfolio Website",
+        desc: "After going through various websites over the years, I wanted a single location to put all my content. This site was built with Svelte and served as a personal capstone project in front-end development.",
+        stack: ["Svelte", "Page.js"],
+    },
+    {
+        title: "React Ticket Tracker",
+        desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
+        stack: ["React", "Redux", "Node", "Express"],
+    },
+    {
+        title: "Another Project",
+        desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
+        stack: ["Stuff", "2", "3", "4"],
+    }
+]
+
+// Other Web projects
+export const projectsOther = [
+    {
+        title: "Map Builder",
+        desc: "Create a fantasy style map with jqeury drag and drop",
+        img: "/assets/games/protoshift/protoshiftcover.png",
+    },
+    {
+        title: "Map Builder",
+        desc: "Create a fantasy style map with jqeury drag and drop",
+        img: "/assets/games/protoshift/protoshiftcover.png",
+    },
+    {
+        title: "Map Builder",
+        desc: "Create a fantasy style map with jqeury drag and drop",
+        img: "/assets/games/protoshift/protoshiftcover.png",
+    },
+];

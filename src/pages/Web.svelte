@@ -7,27 +7,7 @@
     import Section from "./../components/Section.svelte";
     import Skills from "./../components/web/Skills.svelte";
     import Project from "./../components/web/Project.svelte";
-    import { theme } from "../stores";
-
-    let stack = ["React", "Redux", "Node", "Express"];
-
-    let projectsOther = [
-        {
-            title: "Map Builder",
-            desc: "Create a fantasy style map with jqeury drag and drop",
-            img: "/assets/games/protoshift/protoshiftcover.png",
-        },
-        {
-            title: "Map Builder",
-            desc: "Create a fantasy style map with jqeury drag and drop",
-            img: "/assets/games/protoshift/protoshiftcover.png",
-        },
-        {
-            title: "Map Builder",
-            desc: "Create a fantasy style map with jqeury drag and drop",
-            img: "/assets/games/protoshift/protoshiftcover.png",
-        },
-    ];
+    import { projects, projectsOther, theme } from "../stores";
 </script>
 
 <div class="page">
@@ -58,22 +38,14 @@
         bg={"linear-gradient(120deg, rgba(113,120,125,1) 0%, rgba(112,145,170,1) 100%)"}
     >
         <h2 class="dash">Projects</h2>
-        <Project
-            title="React Ticket Tracker"
-            desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
-            {stack}
-        />
-        <Project
-            title="Project 2"
-            desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
-            {stack}
-            reverse={true}
-        />
-        <Project
-            title="New Project"
-            desc="React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice."
-            {stack}
-        />
+        {#each projects as project, i}
+            <Project
+                title={project.title}
+                desc={project.desc}
+                stack={project.stack}
+                reverse={i % 2 !== 0}
+            />
+        {/each}
     </Section>
 
     <Section top={true} bottom={true} bg={theme.bgColors.primary}>
@@ -81,18 +53,7 @@
         <OtherProjects projects={projectsOther} />
     </Section>
 
-    <!-- <SectionBreak bgURL={theme.bgImages.space} maskColor={'rgb(11 16 56 / 57%)'}>
-        <h2 class="dash">Projects</h2>
-        <Project />
-        <Project />
-        <Project />
-    </SectionBreak> -->
-
-    <!-- <SectionBreak maskColor={'#0000008f'}> -->
     <SectionBreak>
         <ContactForm />
     </SectionBreak>
-
-    <!-- Add contact form and resume link here -->
-    <!-- Or resume as new tab -->
 </div>
