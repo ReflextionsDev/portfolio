@@ -44,7 +44,7 @@
 		if (documentLoaded && navbar && main && !firstLoad) {
 			// elem.scrollIntoView({ behavior: "smooth" });
 			const yOffset = -navbar.offsetHeight;
-			const y =
+			const y = main.getBoundingClientRect().top + window.pageYOffset + yOffset;
 			window.scrollTo({ top: y, behavior: "smooth" });
 		} else {
 			firstLoad = false;
@@ -77,7 +77,7 @@
 					.toLowerCase();
 				return cleanTitle === gameTitle;
 			});
-			console.log("props", gameProps);
+			// console.log("props", gameProps);
 			next();
 		},
 		() => (page = "gameShowcase")

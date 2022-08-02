@@ -199,7 +199,7 @@ export const games = [
         hasDesktopPreview: true,
         hasMobilePreview: false,
         src: "https://itch.io/embed-upload/6238921?color=000000",
-        cover: "/assets/games/protoshift/protoshiftcover.png",
+        cover: "/assets/games/protoshift/portoshiftCover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
         tags: ["featured", "web", "sale"],
         links: [
@@ -550,23 +550,23 @@ export const games = [
         ],
         images: [
             {
-                src: "/assets/games/minos/ss1.png",
+                src: "/assets/games/minos/SS1.png",
                 alt: "minos screenshot",
             },
             {
-                src: "/assets/games/minos/ss3.png",
+                src: "/assets/games/minos/SS3.png",
                 alt: "minos screenshot",
             },
             {
-                src: "/assets/games/minos/ss4.png",
+                src: "/assets/games/minos/SS4.png",
                 alt: "minos screenshot",
             },
             {
-                src: "/assets/games/minos/ss2.png",
+                src: "/assets/games/minos/SS2.png",
                 alt: "minos screenshot",
             },
             {
-                src: "/assets/games/minos/ss5.gif",
+                src: "/assets/games/minos/SS5.gif",
                 alt: "minos screenshot",
             },
         ],
@@ -584,7 +584,7 @@ export const games = [
         src: "https://itch.io/embed-upload/6248551?color=333333",
         cover: "/assets/games/brixbuilder/brixCover.png",
         gif: "/assets/games/brixbuilder/brix.gif",
-        icon: "/assets/games/brixbuilder/icon.png",
+        icon: "/assets/games/brixbuilder/Icon.png",
         tags: ["mobile", "web", "sale"],
         links: [
             {
@@ -620,7 +620,7 @@ export const games = [
         src: "https://itch.io/embed-upload/6248631?color=333333",
         cover: "/assets/games/rocketrunner/rocketCover.png",
         gif: "/assets/games/rocketrunner/rocket.gif",
-        icon: "/assets/games/rocketrunner/icon.png",
+        icon: "/assets/games/rocketrunner/Icon.png",
         tags: ["mobile", "web", "sale"],
         links: [
             {
@@ -700,8 +700,8 @@ export const games = [
         hasDesktopPreview: false,
         hasMobilePreview: true,
         src: "https://everydayarcade.com/games/mta-country",
-        cover: "/assets/games/mta/mtaCover.png",
-        gif: "/assets/games/mta/mta.gif",
+        cover: "/assets/games/mta/MTACover.png",
+        gif: "/assets/games/mta/MTA.gif",
         tags: ["featured", "mobile", "web", "freelance"],
         links: [
             {
@@ -711,19 +711,19 @@ export const games = [
         ],
         images: [
             {
-                src: "/assets/games/mta/mta.png",
+                src: "/assets/games/mta/MTA.png",
                 alt: "MTA Country menu screen",
             },
             {
-                src: "/assets/games/mta/mta2.png",
+                src: "/assets/games/mta/MTA2.png",
                 alt: "MTA Country screenshot (1)",
             },
             {
-                src: "/assets/games/mta/mta3.png",
+                src: "/assets/games/mta/MTA3.png",
                 alt: "MTA Country screenshot (2)",
             },
             {
-                src: "/assets/games/mta/mta4.png",
+                src: "/assets/games/mta/MTA4.png",
                 alt: "MTA Country screenshot (3)",
             },
         ],
@@ -965,16 +965,16 @@ export const projectsOther = [
     {
         title: "Map Builder",
         desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/protoshiftcover.png",
+        img: "/assets/games/protoshift/portoshiftCover.png",
     },
     {
         title: "Map Builder",
         desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/protoshiftcover.png",
+        img: "/assets/games/protoshift/portoshiftCover.png",
     },
     {
         title: "Map Builder",
         desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/protoshiftcover.png",
+        img: "/assets/games/protoshift/portoshiftCover.png",
     },
 ];

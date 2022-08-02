@@ -13,7 +13,7 @@
     let fullscreenPreview = false;
 
     document.addEventListener("fullscreenchange", () => {
-        console.log("fullscreenchange");
+        // console.log("fullscreenchange");
         fullscreenPreview = !fullscreenPreview;
     });
 
