@@ -963,9 +963,9 @@ export const projects = [
 // Other Web projects
 export const projectsOther = [
     {
-        title: "Post Comment Backen",
-        desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/protoshiftCover.png",
+        title: "Post Comment Backend",
+        desc: "A full CRUD backend written in JS using Node, Express, and Mongoose.",
+        img: "/assets/projects/other/postcomment.png",
         link: "https://github.com/ReflextionsDev/post-comment-backend",
     },
     {

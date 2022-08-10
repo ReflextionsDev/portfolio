@@ -6,7 +6,9 @@
     {#each projects as project}
         <div class="project">
             <h4>{project.title}</h4>
-            <img src={project.img} alt="project screenshot" />
+            <a href={project.link} target="project">
+                <img src={project.img} alt="project screenshot" />
+            </a>
             <p>{project.desc}</p>
         </div>
     {/each}
