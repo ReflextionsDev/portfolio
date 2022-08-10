@@ -6237,9 +6237,9 @@ var app = (function () {
     // Other Web projects
     const projectsOther = [
         {
-            title: "Post Comment Backen",
-            desc: "Create a fantasy style map with jqeury drag and drop",
-            img: "/assets/games/protoshift/protoshiftCover.png",
+            title: "Post Comment Backend",
+            desc: "A full CRUD backend written in JS using Node, Express, and Mongoose.",
+            img: "/assets/projects/other/postcomment.png",
             link: "https://github.com/ReflextionsDev/post-comment-backend",
         },
         {
@@ -7132,8 +7132,10 @@ var app = (function () {
     	let t0_value = /*project*/ ctx[1].title + "";
     	let t0;
     	let t1;
+    	let a;
     	let img;
     	let img_src_value;
+    	let a_href_value;
     	let t2;
     	let p;
     	let t3_value = /*project*/ ctx[1].desc + "";
@@ -7146,6 +7148,7 @@ var app = (function () {
     			h4 = element("h4");
     			t0 = text(t0_value);
     			t1 = space();
+    			a = element("a");
     			img = element("img");
     			t2 = space();
     			p = element("p");
@@ -7155,9 +7158,12 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*project*/ ctx[1].img)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project screenshot");
     			attr_dev(img, "class", "svelte-127rnwj");
-    			add_location(img, file$s, 8, 12, 203);
+    			add_location(img, file$s, 9, 16, 261);
+    			attr_dev(a, "href", a_href_value = /*project*/ ctx[1].link);
+    			attr_dev(a, "target", "project");
+    			add_location(a, file$s, 8, 12, 203);
     			attr_dev(p, "class", "svelte-127rnwj");
-    			add_location(p, file$s, 9, 12, 267);
+    			add_location(p, file$s, 11, 12, 343);
     			attr_dev(div, "class", "project svelte-127rnwj");
     			add_location(div, file$s, 6, 8, 130);
     		},
@@ -7166,7 +7172,8 @@ var app = (function () {
     			append_dev(div, h4);
     			append_dev(h4, t0);
     			append_dev(div, t1);
-    			append_dev(div, img);
+    			append_dev(div, a);
+    			append_dev(a, img);
     			append_dev(div, t2);
     			append_dev(div, p);
     			append_dev(p, t3);
@@ -7177,6 +7184,10 @@ var app = (function () {
 
     			if (dirty & /*projects*/ 1 && !src_url_equal(img.src, img_src_value = /*project*/ ctx[1].img)) {
     				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*projects*/ 1 && a_href_value !== (a_href_value = /*project*/ ctx[1].link)) {
+    				attr_dev(a, "href", a_href_value);
     			}
 
     			if (dirty & /*projects*/ 1 && t3_value !== (t3_value = /*project*/ ctx[1].desc + "")) set_data_dev(t3, t3_value);
@@ -7220,7 +7231,7 @@ var app = (function () {
     			t = space();
     			div0 = element("div");
     			attr_dev(div0, "class", "project svelte-127rnwj");
-    			add_location(div0, file$s, 13, 4, 396);
+    			add_location(div0, file$s, 15, 4, 472);
     			attr_dev(div1, "class", "projectGrid content svelte-127rnwj");
     			add_location(div1, file$s, 4, 0, 54);
     		},
