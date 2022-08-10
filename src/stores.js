@@ -969,13 +969,27 @@ export const projectsOther = [
         link: "https://github.com/ReflextionsDev/post-comment-backend",
     },
     {
-        title: "Map Builder",
-        desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/protoshiftCover.png",
+        title: "Jeopardy",
+        desc: "An interactive Jeopardy board built with jQuery.",
+        img: "/assets/projects/other/jeopardy.png",
+        link: "https://github.com/ReflextionsDev/jeopardy"
     },
     {
         title: "Map Builder",
-        desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/protoshiftCover.png",
+        desc: "Create a fantasy style map with jQeury drag and drop.",
+        img: "/assets/projects/other/mapbuilder.png",
+        link: "https://github.com/ReflextionsDev/Map-Builder"
     },
+    {
+        title: "Hacker News API",
+        desc: "Loads and displays the top 100 stories from the Hacker News API.",
+        img: "/assets/projects/other/hackernews.png",
+        link: "https://github.com/ReflextionsDev/hackernews-api"
+    },
+    {
+        title: "SoundCloud Mockup",
+        desc: "A static mockup of the SoundCloud home page using HTML and CSS.",
+        img: "/assets/projects/other/soundcloud.png",
+        link: "https://github.com/ReflextionsDev/soundcloud-mockup"
+    }
 ];
