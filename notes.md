@@ -23,3 +23,5 @@
 Wayback links to old sites
 Consider change background image on page change (web vs games)
 
+# Git
+git subtree push --prefix public/ origin deploy

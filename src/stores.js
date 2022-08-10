@@ -199,7 +199,7 @@ export const games = [
         hasDesktopPreview: true,
         hasMobilePreview: false,
         src: "https://itch.io/embed-upload/6238921?color=000000",
-        cover: "/assets/games/protoshift/portoshiftCover.png",
+        cover: "/assets/games/protoshift/protoshiftCover.png",
         gif: "/assets/games/protoshift/protoshift.gif",
         tags: ["featured", "web", "sale"],
         links: [
@@ -963,18 +963,19 @@ export const projects = [
 // Other Web projects
 export const projectsOther = [
     {
-        title: "Map Builder",
+        title: "Post Comment Backen",
         desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/portoshiftCover.png",
+        img: "/assets/games/protoshift/protoshiftCover.png",
+        link: "https://github.com/ReflextionsDev/post-comment-backend",
     },
     {
         title: "Map Builder",
         desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/portoshiftCover.png",
+        img: "/assets/games/protoshift/protoshiftCover.png",
     },
     {
         title: "Map Builder",
         desc: "Create a fantasy style map with jqeury drag and drop",
-        img: "/assets/games/protoshift/portoshiftCover.png",
+        img: "/assets/games/protoshift/protoshiftCover.png",
     },
 ];
