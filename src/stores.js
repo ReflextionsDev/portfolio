@@ -956,12 +956,12 @@ export const projects = [
     {
         title: "React Ticket Tracker",
         desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
-        stack: ["React", "Redux", "Node", "Express"],
+        stack: ["React", "Redux", "Node", "Express", "MongoDB"],
     },
     {
-        title: "Another Project",
+        title: "Construct Snippets",
         desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
-        stack: ["Stuff", "2", "3", "4"],
+        stack: ["React", "Mantine", "Node", "Express", "MongoDB"],
     }
 ]
 
