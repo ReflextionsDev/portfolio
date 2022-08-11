@@ -1,10 +1,12 @@
 <!-- Should be modular, accept images, title text, tech stack, order, links, etc -->
 <script>
+    import Phone from "./../Phone.svelte";
     import Laptop from "../Laptop.svelte";
 
     export let title, desc;
     export let stack = [];
     export let reverse = false;
+    export let preview = "both";
 </script>
 
 <div class="project content">
@@ -12,7 +14,18 @@
 
     <div class="spotlight content__section" class:reverse>
         <div style="padding-inline: 30px">
-            <Laptop img="/assets/games/protoshift/protoshiftCover.png"/>
+            {#if preview === "laptop"}
+                <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
+            {:else if preview === "both"}
+                <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
+                <div class="phoneOverlay">
+                    <Phone
+                        img="/assets/games/bouncyballons/bouncyballoonsportrait.png"
+                    />
+                </div>
+            {:else}
+                <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
+            {/if}
         </div>
 
         <div style="display: flex; justify-content: center; gap: 5% ">
@@ -55,6 +68,14 @@
 
     .spotlight {
         order: 2;
+        position: relative;
+    }
+
+    .phoneOverlay {
+        position: absolute;
+        right: 4%;
+        bottom: 10%;
+        height: 55%;
     }
 
     .info {

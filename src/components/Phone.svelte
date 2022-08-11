@@ -102,7 +102,7 @@
         max-height: 90%;
         aspect-ratio: 9/16;
         background-color: rgb(1, 16, 11);
-        border-radius: 50px;
+        border-radius: 10% / 5%;
         display: flex;
         flex-direction: column;
         box-shadow: 3px 5px 12px rgb(82, 82, 82);
