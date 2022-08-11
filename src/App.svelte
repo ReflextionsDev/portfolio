@@ -5,16 +5,18 @@
 	import Web from "./pages/Web.svelte";
 	import Games from "./pages/Games.svelte";
 	import GameShowcase from "./components/game/GameShowcase.svelte";
+	import ProjectShowcase from "./components/web/ProjectShowcase.svelte";
 	import Section from "./components/Section.svelte";
 	import Modal from "svelte-simple-modal";
 	import SectionBreak from "./components/SectionBreak.svelte";
-
 	// Variables
-	import { games, url, theme } from "./stores";
+	import { games, projects, url, theme } from "./stores";
 
 	// Used to load game showcases, will probably need to be update when converted to modal
 	let gameTitle = {};
 	let gameProps = null;
+	let projectTitle = {};
+	let projectProps = null;
 
 	// Adjust iconSize on small screens
 	import Viewport from "svelte-viewport-info";
@@ -37,14 +39,14 @@
 	let firstLoad = true;
 	let documentLoaded = false;
 	function scrollToTop() {
-
 		const main = document.querySelector("main");
 		const navbar = document.querySelector(".navbar");
-		
+
 		if (documentLoaded && navbar && main && !firstLoad) {
 			// elem.scrollIntoView({ behavior: "smooth" });
 			const yOffset = -navbar.offsetHeight;
-			const y = main.getBoundingClientRect().top + window.pageYOffset + yOffset;
+			const y =
+				main.getBoundingClientRect().top + window.pageYOffset + yOffset;
 			window.scrollTo({ top: y, behavior: "smooth" });
 		} else {
 			firstLoad = false;
@@ -81,6 +83,24 @@
 			next();
 		},
 		() => (page = "gameShowcase")
+	);
+	// Project showcase
+	router(
+		"/projects/:project",
+		(ctx, next) => {
+			// If game parameter matches object in store list, load props
+			projectTitle = ctx.params.project;
+			projectProps = projects.find((projectObj) => {
+				let cleanTitle = projectObj.title
+					.split(" ")
+					.join("")
+					.toLowerCase();
+				return cleanTitle === projectTitle;
+			});
+			console.log("props", projectProps);
+			next();
+		},
+		() => (page = "projectShowcase")
 	);
 	// 404 redirect
 	router("/*", () => {
@@ -127,6 +147,20 @@
 						bg={theme.bgColors.primary}
 					>
 						<GameShowcase {...gameProps} fullPage={true} />
+					</Section>
+					<SectionBreak />
+				{/if}
+			{:else if page === "projectShowcase"}
+				<!-- Redirect to game page is props are missing -->
+				{#if projectProps == null}
+					{window.location.replace(`${url}/`)}
+				{:else}
+					<Section
+						top={false}
+						bottom={true}
+						bg={theme.bgColors.primary}
+					>
+						<ProjectShowcase {...projectProps} fullPage={true} />
 					</Section>
 					<SectionBreak />
 				{/if}
