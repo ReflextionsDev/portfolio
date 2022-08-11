@@ -1,19 +1,28 @@
 <!-- Should be modular, accept images, title text, tech stack, order, links, etc -->
 <script>
+    // Imports
     import Phone from "./../Phone.svelte";
     import Laptop from "../Laptop.svelte";
 
+    // Vars
     export let title, desc;
     export let stack = [];
     export let reverse = false;
     export let preview = "both";
+    export let link = "";
+
+    // Modal
+    import { getContext } from "svelte";
+    import Popup from "./ProjectPopup.svelte";
+    const { open } = getContext("simple-modal");
+    const openPopup = () => open(Popup, { title });
 </script>
 
 <div class="project content">
     <h3 class="project__title">{title}</h3>
 
     <div class="spotlight content__section" class:reverse>
-        <div style="padding-inline: 30px">
+        <div style="padding-inline: 30px" on:click={openPopup} class="content__splash">
             {#if preview === "laptop"}
                 <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
             {:else if preview === "both"}
@@ -42,8 +51,10 @@
             {desc}
         </p>
         <div class="buttons">
-            <button class="button">Live Demo</button>
-            <button class="button">More Info & Source</button>
+            <a href={link} target="project"><button class="button">Live Demo</button></a>
+            <button class="button" on:click={openPopup}>
+                More Info & Source
+            </button>
         </div>
     </div>
 </div>
@@ -71,11 +82,15 @@
         position: relative;
     }
 
+    .content__splash:hover {
+        cursor: pointer;
+    }
+
     .phoneOverlay {
         position: absolute;
         bottom: 11%;
         height: 55%;
-        left: 4%
+        left: 4%;
     }
 
     .phoneOverlay.reverse {

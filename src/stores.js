@@ -947,6 +947,7 @@ export const projects = [
         title: "Portfolio",
         desc: "After going through various websites over the years, I wanted a single location to put all my content. This site was built with Svelte and served as a personal capstone project in front-end development.",
         stack: ["Svelte", "Page.js"],
+        link: "https://nlb.dev"
     },
     {
         title: "React Ticket Tracker",

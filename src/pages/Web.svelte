@@ -40,9 +40,7 @@
         <h2 class="dash">Projects</h2>
         {#each projects as project, i}
             <Project
-                title={project.title}
-                desc={project.desc}
-                stack={project.stack}
+                {...project}
                 reverse={i % 2 !== 0}
             />
         {/each}

@@ -74,7 +74,7 @@
     <!-- Full Page Button -->
     {#if !fullPage}
         <a
-            href={`/games/${title.split(" ").join("").toLowerCase()}`}
+            href={`/projects/${title.split(" ").join("").toLowerCase()}`}
             target="new"
         >
             <button class="button">Open as page</button>
