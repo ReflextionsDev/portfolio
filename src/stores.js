@@ -1,7 +1,8 @@
 import { writable } from "svelte/store";
 
 // Vars
-export const url = "http://localhost:8080";
+// export const url = "http://localhost:8080";
+export const url = "https://nlb.dev";
 export const iconSize = writable(64)
 export const theme = {
     bgColors: {
@@ -956,12 +957,12 @@ export const projects = [
     {
         title: "React Ticket Tracker",
         desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
-        stack: ["React", "Redux", "Node", "Express", "MongoDB"],
+        stack: ["React", "Redux", "Express", "MongoDB", "AWS EC2"],
     },
     {
         title: "Construct Snippets",
         desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
-        stack: ["React", "Mantine", "Node", "Express", "MongoDB"],
+        stack: ["React", "Mantine", "Express", "MongoDB", "AWS EC2"],
     }
 ]
 
