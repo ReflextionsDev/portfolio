@@ -8,8 +8,9 @@
     export let title, desc;
     export let stack = [];
     export let reverse = false;
-    export let preview = "both";
+    export let splash = "both";
     export let link = "";
+    export let preview = {};
 
     // Modal
     import { getContext } from "svelte";
@@ -23,13 +24,13 @@
 
     <div class="spotlight content__section" class:reverse>
         <div style="padding-inline: 30px" on:click={openPopup} class="content__splash">
-            {#if preview === "laptop"}
-                <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
-            {:else if preview === "both"}
-                <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
+            {#if splash === "laptop"}
+                <Laptop img={preview.desktop} />
+            {:else if splash === "both"}
+                <Laptop img={preview.desktop} />
                 <div class="phoneOverlay" class:reverse>
                     <Phone
-                        img="/assets/games/bouncyballoons/bouncyballoonsportrait.png"
+                        img={preview.mobile}
                     />
                 </div>
             {:else}

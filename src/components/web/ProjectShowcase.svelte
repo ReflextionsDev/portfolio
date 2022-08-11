@@ -9,8 +9,7 @@
         src = "",
         gif = "",
         date = "";
-    export let hasDesktopPreview, hasMobilePreview;
-    // export let icon = "";
+
     export let links = [];
     export let videos = [];
     export let fullPage = false;
