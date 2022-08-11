@@ -69,7 +69,7 @@
             label: "Express",
             type: "backend",
             component: Express,
-            colorDefault: "#000000",
+            colorDefault: "#565656",
         },
         {
             label: "MongoDB",
@@ -81,7 +81,7 @@
             label: "Amazon AWS",
             type: "backend",
             component: Amazonaws,
-            colorDefault: "#232F3E",
+            colorDefault: "#FF9900",
         },
         {
             label: "SQLite",
@@ -111,7 +111,7 @@
             label: "Notion",
             type: "other",
             component: Notion,
-            colorDefault: "#000000",
+            colorDefault: "#a3a3a3",
         },
         {
             label: "Construct 3",
