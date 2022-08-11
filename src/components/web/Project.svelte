@@ -18,9 +18,9 @@
                 <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
             {:else if preview === "both"}
                 <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
-                <div class="phoneOverlay">
+                <div class="phoneOverlay" class:reverse>
                     <Phone
-                        img="/assets/games/bouncyballons/bouncyballoonsportrait.png"
+                        img="/assets/games/bouncyballoons/bouncyballoonsportrait.png"
                     />
                 </div>
             {:else}
@@ -73,9 +73,14 @@
 
     .phoneOverlay {
         position: absolute;
-        right: 4%;
-        bottom: 10%;
+        bottom: 11%;
         height: 55%;
+        left: 4%
+    }
+
+    .phoneOverlay.reverse {
+        left: auto;
+        right: 4%;
     }
 
     .info {

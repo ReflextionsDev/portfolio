@@ -40,9 +40,9 @@
             {/if}
         {:else}
             <div class="lightbox">
-                <Lightbox transitionDuration="150">
+                <!-- <Lightbox transitionDuration="150"> -->
                     <img class="gif" src={img} alt="project preview" />
-                </Lightbox>
+                <!-- </Lightbox> -->
             </div>
         {/if}
     </MediaQuery>
@@ -95,5 +95,6 @@
 
     .lightbox {
         width: 100%;
+        height: 100%;
     }
 </style>

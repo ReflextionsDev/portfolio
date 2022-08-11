@@ -982,7 +982,7 @@ export const projectsOther = [
     },
     {
         title: "Hacker News API",
-        desc: "Loads and displays the top 100 stories from the Hacker News API.",
+        desc: "Loads and displays the top 100 stories from the Hacker News API w/ jQuery.",
         img: "/assets/projects/other/hackernews.png",
         link: "https://github.com/ReflextionsDev/hackernews-api"
     },
