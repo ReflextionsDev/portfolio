@@ -23,7 +23,7 @@
     <h3 class="project__title">{title}</h3>
 
     <div class="spotlight content__section" class:reverse>
-        <div on:click={openPopup}>
+        <div class="splash" on:click={openPopup}>
             <ProjectSplash {reverse} {splash} {preview} />
         </div>
 
@@ -80,6 +80,10 @@
     .spotlight {
         order: 2;
         position: relative;
+    }
+
+    .splash:hover {
+        cursor: pointer;
     }
 
     .info {

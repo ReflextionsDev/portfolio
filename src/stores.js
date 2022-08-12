@@ -949,6 +949,16 @@ export const projects = [
         desc: "After going through various websites over the years, I wanted a single location to put all my content. This site was built with Svelte and served as a personal capstone project in front-end development.",
         stack: ["Svelte", "Page.js"],
         link: "https://nlb.dev",
+        links: [
+            {
+                label: "Website",
+                link: "https://nlb.dev"
+            },
+            {
+                label: "Github Repo",
+                link: "https://github.com/ReflextionsDev/Portfolio"
+            }
+        ],
         preview: {
             desktop: "/assets/projects/portfolio/desktop3.png",
             mobile: "/assets/projects/portfolio/mobile4.png",

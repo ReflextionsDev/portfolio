@@ -21,11 +21,7 @@
     .content__splash {
         position: relative;
     }
-
-    .content__splash:hover {
-        cursor: pointer;
-    }
-
+    
     .phoneOverlay {
         position: absolute;
         bottom: -10%;

@@ -1,7 +1,7 @@
 <script>
     // Imports
     import { Lightbox } from "svelte-lightbox";
-import ProjectSplash from "./ProjectSplash.svelte";
+    import ProjectSplash from "./ProjectSplash.svelte";
 
     // Vars
     export let title = "project tile",
@@ -31,22 +31,19 @@ import ProjectSplash from "./ProjectSplash.svelte";
 <!-- Make open as page button scroll to top page -->
 
 <div class="content">
-    <!-- <ShowcaseLaptop
-        {src}
-        {title}
-        {links}
-        {desc}
-        {date}
-        {gif}
-        {hasDesktopPreview}
-        {hasMobilePreview}
-    /> -->
+    <h2 class="dash title">{title}</h2>
 
-    <div>
+    <div class="splash">
         <ProjectSplash {reverse} {splash} {preview} />
     </div>
 
-    <h2 class="dash title">{title}</h2>
+    <div class="links">
+        {#each links as link}
+            <a href={link.link} target="game">
+                <h4 style="max-width: 100%">{link.label}</h4>
+            </a>
+        {/each}
+    </div>
 
     <div class="content__section">
         <p class="content__text ">
@@ -60,18 +57,6 @@ import ProjectSplash from "./ProjectSplash.svelte";
 
     <!-- Media -->
     <div class="content__section content__padding images">
-        {#each videos as video}
-            <div class="image">
-                <iframe
-                    class="video"
-                    src={video.src}
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="autoplay; clipboard-write; encrypted-media;picture-in-picture"
-                    allowfullscreen
-                />
-            </div>
-        {/each}
         {#each images as image}
             <div class="image">
                 <Lightbox transitionDuration="150">
@@ -93,6 +78,18 @@ import ProjectSplash from "./ProjectSplash.svelte";
 </div>
 
 <style>
+    .splash {
+        /* margin-bottom: 50px; */
+        /* margin-top: 50px; */
+        padding: 1% 10% 1%;
+    }
+
+    @media (max-width: 1200px) {
+        .splash {
+            padding: 5% 5% 2%;
+        }
+    }
+
     img {
         max-width: 100%;
     }
@@ -115,5 +112,12 @@ import ProjectSplash from "./ProjectSplash.svelte";
     .video {
         width: 1193px;
         aspect-ratio: 16/9;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
     }
 </style>
