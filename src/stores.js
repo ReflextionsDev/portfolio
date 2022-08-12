@@ -952,7 +952,8 @@ export const projects = [
         preview: {
             desktop: "/assets/projects/portfolio/desktop3.png",
             mobile: "/assets/projects/portfolio/mobile4.png",
-        }
+        },
+        youAreHere: true
     },
     {
         title: "React Ticket Tracker",

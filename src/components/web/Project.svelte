@@ -11,6 +11,7 @@
     export let splash = "both";
     export let link = "";
     export let preview = {};
+    export let youAreHere = false;
 
     // Modal
     import { getContext } from "svelte";
@@ -23,15 +24,17 @@
     <h3 class="project__title">{title}</h3>
 
     <div class="spotlight content__section" class:reverse>
-        <div style="padding-inline: 30px" on:click={openPopup} class="content__splash">
+        <div
+            style="padding-inline: 30px"
+            on:click={openPopup}
+            class="content__splash"
+        >
             {#if splash === "laptop"}
                 <Laptop img={preview.desktop} />
             {:else if splash === "both"}
                 <Laptop img={preview.desktop} />
                 <div class="phoneOverlay" class:reverse>
-                    <Phone
-                        img={preview.mobile}
-                    />
+                    <Phone img={preview.mobile} />
                 </div>
             {:else}
                 <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
@@ -52,7 +55,17 @@
             {desc}
         </p>
         <div class="buttons">
-            <a href={link} target="project"><button class="button">Live Demo</button></a>
+            {#if youAreHere}
+                <div class="tooltip">
+                    <span class="tooltiptext">You are here!</span>
+                    <button class="button">Live Demo</button>
+                </div>
+            {:else}
+                <a href={link} target="project"
+                    ><button class="button">Live Demo</button>
+                </a>
+            {/if}
+
             <button class="button" on:click={openPopup}>
                 More Info & Source
             </button>
@@ -170,5 +183,44 @@
         .spotlight {
             width: 100%;
         }
+    }
+
+    /* Tooltip */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltip .tooltiptext {
+        opacity: 0;
+        width: 120px;
+        background-color: rgba(42, 14, 114, 0.746);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 120%;
+        transition-property: opacity;
+        transition-delay: 100ms;
+        transition-duration: 200ms;
+        font-size: 0.9rem;
+        margin-left: -10%;
+    }
+
+    .tooltip:hover .tooltiptext {
+        opacity: 100;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(42, 14, 114, 0.746) transparent transparent
+            transparent;
     }
 </style>
