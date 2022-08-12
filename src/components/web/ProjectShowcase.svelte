@@ -12,10 +12,13 @@
         date = "";
 
     export let links = [];
-    export let videos = [];
     export let fullPage = false;
 
+    export let deps = "";
+    console.log('deps',deps)
+
     export let stack = [];
+    export let techs = [];
     export let reverse = false;
     export let splash = "both";
     export let link = "";
@@ -45,14 +48,30 @@
         {/each}
     </div>
 
-    <div class="content__section">
-        <p class="content__text ">
-            {#if date}
-                <p><b>Release Date: </b> {date}</p>
-            {/if}
+    <div class="content__section content__text">
+        <div>
             <!-- <svelte:component this={desc} /> -->
-            {desc}
-        </p>
+            <p>{desc}</p>
+
+            <div class="techused">
+                <div>
+                    <b>Technologies: </b>
+                    <ul>
+                        {#each techs as tech}
+                        <li><a href={tech.link} target="tech">{tech.label}</a></li>
+                        {/each}
+                    </ul>
+                </div>
+                <div>
+                    <b>Dependencies: </b>
+                    <ul>
+                        {#each deps as dep}
+                            <li><a href={dep.link} target="dep">{dep.label}</a></li>
+                        {/each}
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Media -->
@@ -78,9 +97,8 @@
 </div>
 
 <style>
+    /* Splash */
     .splash {
-        /* margin-bottom: 50px; */
-        /* margin-top: 50px; */
         padding: 1% 10% 1%;
     }
 
@@ -90,6 +108,7 @@
         }
     }
 
+    /* Images */
     img {
         max-width: 100%;
     }
@@ -109,15 +128,18 @@
         justify-content: center;
     }
 
-    .video {
-        width: 1193px;
-        aspect-ratio: 16/9;
-    }
-
+    /* Links */
     .links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 5%;
+    }
+
+    /* Text */
+    .techused {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 </style>

@@ -946,8 +946,15 @@ export const games = [
 export const projects = [
     {
         title: "Portfolio",
+        youAreHere: true,
         desc: "After going through various websites over the years, I wanted a single location to put all my content. This site was built with Svelte and served as a personal capstone project in front-end development.",
         stack: ["Svelte", "Page.js"],
+        techs: [
+            {
+                label: "Svelte",
+                link: ""
+            },
+        ],
         link: "https://nlb.dev",
         links: [
             {
@@ -959,11 +966,20 @@ export const projects = [
                 link: "https://github.com/ReflextionsDev/Portfolio"
             }
         ],
+        deps: [
+            {
+                label: "Svelte Modal",
+                link: "https://nlb.dev"
+            },
+            {
+                label: "Svelte Media Query",
+                link: "https://github.com/ReflextionsDev/Portfolio"
+            }
+        ],
         preview: {
             desktop: "/assets/projects/portfolio/desktop3.png",
             mobile: "/assets/projects/portfolio/mobile4.png",
         },
-        youAreHere: true
     },
     {
         title: "React Ticket Tracker",
