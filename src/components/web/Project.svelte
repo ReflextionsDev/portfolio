@@ -1,8 +1,7 @@
 <!-- Should be modular, accept images, title text, tech stack, order, links, etc -->
 <script>
     // Imports
-    import Phone from "./../Phone.svelte";
-    import Laptop from "../Laptop.svelte";
+    import ProjectSplash from "./ProjectSplash.svelte";
 
     // Vars
     export let title, desc;
@@ -24,21 +23,8 @@
     <h3 class="project__title">{title}</h3>
 
     <div class="spotlight content__section" class:reverse>
-        <div
-            style="padding-inline: 30px"
-            on:click={openPopup}
-            class="content__splash"
-        >
-            {#if splash === "laptop"}
-                <Laptop img={preview.desktop} />
-            {:else if splash === "both"}
-                <Laptop img={preview.desktop} />
-                <div class="phoneOverlay" class:reverse>
-                    <Phone img={preview.mobile} />
-                </div>
-            {:else}
-                <Laptop img="/assets/games/protoshift/protoshiftCover.png" />
-            {/if}
+        <div on:click={openPopup}>
+            <ProjectSplash {reverse} {splash} {preview} />
         </div>
 
         <div style="display: flex; justify-content: center; gap: 5% ">
@@ -94,22 +80,6 @@
     .spotlight {
         order: 2;
         position: relative;
-    }
-
-    .content__splash:hover {
-        cursor: pointer;
-    }
-
-    .phoneOverlay {
-        position: absolute;
-        bottom: 11%;
-        height: 55%;
-        left: 4%;
-    }
-
-    .phoneOverlay.reverse {
-        left: auto;
-        right: 4%;
     }
 
     .info {

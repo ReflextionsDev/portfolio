@@ -1,6 +1,7 @@
 <script>
     // Imports
     import { Lightbox } from "svelte-lightbox";
+import ProjectSplash from "./ProjectSplash.svelte";
 
     // Vars
     export let title = "project tile",
@@ -13,6 +14,13 @@
     export let links = [];
     export let videos = [];
     export let fullPage = false;
+
+    export let stack = [];
+    export let reverse = false;
+    export let splash = "both";
+    export let link = "";
+    export let preview = {};
+    export let youAreHere = false;
 </script>
 
 <!-- On mobile, hide preview object, only show links (play in browser) for mobile, for desktop games, show gif in laptop -->
@@ -34,6 +42,10 @@
         {hasMobilePreview}
     /> -->
 
+    <div>
+        <ProjectSplash {reverse} {splash} {preview} />
+    </div>
+
     <h2 class="dash title">{title}</h2>
 
     <div class="content__section">
@@ -45,7 +57,6 @@
             {desc}
         </p>
     </div>
-    
 
     <!-- Media -->
     <div class="content__section content__padding images">
