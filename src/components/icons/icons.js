@@ -8,7 +8,7 @@ export { default as Git } from './Git.svelte';
 export { default as Html5 } from './Html5.svelte';
 export { default as Javascript } from './Javascript.svelte';
 export { default as Mongodb } from './Mongodb.svelte';
-export { default as NodeDotJs } from './Nodedotjs.svelte';
+export { default as NodeDotJs } from './NodeDotJs.svelte';
 export { default as Notion } from './Notion.svelte';
 export { default as React } from './React.svelte';
 export { default as Redux } from './Redux.svelte';
