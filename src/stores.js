@@ -43,7 +43,7 @@ import MTACountryDesc from './components/game/descriptions/MTACountryDesc.svelte
 import FantakneeDesc from './components/game/descriptions/FantakneeDesc.svelte'
 import MayhemDesc from './components/game/descriptions/MayhemDesc.svelte'
 import TowerDefenseDesc from './components/game/descriptions/TowerDefenseDesc.svelte'
-import KcpsDesc from "./components/game/descriptions/kcpsDesc.svelte";
+import KCPSDesc from "./components/game/descriptions/KCPSDesc.svelte";
 import ChemDesc from "./components/game/descriptions/ChemDesc.svelte";
 
 // Sizes - small, tall, big, huge (unused), wide (unused)
@@ -109,7 +109,7 @@ export const games = [
         title: "Kitty Cat Poker Slots",
         size: "big",
         platform: "laptop",
-        desc: KcpsDesc,
+        desc: KCPSDesc,
         hasDesktopPreview: false,
         hasMobilePreview: false,
         src: "https://play.google.com/store/apps/details?id=com.Go2No1.KittyCat",
