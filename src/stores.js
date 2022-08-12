@@ -943,11 +943,14 @@ export const games = [
 // },
 
 // Web Projects
+import Portfolio from "./components/web/descriptions/Portfolio.svelte"
+
 export const projects = [
     {
         title: "Portfolio",
         youAreHere: true,
         desc: "After going through various websites over the years, I wanted a single location to put all my content. This site was built with Svelte and served as a personal capstone project in front-end development.",
+        fullDesc: Portfolio,
         stack: ["Svelte", "Page.js"],
         techs: [
             {

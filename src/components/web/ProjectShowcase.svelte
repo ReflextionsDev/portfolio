@@ -17,6 +17,8 @@
     export let deps = "";
     console.log('deps',deps)
 
+    export let fullDesc;
+
     export let stack = [];
     export let techs = [];
     export let reverse = false;
@@ -50,8 +52,11 @@
 
     <div class="content__section content__text">
         <div>
-            <!-- <svelte:component this={desc} /> -->
             <p>{desc}</p>
+
+
+            <svelte:component this={fullDesc} />
+
 
             <div class="techused">
                 <div>
