@@ -1,3 +1,29 @@
+<script>
+	import ImageSpan from './../../ImageSpan.svelte';
+
+    let gallery1 = [
+        {
+            src: "/assets/projects/portfolio/mockup1.png",
+            alt: "",
+        },
+        {
+            src: "/assets/projects/portfolio/mockup3.png",
+            alt: "",
+        },
+        {
+            src: "/assets/projects/portfolio/mockup4.png",
+            alt: "",
+        },
+    ]
+    
+
+    
+</script>
+
+<!-- Build image / text split component, with reverse prop
+Text takes many paragraphs or whatever, image displays in list
+-->
+
 <div>
     <h3>About</h3>
 
@@ -7,6 +33,8 @@
         a new (though fairly similar) framework, and I liked the design
         philosophy behind Svelte.
     </p>
+
+    <ImageSpan images={gallery1}/>
 
     <h3>Process</h3>
 
@@ -152,6 +180,17 @@
 </div>
 
 <style>
+
+    h3 {
+        /* text-align: left; */
+    }
+
+    h4 {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
     p {
         font-size: 0.85rem;
         text-align: left;
