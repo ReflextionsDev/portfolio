@@ -947,6 +947,11 @@ import Portfolio from "./components/web/descriptions/Portfolio.svelte"
 
 export const projects = [
     {
+        title: "Construct Snippets",
+        desc: "Work in Progress",
+        stack: ["React", "Mantine", "Express", "MongoDB", "AWS EC2"],
+    },
+    {
         title: "Portfolio",
         youAreHere: true,
         desc: "After going through various websites over the years, I wanted a single location to put all my content. This site was built with Svelte and served as a personal capstone project in front-end development.",
@@ -955,8 +960,12 @@ export const projects = [
         techs: [
             {
                 label: "Svelte",
-                link: ""
+                link: "https://svelte.dev/"
             },
+            {
+                label: "Page.js",
+                link: "https://www.npmjs.com/package/page"
+            }
         ],
         link: "https://nlb.dev",
         links: [
@@ -971,12 +980,20 @@ export const projects = [
         ],
         deps: [
             {
-                label: "Svelte Modal",
-                link: "https://nlb.dev"
+                label: "Svelte Simple Modal",
+                link: "https://www.npmjs.com/package/svelte-simple-modal"
             },
             {
                 label: "Svelte Media Query",
-                link: "https://github.com/ReflextionsDev/Portfolio"
+                link: "https://www.npmjs.com/package/svelte-media-query"
+            },
+            {
+                label: "Svelte Lightbox",
+                link: "https://www.npmjs.com/package/svelte-lightbox"
+            },
+            {
+                label: "Svelte Viewport Info",
+                link: "https://www.npmjs.com/package/svelte-viewport-info"
             }
         ],
         preview: {
@@ -985,15 +1002,11 @@ export const projects = [
         },
     },
     {
-        title: "React Ticket Tracker",
-        desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
+        title: "React Ticket Tracker (WIP)",
+        desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
         stack: ["React", "Redux", "Express", "MongoDB", "AWS EC2"],
     },
-    {
-        title: "Construct Snippets",
-        desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express. More filler paragraph text here cause it looks nice.",
-        stack: ["React", "Mantine", "Express", "MongoDB", "AWS EC2"],
-    }
+   
 ]
 
 // Other Web projects
