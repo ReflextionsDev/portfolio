@@ -983,32 +983,6 @@ export const projects = [
             desktop: "/assets/projects/portfolio/desktop3.png",
             mobile: "/assets/projects/portfolio/mobile4.png",
         },
-        images: [
-            {
-                src: "/assets/games/soulgrinder/1.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/3.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/5.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/4.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/6.png",
-                alt: "soulgrinder screenshot",
-            },
-            {
-                src: "/assets/games/soulgrinder/7.png",
-                alt: "soulgrinder screenshot",
-            },
-        ],
     },
     {
         title: "React Ticket Tracker",

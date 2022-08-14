@@ -15,7 +15,7 @@
     export let fullPage = false;
 
     export let deps = "";
-    console.log('deps',deps)
+    console.log("deps", deps);
 
     export let fullDesc;
 
@@ -55,27 +55,33 @@
             <p>{desc}</p>
 
 
-            <svelte:component this={fullDesc} />
-
-
             <div class="techused">
-                <div>
-                    <b>Technologies: </b>
+                <div class="tech">
+                <i>Technologies: </i>
                     <ul>
                         {#each techs as tech}
-                        <li><a href={tech.link} target="tech">{tech.label}</a></li>
+                            <li>
+                                <a href={tech.link} target="tech"
+                                    >{tech.label}</a
+                                >
+                            </li>
                         {/each}
                     </ul>
                 </div>
-                <div>
-                    <b>Dependencies: </b>
+                <div class="tech">
+                    <i>Dependencies: </i>
                     <ul>
                         {#each deps as dep}
-                            <li><a href={dep.link} target="dep">{dep.label}</a></li>
+                            <li>
+                                <a href={dep.link} target="dep">{dep.label}</a>
+                            </li>
                         {/each}
                     </ul>
                 </div>
             </div>
+
+            <br />
+            <svelte:component this={fullDesc} />
         </div>
     </div>
 
@@ -146,5 +152,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        column-gap: 15px;
     }
+
+    .tech {
+        margin-right: auto;
+    }
+    
 </style>

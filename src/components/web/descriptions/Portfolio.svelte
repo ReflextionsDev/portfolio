@@ -1,5 +1,5 @@
 <script>
-	import ImageSpan from './../../ImageSpan.svelte';
+    import ImageSpan from "./../../ImageSpan.svelte";
 
     let gallery1 = [
         {
@@ -14,15 +14,23 @@
             src: "/assets/projects/portfolio/mockup4.png",
             alt: "",
         },
-    ]
-    
+    ];
 
-    
+    let gallery2 = [
+        {
+            src: "/assets/projects/portfolio/phone.png",
+            alt: "",
+        },
+        {
+            src: "/assets/projects/portfolio/grid.png",
+            alt: "",
+        },
+        {
+            src: "/assets/projects/portfolio/devices.png",
+            alt: "",
+        },
+    ];
 </script>
-
-<!-- Build image / text split component, with reverse prop
-Text takes many paragraphs or whatever, image displays in list
--->
 
 <div>
     <h3>About</h3>
@@ -34,9 +42,8 @@ Text takes many paragraphs or whatever, image displays in list
         philosophy behind Svelte.
     </p>
 
-    <ImageSpan images={gallery1}/>
-
     <h3>Process</h3>
+    <ImageSpan images={gallery1} />
 
     <p>
         I started out by mocking up some designs in Figma, attempting to figure
@@ -45,8 +52,6 @@ Text takes many paragraphs or whatever, image displays in list
         I tried a few layouts for both the game page and the portfolio page.
     </p>
 
-    <!-- > FIGMA IMAGES < -->
-
     <p>
         Once I had a few designs to choose from, I got to work implementing the
         game pages. Feeling inspired by some examples on codepen, I built a
@@ -54,15 +59,11 @@ Text takes many paragraphs or whatever, image displays in list
         with page.js.
     </p>
 
-    <!-- > DEVICE IMAGES < -->
-
     <p>
         The theme felt OK, but it felt a bit bare, and I wanted something more
         creative for a personal site. I started by switching to a dark theme,
         and then adding more color.
     </p>
-
-    <!-- > EARLY SITE IMAGES < -->
 
     <p>
         These layouts also ended up being too wide to have a large enough game
@@ -79,13 +80,13 @@ Text takes many paragraphs or whatever, image displays in list
         good across devices.
     </p>
 
-    <!-- > POTENTIAL MODAL IMAGES < -->
-
     <p>
         Building the data structure and component composition for the games
         portfolio made implementing the web projects fairly straight forward. I
         also implemented a contact page using formspree.
     </p>
+
+    <ImageSpan images={gallery2} />
 
     <h3>A deeper dive</h3>
 
@@ -180,11 +181,6 @@ Text takes many paragraphs or whatever, image displays in list
 </div>
 
 <style>
-
-    h3 {
-        /* text-align: left; */
-    }
-
     h4 {
         text-align: left;
         padding: 0;
