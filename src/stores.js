@@ -944,12 +944,38 @@ export const games = [
 
 // Web Projects
 import Portfolio from "./components/web/descriptions/Portfolio.svelte"
+import RTT from "./components/web/descriptions/RTT.svelte"
+import Snippets from "./components/web/descriptions/Snippets.svelte"
 
 export const projects = [
     {
         title: "Construct Snippets",
         desc: "Work in Progress",
+        fullDesc: Snippets,
         stack: ["React", "Mantine", "Express", "MongoDB", "AWS EC2"],
+        techs: [
+            {
+                label: "",
+                link: ""
+            },
+        ],
+        link: "",
+        links: [
+            {
+                label: "",
+                link: ""
+            },
+        ],
+        deps: [
+            {
+                label: "",
+                link: ""
+            },
+        ],
+        preview: {
+            desktop: "/assets/projects/portfolio/desktop3.png",
+            mobile: "/assets/projects/portfolio/mobile4.png",
+        },
     },
     {
         title: "Portfolio",
@@ -1005,6 +1031,29 @@ export const projects = [
         title: "React Ticket Tracker (WIP)",
         desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
         stack: ["React", "Redux", "Express", "MongoDB", "AWS EC2"],
+        techs: [
+            {
+                label: "",
+                link: ""
+            },
+        ],
+        link: "",
+        links: [
+            {
+                label: "",
+                link: ""
+            },
+        ],
+        deps: [
+            {
+                label: "",
+                link: ""
+            },
+        ],
+        preview: {
+            desktop: "/assets/projects/portfolio/desktop3.png",
+            mobile: "/assets/projects/portfolio/mobile4.png",
+        },
     },
    
 ]
