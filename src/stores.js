@@ -1030,6 +1030,7 @@ export const projects = [
     {
         title: "React Ticket Tracker (WIP)",
         desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
+        fullDesc: RTT,
         stack: ["React", "Redux", "Express", "MongoDB", "AWS EC2"],
         techs: [
             {
