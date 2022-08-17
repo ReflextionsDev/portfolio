@@ -42,6 +42,14 @@
         philosophy behind Svelte.
     </p>
 
+    <h3>Deployment</h3>
+    <p>
+        This project is deployed as a static site via namecheap hosting. I've
+        setup a deployment branch on github which is a subtree with the origin
+        at public/. To update this site I simply have to push to the subtree,
+        then connect to my namecheap file server via ssh and pull.
+    </p>
+
     <h3>Process</h3>
     <ImageSpan images={gallery1} />
 

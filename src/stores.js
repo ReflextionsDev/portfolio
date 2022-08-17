@@ -949,32 +949,76 @@ import Snippets from "./components/web/descriptions/Snippets.svelte"
 
 export const projects = [
     {
-        title: "Construct Snippets",
+        title: "Construct Snippets (WIP)",
         desc: "Work in Progress",
         fullDesc: Snippets,
-        stack: ["React", "Mantine", "Express", "MongoDB", "AWS EC2"],
+        stack: ["React", "Mantine", "Express", "MongoDB", "EC2"],
         techs: [
             {
-                label: "",
-                link: ""
+                label: "React",
+                link: "https://reactjs.org/"
+            },
+            {
+                label: "Mantine",
+                link: "https://mantine.dev/"
+            },
+            {
+                label: "Express",
+                link: "https://expressjs.com/"
+            },
+            {
+                label: "MongoDB",
+                link: "https://www.mongodb.com/"
+            },
+            {
+                label: "AWS EC2",
+                link: "https://aws.amazon.com/ec2/"
             },
         ],
-        link: "",
+        link: "https://constructsnippets.com/",
         links: [
             {
-                label: "",
-                link: ""
+                label: "Website",
+                link: "https://constructsnippets.com/"
+            },
+            {
+                label: "Frontend Repo",
+                link: "https://github.com/ReflextionsDev/construct-snippets-frontend"
+            },
+            {
+                label: "Backend Repo",
+                link: "https://github.com/ReflextionsDev/construct-snippets-backend"
             },
         ],
         deps: [
             {
-                label: "",
-                link: ""
+                label: "Axios",
+                link: "https://axios-http.com/docs/intro"
+            },
+            {
+                label: "Tabler Icons",
+                link: "https://tabler-icons-react.vercel.app/"
+            },
+            {
+                label: "React Router",
+                link: "https://v5.reactrouter.com/web/guides/quick-start"
+            },
+            {
+                label: "bcryptjs",
+                link: "https://www.npmjs.com/package/bcryptjs"
+            },
+            {
+                label: "jsonwebtoken",
+                link: "https://www.npmjs.com/package/jsonwebtoken"
+            },
+            {
+                label: "validator",
+                link: "https://www.npmjs.com/package/validator"
             },
         ],
         preview: {
-            desktop: "/assets/projects/portfolio/desktop3.png",
-            mobile: "/assets/projects/portfolio/mobile4.png",
+            desktop: "/assets/projects/snippets/snippets.png",
+            mobile: "/assets/projects/snippets/snippetsM.png",
         },
     },
     {
@@ -1029,34 +1073,75 @@ export const projects = [
     },
     {
         title: "React Ticket Tracker (WIP)",
-        desc: "React Ticket Tracker is a fullstack bug tracker built with React and with state management by redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
+        desc: "React Ticket Tracker is a fullstack bug tracker built with React and state management via Redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
         fullDesc: RTT,
-        stack: ["React", "Redux", "Express", "MongoDB", "AWS EC2"],
+        stack: ["React", "Redux", "Express", "MongoDB", "EC2"],
         techs: [
             {
-                label: "",
-                link: ""
+                label: "React",
+                link: "https://reactjs.org/"
+            },
+
+            {
+                label: "Express",
+                link: "https://expressjs.com/"
+            },
+            {
+                label: "MongoDB",
+                link: "https://www.mongodb.com/"
+            },
+            {
+                label: "AWS EC2",
+                link: "https://aws.amazon.com/ec2/"
             },
         ],
-        link: "",
+        link: "https://react-ticket-frontend.vercel.app/",
         links: [
             {
-                label: "",
-                link: ""
+                label: "Website",
+                link: "https://react-ticket-frontend.vercel.app/"
+            },
+            {
+                label: "Frontend Repo",
+                link: "https://github.com/ReflextionsDev/react-ticket-frontend"
+            },
+            {
+                label: "Backend Repo",
+                link: "https://github.com/ReflextionsDev/react-ticket-backend"
             },
         ],
         deps: [
             {
-                label: "",
-                link: ""
+                label: "Redux",
+                link: "https://react-redux.js.org/"
+            },
+            {
+                label: "React Router",
+                link: "https://v5.reactrouter.com/web/guides/quick-start"
+            },
+            {
+                label: "React Select",
+                link: "https://react-select.com/home"
+            },
+            {
+                label: "bcryptjs",
+                link: "https://www.npmjs.com/package/bcryptjs"
+            },
+            {
+                label: "jsonwebtoken",
+                link: "https://www.npmjs.com/package/jsonwebtoken"
+            },
+            {
+                label: "validator",
+                link: "https://www.npmjs.com/package/validator"
             },
         ],
         preview: {
-            desktop: "/assets/projects/portfolio/desktop3.png",
-            mobile: "/assets/projects/portfolio/mobile4.png",
+            desktop: "/assets/projects/rtt/rtt.png",
+            mobile: "/assets/projects/rtt/rtt.png",
         },
     },
-   
+
 ]
 
 // Other Web projects
