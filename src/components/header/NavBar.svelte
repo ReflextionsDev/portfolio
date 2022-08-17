@@ -55,7 +55,7 @@
             <a href="/games" class="tab tab__games">
                 <h4>GAMES</h4>
             </a>
-            <a href="/" class="tab tab__resume">
+            <a href="/assets/resume/resume.pdf" target="resume" class="tab tab__resume">
                 <h4>RESUME</h4>
             </a>
         </div>
