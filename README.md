@@ -1,3 +1,3 @@
 ### NLB.DEV
 
-My portfolio site, built with Svelte.
+[My portfolio](https://nlb.dev/), built with Svelte.
