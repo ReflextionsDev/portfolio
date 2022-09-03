@@ -23,7 +23,7 @@
             <!-- hover note about 2013 and setting up a business as a kid -->
             I have a background in creating and selling web games since I was a teenager
             and I've worked as a professional QA Tester. I'm primarily trained in
-            MERN stack but am adaptable and excited to work in collaborative environments.
+            MERN stack and am adaptable and excited to work in collaborative environments.
         </p>
     </div>
 
