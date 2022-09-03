@@ -948,9 +948,10 @@ import RTT from "./components/web/descriptions/RTT.svelte"
 import Snippets from "./components/web/descriptions/Snippets.svelte"
 
 export const projects = [
+    // Snippets
     {
         title: "Construct Snippets (WIP)",
-        desc: "Work in Progress",
+        desc: "Construct Snippets is an open source library of useful functions and other code snippets for the HTML5 game engine Construct 3. Built with comprehensive user validation and session security with HttpOnly cookies. Supports creation and viewing of snippets. ",
         fullDesc: Snippets,
         stack: ["React", "Mantine", "Express", "MongoDB", "EC2"],
         techs: [
@@ -1015,12 +1016,17 @@ export const projects = [
                 label: "validator",
                 link: "https://www.npmjs.com/package/validator"
             },
+            {
+                label: "date-fns",
+                link: "https://date-fns.org/"
+            },
         ],
         preview: {
             desktop: "/assets/projects/snippets/snippets.png",
             mobile: "/assets/projects/snippets/snippetsM.png",
         },
     },
+    // Portfolio
     {
         title: "Portfolio",
         youAreHere: true,
@@ -1071,10 +1077,12 @@ export const projects = [
             mobile: "/assets/projects/portfolio/mobile4.png",
         },
     },
+    // RTT
     {
         title: "React Ticket Tracker (WIP)",
         splash: "laptop",
-        desc: "React Ticket Tracker is a fullstack bug tracker built with React and state management via Redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
+        // desc: "React Ticket Tracker is a fullstack bug tracker built with React and state management via Redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
+        desc: "React Ticket Tracker is a fullstack task tracker built with React and state management via Redux. Can be used for bugs, tickets, and project management. Supports posting and updating tasks, timestamps, tasks IDs, descriptions, severity, and status.",
         fullDesc: RTT,
         stack: ["React", "Redux", "Express", "MongoDB", "EC2"],
         techs: [
