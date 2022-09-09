@@ -6,7 +6,7 @@
 
 <div class="info content">
     <div class="info__title content__section">
-        <h1>Nathanael Bennett</h1>
+        <h1>Nathan Bennett</h1>
         <h2>Web & Game Development</h2>
     </div>
 

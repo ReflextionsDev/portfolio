@@ -950,8 +950,8 @@ import Snippets from "./components/web/descriptions/Snippets.svelte"
 export const projects = [
     // Snippets
     {
-        title: "Construct Snippets (WIP)",
-        desc: "Construct Snippets is an open source library of useful functions and other code snippets for the HTML5 game engine Construct 3. Built with comprehensive user validation and session security with HttpOnly cookies. Supports creation and viewing of snippets. ",
+        title: "Construct Snippets",
+        desc: "Construct Snippets (WIP) is an open source library of useful functions and other code snippets for the HTML5 game engine Construct 3. Built with comprehensive user validation and session security with HttpOnly cookies. Supports creation and viewing of snippets. ",
         fullDesc: Snippets,
         stack: ["React", "Mantine", "Express", "MongoDB", "EC2"],
         techs: [
@@ -1079,7 +1079,7 @@ export const projects = [
     },
     // RTT
     {
-        title: "React Ticket Tracker (WIP)",
+        title: "React Ticket Tracker",
         splash: "laptop",
         // desc: "React Ticket Tracker is a fullstack bug tracker built with React and state management via Redux. Supports filtering, user roles, permissions, and organization assignment. Backend is built with Node & Express.",
         desc: "React Ticket Tracker is a fullstack task tracker built with React and state management via Redux. Can be used for bugs, tickets, and project management. Supports posting and updating tasks, timestamps, tasks IDs, descriptions, severity, and status.",
