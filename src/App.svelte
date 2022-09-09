@@ -54,61 +54,22 @@
 	}
 
 	// Routing
-	import router from "page";
-	let page = "";
+	import Router from 'svelte-spa-router'
+	import {wrap} from 'svelte-spa-router/wrap'
 
-	// Routes
-	router("/", () => {
-		page = "home";
-		setTimeout(scrollToTop, 10);
-	});
-	router("/games", () => {
-		page = "games";
-		setTimeout(scrollToTop, 10);
-	});
-	// Game showcase
-	router(
-		"/games/:game",
-		(ctx, next) => {
-			// If game parameter matches object in store list, load props
-			gameTitle = ctx.params.game;
-			gameProps = games.find((gameObj) => {
-				let cleanTitle = gameObj.title
-					.split(" ")
-					.join("")
-					.toLowerCase();
-				return cleanTitle === gameTitle;
-			});
-			// console.log("props", gameProps);
-			next();
-		},
-		() => (page = "gameShowcase")
-	);
-	// Project showcase
-	router(
-		"/projects/:project",
-		(ctx, next) => {
-			// If game parameter matches object in store list, load props
-			projectTitle = ctx.params.project;
-			projectProps = projects.find((projectObj) => {
-				let cleanTitle = projectObj.title
-					.split(" ")
-					.join("")
-					.toLowerCase();
-				return cleanTitle === projectTitle;
-			});
-			console.log("props", projectProps);
-			next();
-		},
-		() => (page = "projectShowcase")
-	);
-	// 404 redirect
-	router("/*", () => {
-		page = "home";
-		scrollToTop();
-	});
+	const routes = {
+		'/' : Web,
+		'/games' : Games,
+		'/games/:game' : wrap({
+			component: GameShowcase,
+			// Props
+			props: {
+				fullPage: true
+			}
+		}),
+		'*' : Web,
+	}
 
-	router.start();
 </script>
 
 <!-- Watch body for viewport changes -->
@@ -132,39 +93,7 @@
 
 		<!-- Routed body -->
 		<main>
-			{#if page === "home"}
-				<Web />
-			{:else if page === "games"}
-				<Games {games} />
-			{:else if page === "gameShowcase"}
-				<!-- Redirect to game page is props are missing -->
-				{#if gameProps == null}
-					{window.location.replace(`${url}/games`)}
-				{:else}
-					<Section
-						top={false}
-						bottom={true}
-						bg={theme.bgColors.primary}
-					>
-						<GameShowcase {...gameProps} fullPage={true} />
-					</Section>
-					<SectionBreak />
-				{/if}
-			{:else if page === "projectShowcase"}
-				<!-- Redirect to game page is props are missing -->
-				{#if projectProps == null}
-					{window.location.replace(`${url}/`)}
-				{:else}
-					<Section
-						top={false}
-						bottom={true}
-						bg={theme.bgColors.primary}
-					>
-						<ProjectShowcase {...projectProps} fullPage={true} />
-					</Section>
-					<SectionBreak />
-				{/if}
-			{/if}
+			<Router {routes}/>
 		</main>
 	</Modal>
 </div>
