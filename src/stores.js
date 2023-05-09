@@ -1156,6 +1156,12 @@ export const projects = [
 // Other Web projects
 export const projectsOther = [
     {
+        title: "Pexels Search",
+        desc: "A React web page that interfaces with the Pexels API. Supports curated photos, search, pagination, and session storage.",
+        img: "/assets/projects/other/pexels.png",
+        link: "https://github.com/ReflextionsDev/pexels-search",
+    },
+    {
         title: "Post Comment Backend",
         desc: "A full CRUD backend written in JS using Node, Express, and Mongoose.",
         img: "/assets/projects/other/postcomment.png",
