@@ -11,7 +11,7 @@
   </div>
 
   <div class="info__body content__text content__section">
-    <p>
+    <!-- <p>
       I'm an experienced developer interested in building things and solving
       problems. I'm passionate about collaboration across teams of various
       disciplines and creating better user experiences with creativity.
@@ -22,6 +22,20 @@
       fullstack web developer, I am equipped and capable of tying together full
       service websites and applications, from enterprise-level systems to
       bespoke solutions.
+    </p> -->
+
+    <p>
+      I'm an experienced developer with a passion for building innovative
+      solutions and solving complex challenges. My journey began as a teenager,
+      creating and selling web games, and has evolved into a career that
+      includes professional QA testing on AAA franchises.
+    </p>
+    <p>
+      As a fullstack web developer, I specialize in seamlessly integrating a
+      wide range of technologies to deliver comprehensive websites and
+      applications. Whether it's enterprise-level systems or bespoke solutions,
+      I'm dedicated to enhancing user experiences through creative collaboration
+      and technical expertise.
     </p>
   </div>
 
