@@ -10,7 +10,7 @@
             As a solo developer, I've worn many hats. I've taken games through
             their full lifecycle: handling all aspects of designing, developing,
             testing, and publishing. But I'm no stranger to getting in the
-            weeds. I like the idea of a π shaped skillset, wherein I specialize
+            weeds. I follow the idea of a π shaped skillset, wherein I specialize
             in design and development.
         </p>
         <p>
