@@ -26,4 +26,4 @@ export { default as Android } from './Android.svelte';
 export { default as Apple } from './Apple.svelte';
 export { default as Json } from './Json.svelte';
 export { default as Firebase } from './Firebase.svelte';
-export { default as supabase } from './supabase.svelte';
+export { default as Supabase } from './Supabase.svelte';

@@ -23,7 +23,7 @@
     Apple,
     Json,
     Firebase,
-    supabase,
+    Supabase,
   } from "../icons/icons.js";
 
   // Define icons
@@ -131,7 +131,7 @@
     {
       label: "Supabase",
       type: "backend",
-      component: supabase,
+      component: Supabase,
       colorDefault: "#3ecf8e",
     },
     {
