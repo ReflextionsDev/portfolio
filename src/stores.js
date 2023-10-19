@@ -33,7 +33,6 @@ export const gameTags = [
 ];
 
 // Game Descriptions
-// import AdderDesc from './components/game/descriptions/AdderDesc.svelte'
 import ProtoshiftDesc from "./components/game/descriptions/ProtoshiftDesc.svelte";
 import SoulGrinderDesc from "./components/game/descriptions/SoulGrinderDesc.svelte";
 import RTRDesc from "./components/game/descriptions/RTRDesc.svelte";
@@ -62,31 +61,63 @@ export const games = [
   // Adder
   {
     date: "TBD",
-    title: "Adder",
+    title: "Project Adder",
     platform: "laptop",
     size: "huge",
     desc: AdderDesc,
     hasDesktopPreview: false,
     hasMobilePreview: false,
-    src: "",
+    src: "Oct 5, 2023",
     cover: "/assets/games/adder/cover.png",
     gif: "/assets/games/adder/adder.gif",
     tags: ["featured", "web"],
+    videos: [
+      {
+        label: "Trailer",
+        src: "https://www.youtube.com/embed/gzIDx3JAV10?si=j5gjUAFdlYwrM4WH",
+      },
+    ],
+    links: [
+      {
+        label: "Steam",
+        link: "https://store.steampowered.com/app/2598410/Project_Adder/",
+      },
+      {
+        label: "Itch.io",
+        link: "https://nlbdotdev.itch.io/adder",
+      },
+      {
+        label: "Git",
+        link: "https://github.com/ReflextionsDev/Adder",
+      },
+    ],
     images: [
       {
-        src: "/assets/games/adder/1.png",
+        src: "/assets/games/adder/1.jpg",
         alt: "adder screenshot",
       },
       {
-        src: "/assets/games/adder/2.png",
+        src: "/assets/games/adder/2.jpg",
         alt: "adder screenshot",
       },
       {
-        src: "/assets/games/adder/3.png",
+        src: "/assets/games/adder/3.jpg",
         alt: "adder screenshot",
       },
       {
-        src: "/assets/games/adder/4.png",
+        src: "/assets/games/adder/4.jpg",
+        alt: "adder screenshot",
+      },
+      {
+        src: "/assets/games/adder/5.jpg",
+        alt: "adder screenshot",
+      },
+      {
+        src: "/assets/games/adder/6.jpg",
+        alt: "adder screenshot",
+      },
+      {
+        src: "/assets/games/adder/7.jpg",
         alt: "adder screenshot",
       },
     ],
@@ -107,7 +138,7 @@ export const games = [
     videos: [
       {
         label: "Trailer",
-        src: "https://www.youtube.com/watch?v=Xq7S-Hs5-jA",
+        src: "https://www.youtube.com/embed/Xq7S-Hs5-jA?si=n1zgnRfQ4i7LPTy-",
       },
     ],
     links: [
@@ -429,6 +460,10 @@ export const games = [
     tags: ["featured", "mobile", "web", "sale"],
     links: [
       {
+        label: "Steam",
+        link: "https://store.steampowered.com/app/391150/",
+      },
+      {
         label: "Scirra Arcade",
         link: "https://www.construct.net/en/free-online-games/red-tie-runner-1463/play",
       },
@@ -439,6 +474,10 @@ export const games = [
       {
         label: "Y8",
         link: "https://www.y8.com/games/red_tie_runner",
+      },
+      {
+        label: "Git",
+        link: "https://github.com/ReflextionsDev/RTR",
       },
     ],
     images: [
