@@ -41,7 +41,7 @@
 
   <div class="info__links content__section">
     <a
-      href="https://github.com/ReflextionsDev"
+      href="https://github.com/nlbdotdev"
       target="new"
       class="info__link hvr-grow"
     >

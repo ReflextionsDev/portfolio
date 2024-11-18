@@ -88,7 +88,7 @@ export const games = [
       },
       {
         label: "Git",
-        link: "https://github.com/ReflextionsDev/Adder",
+        link: "https://github.com/nlbdotdev/Adder",
       },
     ],
     images: [
@@ -477,7 +477,7 @@ export const games = [
       },
       {
         label: "Git",
-        link: "https://github.com/ReflextionsDev/RTR",
+        link: "https://github.com/nlbdotdev/RTR",
       },
     ],
     images: [
@@ -1081,11 +1081,11 @@ export const projects = [
       },
       {
         label: "Frontend Repo",
-        link: "https://github.com/ReflextionsDev/construct-snippets-frontend",
+        link: "https://github.com/nlbdotdev/construct-snippets-frontend",
       },
       {
         label: "Backend Repo",
-        link: "https://github.com/ReflextionsDev/construct-snippets-backend",
+        link: "https://github.com/nlbdotdev/construct-snippets-backend",
       },
     ],
     deps: [
@@ -1148,7 +1148,7 @@ export const projects = [
       },
       {
         label: "Github Repo",
-        link: "https://github.com/ReflextionsDev/Portfolio",
+        link: "https://github.com/nlbdotdev/Portfolio",
       },
     ],
     deps: [
@@ -1209,11 +1209,11 @@ export const projects = [
       },
       {
         label: "Frontend Repo",
-        link: "https://github.com/ReflextionsDev/react-ticket-frontend",
+        link: "https://github.com/nlbdotdev/react-ticket-frontend",
       },
       {
         label: "Backend Repo",
-        link: "https://github.com/ReflextionsDev/react-ticket-backend",
+        link: "https://github.com/nlbdotdev/react-ticket-backend",
       },
     ],
     deps: [
@@ -1255,36 +1255,36 @@ export const projectsOther = [
     title: "Pexels Search",
     desc: "A React web page that interfaces with the Pexels API. Supports curated photos, search, pagination, and session storage.",
     img: "/assets/projects/other/pexels.png",
-    link: "https://github.com/ReflextionsDev/pexels-search",
+    link: "https://github.com/nlbdotdev/pexels-search",
   },
   {
     title: "Post Comment Backend",
     desc: "A full CRUD backend written in JS using Node, Express, and Mongoose.",
     img: "/assets/projects/other/postcomment.png",
-    link: "https://github.com/ReflextionsDev/post-comment-backend",
+    link: "https://github.com/nlbdotdev/post-comment-backend",
   },
   {
     title: "Jeopardy",
     desc: "An interactive Jeopardy board built with jQuery.",
     img: "/assets/projects/other/jeopardy.png",
-    link: "https://github.com/ReflextionsDev/jeopardy",
+    link: "https://github.com/nlbdotdev/jeopardy",
   },
   {
     title: "Map Builder",
     desc: "Create a fantasy style map with jQeury drag and drop.",
     img: "/assets/projects/other/mapbuilder.png",
-    link: "https://github.com/ReflextionsDev/Map-Builder",
+    link: "https://github.com/nlbdotdev/Map-Builder",
   },
   {
     title: "Hacker News API",
     desc: "Loads and displays the top 100 stories from the Hacker News API w/ jQuery.",
     img: "/assets/projects/other/hackernews.png",
-    link: "https://github.com/ReflextionsDev/hackernews-api",
+    link: "https://github.com/nlbdotdev/hackernews-api",
   },
   {
     title: "SoundCloud Mockup",
     desc: "A static mockup of the SoundCloud home page using HTML and CSS.",
     img: "/assets/projects/other/soundcloud.png",
-    link: "https://github.com/ReflextionsDev/soundcloud-mockup",
+    link: "https://github.com/nlbdotdev/soundcloud-mockup",
   },
 ];

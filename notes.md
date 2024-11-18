@@ -27,4 +27,4 @@ Consider change background image on page change (web vs games)
 git subtree push --prefix public/ origin deploy
 
 # More
-Construct 3 bugs: https://github.com/Scirra/Construct-3-bugs/issues?q=user%3ARefextionsDev+author%3AReflextionsDev
+Construct 3 bugs: https://github.com/Scirra/Construct-3-bugs/issues?q=user%3ARefextionsDev+author%3Anlbdotdev
